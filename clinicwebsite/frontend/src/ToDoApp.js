@@ -29,7 +29,7 @@ const todoItems = [
 },
 ];
 
-class App extends Component{
+class ToDoApp extends Component{
 
   constructor(props)
   {
@@ -150,5 +150,5 @@ class App extends Component{
 
 }
 
-export default App;
+export default ToDoApp;
 
