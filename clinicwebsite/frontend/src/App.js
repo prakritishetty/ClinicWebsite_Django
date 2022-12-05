@@ -2,25 +2,34 @@ import React, {Component} from "react";
 import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
 import {Button, Toast, ToastHeader, ToastBody, Row, Col, Card, CardBody, CardImg, CardTitle, CardSubtitle, CardText, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from "reactstrap";
 import {TfiCheckBox} from "react-icons/tfi"
-import testimonial from './testimonial.jpg'
+import testimonial from "./testimonials.png"
+import general from "./cleaningteeth.jpg"
+import cosmetic from "./Porcelain-Veneers-Smiles-of-Chandler-AZ.webp"
+import surgical from "./Dental-implant-illustration.jpg"
+import { MDBRipple } from 'mdb-react-ui-kit';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+const HoverData = "Click or pinch to Zoom Image";
 
 const items = [
     {
-      
+      id:1,
       src: "https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif" ,
       altText: 'Slide 1',
-      caption: 'Slide 1',
-       
+      caption: 'Prakriti Shetty',
+      
     },
     {
+      id:2,
       src: 'https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif',
       altText: 'Slide 2',
-      caption: 'Slide 2'
+      caption: 'Pratiksha Shetty'
     },
     {
+      id:3,
       src: 'https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif',
       altText: 'Slide 3',
-      caption: 'Slide 3'
+      caption: 'Sandhya Shetty'
     }
   ];
 
@@ -32,7 +41,17 @@ class App extends Component{
         this.state = ({
             isOpen: false, isOpenG: false, isOpenC: false, isOpenS: false, 
             activeIndex: 0,
+            hover:false,
+            hover1:false,
+            hover2:false,
+            opacity:1
         });
+        this.onHover = this.onHover.bind(this);
+        this.onHoverOver = this.onHoverOver.bind(this);
+        this.onHover1 = this.onHover1.bind(this);
+        this.onHoverOver1 = this.onHoverOver1.bind(this);
+        this.onHover2 = this.onHover2.bind(this);
+        this.onHoverOver2 = this.onHoverOver2.bind(this);
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
         this.goToIndex = this.goToIndex.bind(this);
@@ -41,13 +60,44 @@ class App extends Component{
     }
 
     onMouseEnter = () => { this.setState({    isOpen: true}); };
-    onMouseLeave = () => {this.setState({     isOpen: false});};
-    onMouseEnterG = () => {this.setState({    isOpenG: true});};
-    onMouseLeaveG = () => {this.setState({    isOpenG: false});};
-    onMouseEnterC = () => {this.setState({    isOpenC: true});};
-    onMouseLeaveC = () => {this.setState({    isOpenC: false});};
-    onMouseEnterS = () => {this.setState({    isOpenS: true});};
-    onMouseLeaveS = () => {this.setState({    isOpenS: false});};
+    onMouseLeave = () => {this.setState({isOpen: false});};
+    onMouseEnterG = () => {this.setState({isOpenG: true});};
+    onMouseLeaveG = () => {this.setState({isOpenG: false});};
+    onMouseEnterC = () => {this.setState({isOpenC: true});};
+    onMouseLeaveC = () => {this.setState({isOpenC: false});};
+    onMouseEnterS = () => {this.setState({isOpenS: true});};
+    onMouseLeaveS = () => {this.setState({isOpenS: false});};
+    onHover= (e) => {
+        e.preventDefault();
+        
+        console.log("hovering");
+        this.setState({opacity:0.2, hover: true});
+        
+      };
+    onHoverOver = (e) => {
+        e.preventDefault();
+        this.setState({ hover: false});
+      };
+    onHover1= (e) => {
+        e.preventDefault();
+        console.log("hovering");
+        this.setState({opacity:0.2, hover1: true});
+        
+      };
+    onHoverOver1 = (e) => {
+        e.preventDefault();
+        this.setState({hover1: false});
+      };
+    onHover2= (e) => {
+        e.preventDefault();
+        console.log("hovering");
+        this.setState({opacity:0.2, hover2: true});
+        
+      };
+    onHoverOver2 = (e) => {
+        e.preventDefault();
+        this.setState({hover2: false});
+      };
 
     onExiting() {this.animating = true;}
     onExited()  {this.animating = false;}    
@@ -69,16 +119,23 @@ class App extends Component{
     render()
     {
         const { activeIndex } = this.state;
+        
+        
 
         const slides = items.map((item) => {
           return (
             <CarouselItem
               onExiting={this.onExiting}
               onExited={this.onExited}
-              key={item.src}
+              key={item.id}
+              style={{color:"black"}}
+              className="text-secondary"
             >
-              <img src={item.src} alt={item.altText} />
-              <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+            
+            <img src={testimonial} alt={item.altText} style={{width:"2470px", height:"350px", padding:"20px", margin:"30px"}}/>
+            <div dangerouslySetInnerHTML={{__html: item.htmlContent}} />
+              
+            <CarouselCaption captionText={item.caption} captionHeader={item.caption} className="text-secondary" style={{padding:"10px"}} />
             </CarouselItem>
           );
         });
@@ -192,16 +249,90 @@ class App extends Component{
                         </CardText>         
                         </CardBody>
                         </Card>
-                        <Carousel activeIndex={activeIndex} next={this.next} previous={this.previous} style={{display:"cover"}}>
+                        
+
+
+
+
+
+
+                        <div style={{position:"relative",overflow:"hidden", display:"inline"}}>
+                        
+                        <img
+                          onMouseEnter={(e)=>this.onHover(e)}
+                          onMouseLeave={(e)=>this.onHoverOver(e)}
+                          alt=""
+                          src={general}
+                          className="img-responsive colored-pencil-effect"
+                          
+                          style={{width:"33%", opacity:"0.5", boxShadow: "inset -10px -10px 10px 20px white"}}
+                          
+                        ></img>
+                        { this.state.hover && <p style={{color:"white", fontSize:"40px", textShadow: "-2px 2px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000", position:"absolute", top:0,bottom:0, left:0, right:0, padding:"20px", margin:"20px", width:"33%"}}><b>GENERAL</b></p>}
+                        
+                        </div>
+                        <div style={{position:"relative",overflow:"hidden", display:"inline"}}>
+                        <img
+                          onMouseEnter={(e)=>this.onHover1(e)}
+                          onMouseLeave={(e)=>this.onHoverOver1(e)}
+                          alt=""
+                          src={cosmetic}
+                          className="img-responsive colored-pencil-effect"
+                          
+                          style={{width:"33%",opacity:"0.5"}}
+                        ></img>
+                        { this.state.hover1 && <p style={{color:"white", fontSize:"40px", textShadow: "-2px 2px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000", position:"absolute", top:0,bottom:0, left:0, right:0, padding:"20px", margin:"20px", width:"33%"}}><b>COSMETIC</b></p>}
+                        </div>
+                        <div style={{position:"relative",overflow:"hidden", display:"inline"}}>
+                        <img
+                          onMouseEnter={(e)=>this.onHover2(e)}
+                          onMouseLeave={(e)=>this.onHoverOver2(e)}
+                          alt=""
+                          src={surgical}
+                          className="img-responsive colored-pencil-effect"
+                          
+                          style={{width:"33%",opacity:"0.5"}}
+                        ></img>
+                        { this.state.hover2 && <p style={{color:"white", fontSize:"40px", textShadow: "-2px 2px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000", position:"absolute", top:0,bottom:0, left:0, right:0, padding:"20px", margin:"20px"}}><b>SURGICAL</b></p>}
+                        </div>
+
+
+                        
+
+                        <Carousel activeIndex={activeIndex} next={this.next} previous={this.previous}  >
                             <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
                                 {slides}
                             <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                         </Carousel>
-        
 
 
+                       
 
+                        
+                        {/* <section style={{width: "80%", margin: "0 auto", lineHeight: "0", position: "relative"}}>
+                          <img src="https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif" alt="" style={{width:"35%", }} />
+                          
+                          <article style={{position: "absolute", top: 0, width: "35%", background: "white", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gridGap: "2px", mixBlendMode: "lighten"}}>
+                            <div style={{background: "black", height: "8.53vw", gridColumn: 2 / 4}}></div>
+                            <div style={{background: "black", height: "8.53vw", gridColumn: 2 / 4}}></div>
+                            <div style={{background: "black", height: "8.53vw", gridColumn: 2 / 4}}></div>
+                            <div style={{background: "black", height: "10.53vw", gridColumn: 2 / 4}}></div>
+                            <div style={{background: "black", height: "10.53vw", gridColumn: 2 / 4}}></div>
+                            <div style={{background: "black", height: "10.53vw", gridColumn: 2 / 4}}></div>
+                          </article>
+
+                          <div style={{padding:"20px", margin:"30px"}}> Visit Online</div>
+                        </section> */}
+                       
+                       <ListGroup horizontal style={{width:"100%"}}>
+                          <ListGroup.Item><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.627340847596!2d72.94237301412522!3d19.167783054063854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8f7c2d76931%3A0xa2d85150fddd96c8!2sDr%20Sandhya&#39;s%20Total%20Dental%20Care!5e0!3m2!1sen!2sin!4v1670239514055!5m2!1sen!2sin" style={{width:"1000px", height:"250px" ,border:"0" ,allowfullscreen:"" ,loading:"lazy", referrerpolicy:"no-referrer-when-downgrade", padding:"20px"}}></iframe></ListGroup.Item>
+                          <ListGroup.Item>Visit Us <br></br><br></br>Shop #9, Saidham Complex, <br></br>P.K road, Mulund West <br></br>Mumbai - 400080<br></br><br></br>Mon - Sat: <br></br>10am to 2pm,<br></br>6pm to 9pm</ListGroup.Item>
+                  
+                        </ListGroup>
+                        
+
+                        
 
 
 
