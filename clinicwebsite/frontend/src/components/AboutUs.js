@@ -1,15 +1,16 @@
 import React, {Component} from "react";
 import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
-import {Button, Toast, ToastHeader, ToastBody, Row, Col, Card, CardBody, CardImg, CardTitle, CardSubtitle, CardText, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from "reactstrap";
+import {Button, Toast, ToastHeader, ToastBody, Row, Col, Card, CardBody, CardGroup, CardImg, CardTitle, CardSubtitle, CardText, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from "reactstrap";
 import {TfiCheckBox} from "react-icons/tfi"
-import testimonial from "./testimonials.png"
-import general from "./cleaningteeth.jpg"
-import cosmetic from "./Porcelain-Veneers-Smiles-of-Chandler-AZ.webp"
-import surgical from "./Dental-implant-illustration.jpg"
+import testimonial from "../testimonials.png"
+// import general from "./cleaningteeth.jpg"
+// import cosmetic from "./Porcelain-Veneers-Smiles-of-Chandler-AZ.webp"
+// import surgical from "./Dental-implant-illustration.jpg"
 import { MDBRipple } from 'mdb-react-ui-kit';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {BsInstagram} from "react-icons/bs"
 import {AiOutlineLinkedin} from "react-icons/ai"
+import ReactCompareImage from "react-compare-image";
 
 const HoverData = "Click or pinch to Zoom Image";
 
@@ -122,6 +123,11 @@ class App extends Component{
     {
         const { activeIndex } = this.state;
         
+        const before =
+        "https://upload.wikimedia.org/wikipedia/commons/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg?h=100px&w=20px";
+        const after =
+        "https://hindalkindi1992.files.wordpress.com/2013/11/portrait_eyes_23.jpg";
+  
         
 
         const slides = items.map((item) => {
@@ -148,7 +154,7 @@ class App extends Component{
             
         <div>
                     <Navbar color="secondary" style={{color:"white"}}>
-                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"30px"}} >Dr Sandhya's Total Dental Care</NavbarBrand>
+                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"35px"}} >About Us</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                             {/* <Collapse isOpen={this.state.isOpen} > */}
                                 <Nav className="ms-auto">
@@ -218,8 +224,8 @@ class App extends Component{
                         </Navbar>
                             <div className="p-5 my-6 rounded" style={{ backgroundImage: `url("https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif")` , backgroundPosition: 'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat',width: '100vw',height: '90vh'}}>
                                 <Toast style={{height:"300px", width:"50%", display:"block"}}>
-                                    <ToastHeader align="center" style={{height:"100px", fontFamily:"Arizonia", fontSize:"30px", align:"center"}}>
-                                        Exceptional dental care for all ages
+                                    <ToastHeader align="center" style={{height:"100px", fontFamily:"Arizonia", fontSize:"30px", align:"center", padding:"20px"}}>
+                                        We are perfect for your entire family
                                     </ToastHeader>
                                     <ToastBody style={{fontFamily:"Verdana", fontSize:"20px", align:"center"}}>
                                         Call on (+91) 9833630985
@@ -231,30 +237,113 @@ class App extends Component{
                                         </Button>
                                     </ToastBody>
                                 </Toast>
+
                             </div>
                         
-                        <Card style={{padding:20}}>            
-                        <CardBody>
-                        <CardText >
-                            <img
-                            src="https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif"
-                            alt="Card image cap"
-                            style={{float: "right", height:"300px"}}/> 
-                            <br></br>
-                            <TfiCheckBox size={50}/> <h2 style={{fontFamily:"Century Gothic", display:"inline"}}>On time, every time</h2>
-                            <h5>Appointments always start on time. We know how packed your schedule is.</h5>
-                            <br></br>
-                            <TfiCheckBox size={50}/> <h2 style={{fontFamily:"Century Gothic", display:"inline"}}>Quality First</h2>
-                            <h5>Rest assured, we encourage the use of only the finest materials available.</h5>
-                            <br></br>
-                            <TfiCheckBox size={50}/> <h2 style={{fontFamily:"Century Gothic", display:"inline"}}>Transparent Pricing</h2>
-                            <h5>We accept a wide variety of payment methods for hassle-free payment</h5>                    
-                        </CardText>         
-                        </CardBody>
-                        </Card>
+
+
+                            <br></br><br></br>
+                            <div className="p-3 bg-success my-2 rounded" >
+                              
+                                <Toast>
+                                  <ToastHeader>
+                                    Dr(Mrs.) Sandhya Shetty, B.D.S
+                                  </ToastHeader>
+                                  <ToastBody>
+                                    This is a toast on a success background — check it out!
+                                  </ToastBody>
+                                </Toast>
+                                <Toast>
+                                  <ToastHeader>
+                                    Dr Pratiksha Shetty, B.D.S, M.D.S
+                                  </ToastHeader>
+                                  <ToastBody>
+                                    This is a toast on a success background — check it out!
+                                  </ToastBody>
+                                </Toast>
+                                
+                            </div>
+                            
+
+                            {/* <div className="p-3 bg-success my-2 rounded">
+                                <Toast>
+                                  <ToastHeader>
+                                    Dr Pratiksha Shetty, B.D.S, M.D.S
+                                  </ToastHeader>
+                                  <ToastBody>
+                                    This is a toast on a success background — check it out!
+                                  </ToastBody>
+                                </Toast>
+                            </div> */}
+
+
+                            <br></br><br></br>
+                      
                         
 
 
+                            <CardGroup style={{padding:"20px"}}>
+                              <Card style={{padding:"20px"}}>
+                                <ReactCompareImage leftImage={before} rightImage={after}/>
+                                <CardBody>
+                                  <CardTitle tag="h5">
+                                    Card title
+                                  </CardTitle>
+                                  <CardSubtitle
+                                    className="mb-2 text-muted"
+                                    tag="h6"
+                                  >
+                                    Card subtitle
+                                  </CardSubtitle>
+                                  <CardText>
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                  </CardText>
+                                  <Button>
+                                    Button
+                                  </Button>
+                                </CardBody>
+                              </Card>
+                              <Card style={{padding:"20px"}}>
+                              <ReactCompareImage leftImage={before} rightImage={after} />
+                                <CardBody>
+                                  <CardTitle tag="h5">
+                                    Card title
+                                  </CardTitle>
+                                  <CardSubtitle
+                                    className="mb-2 text-muted"
+                                    tag="h6"
+                                  >
+                                    Card subtitle
+                                  </CardSubtitle>
+                                  <CardText>
+                                    This card has supporting text below as a natural lead-in to additional content.
+                                  </CardText>
+                                  <Button>
+                                    Button
+                                  </Button>
+                                </CardBody>
+                              </Card>
+                              <Card style={{padding:"20px"}}>
+                              <ReactCompareImage leftImage={before} rightImage={after}/>
+                                <CardBody>
+                                  <CardTitle tag="h5">
+                                    Card title
+                                  </CardTitle>
+                                  <CardSubtitle
+                                    className="mb-2 text-muted"
+                                    tag="h6"
+                                  >
+                                    Card subtitle
+                                  </CardSubtitle>
+                                  <CardText>
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                  </CardText>
+                                  <Button>
+                                    Button
+                                  </Button>
+                                </CardBody>
+                              </Card>
+                            </CardGroup>
 
 
 
@@ -265,7 +354,7 @@ class App extends Component{
                           onMouseEnter={(e)=>this.onHover(e)}
                           onMouseLeave={(e)=>this.onHoverOver(e)}
                           alt=""
-                          src={general}
+                          src=""
                           className="img-responsive colored-pencil-effect"
                           
                           style={{width:"33%", opacity:"0.5", boxShadow: "inset -10px -10px 10px 20px white"}}
@@ -279,7 +368,7 @@ class App extends Component{
                           onMouseEnter={(e)=>this.onHover1(e)}
                           onMouseLeave={(e)=>this.onHoverOver1(e)}
                           alt=""
-                          src={cosmetic}
+                          src=""
                           className="img-responsive colored-pencil-effect"
                           
                           style={{width:"33%",opacity:"0.5"}}
@@ -291,7 +380,7 @@ class App extends Component{
                           onMouseEnter={(e)=>this.onHover2(e)}
                           onMouseLeave={(e)=>this.onHoverOver2(e)}
                           alt=""
-                          src={surgical}
+                          src=""
                           className="img-responsive colored-pencil-effect"
                           
                           style={{width:"33%",opacity:"0.5"}}
