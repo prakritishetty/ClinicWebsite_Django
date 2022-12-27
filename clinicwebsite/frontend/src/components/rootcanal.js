@@ -1,18 +1,13 @@
 import React, {Component} from "react";
-import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
-import {Button, Toast, ToastHeader, ToastBody, Row, Col, Card, CardBody, CardGroup, CardImg, CardTitle, CardSubtitle, CardText, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from "reactstrap";
-import {TfiCheckBox} from "react-icons/tfi"
+import {Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
+import {Button, Toast, ToastHeader, ToastBody, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from "reactstrap";
+import Accordion from "react-bootstrap/Accordion"
 import testimonial from "../testimonials.png"
-// import general from "./cleaningteeth.jpg"
-// import cosmetic from "./Porcelain-Veneers-Smiles-of-Chandler-AZ.webp"
-// import surgical from "./Dental-implant-illustration.jpg"
-import { MDBRipple } from 'mdb-react-ui-kit';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {BsInstagram} from "react-icons/bs"
 import {AiOutlineLinkedin} from "react-icons/ai"
-import ReactCompareImage from "react-compare-image";
 
-const HoverData = "Click or pinch to Zoom Image";
+
 
 const items = [
     {
@@ -47,7 +42,8 @@ class App extends Component{
             hover:false,
             hover1:false,
             hover2:false,
-            opacity:1
+            opacity:1,
+            open:1
         });
         this.onHover = this.onHover.bind(this);
         this.onHoverOver = this.onHoverOver.bind(this);
@@ -60,9 +56,10 @@ class App extends Component{
         this.goToIndex = this.goToIndex.bind(this);
         this.onExiting = this.onExiting.bind(this);
         this.onExited = this.onExited.bind(this);
+        this.toggle = this.toggle.bind(this);
     }
 
-    onMouseEnter = () => { this.setState({    isOpen: true}); };
+    onMouseEnter = () => { this.setState({isOpen: true}); };
     onMouseLeave = () => {this.setState({isOpen: false});};
     onMouseEnterG = () => {this.setState({isOpenG: true});};
     onMouseLeaveG = () => {this.setState({isOpenG: false});};
@@ -118,16 +115,22 @@ class App extends Component{
       if (this.animating) return;
       this.setState({ activeIndex: newIndex });
     }
+
+    
+    toggle = (id) => {
+    if (this.open === id) {
+        this.setState({ open: 0 });
+    } else {
+        this.setState({ open: id });
+    }
+    };
+
     
     render()
     {
         const { activeIndex } = this.state;
         
-        const before =
-        "https://upload.wikimedia.org/wikipedia/commons/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg?h=100px&w=20px";
-        const after =
-        "https://hindalkindi1992.files.wordpress.com/2013/11/portrait_eyes_23.jpg";
-  
+       
         
 
         const slides = items.map((item) => {
@@ -154,7 +157,7 @@ class App extends Component{
             
         <div>
                     <Navbar color="secondary" style={{color:"white"}}>
-                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"35px"}} >About Us</NavbarBrand>
+                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"35px"}}>Root Canal Treatment</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                             {/* <Collapse isOpen={this.state.isOpen} > */}
                                 <Nav className="ms-auto">
@@ -243,109 +246,215 @@ class App extends Component{
 
 
                             <br></br><br></br>
-                            <p style={{padding:"20px"}}>Greetings and welcome to our dental clinic! We value your trust in us and are committed to providing you with excellent dental care</p>
-                              <br></br><br></br>
-                            <div className="p-3 bg-success my-2 rounded" >
-                              
-                                <Toast>
-                                  <ToastHeader>
-                                    Dr(Mrs.) Sandhya Shetty, B.D.S
-                                  </ToastHeader>
-                                  <ToastBody>
-                                    This is a toast on a success background — check it out!
-                                  </ToastBody>
-                                </Toast>
-                                <Toast>
-                                  <ToastHeader>
-                                    Dr Pratiksha Shetty, B.D.S, M.D.S
-                                  </ToastHeader>
-                                  <ToastBody>
-                                    This is a toast on a success background — check it out!
-                                  </ToastBody>
-                                </Toast>
-                                
-                            </div>
-                            
+                            {/* <div> */}
+      {/* <Accordion open={this.open} toggle={this.toggle}>
+        <Accordion.Item>
+          <Accordion.Header targetId="1">Accordion Item 1</Accordion.Header>
+          <Accordion.Body accordionId="1">
+            <strong>This is the first item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header targetId="2">Accordion Item 2</Accordion.Header>
+          <Accordion.Body accordionId="2">
+            <strong>This is the second item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header targetId="3">Accordion Item 3</Accordion.Header>
+          <Accordion.Body accordionId="3">
+            <strong>This is the third item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+    </div> */}
 
-                            {/* <div className="p-3 bg-success my-2 rounded">
-                                <Toast>
-                                  <ToastHeader>
-                                    Dr Pratiksha Shetty, B.D.S, M.D.S
-                                  </ToastHeader>
-                                  <ToastBody>
-                                    This is a toast on a success background — check it out!
-                                  </ToastBody>
-                                </Toast>
-                            </div> */}
+<div>
+    <p style={{padding:"20px", fontSize:"20px"}}>A root canal is a dental procedure that is used to treat a tooth that is infected or damaged in the pulp, which is the tissue inside the tooth that contains the nerves and blood vessels. The procedure involves removing the infected or damaged pulp from inside the tooth and then filling and sealing the root canal to prevent further infection.
+<br></br><br></br>
+Root canals are often needed when a tooth becomes infected or damaged as a result of decay, trauma, or a deep filling. If left untreated, an infected or damaged tooth can cause pain, swelling, and even abscesses. A root canal can help relieve these symptoms and save the tooth from extraction.
+<br></br><br></br>
+To perform a root canal, the dentist or endodontist (a dental specialist who performs root canals) will numb the tooth and surrounding area with an anesthetic. The dentist will then make an opening in the top of the tooth and remove the infected or damaged pulp using special instruments. Once the pulp has been removed, the dentist will clean and shape the root canal and fill it with a special material to seal it. The tooth is then restored with a filling or crown to protect it and restore its function.
+<div class="wrapper">
+<div class="svg-container">
+  <svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="svg-content">
+    
+    <defs>
+      <marker id="arrow" markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0" markerUnits="strokeWidth" orient="auto">
+        <polyline points="2,-2 0,0 2,2" stroke="#443c3d" strokeWidth="0.75px" fill="none"/>
+      </marker>
+  </defs>
+ 
+    
+    <g class="box-group">
+      <g transform="translate(-5)">
+	      <circle fill="#000" cx="55" cy="50" r="45" opacity="1" />
+        <text x="28" y="58" font-family="Open Sans Condensed" fontSize="26" stroke="none" fill="#f5f3e7" fontWeight="100" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Start</text>
+        <line x1="102" x2="135" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+      </g>
+        
+      <line x1="100" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+      <g transform="translate(136)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" font-family="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #1</tspan>
+      </text>
+      </g>
+
+      <line x1="230" x2="268" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+      
+      <g transform="translate(268)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" font-family="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #2</tspan>
+      </text>
+      </g>
+
+      <line x1="362" x2="400" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+      
+      <g transform="translate(400)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" fontFamily="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #3</tspan>
+      </text>
+      </g>
+    </g>
+    
+    <line x1="450" x2="450" y1="77" y2="124" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+    
+    <g class="box-group" transform="translate(0,100)">
+      <g transform="translate(5)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" fontFamily="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #7</tspan>
+      </text>
+      </g>
+        
+      <line x1="100" x2="136" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+
+      <g transform="translate(136)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" font-family="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #6</tspan>
+      </text>
+      </g>
+
+      <line x1="230" x2="268" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+      
+      <g transform="translate(268)">
+        <polygon points="60,20 100,40 100,80 60,100 20,80 20,40" fill="#72508d" transform="translate(-12,-10)"/>
+      <rect fill="#72508d" stroke="#72508d" strokeWidth="0" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" font-family="Open Sans Condensed" fontSize="14" stroke="none" fill="#fff" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #5</tspan>
+      </text>
+      </g>
+
+      <line x1="362" x2="400" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" marker-start="url(#arrow)"/>
+      
+      <g transform="translate(400)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" font-family="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #4</tspan>
+      </text>
+      </g>
+    </g>
+    
+    <line x1="50" x2="50" y1="177" y2="224" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+    
+    <g class="box-group" transform="translate(0,200)">
+      <g transform="translate(5)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" font-family="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #8</tspan>
+      </text>
+      </g>
+        
+      <line x1="100" x2="136" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+
+      <g transform="translate(136)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" fontFamily="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #9</tspan>
+      </text>
+      </g>
+
+      <line x1="230" x2="268" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+      
+      <g transform="translate(268)">
+      <rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+      <text x="16" y="47" fontFamily="Open Sans Condensed" fontSize="14" stroke="none" fill="#f5f3e7" fontWeight="900" style={{textTransform:"uppercase", letterSpacing: "1px"}}>Workflow
+        <tspan x="26" dy="17">Step #10</tspan>
+      </text>
+      </g>
+
+      <line x1="362" x2="400" y1="50" y2="50" strokeWidth="2" stroke="#443c3d" strokeDasharray="2,1" />
+      
+      <g transform="translate(392)">
+	      <circle fill="#000" cx="55" cy="50" r="45" opacity="1" />
+        <text x="37" y="58" fontFamily="Open Sans Condensed" fontSize="26" stroke="none" fill="#f5f3e7" fontWeight="100" style={{textTransform:"uppercase", letterSpacing: "1px"}}>End</text>
+      </g>
+    </g>
+  
+	</svg>
+</div>
+</div>
+<br></br><br></br>
+Overall, root canals are a safe and effective way to treat infected or damaged teeth and can help relieve pain and prevent the need for extraction. If you are experiencing tooth pain or other symptoms that may indicate a need for a root canal, it is important to consult with a dental professional as soon as possible.</p>
+
+    </div>
 
 
-                            <br></br><br></br>
-                      
-                        
-
-
-                            <CardGroup style={{padding:"20px"}}>
-                              <Card style={{padding:"20px"}}>
-                                <ReactCompareImage leftImage={before} rightImage={after}/>
-                                <CardBody>
-                                  <CardTitle tag="h5">
-                                    Card title
-                                  </CardTitle>
-                                  <CardSubtitle
-                                    className="mb-2 text-muted"
-                                    tag="h6"
-                                  >
-                                    Card subtitle
-                                  </CardSubtitle>
-                                  <CardText>
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                  </CardText>
-                                  <Button>
-                                    Button
-                                  </Button>
-                                </CardBody>
-                              </Card>
-                              <Card style={{padding:"20px"}}>
-                              <ReactCompareImage leftImage={before} rightImage={after} />
-                                <CardBody>
-                                  <CardTitle tag="h5">
-                                    Card title
-                                  </CardTitle>
-                                  <CardSubtitle
-                                    className="mb-2 text-muted"
-                                    tag="h6"
-                                  >
-                                    Card subtitle
-                                  </CardSubtitle>
-                                  <CardText>
-                                    This card has supporting text below as a natural lead-in to additional content.
-                                  </CardText>
-                                  <Button>
-                                    Button
-                                  </Button>
-                                </CardBody>
-                              </Card>
-                              <Card style={{padding:"20px"}}>
-                              <ReactCompareImage leftImage={before} rightImage={after}/>
-                                <CardBody>
-                                  <CardTitle tag="h5">
-                                    Card title
-                                  </CardTitle>
-                                  <CardSubtitle
-                                    className="mb-2 text-muted"
-                                    tag="h6"
-                                  >
-                                    Card subtitle
-                                  </CardSubtitle>
-                                  <CardText>
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-                                  </CardText>
-                                  <Button>
-                                    Button
-                                  </Button>
-                                </CardBody>
-                              </Card>
-                            </CardGroup>
+                {/* <div className="accordion" id="accordionExample">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
 
 
 

@@ -1,17 +1,13 @@
 import React, {Component} from "react";
-import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
-import {Button, Toast, ToastHeader, ToastBody, Row, Col, Card, CardBody, CardImg, CardTitle, CardSubtitle, CardText, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from "reactstrap";
-import {TfiCheckBox} from "react-icons/tfi"
-import testimonial from "./testimonials.png"
-import general from "./cleaningteeth.jpg"
-import cosmetic from "./Porcelain-Veneers-Smiles-of-Chandler-AZ.webp"
-import surgical from "./Dental-implant-illustration.jpg"
-import { MDBRipple } from 'mdb-react-ui-kit';
+import {Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
+import {Button, Toast, ToastHeader, ToastBody, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from "reactstrap";
+import Accordion from "react-bootstrap/Accordion"
+import testimonial from "../testimonials.png"
 import ListGroup from 'react-bootstrap/ListGroup';
 import {BsInstagram} from "react-icons/bs"
 import {AiOutlineLinkedin} from "react-icons/ai"
 
-const HoverData = "Click or pinch to Zoom Image";
+
 
 const items = [
     {
@@ -46,7 +42,8 @@ class App extends Component{
             hover:false,
             hover1:false,
             hover2:false,
-            opacity:1
+            opacity:1,
+            open:1
         });
         this.onHover = this.onHover.bind(this);
         this.onHoverOver = this.onHoverOver.bind(this);
@@ -59,9 +56,10 @@ class App extends Component{
         this.goToIndex = this.goToIndex.bind(this);
         this.onExiting = this.onExiting.bind(this);
         this.onExited = this.onExited.bind(this);
+        this.toggle = this.toggle.bind(this);
     }
 
-    onMouseEnter = () => { this.setState({    isOpen: true}); };
+    onMouseEnter = () => { this.setState({isOpen: true}); };
     onMouseLeave = () => {this.setState({isOpen: false});};
     onMouseEnterG = () => {this.setState({isOpenG: true});};
     onMouseLeaveG = () => {this.setState({isOpenG: false});};
@@ -117,11 +115,22 @@ class App extends Component{
       if (this.animating) return;
       this.setState({ activeIndex: newIndex });
     }
+
+    
+    toggle = (id) => {
+    if (this.open === id) {
+        this.setState({ open: 0 });
+    } else {
+        this.setState({ open: id });
+    }
+    };
+
     
     render()
     {
         const { activeIndex } = this.state;
         
+       
         
 
         const slides = items.map((item) => {
@@ -148,12 +157,12 @@ class App extends Component{
             
         <div>
                     <Navbar color="secondary" style={{color:"white"}}>
-                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"30px"}} >Dr Sandhya's Total Dental Care</NavbarBrand>
+                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"35px"}}>Gum Therapy</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
-                            
+                            {/* <Collapse isOpen={this.state.isOpen} > */}
                                 <Nav className="ms-auto">
                                     <NavItem >
-                                        <NavLink href="/about" style={{color:"white"}}>About</NavLink>
+                                        <NavLink href="/components/" style={{color:"white"}}>About</NavLink>
                                     </NavItem>
                                     
                                     <Dropdown onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.isOpen}>
@@ -164,29 +173,29 @@ class App extends Component{
                                             <Dropdown direction="left" onMouseOver={this.onMouseEnterG} onMouseLeave={this.onMouseLeaveG} isOpen={this.state.isOpenG}>
                                             <DropdownToggle nav >General</DropdownToggle>
                                                 <DropdownMenu >
-                                                    <DropdownItem href="/cleaningexams">Cleanings and Exams</DropdownItem>
-                                                  
-                                                    <DropdownItem href="/crowns">Crowns</DropdownItem>
-                                                    <DropdownItem href="/extractions">Tooth Extractions</DropdownItem>
-                                                    <DropdownItem href="/gumtherapy">Gum Therapy</DropdownItem>
-                                                    <DropdownItem href="/bondingfillings">Bonding and White Fillings</DropdownItem>
-                                                    <DropdownItem href="/dentures">Dentures</DropdownItem>
-                                                    <DropdownItem href="/nightguards">Night Guards</DropdownItem>
+                                                    <DropdownItem>Cleanings and Exams</DropdownItem>
+                                                    
+                                                    <DropdownItem>Crowns</DropdownItem>
+                                                    <DropdownItem>Tooth Extractions</DropdownItem>
+                                                    <DropdownItem>Gum Therapy</DropdownItem>
+                                                    <DropdownItem>Bonding and White Fillings</DropdownItem>
+                                                    <DropdownItem>Dentures</DropdownItem>
+                                                    <DropdownItem>Night Guards</DropdownItem>
                                                     <DropdownItem>Family Dentistry</DropdownItem>
-                                                    <DropdownItem >Emergency Care</DropdownItem>    
+                                                    <DropdownItem>Emergency Care</DropdownItem>    
                                                 </DropdownMenu>
                                             </Dropdown >
                                             <DropdownItem divider />
                                             <Dropdown direction="left" onMouseOver={this.onMouseEnterC} onMouseLeave={this.onMouseLeaveC} isOpen={this.state.isOpenC}>
                                             <DropdownToggle nav>Cosmetic</DropdownToggle>
                                                 <DropdownMenu >
-                                                    <DropdownItem href="/invisalign">InvisAlign</DropdownItem>
+                                                    <DropdownItem>InvisAlign</DropdownItem>
                                                     
-                                                    <DropdownItem href="/teethwhitening">Teeth Whitening</DropdownItem>
-                                                    <DropdownItem href="/bondingfillings">Bonding</DropdownItem>
-                                                    <DropdownItem href="/veneers">Veneers</DropdownItem>
-                                                    <DropdownItem href="/smilemakeover">Smile Makeover</DropdownItem>
-                                                    <DropdownItem href="/gummysmilereduction">Gummy Smile Reduction</DropdownItem>
+                                                    <DropdownItem>Teeth Whitening</DropdownItem>
+                                                    <DropdownItem>Bonding</DropdownItem>
+                                                    <DropdownItem>Veneers</DropdownItem>
+                                                    <DropdownItem>Smile Makeover</DropdownItem>
+                                                    <DropdownItem>Gummy Smile Reduction</DropdownItem>
                                                     <DropdownItem>Full Mouth Rehabilitation</DropdownItem>   
                                                 </DropdownMenu>
                                             </Dropdown >
@@ -194,14 +203,14 @@ class App extends Component{
                                             <Dropdown direction="left" onMouseOver={this.onMouseEnterS} onMouseLeave={this.onMouseLeaveS} isOpen={this.state.isOpenS}>
                                             <DropdownToggle nav>Surgical</DropdownToggle>
                                                 <DropdownMenu >
-                                                    <DropdownItem href="/implants">Implants</DropdownItem>
-                                                    <DropdownItem href="/extractions">Extractions</DropdownItem>
-                                                    <DropdownItem href="/rootcanal">Root Canal</DropdownItem>
-                                                    <DropdownItem href="/bonegraft">Bone Graft</DropdownItem>
-                                                    <DropdownItem href="/implantsupporteddentures">Implant-supported Dentures</DropdownItem>
-                                                    <DropdownItem href="/bridges">Bridges</DropdownItem>
-                                                    <DropdownItem href="/overdentures">Over Dentures</DropdownItem>
-                                                    <DropdownItem href="/samedayimplants">Same day Implants</DropdownItem>   
+                                                    <DropdownItem>Implants</DropdownItem>
+                                                    <DropdownItem>Extractions</DropdownItem>
+                                                    <DropdownItem>Root Canal</DropdownItem>
+                                                    <DropdownItem>Bone Graft</DropdownItem>
+                                                    <DropdownItem>Implant-supported Dentures</DropdownItem>
+                                                    <DropdownItem>Bridges</DropdownItem>
+                                                    <DropdownItem>Over Dentures</DropdownItem>
+                                                    <DropdownItem>Same day Implants</DropdownItem>   
                                                 </DropdownMenu>
                                             </Dropdown >
                                         </DropdownMenu>
@@ -218,8 +227,8 @@ class App extends Component{
                         </Navbar>
                             <div className="p-5 my-6 rounded" style={{ backgroundImage: `url("https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif")` , backgroundPosition: 'center', backgroundSize: 'cover',backgroundRepeat: 'no-repeat',width: '100vw',height: '90vh'}}>
                                 <Toast style={{height:"300px", width:"50%", display:"block"}}>
-                                    <ToastHeader align="center" style={{height:"100px", fontFamily:"Arizonia", fontSize:"30px", align:"center"}}>
-                                        Exceptional dental care for all ages
+                                    <ToastHeader align="center" style={{height:"100px", fontFamily:"Arizonia", fontSize:"30px", align:"center", padding:"20px"}}>
+                                        We are perfect for your entire family
                                     </ToastHeader>
                                     <ToastBody style={{fontFamily:"Verdana", fontSize:"20px", align:"center"}}>
                                         Call on (+91) 9833630985
@@ -231,30 +240,102 @@ class App extends Component{
                                         </Button>
                                     </ToastBody>
                                 </Toast>
+
                             </div>
                         
-                        <Card style={{padding:20}}>            
-                        <CardBody>
-                        <CardText >
-                            <img
-                            src="https://media.tenor.com/LwKy5Mellj8AAAAC/clinic-dentist.gif"
-                            alt="Card image cap"
-                            style={{float: "right", height:"300px"}}/> 
-                            <br></br>
-                            <TfiCheckBox size={50}/> <h2 style={{fontFamily:"Century Gothic", display:"inline"}}>On time, every time</h2>
-                            <h5>Appointments always start on time. We know how packed your schedule is.</h5>
-                            <br></br>
-                            <TfiCheckBox size={50}/> <h2 style={{fontFamily:"Century Gothic", display:"inline"}}>Quality First</h2>
-                            <h5>Rest assured, we encourage the use of only the finest materials available.</h5>
-                            <br></br>
-                            <TfiCheckBox size={50}/> <h2 style={{fontFamily:"Century Gothic", display:"inline"}}>Transparent Pricing</h2>
-                            <h5>We accept a wide variety of payment methods for hassle-free payment</h5>                    
-                        </CardText>         
-                        </CardBody>
-                        </Card>
-                        
 
 
+                            <br></br><br></br>
+                            {/* <div> */}
+      {/* <Accordion open={this.open} toggle={this.toggle}>
+        <Accordion.Item>
+          <Accordion.Header targetId="1">Accordion Item 1</Accordion.Header>
+          <Accordion.Body accordionId="1">
+            <strong>This is the first item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header targetId="2">Accordion Item 2</Accordion.Header>
+          <Accordion.Body accordionId="2">
+            <strong>This is the second item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header targetId="3">Accordion Item 3</Accordion.Header>
+          <Accordion.Body accordionId="3">
+            <strong>This is the third item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+    </div> */}
+
+<div>
+<hr></hr>
+    <p style={{padding:"20px", fontSize:"20px"}}>Gum therapy, also known as periodontal therapy, is a type of treatment for gum disease, which is an infection of the tissues that support your teeth. Gum disease can range from mild to severe, and it is caused by a build-up of plaque and tartar on the teeth and gums. If left untreated, gum disease can lead to tooth loss and other serious health problems.
+<br></br><br></br>
+<hr></hr>
+Gum therapy is a way to treat and reverse the effects of gum disease. It involves a range of procedures, 
+<ul><li>Scaling : removing plaque and tartar from the teeth </li><li>Root Planing : smoothing the root surfaces of the teeth to help prevent further build-up.</li><li>Antibiotics : to kill bacteria and laser therapy to kill bacteria and stimulate the growth of healthy gum tissue.</li>
+</ul>
+The specific treatment plan will depend on the severity of the gum disease and may involve a combination of different procedures.
+<br></br><br></br>
+
+<hr></hr>
+It is important to maintain good oral hygiene and visit the dentist regularly to prevent the development of gum disease and the need for gum therapy. This includes brushing and flossing your teeth daily, using mouthwash, and having your teeth professionally cleaned at least twice a year.</p>
+
+    </div>
+
+
+                {/* <div className="accordion" id="accordionExample">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
 
 
 
@@ -265,7 +346,7 @@ class App extends Component{
                           onMouseEnter={(e)=>this.onHover(e)}
                           onMouseLeave={(e)=>this.onHoverOver(e)}
                           alt=""
-                          src={general}
+                          src=""
                           className="img-responsive colored-pencil-effect"
                           
                           style={{width:"33%", opacity:"0.5", boxShadow: "inset -10px -10px 10px 20px white"}}
@@ -279,7 +360,7 @@ class App extends Component{
                           onMouseEnter={(e)=>this.onHover1(e)}
                           onMouseLeave={(e)=>this.onHoverOver1(e)}
                           alt=""
-                          src={cosmetic}
+                          src=""
                           className="img-responsive colored-pencil-effect"
                           
                           style={{width:"33%",opacity:"0.5"}}
@@ -291,7 +372,7 @@ class App extends Component{
                           onMouseEnter={(e)=>this.onHover2(e)}
                           onMouseLeave={(e)=>this.onHoverOver2(e)}
                           alt=""
-                          src={surgical}
+                          src=""
                           className="img-responsive colored-pencil-effect"
                           
                           style={{width:"33%",opacity:"0.5"}}

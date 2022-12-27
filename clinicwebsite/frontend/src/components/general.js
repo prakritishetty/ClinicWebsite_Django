@@ -1,18 +1,13 @@
 import React, {Component} from "react";
-import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
-import {Button, Toast, ToastHeader, ToastBody, Row, Col, Card, CardBody, CardGroup, CardImg, CardTitle, CardSubtitle, CardText, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from "reactstrap";
-import {TfiCheckBox} from "react-icons/tfi"
+import {Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,NavLink,Dropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap';
+import {Button, Toast, ToastHeader, ToastBody, Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from "reactstrap";
+import Accordion from "react-bootstrap/Accordion"
 import testimonial from "../testimonials.png"
-// import general from "./cleaningteeth.jpg"
-// import cosmetic from "./Porcelain-Veneers-Smiles-of-Chandler-AZ.webp"
-// import surgical from "./Dental-implant-illustration.jpg"
-import { MDBRipple } from 'mdb-react-ui-kit';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {BsInstagram} from "react-icons/bs"
 import {AiOutlineLinkedin} from "react-icons/ai"
-import ReactCompareImage from "react-compare-image";
 
-const HoverData = "Click or pinch to Zoom Image";
+
 
 const items = [
     {
@@ -47,7 +42,8 @@ class App extends Component{
             hover:false,
             hover1:false,
             hover2:false,
-            opacity:1
+            opacity:1,
+            open:1
         });
         this.onHover = this.onHover.bind(this);
         this.onHoverOver = this.onHoverOver.bind(this);
@@ -60,9 +56,10 @@ class App extends Component{
         this.goToIndex = this.goToIndex.bind(this);
         this.onExiting = this.onExiting.bind(this);
         this.onExited = this.onExited.bind(this);
+        this.toggle = this.toggle.bind(this);
     }
 
-    onMouseEnter = () => { this.setState({    isOpen: true}); };
+    onMouseEnter = () => { this.setState({isOpen: true}); };
     onMouseLeave = () => {this.setState({isOpen: false});};
     onMouseEnterG = () => {this.setState({isOpenG: true});};
     onMouseLeaveG = () => {this.setState({isOpenG: false});};
@@ -118,16 +115,22 @@ class App extends Component{
       if (this.animating) return;
       this.setState({ activeIndex: newIndex });
     }
+
+    
+    toggle = (id) => {
+    if (this.open === id) {
+        this.setState({ open: 0 });
+    } else {
+        this.setState({ open: id });
+    }
+    };
+
     
     render()
     {
         const { activeIndex } = this.state;
         
-        const before =
-        "https://upload.wikimedia.org/wikipedia/commons/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg?h=100px&w=20px";
-        const after =
-        "https://hindalkindi1992.files.wordpress.com/2013/11/portrait_eyes_23.jpg";
-  
+       
         
 
         const slides = items.map((item) => {
@@ -154,7 +157,7 @@ class App extends Component{
             
         <div>
                     <Navbar color="secondary" style={{color:"white"}}>
-                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"35px"}} >About Us</NavbarBrand>
+                        <NavbarBrand href="/" style={{color:"white", fontFamily:"Arizonia", fontSize:"35px"}} >General Services</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                             {/* <Collapse isOpen={this.state.isOpen} > */}
                                 <Nav className="ms-auto">
@@ -243,109 +246,205 @@ class App extends Component{
 
 
                             <br></br><br></br>
-                            <p style={{padding:"20px"}}>Greetings and welcome to our dental clinic! We value your trust in us and are committed to providing you with excellent dental care</p>
-                              <br></br><br></br>
-                            <div className="p-3 bg-success my-2 rounded" >
-                              
-                                <Toast>
-                                  <ToastHeader>
-                                    Dr(Mrs.) Sandhya Shetty, B.D.S
-                                  </ToastHeader>
-                                  <ToastBody>
-                                    This is a toast on a success background — check it out!
-                                  </ToastBody>
-                                </Toast>
-                                <Toast>
-                                  <ToastHeader>
-                                    Dr Pratiksha Shetty, B.D.S, M.D.S
-                                  </ToastHeader>
-                                  <ToastBody>
-                                    This is a toast on a success background — check it out!
-                                  </ToastBody>
-                                </Toast>
-                                
-                            </div>
-                            
+                            {/* <div> */}
+      {/* <Accordion open={this.open} toggle={this.toggle}>
+        <Accordion.Item>
+          <Accordion.Header targetId="1">Accordion Item 1</Accordion.Header>
+          <Accordion.Body accordionId="1">
+            <strong>This is the first item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header targetId="2">Accordion Item 2</Accordion.Header>
+          <Accordion.Body accordionId="2">
+            <strong>This is the second item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header targetId="3">Accordion Item 3</Accordion.Header>
+          <Accordion.Body accordionId="3">
+            <strong>This is the third item&#39;s accordion body.</strong>
+            You can modify any of this with custom CSS or overriding our default
+            variables. It&#39;s also worth noting that just about any HTML can
+            go within the <code>.accordion-body</code>, though the transition
+            does limit overflow.
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+    </div> */}
 
-                            {/* <div className="p-3 bg-success my-2 rounded">
-                                <Toast>
-                                  <ToastHeader>
-                                    Dr Pratiksha Shetty, B.D.S, M.D.S
-                                  </ToastHeader>
-                                  <ToastBody>
-                                    This is a toast on a success background — check it out!
-                                  </ToastBody>
-                                </Toast>
-                            </div> */}
+<div>
+    <p style={{padding:"20px", fontSize:"20px"}}>General dentistry is the branch that deals with cases related to XYZ</p>
+<Accordion  flush >
+  <Navbar>
+      <Accordion.Item eventKey="0" style={{padding:"20px"}}> 
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Cleanings and Exams</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1"  style={{  padding:"20px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Crowns</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2"  style={{ padding:"20px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Tooth Extractions</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3"  style={{ padding:"20px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Gum Therapy</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="4"  style={{ padding:"20px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Bondings and white fillings</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="5"  style={{ padding:"10px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Dentures</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="6"  style={{ padding:"10px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Night Guards</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="7"  style={{ padding:"10px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Family Dentistry</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="8"  style={{ padding:"10px"}}>
+        <Accordion.Header style={{fontFamily:"Verdana", background:"#808080"}}>Emergency Care</Accordion.Header>
+        <Accordion.Body style={{background:"#DCDCDC" , padding:"20px"}}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br></br><a  href="">Read More...</a>
+        </Accordion.Body>
+      </Accordion.Item>
+      </Navbar>
+    </Accordion>
+    </div>
 
 
-                            <br></br><br></br>
-                      
-                        
-
-
-                            <CardGroup style={{padding:"20px"}}>
-                              <Card style={{padding:"20px"}}>
-                                <ReactCompareImage leftImage={before} rightImage={after}/>
-                                <CardBody>
-                                  <CardTitle tag="h5">
-                                    Card title
-                                  </CardTitle>
-                                  <CardSubtitle
-                                    className="mb-2 text-muted"
-                                    tag="h6"
-                                  >
-                                    Card subtitle
-                                  </CardSubtitle>
-                                  <CardText>
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                  </CardText>
-                                  <Button>
-                                    Button
-                                  </Button>
-                                </CardBody>
-                              </Card>
-                              <Card style={{padding:"20px"}}>
-                              <ReactCompareImage leftImage={before} rightImage={after} />
-                                <CardBody>
-                                  <CardTitle tag="h5">
-                                    Card title
-                                  </CardTitle>
-                                  <CardSubtitle
-                                    className="mb-2 text-muted"
-                                    tag="h6"
-                                  >
-                                    Card subtitle
-                                  </CardSubtitle>
-                                  <CardText>
-                                    This card has supporting text below as a natural lead-in to additional content.
-                                  </CardText>
-                                  <Button>
-                                    Button
-                                  </Button>
-                                </CardBody>
-                              </Card>
-                              <Card style={{padding:"20px"}}>
-                              <ReactCompareImage leftImage={before} rightImage={after}/>
-                                <CardBody>
-                                  <CardTitle tag="h5">
-                                    Card title
-                                  </CardTitle>
-                                  <CardSubtitle
-                                    className="mb-2 text-muted"
-                                    tag="h6"
-                                  >
-                                    Card subtitle
-                                  </CardSubtitle>
-                                  <CardText>
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-                                  </CardText>
-                                  <Button>
-                                    Button
-                                  </Button>
-                                </CardBody>
-                              </Card>
-                            </CardGroup>
+                {/* <div className="accordion" id="accordionExample">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
+                      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div className="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
 
 
 
