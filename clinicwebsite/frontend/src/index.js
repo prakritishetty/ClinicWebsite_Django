@@ -4,6 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import { createRoot } from "react-dom/client";
+
+import bookappt from "./components/bookappointment.js";
+
+
+
+
+
 
 import App from './App.js';
 import AboutUs from './components/AboutUs.js'
@@ -35,8 +43,13 @@ import SameDayImplants from './components/sameDayImplants.js'
 import Book from './components/bookappointment.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// const rootElement = document.getElementById("root");
+// const root1 = createRoot(rootElement);
+
 root.render(
+  
     <BrowserRouter>
+    
   <Routes>
     <Route path="/" element={<App/>}/>
     <Route path="/about" element={<AboutUs/>} />
@@ -65,13 +78,17 @@ root.render(
     <Route path="/bridges" element={<Bridges/>} />
     <Route path="/overdentures" element={<OverDentures/>} />
     <Route path="/samedayimplant" element={<SameDayImplants/>} />
-    <Route path="/bookappointment" element={<Book/>} />
+    <Route path="/bookappointment" element={<Book />} />
 
 
     
   </Routes>
+
+  <bookappt/>
   </BrowserRouter> 
 );
+
+
 
 
 // If you want to start measuring performance in your app, pass a function
