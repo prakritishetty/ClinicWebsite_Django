@@ -4,9 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
-import { createRoot } from "react-dom/client";
+import createRoot  from "react-dom/client";
 
-import bookappt from "./components/bookappointment.js";
 
 
 
@@ -40,11 +39,11 @@ import ImplantSupportedDentures from './components/implantSupportedDentures.js'
 import Bridges from './components/bridges.js'
 import OverDentures from './components/overDentures.js'
 import SameDayImplants from './components/sameDayImplants.js'
-import Book from './components/bookappointment.js'
+import Testimonials from "./components/Testimonials.js"
+import Overview from './components/overview.js'
+import FormComp from './components/form.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// const rootElement = document.getElementById("root");
-// const root1 = createRoot(rootElement);
 
 root.render(
   
@@ -78,13 +77,14 @@ root.render(
     <Route path="/bridges" element={<Bridges/>} />
     <Route path="/overdentures" element={<OverDentures/>} />
     <Route path="/samedayimplant" element={<SameDayImplants/>} />
-    <Route path="/bookappointment" element={<Book />} />
+    <Route path="/testimonials" element={<Testimonials/>} />
+    <Route path="/bookappointment" element={<FormComp/>} />
 
 
     
   </Routes>
 
-  <bookappt/>
+  
   </BrowserRouter> 
 );
 
