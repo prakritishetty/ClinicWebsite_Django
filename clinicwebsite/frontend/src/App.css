@@ -2,6 +2,36 @@
   text-align: center;
 }
 
+
+/* 
+.myDiv:hover ~ .on{
+    display:block;
+    z-index:9999;
+     width:500px; 
+    color:red;
+    width: 1000px;
+    
+}
+.myDiv:hover  
+    {
+    opacity: .3;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    }
+
+.on
+    {
+    color: #000000;
+    display: None; 
+    /* z-index:-5000;*/
+    /* position: absolute;
+    left: 0; Align to the left of its container */
+     /* Position it below its container */
+  
+    /* } */ */
+
 .gradient-custom {
   background: 
   /* radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%), */

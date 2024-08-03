@@ -4,13 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
-import createRoot  from "react-dom/client";
-
-
-
-
-
-
 
 import App from './App.js';
 import AboutUs from './components/AboutUs.js'
@@ -24,8 +17,6 @@ import GumTherapy from './components/gumtherapy.js'
 import BondingFillings from './components/bondingfillings.js'
 import Dentures from './components/dentures.js'
 import NightGuards from './components/nightguards.js'
-import FamilyDentistry from './components/familydent.js'
-import EmergencyCare from './components/emergencycare.js'
 import InvisAlign from './components/invisalign.js'
 import TeethWhitening from './components/whitening.js'
 import Veneers from './components/veneers.js'
@@ -39,9 +30,9 @@ import ImplantSupportedDentures from './components/implantSupportedDentures.js'
 import Bridges from './components/bridges.js'
 import OverDentures from './components/overDentures.js'
 import SameDayImplants from './components/sameDayImplants.js'
+import DoctorLogin from './components/doctorLogin.js'
 import Testimonials from "./components/Testimonials.js"
-import Overview from './components/overview.js'
-import FormComp from './components/form.js'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -62,8 +53,6 @@ root.render(
     <Route path="/bondingfillings" element={<BondingFillings/>} />
     <Route path="/dentures" element={<Dentures/>} />
     <Route path="/nightguards" element={<NightGuards/>} />
-    <Route path="/familydent" element={<FamilyDentistry/>}/>
-    <Route path="/emergencyCare" element={<EmergencyCare/>} />
     <Route path="/invisalign" element={<InvisAlign/>} />
     <Route path="/teethwhitening" element={<TeethWhitening/>} />
     <Route path="/veneers" element={<Veneers/>} />
@@ -76,9 +65,9 @@ root.render(
     <Route path="/implantsupporteddentures" element={<ImplantSupportedDentures/>} />
     <Route path="/bridges" element={<Bridges/>} />
     <Route path="/overdentures" element={<OverDentures/>} />
-    <Route path="/samedayimplant" element={<SameDayImplants/>} />
+    <Route path="/samedayimplants" element={<SameDayImplants/>} />
     <Route path="/testimonials" element={<Testimonials/>} />
-    <Route path="/bookappointment" element={<FormComp/>} />
+    <Route path="/doctorlogin" element={<DoctorLogin/>} />
 
 
     
@@ -89,9 +78,4 @@ root.render(
 );
 
 
-
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
