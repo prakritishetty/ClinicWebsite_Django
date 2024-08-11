@@ -327,12 +327,12 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3">
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem",
+            fontSize: "clamp(1rem, 4vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
-            margin: "10px",
+            margin: "1vw",
           }}>Social</h3>
       <BsInstagram size="2em" className="mr-2" style={{margin:"1vw"}}/>
       <AiOutlineLinkedin size="2em" />
@@ -340,26 +340,50 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3">
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem",
+            fontSize: "clamp(1rem, 4vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
-            margin: "10px",
+            margin: "1vw",
           }}>Services</h3>
-      <NavLink href="/general">General</NavLink>
-      <NavLink href="/cosmetic">Cosmetic</NavLink>
-      <NavLink href="/surgical">Surgical</NavLink>
+      <NavLink href="/general" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "clamp(1rem, 2vw, 1.75rem)",
+            color: "white",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "0.5vw",
+            margin: "1vw",
+          }}>General</NavLink>
+      <NavLink href="/cosmetic" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "clamp(1rem, 2vw, 1.75rem)",
+            color: "white",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "0.5vw",
+            margin: "1vw",
+          }}>Cosmetic</NavLink>
+      <NavLink href="/surgical" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "clamp(1rem, 2vw, 1.75rem)",
+            color: "white",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "0.5vw",
+            margin: "1vw",
+          }}>Surgical</NavLink>
     </div>
     <div className="col-md-3 mb-3">
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem",
+            fontSize: "clamp(1rem, 4vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
-            margin: "10px",
+            margin: "1vw",
           }}>Our Office</h3>
       <NavLink href="/">Home</NavLink>
       <NavLink href="/about">About</NavLink>
