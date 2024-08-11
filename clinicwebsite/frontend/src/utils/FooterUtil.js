@@ -126,7 +126,7 @@ class FooterUtil extends Component {
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem",
+            fontSize: "clamp(1rem, 4vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
