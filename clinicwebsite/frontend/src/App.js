@@ -116,14 +116,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${removeWM_clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${removeWM_clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -137,35 +142,62 @@ class App extends Component {
         <br></br>
         <br></br>
 
-        <Card
+        <Card 
+        // className="p-3 m-2"
+          // style={{
+          //   padding: "2vw",
+          //   borderWidth: "0.2vw",
+          //   margin: "2vw",
+          //   position: "float",
+          //   backgroundColor: "white",
+          // }}
+
           style={{
-            padding: 20,
-            borderWidth: "1px",
-            margin: "5px",
-            position: "float",
+            // padding: "2vw",
+            borderWidth: "0.2vw",
+            margin: "2vw",
             backgroundColor: "white",
+            // display: "flex", // Enables Flexbox
+            // alignItems: "center", // Vertical centering
+            // justifyContent: "center", // Horizontal centering (if needed)
+            // minHeight: "40vw", // Ensure card has a minimum height
           }}
         >
           <CardBody>
-            <CardText>
+            <CardText >
               <img
                 src={`${removeWM_clinic1}`}
                 alt="Card image cap"
-                style={{ float: "right", height: "300px" }}
+                className="float-md-right mb-3 mb-md-0"
+                style={{ float: "right", width: '40vw', height: '30vw' }}
               />
               <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
               <TfiCheckBox size={50} color="black" />
-              <h1
+              <h1 
                 style={{
                   fontFamily: "Playfair Display",
+                  fontSize: "2vw",
                   display: "inline",
-                  fontSize: "30px",
                   color: "black",
+                  // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
+                  padding: "1vw",
+                  // margin: "10px",
                 }}
               >
                 On time, every time
               </h1>
-              <h3 style={{ color: "black" }}>
+              <h3 style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "1.5vw",
+                  // display: "inline",
+                  color: "black",
+                  // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                 Appointments always start on time. We know how packed your
                 schedule is.
               </h3>
@@ -174,14 +206,25 @@ class App extends Component {
               <h1
                 style={{
                   fontFamily: "Playfair Display",
+                  fontSize: "2vw",
                   display: "inline",
-                  fontSize: "30px",
                   color: "black",
+                  // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
+                  padding: "1vw",
+                  // margin: "10px",
                 }}
               >
                 Quality First
               </h1>
-              <h3 style={{ color: "black" }}>
+              <h3 style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "1.5vw",
+                  // display: "inline",
+                  color: "black",
+                  // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                 Rest assured, we encourage the use of only the finest materials
                 available.
               </h3>
@@ -190,14 +233,25 @@ class App extends Component {
               <h1
                 style={{
                   fontFamily: "Playfair Display",
+                  fontSize: "2vw",
                   display: "inline",
-                  fontSize: "30px",
                   color: "black",
+                  // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
+                  padding: "1vw",
+                  // margin: "10px",
                 }}
               >
                 Transparent Pricing
               </h1>
-              <h3 style={{ color: "black" }}>
+              <h3 style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "1.5vw",
+                  // display: "inline",
+                  color: "black",
+                  // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                 We accept a wide variety of payment methods for hassle-free
                 payment
               </h3>

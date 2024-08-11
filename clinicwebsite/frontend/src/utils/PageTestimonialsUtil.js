@@ -68,7 +68,7 @@ const PageTestimonialsUtil = () => {
     <Card
       className="container-fluid"
       style={{
-        height: "550px",
+        height: "50vw",
         borderWidth: "2px",
         margin: "5px",
         borderColor: "white",
@@ -78,7 +78,7 @@ const PageTestimonialsUtil = () => {
       <div
         style={{
           fontFamily: "Playfair Display",
-          fontSize: "2.5vw",
+          fontSize: "2vw",
           color: "white",
         }}
       >
@@ -90,7 +90,7 @@ const PageTestimonialsUtil = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             position: "center",
-            height: "400px",
+            height: "40vw",
           }}
         >
           <div
@@ -99,13 +99,13 @@ const PageTestimonialsUtil = () => {
               fontSize: "1.5vw",
               color: "white",
               textAlign: "right",
-              padding: "20px",
+              padding: "2vw",
               textDecorationColor: "silver",
             }}
           >
             <a
               href="/testimonials"
-              style={{ color: "white", textDecorationColor: "silver" }}
+              style={{ color: "white", textDecorationColor: "silver", fontSize:"1.5vw" }}
             >
               See all testimonials
             </a>
@@ -127,9 +127,9 @@ const PageTestimonialsUtil = () => {
               >
                 <div
                   style={{
-                    height: "600px",
+                    height: "60vw",
                     width: "100%",
-                    padding: "20px",
+                    padding: "2vw",
                     display: "flex",
                     justifyContent: "center",
                   }}
@@ -153,7 +153,7 @@ const PageTestimonialsUtil = () => {
                         </span>
                         <span
                           className="post-txt"
-                          style={{ color: "white" }}
+                          style={{ color: "white" ,fontSize: "1.5vw",}}
                         >
                           {item.headertext}
                           <br />

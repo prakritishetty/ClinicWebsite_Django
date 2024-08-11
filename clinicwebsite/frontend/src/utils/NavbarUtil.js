@@ -11,6 +11,7 @@ import {
   DropdownMenu,
   DropdownItem,
   Button,
+  // Collapse
 } from "reactstrap";
 
 class NavbarUtil extends Component {
@@ -98,43 +99,51 @@ class NavbarUtil extends Component {
   render() {
     return (
       <Navbar
+        expand="md"
         style={{
           color: "white",
           fontFamily: "Playfair Display",
-          fontSize: "30px",
+          // fontSize: "30px",
           position: "fixed",
           width: "100%",
-          zIndex: "1",
-          paddingLeft: "0px",
-          marginLeft: "0px",
+          zIndex: "100",
+          height:"15vh",
+          // paddingLeft: "0px",
+          // marginLeft: "0px",
           backgroundColor: "rgba(0, 28, 40, 0.38)",
         }}
       >
         <NavbarBrand
           href="/"
-          style={{
-            color: "white",
-            fontFamily: "Playfair Display",
-            fontSize: "30px",
-            paddingLeft: "0px",
-            marginLeft: "0px",
-          }}
+          className="text-white" 
+        style={{
+          fontFamily: "Playfair Display",
+          fontSize: "3vw",
+          color: "white",
+          // backgroundColor: "rgba(0,0,0,0.5)",
+          width: "100vw",
+          padding: "1vw",
+          margin: "10px",
+        }}
         >
           Dr Sandhya's Total Dental Care
         </NavbarBrand>
-        {/* <NavbarToggler onClick={this.toggle} /> */}
-
-        <Nav className="ms-auto">
+        
+        {/* <Collapse isOpen={this.state.isOpen} navbar> */}
+        <Nav className="ml-auto" navbar>
           <NavItem style={{ width: "200px" }}></NavItem>
           <NavItem>
             <NavLink
               onClick=""
               href="/about"
               style={{
-                color: "white",
                 fontFamily: "Playfair Display",
-                fontSize: "20px",
-                backgroundColor: "rgba(0, 28, 40, 0.38)",
+                fontSize: "1.5vw",
+                color: "white",
+                // backgroundColor: "rgba(0,28,40,0.38)",
+                // width: "100vw",
+                padding: "1vw",
+                margin: "0.5vw",
               }}
             >
               About
@@ -149,11 +158,13 @@ class NavbarUtil extends Component {
             <DropdownToggle
               nav
               style={{
-                color: "white",
                 fontFamily: "Playfair Display",
-                fontSize: "20px",
-                backgroundColor: "rgba(0, 28, 40, 0.38)",
-                padding: "10px",
+                fontSize: "1.5vw",
+                color: "white",
+                // backgroundColor: "rgba(0,28,40,0.38)",
+                // width: "100vw",
+                padding: "0.5vw",
+                margin: "0.5vw",
               }}
             >
               Services
@@ -165,41 +176,110 @@ class NavbarUtil extends Component {
                 onMouseLeave={this.onMouseLeaveG}
                 isOpen={this.state.isOpenG}
               >
-                <DropdownToggle nav style={{ fontSize: "20px" }}>
+                <DropdownToggle nav 
+                style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}
+                >
                   General
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem
                     href="/cleaningexams"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Cleanings and Exams
                   </DropdownItem>
 
-                  <DropdownItem href="/crowns" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/crowns" 
+                  style={{
+                    fontFamily: "Playfair Display",
+                    fontSize: "2vw",
+                    // color: "white",
+                    // backgroundColor: "rgba(0,28,40,0.38)",
+                    // width: "100vw",
+                    padding: "1vw",
+                    // margin: "10px",
+                  }}
+                  >
                     Crowns
                   </DropdownItem>
                   <DropdownItem
                     href="/extractions"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Tooth Extractions
                   </DropdownItem>
-                  <DropdownItem href="/gumtherapy" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/gumtherapy" style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     Gum Therapy
                   </DropdownItem>
                   <DropdownItem
                     href="/bondingfillings"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Bonding and White Fillings
                   </DropdownItem>
-                  <DropdownItem href="/dentures" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/dentures" 
+                  style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     Dentures
                   </DropdownItem>
                   <DropdownItem
                     href="/nightguards"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Night Guards
                   </DropdownItem>
@@ -212,44 +292,108 @@ class NavbarUtil extends Component {
                 onMouseLeave={this.onMouseLeaveC}
                 isOpen={this.state.isOpenC}
               >
-                <DropdownToggle nav style={{ fontSize: "20px" }}>
+                <DropdownToggle nav style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                   Cosmetic
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem href="/invisalign" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/invisalign" style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     InvisAlign
                   </DropdownItem>
 
                   <DropdownItem
                     href="/teethwhitening"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Teeth Whitening
                   </DropdownItem>
                   <DropdownItem
                     href="/bondingfillings"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Bonding
                   </DropdownItem>
-                  <DropdownItem href="/veneers" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/veneers" style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     Veneers
                   </DropdownItem>
                   <DropdownItem
                     href="/smilemakeover"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Smile Makeover
                   </DropdownItem>
                   <DropdownItem
                     href="/gummysmilereduction"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Gummy Smile Reduction
                   </DropdownItem>
                   <DropdownItem
                     href="/fullmouthrehab"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Full Mouth Rehabilitation
                   </DropdownItem>
@@ -262,43 +406,115 @@ class NavbarUtil extends Component {
                 onMouseLeave={this.onMouseLeaveS}
                 isOpen={this.state.isOpenS}
               >
-                <DropdownToggle nav style={{ fontSize: "20px" }}>
+                <DropdownToggle nav style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                   Surgical
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem href="/implants" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/implants" style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     Implants
                   </DropdownItem>
                   <DropdownItem
                     href="/extractions"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Extractions
                   </DropdownItem>
-                  <DropdownItem href="/rootcanal" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/rootcanal" style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     Root Canal
                   </DropdownItem>
-                  <DropdownItem href="/bonegraft" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/bonegraft" style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     Bone Graft
                   </DropdownItem>
                   <DropdownItem
                     href="/implantsupporteddentures"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Implant-supported Dentures
                   </DropdownItem>
-                  <DropdownItem href="/bridges" style={{ fontSize: "20px" }}>
+                  <DropdownItem href="/bridges" style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  // color: "white",
+                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // width: "100vw",
+                  padding: "1vw",
+                  // margin: "10px",
+                }}>
                     Bridges
                   </DropdownItem>
                   <DropdownItem
                     href="/overdentures"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Over Dentures
                   </DropdownItem>
                   <DropdownItem
                     href="/samedayimplants"
-                    style={{ fontSize: "20px" }}
+                    style={{
+                      fontFamily: "Playfair Display",
+                      fontSize: "2vw",
+                      // color: "white",
+                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // width: "100vw",
+                      padding: "1vw",
+                      // margin: "10px",
+                    }}
                   >
                     Same day Implants
                   </DropdownItem>
@@ -313,15 +529,20 @@ class NavbarUtil extends Component {
               onMouseEnter={this.onMouseEnterDoctorLogin}
               onMouseLeave={this.onMouseLeaveDoctorLogin}
               href="/doctorlogin"
+              className="text-white"
               style={{
-                color: "white",
+                // color: "white",
                 fontFamily: "Playfair Display",
-                fontSize: "20px",
-                marginRight: "5px",
-                backgroundColor: this.state.isOpenDoctorLogin
-                  ? "lightslategrey"
-                  : "rgba(0, 28, 40, 0.38)",
+                fontSize: "1.5vw",
+                padding:"1vw",
+                margin: "0.5vw",
+                width:"11vw",
+                // backgroundColor: this.state.isOpenDoctorLogin
+                //   ? "lightslategrey"
+                //   : "rgba(0, 28, 40, 0.38)",
               }}
+
+             
             >
               Doctor Login
             </NavLink>
@@ -329,7 +550,15 @@ class NavbarUtil extends Component {
           <Button
             active
             color="light"
-            style={{ fontFamily: "Playfair Display", fontSize: "20px" }}
+            style={{
+              fontFamily: "Playfair Display",
+              fontSize: "1.5vw",
+              color: "white",
+              // backgroundColor: "rgba(0,0,0,0.5)",
+              width: "15vw",
+              padding: "0.5vw",
+              // margin: "0.5vw",
+            }}
           >
             <a
               href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
@@ -339,6 +568,7 @@ class NavbarUtil extends Component {
             </a>
           </Button>
         </Nav>
+        
       </Navbar>
     );
   }
