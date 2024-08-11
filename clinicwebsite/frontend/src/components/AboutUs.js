@@ -40,34 +40,34 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
-          style={{
-            padding: "50px",
-            margin: "0px",
-            backgroundImage: `url(${ammawithbg})`,
-            // backgroundPosition: "center",
-            backgroundPosition: "right 10% top 25%",
-            // marginTop:"-50px",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            height: "120vh",
-          }}
+          // className="p-5 my-6 rounded"
+          className="d-flex flex-column justify-content-center align-items-center"
+        style={{
+          padding: "5vw 30vw",
+          margin: "0vw",
+          backgroundImage: `url(${ammawithbg})`,
+          backgroundPosition: "center top 30%",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100vw",
+          height: "150vh",
+          position:"relative"
+        }}
         >
           <div
+            className="text-center"
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "60px",
-              align: "center",
+              fontSize: "6vw",
               color: "white",
-              backgroundColor: "rgba(0,0,0,.5)",
-              width: "1050px",
+              backgroundColor: "rgba(0,0,0,0.5)",
+              width: "100vw",
               padding: "10px",
               margin: "10px",
             }}
           >
             {" "}
-            This is where we tell you all about us!
+            About Us!
           </div>
           <Button
             active
@@ -88,7 +88,15 @@ class App extends Component {
             >
               <a
                 href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
+                style={{
+                  fontFamily: "Playfair Display",
+                  fontSize: "2vw",
+                  color: "white",
+                  // backgroundColor: "rgba(0,0,0,0.5)",
+                  // width: "100vw",
+                  // padding: "10px",
+                  // margin: "10px",
+                }}
               >
                 Book an appointment
               </a>

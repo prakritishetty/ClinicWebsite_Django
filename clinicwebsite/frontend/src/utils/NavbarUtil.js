@@ -131,7 +131,7 @@ class NavbarUtil extends Component {
         
         {/* <Collapse isOpen={this.state.isOpen} navbar> */}
         <Nav className="ml-auto" navbar>
-          <NavItem style={{ width: "200px" }}></NavItem>
+          <NavItem style={{ width: "1vw" }}></NavItem>
           <NavItem>
             <NavLink
               onClick=""
