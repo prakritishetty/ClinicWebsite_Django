@@ -126,7 +126,7 @@ class FooterUtil extends Component {
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.5vw",
+            fontSize: "clamp(1rem, 4vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -136,7 +136,7 @@ class FooterUtil extends Component {
           <hr></hr>
     <p style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.5vw",
+            fontSize: "clamp(1rem, 4vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -316,7 +316,7 @@ class FooterUtil extends Component {
 
 <div className="container-fluid text-white py-4" style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.5vw",
+            fontSize: "clamp(1rem, 4vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -327,7 +327,7 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3">
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.5vw",
+            fontSize: "clamp(1rem, 4vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -340,7 +340,7 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3">
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.5vw",
+            fontSize: "clamp(1rem, 4vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -354,7 +354,7 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3">
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.5vw",
+            fontSize: "clamp(1rem, 4vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -373,7 +373,7 @@ class FooterUtil extends Component {
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
-            margin: "10px",
+            margin: "1vw",
           }}>Contact Us</h3>
       <p>Call (+91) 9833630985</p>
       <p>Shop #9, Saidham Complex,<br />P.K road, Mulund West<br />Mumbai - 400080</p>
