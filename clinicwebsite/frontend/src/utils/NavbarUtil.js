@@ -112,7 +112,8 @@ class NavbarUtil extends Component {
           // marginLeft: "0px",
           backgroundColor: "rgba(0, 28, 40, 0.38)",
           flexDirection: "column",
-          alignItems: "center",
+          
+          alignItems: "stretch",
         }}
       >
         <NavbarBrand
