@@ -43,11 +43,10 @@ class App extends Component {
           <div
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "60px",
-              align: "center",
+              fontSize: "6vw",
               color: "white",
-              backgroundColor: "rgba(0,0,0,.5)",
-              width: "500px",
+              backgroundColor: "rgba(0,0,0,0.5)",
+              width: "100vw",
               padding: "10px",
               margin: "10px",
             }}

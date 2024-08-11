@@ -49,16 +49,15 @@ class App extends Component {
           }}
         >
           <div
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "60px",
-              align: "center",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,.5)",
-              width: "850px",
-              padding: "10px",
-              margin: "10px",
-            }}
+           style={{
+            fontFamily: "Playfair Display",
+            fontSize: "6vw",
+            color: "white",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            width: "100vw",
+            padding: "10px",
+            margin: "10px",
+          }}
           >
             {" "}
             Bondings and White Fillings!
