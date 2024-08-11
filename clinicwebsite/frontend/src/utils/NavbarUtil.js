@@ -125,8 +125,8 @@ class NavbarUtil extends Component {
           // backgroundColor: "rgba(0,0,0,0.5)",
           // width: "100vw",
           padding: "1vw",
-          margin: "10px",
-          width: "100%",
+          // margin: "10px",
+          width: "50vw",
           // textAlign: "center",
         }}
         >
@@ -137,7 +137,7 @@ class NavbarUtil extends Component {
         <Nav className="ml-auto" navbar style={{
             flexDirection: "row",
             flexWrap: "wrap",
-            justifyContent: "center",
+            // justifyContent: "center",
           }}>
           <NavItem style={{ width: "1vw" }}></NavItem>
           <NavItem>
