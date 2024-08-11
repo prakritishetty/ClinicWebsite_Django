@@ -69,8 +69,8 @@ const PageTestimonialsUtil = () => {
       className="container-fluid"
       style={{
         height: "50vw",
-        borderWidth: "2px",
-        margin: "5px",
+        borderWidth: "0.2vw",
+        margin: "0.5vw",
         borderColor: "white",
         backgroundColor: "rgba(0, 28, 40, 0.38)",
       }}

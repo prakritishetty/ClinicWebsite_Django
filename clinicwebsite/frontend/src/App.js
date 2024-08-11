@@ -175,7 +175,7 @@ class App extends Component {
               <br></br>
               <br></br>
               <br></br>
-              <TfiCheckBox size={50} color="black" />
+              <TfiCheckBox size="3vw" color="black" />
               <h1 
                 style={{
                   fontFamily: "Playfair Display",
@@ -202,7 +202,7 @@ class App extends Component {
                 schedule is.
               </h3>
               <br></br>
-              <TfiCheckBox size={50} color="black" />{" "}
+              <TfiCheckBox size="3vw" color="black" />{" "}
               <h1
                 style={{
                   fontFamily: "Playfair Display",
@@ -229,7 +229,7 @@ class App extends Component {
                 available.
               </h3>
               <br></br>
-              <TfiCheckBox size={50} color="black" />{" "}
+              <TfiCheckBox size="3vw" color="black" />{" "}
               <h1
                 style={{
                   fontFamily: "Playfair Display",
