@@ -116,7 +116,7 @@ class FooterUtil extends Component {
   <div className="col-md-4">
     <h2 className="mb-3"  style={{
             fontFamily: "Playfair Display",
-            fontSize: "3vw",
+            fontSize: "3.5vw",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -347,33 +347,9 @@ class FooterUtil extends Component {
             padding: "0.5vw",
             margin: "1vw",
           }}>Services</h3>
-      <NavLink href="/general" style={{
-            fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 2vw, 1.75rem)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "1vw",
-          }}>General</NavLink>
-      <NavLink href="/cosmetic" style={{
-            fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 2vw, 1.75rem)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "1vw",
-          }}>Cosmetic</NavLink>
-      <NavLink href="/surgical" style={{
-            fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 2vw, 1.75rem)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "1vw",
-          }}>Surgical</NavLink>
+      <NavLink href="/general">General</NavLink>
+      <NavLink href="/cosmetic">Cosmetic</NavLink>
+      <NavLink href="/surgical">Surgical</NavLink>
     </div>
     <div className="col-md-3 mb-3">
       <h3 style={{
