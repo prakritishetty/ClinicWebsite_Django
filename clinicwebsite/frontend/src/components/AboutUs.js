@@ -28,7 +28,7 @@ class App extends Component {
         marginLeft: "0",
         paddingRight: "0",
         paddingLeft: "0",
-        backgroundImage: `url(${removeWM_clinic1})`,
+        backgroundImage: `url(${clinic1})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
