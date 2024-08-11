@@ -169,7 +169,7 @@ class App extends Component {
                 src={`${removeWM_clinic1}`}
                 alt="Card image cap"
                 className="float-md-right mb-3 mb-md-0"
-                style={{ float: "right", width: '40vw', height: '30vw' }}
+                style={{ float: "right", width: '30vw', height: '25vw' }}
               />
               <br></br>
               <br></br>

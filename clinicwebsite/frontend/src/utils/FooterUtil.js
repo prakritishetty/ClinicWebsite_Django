@@ -19,8 +19,8 @@ class FooterUtil extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "250px",
-            borderWidth: "2px",
+            height: "50vw",
+            borderWidth: "1vw",
             margin: "0px",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
@@ -320,7 +320,7 @@ class FooterUtil extends Component {
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
-            padding: "1.5vw",
+            padding: "2.5vw",
             margin: "0.5vw",
           }} >
   <div className="row">

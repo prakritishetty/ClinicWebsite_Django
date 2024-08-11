@@ -107,12 +107,12 @@ class NavbarUtil extends Component {
           position: "fixed",
           width: "100%",
           zIndex: "100",
-          height:"15vh",
+          height:"6vw",
           // paddingLeft: "0px",
           // marginLeft: "0px",
           backgroundColor: "rgba(0, 28, 40, 0.38)",
           flexDirection: "column",
-          
+          padding:"0.5vw",
           alignItems: "stretch",
         }}
       >
