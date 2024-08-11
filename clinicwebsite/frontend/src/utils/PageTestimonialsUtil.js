@@ -68,7 +68,7 @@ const PageTestimonialsUtil = () => {
     <Card
       className="container-fluid"
       style={{
-        height: "100%",
+        height: "70vw",
         
         borderWidth: "0.2vw",
         margin: "0.5vw",
@@ -150,6 +150,7 @@ const PageTestimonialsUtil = () => {
                             className="quote-img"
                             src="https://i.imgur.com/i06xx2I.png"
                             alt="quote"
+                            size = "2vw"
                           />
                         </span>
                         <span
@@ -165,6 +166,7 @@ const PageTestimonialsUtil = () => {
                             className="nice-img"
                             src="https://i.imgur.com/l5AkSHd.png"
                             alt="nice"
+                            size = "2vw"
                           />
                         </span>
                       </p>

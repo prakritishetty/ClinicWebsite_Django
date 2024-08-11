@@ -126,7 +126,7 @@ class FooterUtil extends Component {
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem)",
+            fontSize: "clamp(1rem, 2.5vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -382,7 +382,7 @@ class FooterUtil extends Component {
   </div>
 </div>
 
-        <div className="container-fluid text-white py-4" style={{backgroundColor:"rgba(0, 28, 40, 0.38)", padding:"20px", fontFamily:"Playfair Display", fontSize:"clamp(1rem, 4vw, 1.75rem)"}}
+        <div className="container-fluid text-white py-4" style={{backgroundColor:"rgba(0, 28, 40, 0.38)", padding:"20px", fontFamily:"Playfair Display", fontSize:"clamp(1rem, 3vw, 1.75rem)"}}
           // className="text"
           // style={{
           //   paddingLeft: "750px",

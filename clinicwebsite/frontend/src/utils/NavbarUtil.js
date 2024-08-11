@@ -111,6 +111,8 @@ class NavbarUtil extends Component {
           // paddingLeft: "0px",
           // marginLeft: "0px",
           backgroundColor: "rgba(0, 28, 40, 0.38)",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
         <NavbarBrand
@@ -121,16 +123,22 @@ class NavbarUtil extends Component {
           fontSize: "3vw",
           color: "white",
           // backgroundColor: "rgba(0,0,0,0.5)",
-          width: "100vw",
+          // width: "100vw",
           padding: "1vw",
           margin: "10px",
+          width: "100%",
+          // textAlign: "center",
         }}
         >
           Dr Sandhya's Total Dental Care
         </NavbarBrand>
         
         {/* <Collapse isOpen={this.state.isOpen} navbar> */}
-        <Nav className="ml-auto" navbar>
+        <Nav className="ml-auto" navbar style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}>
           <NavItem style={{ width: "1vw" }}></NavItem>
           <NavItem>
             <NavLink
