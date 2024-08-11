@@ -368,7 +368,7 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3">
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.5vw",
+            fontSize:"clamp(1rem, 4vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
