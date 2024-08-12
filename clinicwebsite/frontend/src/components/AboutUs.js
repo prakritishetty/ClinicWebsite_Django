@@ -280,7 +280,7 @@ class App extends Component {
         <br></br>
         <br></br>
 
-        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20px" }}>
+        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20vw" }}>
 
         <BeforeAfterUtil />
         </div>
