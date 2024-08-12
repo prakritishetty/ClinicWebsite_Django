@@ -100,17 +100,17 @@ class BeforeAfterUtil extends Component {
       <Card
         style={{
           fontFamily: "Playfair Display",
-          fontSize: "35px",
+          fontSize: "3vw",
           color: "Black",
-          padding: "30px",
-          margin: "5px",
+          padding: "1vw",
+          margin: "0.5vw",
           backgroundColor: "rgba(255, 255, 255)",
-          height: "500px",
+          height: "90vw",
         }}
       >
         Case Histories - Before/After:
-        <CardGroup style={{ padding: "20px", height: "100px" }}>
-          <Card style={{ padding: "20px", height: "300px" }}>
+        <CardGroup style={{ padding: "2vw", height: "90vw" }}>
+          <Card style={{ padding: "2vw", height: "30vw" }}>
             <ReactCompareImage leftImage={veneerpre} rightImage={veneerpost} />
             <CardBody>
               <CardSubtitle className="mb-2 text-muted" tag="h3">
@@ -118,7 +118,7 @@ class BeforeAfterUtil extends Component {
               </CardSubtitle>
             </CardBody>
           </Card>
-          <Card style={{ padding: "20px", height: "300px" }}>
+          <Card style={{ padding: "2vw", height: "30vw" }}>
             <ReactCompareImage leftImage={cleftpalatepre} rightImage={cleftpalatepost} />
             <CardBody>
               <CardSubtitle className="mb-2 text-muted" tag="h3">
@@ -126,7 +126,7 @@ class BeforeAfterUtil extends Component {
               </CardSubtitle>
             </CardBody>
           </Card>
-          <Card style={{ padding: "20px", height: "300px" }}>
+          <Card style={{ padding: "2vw", height: "30vw" }}>
             <ReactCompareImage leftImage={compositepre} rightImage={compositepost} />
             <CardBody>
               <CardSubtitle className="mb-2 text-muted" tag="h3">

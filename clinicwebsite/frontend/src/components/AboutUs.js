@@ -63,7 +63,6 @@ class App extends Component {
   backgroundPosition: "center top 30%",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
-  width: "100%",
   height: "150vh",
   position: "relative"
         }}
@@ -114,8 +113,8 @@ class App extends Component {
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
-              padding: "10px",
-              margin: "6px",
+              padding: "1vw",
+              margin: "0.6vw",
             }}
           >
             {" "}
@@ -131,14 +130,14 @@ class App extends Component {
 
         <br></br>
 
-        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20px" }}>
+        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "10vw" }}>
 
         <Card
           class="container-fluid"
           style={{
-            height: "250px",
-            borderWidth: "2px",
-            margin: "5px",
+            height: "70vw",
+            borderWidth: "0.2vw",
+            margin: "0.5vw",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
@@ -147,12 +146,12 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "30px",
+              fontSize: "2vw",
               color: "Black",
               position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
+              padding: "2vw",
+              margin: "1vw",
+              borderWidth: "0.2vw",
               borderColor: "black",
             }}
           >
