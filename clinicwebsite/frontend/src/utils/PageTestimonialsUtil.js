@@ -68,7 +68,7 @@ const PageTestimonialsUtil = () => {
     <Card
       className="container-fluid"
       style={{
-        height: "70vw",
+        height: "90vw",
         
         borderWidth: "0.2vw",
         margin: "0.5vw",

@@ -20,7 +20,7 @@ class FooterUtil extends Component {
           class="container-fluid"
           style={{
             height: "50vw",
-            borderWidth: "1vw",
+            borderWidth: "0.2vw",
             margin: "0px",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
@@ -116,7 +116,7 @@ class FooterUtil extends Component {
   <div className="col-md-4">
     <h2 className="mb-3"  style={{
             fontFamily: "Playfair Display",
-            fontSize: "3.5vw",
+            fontSize: "4vw",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -126,7 +126,7 @@ class FooterUtil extends Component {
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 2.5vw, 1.75rem)",
+            fontSize: "clamp(1rem, 3vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -136,7 +136,7 @@ class FooterUtil extends Component {
           <hr></hr>
     <p style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem",
+            fontSize: "clamp(1rem, 3vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -316,7 +316,7 @@ class FooterUtil extends Component {
 
 <div className="container-fluid text-white py-4" style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem",
+            fontSize: "clamp(1rem, 3vw, 1.75rem",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",

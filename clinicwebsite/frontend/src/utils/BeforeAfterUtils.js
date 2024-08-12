@@ -102,10 +102,10 @@ class BeforeAfterUtil extends Component {
           fontFamily: "Playfair Display",
           fontSize: "3vw",
           color: "Black",
-          padding: "1vw",
+          padding: "2vw",
           margin: "0.5vw",
           backgroundColor: "rgba(255, 255, 255)",
-          height: "90vw",
+          height: "110vw",
         }}
       >
         Case Histories - Before/After:
