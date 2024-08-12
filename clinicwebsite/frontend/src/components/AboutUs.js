@@ -95,7 +95,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "4vw",
+                fontSize: "2.5vw",
                 color: "white",
               }}
             >
@@ -110,10 +110,10 @@ class App extends Component {
           <div
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "3vw",
+              fontSize: "2.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
+              width: "35vw",
               padding: "10px",
               margin: "6px",
             }}
@@ -130,6 +130,9 @@ class App extends Component {
         <br></br>
 
         <br></br>
+
+        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20px" }}>
+
         <Card
           class="container-fluid"
           style={{
@@ -140,6 +143,7 @@ class App extends Component {
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
         >
+        
           <Card
             style={{
               fontFamily: "Playfair Display",
@@ -157,6 +161,7 @@ class App extends Component {
             excellent dental care
           </Card>
         </Card>
+
 
         <br></br>
         <br></br>
@@ -268,12 +273,17 @@ class App extends Component {
           </Nav>
         </Navbar>
 
+        </div>
+
         <br></br>
         <br></br>
         <br></br>
         <br></br>
 
+        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20px" }}>
+
         <BeforeAfterUtil />
+        </div>
 
         <br></br>
         <br></br>

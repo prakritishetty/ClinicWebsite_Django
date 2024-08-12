@@ -66,7 +66,7 @@ class App extends Component {
             active
             style={{
               padding: "10px",
-              margin: "4px",
+              // margin: "4px",
               borderColor: "white",
               backgroundColor: "black",
             }}
@@ -74,8 +74,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "35px",
-                align: "center",
+                fontSize: "4vw",
                 color: "white",
               }}
             >
