@@ -172,7 +172,7 @@ class App extends Component {
             <CardBody>
               
               <CardText>
-                
+
               <div className="row" style={{
             fontFamily: "Playfair Display",
             fontSize: "1.25vw",
@@ -240,7 +240,7 @@ class App extends Component {
                 <img
                   src={cleaningteeth}
                   alt="Card image cap"
-                  style={{ float: "right", height: "300px" }}
+                  style={{ height: "30vw", width:"30vw" }}
                 />
                 </div>
                 </div>
