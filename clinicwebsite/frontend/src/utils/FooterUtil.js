@@ -84,7 +84,7 @@ class FooterUtil extends Component {
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "10px",
-            margin: "10px",
+            margin: "10px"
           }}>
           <div className="col-md-8" >
             <iframe

@@ -119,20 +119,21 @@ class App extends Component {
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
         >
+          
           <Card
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "30px",
+              fontSize: "1.75vw",
               color: "Black",
               position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
+              padding: "2vw",
+              margin: "1vw",
+              borderWidth: "0.2vw",
               borderColor: "black",
-              fontSize: "25px",
+              // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "40px" }}>
+            <p style={{ fontSize: "2.5vw", fontFamily:"Playfair Display" }}>
               <b>Tooth Cleaning and Examinations</b>
             </p>
             Tooth cleaning and examination are important parts of maintaining
@@ -147,81 +148,103 @@ class App extends Component {
 
           <Card
             style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
-              position: "float",
-              backgroundColor: "white",
+              fontFamily: "Playfair Display",
+              fontSize: "1.75vw",
+              color: "Black",
+              position: "center",
+              padding: "2vw",
+              margin: "1vw",
+              borderWidth: "0.2vw",
+              borderColor: "black",
+              // fontSize: "25px",
             }}
           >
+            
             <CardHeader
               style={{
                 color: "black",
-                fontSize: "35px",
+                fontSize: "2.5vw",
                 fontFamily: "Playfair Display",
               }}
             >
               Our Approach to Teeth Cleaning
             </CardHeader>
             <CardBody>
+              
               <CardText>
-                <img
-                  src={cleaningteeth}
-                  alt="Card image cap"
-                  style={{ float: "right", height: "300px" }}
-                />
-                <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                
+              <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.25vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "10px",
+            margin: "10px",
+          }}>
+          <div className="col-md-8" >
+                
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Examination
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
                   The dentist will examine your teeth and gums for any signs of
                   problems, such as tooth decay, gum disease, or oral cancer.
                 </h3>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   A stitch in time saves nine
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   It's generally recommended to have your teeth cleaned and
                   examined by a dentist at least twice a year, or more
                   frequently if you have gum disease or other oral health
                   issues.
                 </h3>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Self-Care
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black" , fontSize: "1.75vw"}}>
                   In addition to regular cleanings and exams, it's important to
                   brush and floss your teeth daily to remove plaque and prevent
                   tooth decay and gum disease. Using fluoride toothpaste and
                   mouthwash can also help to strengthen your teeth!
                 </h3>
+                </div>
+                <div className="col-md-3" >
+                <img
+                  src={cleaningteeth}
+                  alt="Card image cap"
+                  style={{ float: "right", height: "300px" }}
+                />
+                </div>
+                </div>
+                
               </CardText>
             </CardBody>
           </Card>
