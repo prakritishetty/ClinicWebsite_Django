@@ -91,7 +91,7 @@ const PageTestimonialsUtil = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             position: "center",
-            height: "40vw",
+            // height: "40vw",
           }}
         >
           <div
@@ -150,7 +150,7 @@ const PageTestimonialsUtil = () => {
                             className="quote-img"
                             src="https://i.imgur.com/i06xx2I.png"
                             alt="quote"
-                            size = "clamp(0.25vw, 1vw, 2vw)"
+                            size = "clamp(0.25vw, 0.25vw, 2vw)"
                           />
                         </span>
                         <span
@@ -166,7 +166,7 @@ const PageTestimonialsUtil = () => {
                             className="nice-img"
                             src="https://i.imgur.com/l5AkSHd.png"
                             alt="nice"
-                            size = "clamp(0.25vw, 1vw, 2vw)"
+                            size = "clamp(0.25vw, 0.25vw, 2vw)"
                           />
                         </span>
                       </p>
