@@ -19,7 +19,7 @@ class FooterUtil extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "clamp(10vw, 20vw, 35vw)",
+            height: "clamp(10vw, 20vw, 50vw)",
             borderWidth: "0.2vw",
             margin: "0px",
             borderColor: "white",

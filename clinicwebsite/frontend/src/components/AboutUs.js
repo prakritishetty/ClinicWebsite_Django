@@ -30,11 +30,11 @@ class App extends Component {
         paddingLeft: "0",
         backgroundImage: `url(${clinic1})`,
         backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundSize: "auto",
         backgroundRepeat: "no-repeat",
         width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
+        height: "90vh",
+        // overflowX: "hidden",
       }}
       >
         <NavbarUtil />
