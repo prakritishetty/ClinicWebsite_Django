@@ -116,7 +116,7 @@ class FooterUtil extends Component {
   <div className="col-md-4">
     <h2 className="mb-3"  style={{
             fontFamily: "Playfair Display",
-            fontSize: "4vw",
+            fontSize: "clamp(2vw, 3vw, 3.5vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -126,22 +126,22 @@ class FooterUtil extends Component {
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 3vw, 1.75rem)",
+            fontSize: "clamp(1.5vw, 2.5vw, 3vw)",
             color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
-            margin: "10px",
+            margin: "0.2vw",
           }}>Shop #9, Saidham Complex,<br />P.K road, Mulund West<br />Mumbai - 400080</p>
           <hr></hr>
     <p style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 3vw, 1.75rem",
+            fontSize: "clamp(1.5vw, 2.5vw, 3vw",
             color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
-            margin: "10px",
+            margin: "0.2vw",
           }}>Mon - Sat:<br />10am to 2pm, 6pm to 9pm</p>
   </div>
 </div>
