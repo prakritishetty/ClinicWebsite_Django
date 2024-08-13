@@ -7,7 +7,6 @@ import {
   NavItem,
   NavLink,
   Button,
-  CardBody,
 } from "reactstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { BsInstagram } from "react-icons/bs";
@@ -67,12 +66,21 @@ class FooterUtil extends Component {
         <br></br>
         <br></br>
         <br></br>
-
+<Card style={{
+            // padding: "2vw",
+            borderWidth: "0.2vw",
+            margin: "2vw",
+            backgroundColor: "white",
+            // display: "flex", // Enables Flexbox
+            // alignItems: "center", // Vertical centering
+            // justifyContent: "center", // Horizontal centering (if needed)
+            // minHeight: "40vw", // Ensure card has a minimum height
+          }}>
         <div className="row" style={{
             fontFamily: "Playfair Display",
             fontSize: "1.25vw",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "10px",
             margin: "10px",
@@ -115,36 +123,20 @@ class FooterUtil extends Component {
           </ListGroup.Item>
         </ListGroup> */}
         </div>
-  <Card className="col-md-4 container-fluid" style={{
-            // padding: "2vw",
-            borderWidth: "0.2vw",
-            margin: "2vw",
-            backgroundColor: "white",
-            // display: "flex", // Enables Flexbox
-            // alignItems: "center", // Vertical centering
-            // justifyContent: "center", // Horizontal centering (if needed)
-            // minHeight: "40vw", // Ensure card has a minimum height
-          }}>
+
+
+  <div className="col-md-4" >
     <h2 className="mb-3"  
-    // style={{
-    //         fontFamily: "Playfair Display",
-    //         fontSize: "clamp(2vw, 3vw, 3.5vw)",
-    //         color: "white",
-    //         backgroundColor: "rgba(0,0,0,0.5)",
-    //         // width: "100vw",
-    //         padding: "2vw",
-    //         margin: "10px",
-    //       }}
-    // style={{
-    //   // padding: "2vw",
-    //   borderWidth: "0.2vw",
-    //   margin: "2vw",
-    //   backgroundColor: "white",
-    //   // display: "flex", // Enables Flexbox
-    //   // alignItems: "center", // Vertical centering
-    //   // justifyContent: "center", // Horizontal centering (if needed)
-    //   // minHeight: "40vw", // Ensure card has a minimum height
-    // }}
+    style={{
+            fontFamily: "Playfair Display",
+            fontSize: "clamp(2vw, 3vw, 3.5vw)",
+            color: "white",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "2vw",
+            margin: "10px",
+          }}
+    
           >Visit Us</h2>
     <hr />
     <p  style={{
@@ -166,7 +158,8 @@ class FooterUtil extends Component {
             padding: "0.5vw",
             margin: "0.2vw",
           }}>Mon - Sat:<br />10am to 2pm, 6pm to 9pm</p>
-  
+  </div>
+</div>
 </Card>
 
         <br></br>
