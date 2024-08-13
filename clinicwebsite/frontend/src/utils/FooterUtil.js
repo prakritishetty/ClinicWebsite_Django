@@ -115,7 +115,7 @@ class FooterUtil extends Component {
           </ListGroup.Item>
         </ListGroup> */}
         </div>
-  <Card className="col-md-4" style={{
+  <Card className="col-md-4 container-fluid" style={{
             // padding: "2vw",
             borderWidth: "0.2vw",
             margin: "2vw",
@@ -166,7 +166,7 @@ class FooterUtil extends Component {
             padding: "0.5vw",
             margin: "0.2vw",
           }}>Mon - Sat:<br />10am to 2pm, 6pm to 9pm</p>
-  </div>
+  
 </Card>
 
         <br></br>
