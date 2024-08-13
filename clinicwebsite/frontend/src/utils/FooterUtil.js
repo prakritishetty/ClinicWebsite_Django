@@ -18,12 +18,22 @@ class FooterUtil extends Component {
       <>
         <Card
           class="container-fluid"
+          // style={{
+          //   // height: "clamp(10vw, 20vw, 50vw)",
+          //   borderWidth: "0.2vw",
+          //   margin: "0px",
+          //   borderColor: "white",
+          //   backgroundColor: "rgba(0, 28, 40, 0.38)",
+          // }}
           style={{
-            height: "clamp(10vw, 20vw, 50vw)",
+            // padding: "2vw",
             borderWidth: "0.2vw",
-            margin: "0px",
-            borderColor: "white",
-            backgroundColor: "rgba(0, 28, 40, 0.38)",
+            margin: "2vw",
+            backgroundColor: "white",
+            // display: "flex", // Enables Flexbox
+            // alignItems: "center", // Vertical centering
+            // justifyContent: "center", // Horizontal centering (if needed)
+            // minHeight: "40vw", // Ensure card has a minimum height
           }}
         >
           <div className="text-center p-3"
