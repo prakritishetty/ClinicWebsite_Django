@@ -72,16 +72,15 @@ const PageTestimonialsUtil = () => {
         
         borderWidth: "0.2vw",
         margin: "0.5vw",
-        borderColor: "black",
-        backgroundColor:"white"
-        // backgroundColor: "rgba(0, 28, 40, 0.38)",
+        borderColor: "white",
+        backgroundColor: "rgba(0, 28, 40, 0.67)",
       }}
     >
       <div
         style={{
           fontFamily: "Playfair Display",
           fontSize: "3vw",
-          color: "black",
+          color: "white",
         }}
       >
         Here's what our patients have to say:
@@ -99,7 +98,7 @@ const PageTestimonialsUtil = () => {
             style={{
               fontFamily: "Playfair Display",
               fontSize: "1.75vw",
-              color: "black",
+              color: "white",
               textAlign: "right",
               padding: "2vw",
               textDecorationColor: "silver",
@@ -107,7 +106,7 @@ const PageTestimonialsUtil = () => {
           >
             <a
               href="/testimonials"
-              style={{ color: "silver", textDecorationColor: "silver", fontSize:"1.5vw" }}
+              style={{ color: "white", textDecorationColor: "silver", fontSize:"1.5vw" }}
             >
               See all testimonials
             </a>
@@ -141,7 +140,7 @@ const PageTestimonialsUtil = () => {
                       className="card"
                       style={{
                         backgroundColor: "rgba(0, 28, 40, 0.38)",
-                        borderColor: "black",
+                        borderColor: "white",
                         borderWidth: "1px",
                       }}
                     >
@@ -177,7 +176,7 @@ const PageTestimonialsUtil = () => {
                       style={{
                         fontFamily: "Playfair Display",
                         fontSize: "2vw",
-                        color: "black",
+                        color: "white",
                       }}
                     >
                       {item.person}
