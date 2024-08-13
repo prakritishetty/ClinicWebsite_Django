@@ -332,7 +332,7 @@ class FooterUtil extends Component {
 
 <div className="container-fluid text-white py-4" style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 3vw, 1.75rem)",
+            fontSize: "clamp(1vw, 1.5vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -340,10 +340,18 @@ class FooterUtil extends Component {
             margin: "0.5vw",
           }} >
   <div className="row">
-    <div className="col-md-3 mb-3">
+    <div className="col-md-2 mb-3" style={{
+            // fontFamily: "Playfair Display",
+            // fontSize:"clamp(1vw, 2vw, 2vw)",
+            // color: "white",
+            backgroundColor: "rgba(0,0,0,0.38)",
+            // // width: "100vw",
+            // padding: "0.5vw",
+            margin: "0.2vw",
+          }}>
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem)",
+            fontSize: "clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -353,10 +361,18 @@ class FooterUtil extends Component {
       <BsInstagram size="2em" className="mr-2" style={{margin:"1vw"}}/>
       <AiOutlineLinkedin size="2em" />
     </div>
-    <div className="col-md-3 mb-3">
+    <div className="col-md-3 mb-3" style={{
+            // fontFamily: "Playfair Display",
+            // fontSize:"clamp(1vw, 2vw, 2vw)",
+            // color: "white",
+            backgroundColor: "rgba(0,0,0,0.38)",
+            // // width: "100vw",
+            // padding: "0.5vw",
+            margin: "0.2vw",
+          }}>
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem)",
+            fontSize: "clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -367,10 +383,18 @@ class FooterUtil extends Component {
       <NavLink href="/cosmetic">Cosmetic</NavLink>
       <NavLink href="/surgical">Surgical</NavLink>
     </div>
-    <div className="col-md-3 mb-3">
+    <div className="col-md-3 mb-3" style={{
+            // fontFamily: "Playfair Display",
+            // fontSize:"clamp(1vw, 2vw, 2vw)",
+            // color: "white",
+            backgroundColor: "rgba(0,0,0,0.38)",
+            // // width: "100vw",
+            // padding: "0.5vw",
+            margin: "0.2vw",
+          }}>
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 4vw, 1.75rem)",
+            fontSize: "clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -381,10 +405,18 @@ class FooterUtil extends Component {
       <NavLink href="/about">About</NavLink>
       <NavLink href="/doctorlogin">Doctor Login</NavLink>
     </div>
-    <div className="col-md-3 mb-3">
+    <div className="col-md-3 mb-3" style={{
+            // fontFamily: "Playfair Display",
+            // fontSize:"clamp(1vw, 2vw, 2vw)",
+            // color: "white",
+            backgroundColor: "rgba(0,0,0,0.38)",
+            // // width: "100vw",
+            // padding: "0.5vw",
+            margin: "0.2vw",
+          }}>
       <h3 style={{
             fontFamily: "Playfair Display",
-            fontSize:"clamp(1rem, 4vw, 1.75rem)",
+            fontSize:"clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
