@@ -79,7 +79,7 @@ const PageTestimonialsUtil = () => {
       <div
         style={{
           fontFamily: "Playfair Display",
-          fontSize: "2vw",
+          fontSize: "3vw",
           color: "white",
         }}
       >
@@ -97,7 +97,7 @@ const PageTestimonialsUtil = () => {
           <div
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "1.5vw",
+              fontSize: "1.75vw",
               color: "white",
               textAlign: "right",
               padding: "2vw",

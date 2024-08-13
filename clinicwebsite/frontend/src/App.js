@@ -281,7 +281,7 @@ class App extends Component {
   <h2
     style={{
       fontFamily: "Playfair Display",
-      fontSize: "40px",
+      fontSize: "3vw",
       color: "Black",
       marginBottom: "20px",
     }}
