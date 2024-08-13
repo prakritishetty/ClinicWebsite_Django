@@ -19,7 +19,7 @@ class FooterUtil extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "50vw",
+            height: "clamp(10vw, 20vw, 35vw)",
             borderWidth: "0.2vw",
             margin: "0px",
             borderColor: "white",
@@ -29,9 +29,9 @@ class FooterUtil extends Component {
           <div className="text-center p-3"
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "2.5vw",
+              fontSize: "clamp(1vw, 3vw, 3vw)",
               color: "white",
-              // padding: "20px",
+              padding: "clamp(1vw, 1vw, 1.5vw)",
               backgroundColor: "rgba(0, 28, 40, 0.38)",
               // zIndex: 100,
             }}
@@ -316,7 +316,7 @@ class FooterUtil extends Component {
 
 <div className="container-fluid text-white py-4" style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1rem, 3vw, 1.75rem",
+            fontSize: "clamp(1rem, 3vw, 1.75rem)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",

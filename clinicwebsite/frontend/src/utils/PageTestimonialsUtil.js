@@ -68,7 +68,7 @@ const PageTestimonialsUtil = () => {
     <Card
       className="container-fluid"
       style={{
-        height: "90vw",
+        height: "clamp(40vw, 50vw, 60vw)",
         
         borderWidth: "0.2vw",
         margin: "0.5vw",
@@ -87,7 +87,7 @@ const PageTestimonialsUtil = () => {
         <br />
         <div
           style={{
-            backgroundColor: "rgba(0, 28, 40, 0.38)",
+            // backgroundColor: "rgba(0, 28, 40, 0.38)",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             position: "center",
