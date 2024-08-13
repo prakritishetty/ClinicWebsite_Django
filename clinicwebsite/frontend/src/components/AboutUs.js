@@ -69,6 +69,7 @@ class App extends Component {
             backgroundRepeat: "no-repeat",
             width: "100vw",
             minHeight: "140vh",
+            overflowX:"auto"
           }}
         >
           <div
@@ -139,7 +140,7 @@ class App extends Component {
 
         {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "10vw" }}> */}
 
-        <Card
+        {/* <Card
           class="container-fluid"
           style={{
             // height: "70vw",
@@ -148,7 +149,7 @@ class App extends Component {
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
-        >
+        > */}
         
           <Card
             style={{
@@ -157,7 +158,7 @@ class App extends Component {
               color: "Black",
               position: "center",
               padding: "2vw",
-              margin: "1vw",
+              // margin: "1vw",
               borderWidth: "0.2vw",
               borderColor: "black",
             }}
@@ -166,7 +167,7 @@ class App extends Component {
             value your trust in us and are committed to providing you with
             excellent dental care
           </Card>
-        </Card>
+        {/* </Card> */}
 
 
         <br></br>
