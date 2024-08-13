@@ -339,7 +339,7 @@ class FooterUtil extends Component {
             padding: "2.5vw",
             margin: "0.5vw",
           }} >
-  <div className="row">
+  <div className="row" style={{paddingLeft:"35vw"}}>
     <div className="col-md-2 mb-3" style={{
             // fontFamily: "Playfair Display",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
@@ -358,8 +358,8 @@ class FooterUtil extends Component {
             padding: "0.5vw",
             margin: "1vw",
           }}>Social</h3>
-      <BsInstagram size="2em" className="mr-2" style={{margin:"1vw"}}/>
-      <AiOutlineLinkedin size="2em" />
+      <BsInstagram size="2em" className="mr-2" style={{ padding:"0.5vw"}}/>
+      <AiOutlineLinkedin size="2em"  style={{padding: "0.5vw",}}/>
     </div>
     <div className="col-md-3 mb-3" style={{
             // fontFamily: "Playfair Display",
@@ -379,9 +379,9 @@ class FooterUtil extends Component {
             padding: "0.5vw",
             margin: "1vw",
           }}>Services</h3>
-      <NavLink href="/general">General</NavLink>
-      <NavLink href="/cosmetic">Cosmetic</NavLink>
-      <NavLink href="/surgical">Surgical</NavLink>
+      <NavLink href="/general" style={{padding: "0.5vw",}}>General</NavLink>
+      <NavLink href="/cosmetic" style={{padding: "0.5vw",}}>Cosmetic</NavLink>
+      <NavLink href="/surgical" style={{padding: "0.5vw",}}>Surgical</NavLink>
     </div>
     <div className="col-md-3 mb-3" style={{
             // fontFamily: "Playfair Display",
@@ -401,9 +401,9 @@ class FooterUtil extends Component {
             padding: "0.5vw",
             margin: "1vw",
           }}>Our Office</h3>
-      <NavLink href="/">Home</NavLink>
-      <NavLink href="/about">About</NavLink>
-      <NavLink href="/doctorlogin">Doctor Login</NavLink>
+      <NavLink href="/" style={{padding: "0.5vw",}}>Home</NavLink>
+      <NavLink href="/about" style={{padding: "0.5vw",}}>About</NavLink>
+      <NavLink href="/doctorlogin" style={{padding: "0.5vw",}}>Doctor Login</NavLink>
     </div>
     <div className="col-md-3 mb-3" style={{
             // fontFamily: "Playfair Display",
@@ -411,7 +411,7 @@ class FooterUtil extends Component {
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",
             // // width: "100vw",
-            // padding: "0.5vw",
+            padding: "0.5vw",
             margin: "0.2vw",
           }}>
       <h3 style={{
@@ -423,9 +423,9 @@ class FooterUtil extends Component {
             padding: "0.5vw",
             margin: "1vw",
           }}>Contact Us</h3>
-      <p>Call (+91) 9833630985</p>
-      <p>Shop #9, Saidham Complex,<br />P.K road, Mulund West<br />Mumbai - 400080</p>
-      <p>Mon - Sat: 10am to 2pm, 6pm to 9pm</p>
+      <p style={{padding: "0.5vw",}}>Call (+91) 9833630985</p>
+      <p style={{padding: "0.5vw",}}>Shop #9, Saidham Complex,<br />P.K road, Mulund West<br />Mumbai - 400080</p>
+      <p style={{padding: "0.5vw",}}>Mon - Sat: 10am to 2pm, 6pm to 9pm</p>
     </div>
   </div>
 </div>
