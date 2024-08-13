@@ -23,6 +23,19 @@ class App extends Component {
   render() { 
     return (
       <div
+      // style={{
+      //   marginRight: "0",
+      //   marginLeft: "0",
+      //   paddingRight: "0",
+      //   paddingLeft: "0",
+      //   backgroundImage: `url(${clinic1})`,
+      //   backgroundPosition: "center",
+      //   backgroundSize: "auto",
+      //   backgroundRepeat: "no-repeat",
+      //   width: "100vw",
+      //   // height: "90vh",
+      //   // overflowX: "hidden",
+      // }}
       style={{
         marginRight: "0",
         marginLeft: "0",
@@ -30,11 +43,11 @@ class App extends Component {
         paddingLeft: "0",
         backgroundImage: `url(${clinic1})`,
         backgroundPosition: "center",
-        backgroundSize: "auto",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         width: "100vw",
-        height: "90vh",
-        // overflowX: "hidden",
+        minHeight: "100vh",
+        overflowX: "hidden",
       }}
       >
         <NavbarUtil />
@@ -47,25 +60,16 @@ class App extends Component {
         <div
           // className="p-5 my-6 rounded"
           className="d-flex flex-column justify-content-center align-items-center"
-        style={{
-        //   padding: "5vw 30vw",
-        //   margin: "0vw",
-        //   backgroundImage: `url(${ammawithbg})`,
-        //   backgroundPosition: "center top 30%",
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        //   width: "100vw",
-        //   height: "150vh",
-        //   position:"relative"
-        padding: "5vw",
-  margin: "0",
-  backgroundImage: `url(${ammawithbg})`,
-  backgroundPosition: "center top 30%",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  height: "150vh",
-  position: "relative"
-        }}
+          style={{
+            padding: "0px",
+            margin: "0px",
+            backgroundImage: `url(${ammawithbg})`,
+            backgroundPosition: "center ",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            width: "100vw",
+            minHeight: "140vh",
+          }}
         >
           <div
             className="text-center"
@@ -76,25 +80,28 @@ class App extends Component {
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
               padding: "10px",
-              margin: "10px",
+              margin: "2vw",
             }}
           >
             {" "}
             About Us!
           </div>
+          <br></br><br></br>
           <Button
-            active
-            style={{
-              padding: "10px",
-              // margin: "4px",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
+           active
+           className="my-2"
+           style={{
+             padding: "0.5vw",
+            //  marginleft:"200vw",
+             borderColor: "white",
+             backgroundColor: "black",
+           }}
           >
             <div
+              className="text-center"
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "2.5vw",
+                fontSize: "3vw",
                 color: "white",
               }}
             >
@@ -130,12 +137,12 @@ class App extends Component {
 
         <br></br>
 
-        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "10vw" }}>
+        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "10vw" }}> */}
 
         <Card
           class="container-fluid"
           style={{
-            height: "70vw",
+            // height: "70vw",
             borderWidth: "0.2vw",
             margin: "0.5vw",
             borderColor: "white",
@@ -166,7 +173,7 @@ class App extends Component {
         <br></br>
         <br></br>
 
-        <Navbar
+        {/* <Navbar
           style={{
             backgroundColor: "rgba(0, 28, 40, 0.38)",
             padding: "20px",
@@ -175,21 +182,24 @@ class App extends Component {
           }}
         >
           <Nav className="ms-auto">
-            <NavItem style={{ padding: "30px" }}>
+            <NavItem style={{ padding: "30px" }}> */}
+            <div className="row">
+            <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
               <Card
+              className="container-fluid"
                 style={{
-                  fontSize: "20px",
-                  margin: "15px",
-                  width: "500px",
-                  padding: "35px",
+                  fontSize: "1.5vw",
+                  margin: "0.5vw",
+                  // width: "",
+                  padding: "1vw",
                 }}
               >
                 <CardHeader
                   style={{
-                    fontSize: "25px",
-                    width: "400px",
+                    fontSize: "1.5vw",
+                    // width: "400px",
                     color: "black",
-                    padding: "10px",
+                    padding: "1vw",
                     align: "center",
                   }}
                 >
@@ -197,7 +207,10 @@ class App extends Component {
                 </CardHeader>
 
                 <CardBody
-                  style={{ width: "400px", fontSize: "18px", color: "black" }}
+                  style={{ 
+                    // width: "400px", 
+                    fontSize: "1.5vw", 
+                    color: "black" }}
                 >
                   <br></br>
                   Dr Sandhya Shetty is a Bachelor in Dental Surgery (B.D.S) from
@@ -215,34 +228,44 @@ class App extends Component {
                 <img
                   src={amma}
                   align="center"
-                  style={{ height: "400px", width: "400px", marginLeft:"20px" }}
+                  style={{ height: "40vw", width: "35vw", 
+                    // marginLeft:"20px" 
+                  }}
                 ></img>
               </Card>
-            </NavItem>
+
+              </div>
+              
+            {/* </NavItem> */}
             {/* <NavItem style={{width:"80px"}}></NavItem> */}
-            <NavItem style={{ padding: "30px" }}>
-              <Card
+             {/* <NavItem style={{ padding: "30px" }}> */}
+
+             <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
+             <Card
                 style={{
-                  fontSize: "20px",
-                  margin: "15px",
-                  width: "500px",
-                  padding: "35px",
+                  fontSize: "1.5vw",
+                  margin: "0.5vw",
+                  // width: "",
+                  padding: "1vw",
                 }}
               >
                 <CardHeader
                   style={{
-                    fontSize: "25px",
-                    width: "420px",
+                    fontSize: "1.5vw",
+                    // width: "400px",
                     color: "black",
-                    padding: "10px",
+                    padding: "1vw",
                     align: "center",
                   }}
                 >
+                
                   <b>Dr Pratiksha Shetty, B.D.S, M.D.S</b>
                 </CardHeader>
 
                 <CardBody
-                  style={{ width: "400px", fontSize: "18px", color: "black" }}
+                  style={{ 
+                    // width: "400px", 
+                    fontSize: "1.5vw", color: "black" }}
                 >
                   <br></br>
                   Dr Pratiksha Shetty is pursuing Masters of Dental Surgery
@@ -265,24 +288,28 @@ class App extends Component {
 
                 <img
                   src={akka}
-                  style={{ height: "400px", width: "400px", marginLeft:"20px" }}
+                  style={{ height: "40vw", width: "35vw", 
+                    // marginLeft:"20px" 
+                  }}
                 ></img>
               </Card>
-            </NavItem>
-          </Nav>
-        </Navbar>
-
+              </div>
+            {/* </NavItem>  */}
+          {/* </Nav>
+        </Navbar> */}
         </div>
 
+        {/* </div> */}
+
         <br></br>
         <br></br>
         <br></br>
         <br></br>
 
-        <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20vw" }}>
+        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20vw" }}> */}
 
         <BeforeAfterUtil />
-        </div>
+        {/* </div> */}
 
         <br></br>
         <br></br>

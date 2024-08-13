@@ -152,6 +152,7 @@ class NavbarUtil extends Component {
                 // backgroundColor: "rgba(0,28,40,0.38)",
                 // width: "100vw",
                 padding: "1vw",
+                paddingTop:"1.5vw",
                 margin: "0.5vw",
               }}
             >
@@ -165,7 +166,7 @@ class NavbarUtil extends Component {
             isOpen={this.state.isOpen}
           >
             <DropdownToggle
-              nav
+              // nav
               style={{
                 fontFamily: "Playfair Display",
                 fontSize: "1.5vw",
@@ -544,6 +545,7 @@ class NavbarUtil extends Component {
                 fontFamily: "Playfair Display",
                 fontSize: "1.5vw",
                 padding:"1vw",
+                paddingTop:"1.5vw",
                 margin: "0.5vw",
                 // width:"11vw",
                 // backgroundColor: this.state.isOpenDoctorLogin

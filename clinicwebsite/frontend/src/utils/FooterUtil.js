@@ -71,6 +71,7 @@ class FooterUtil extends Component {
             borderWidth: "0.2vw",
             margin: "2vw",
             backgroundColor: "white",
+            fontFamily:"Playfair Display"
             // display: "flex", // Enables Flexbox
             // alignItems: "center", // Vertical centering
             // justifyContent: "center", // Horizontal centering (if needed)
@@ -341,7 +342,7 @@ class FooterUtil extends Component {
           }} >
   <div className="row" style={{paddingLeft:"35vw"}}>
     <div className="col-md-2 mb-3" style={{
-            // fontFamily: "Playfair Display",
+            fontFamily: "Playfair Display",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",
@@ -362,7 +363,7 @@ class FooterUtil extends Component {
       <AiOutlineLinkedin size="2em"  style={{padding: "0.5vw",}}/>
     </div>
     <div className="col-md-3 mb-3" style={{
-            // fontFamily: "Playfair Display",
+            fontFamily: "Playfair Display",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",
@@ -384,7 +385,7 @@ class FooterUtil extends Component {
       <NavLink href="/surgical" style={{padding: "0.5vw",}}>Surgical</NavLink>
     </div>
     <div className="col-md-3 mb-3" style={{
-            // fontFamily: "Playfair Display",
+            fontFamily: "Playfair Display",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",

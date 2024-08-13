@@ -97,39 +97,49 @@ class BeforeAfterUtil extends Component {
       "https://hindalkindi1992.files.wordpress.com/2013/11/portrait_eyes_23.jpg";
 
     return (
-      <Card
+      <Card className = "container-fluid"
         style={{
           fontFamily: "Playfair Display",
           fontSize: "3vw",
           color: "Black",
           padding: "2vw",
-          margin: "0.5vw",
+          // margin: "0.5vw",
           backgroundColor: "rgba(255, 255, 255)",
-          height: "110vw",
+          borderWidth: "0.2vw",
+          // margin: "2vw",
+          backgroundColor: "white",
+          // height: "110vw",
         }}
       >
         Case Histories - Before/After:
-        <CardGroup style={{ padding: "2vw", height: "90vw" }}>
-          <Card style={{ padding: "2vw", height: "30vw" }}>
+        <CardGroup className = "container-fluid" style={{ padding: "2vw", 
+          // height: "90vw", 
+          fontSize:"1.5vw" }}>
+          <Card style={{ padding: "2vw", 
+            // height: "30vw", 
+            fontSize:"1.5vw"  }}>
             <ReactCompareImage leftImage={veneerpre} rightImage={veneerpost} />
-            <CardBody>
-              <CardSubtitle className="mb-2 text-muted" tag="h3">
+            <CardBody style={{fontSize:"1.5vw" }}>
+              <CardSubtitle className="mb-2 text-muted" style={{fontSize:"1.5vw" }}>
                 Veneers
               </CardSubtitle>
             </CardBody>
           </Card>
-          <Card style={{ padding: "2vw", height: "30vw" }}>
+          <Card className = "container-fluid"
+          style={{ padding: "2vw", 
+            // height: "30vw", 
+            fontSize:"1.5vw"  }}>
             <ReactCompareImage leftImage={cleftpalatepre} rightImage={cleftpalatepost} />
             <CardBody>
-              <CardSubtitle className="mb-2 text-muted" tag="h3">
+              <CardSubtitle className="mb-2 text-muted" style={{fontSize:"1.5vw"}}>
                 Cleft Palate Missing Tooth Treatment
               </CardSubtitle>
             </CardBody>
           </Card>
-          <Card style={{ padding: "2vw", height: "30vw" }}>
+          <Card className = "container-fluid" style={{ padding: "2vw" }}>
             <ReactCompareImage leftImage={compositepre} rightImage={compositepost} />
             <CardBody>
-              <CardSubtitle className="mb-2 text-muted" tag="h3">
+              <CardSubtitle className="mb-2 text-muted" style={{fontSize:"1.5vw"}}>
                 Composite Restoration
               </CardSubtitle>
             </CardBody>
