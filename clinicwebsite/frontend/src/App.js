@@ -165,16 +165,20 @@ class App extends Component {
         >
           <CardBody>
             <CardText >
+            <div className="row">
+            <div className="col-md-3" >
               <img
                 src={`${removeWM_clinic1}`}
                 alt="Card image cap"
-                className="float-md-right mb-3 mb-md-0"
+                // className="float-md-right mb-3 mb-md-0"
                 style={{ float: "right", width: '30vw', height: '25vw' }}
               />
+              </div>
               <br></br>
               <br></br>
               <br></br>
               <br></br>
+              <div className="col-md-8" >
               <TfiCheckBox size="3vw" color="black" />
               <h1 
                 style={{
@@ -255,6 +259,8 @@ class App extends Component {
                 We accept a wide variety of payment methods for hassle-free
                 payment
               </h3>
+              </div>
+              </div>
             </CardText>
           </CardBody>
         </Card>
