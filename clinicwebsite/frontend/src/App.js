@@ -174,10 +174,10 @@ class App extends Component {
                 style={{ float: "right", width: '30vw', height: '25vw' }}
               />
               </div>
+              {/* <br></br>
               <br></br>
               <br></br>
-              <br></br>
-              <br></br>
+              <br></br> */}
               <div className="col-md-8" >
               <TfiCheckBox size="3vw" color="black" />
               <h1 
