@@ -129,9 +129,9 @@ class FooterUtil extends Component {
     <h2 className="mb-3"  
     style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(2vw, 3vw, 3.5vw)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            fontSize: "clamp(2vw, 2.5vw, 3.5vw)",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "2vw",
             margin: "10px",
@@ -141,7 +141,7 @@ class FooterUtil extends Component {
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1.5vw, 2.5vw, 3vw)",
+            fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
             color: "white",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
@@ -151,7 +151,7 @@ class FooterUtil extends Component {
           <hr></hr>
     <p style={{
             fontFamily: "Playfair Display",
-            fontSize: "clamp(1.5vw, 2.5vw, 3vw",
+            fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
             color: "white",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
