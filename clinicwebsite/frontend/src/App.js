@@ -265,10 +265,10 @@ class App extends Component {
         <Card
   className="container-fluid"
   style={{
-    borderWidth: "2px",
-    margin: "10px",
+    borderWidth: "0.2vw",
+    // margin: "10px",
     borderColor: "white",
-    padding: "20px",
+    padding: "0.5vw",
   }}
 >
   <h2

@@ -172,7 +172,7 @@ class NavbarUtil extends Component {
                 color: "white",
                 // backgroundColor: "rgba(0,28,40,0.38)",
                 // width: "100vw",
-                padding: "0.5vw",
+                padding: "1vw",
                 margin: "0.5vw",
               }}
             >
@@ -545,7 +545,7 @@ class NavbarUtil extends Component {
                 fontSize: "1.5vw",
                 padding:"1vw",
                 margin: "0.5vw",
-                width:"11vw",
+                // width:"11vw",
                 // backgroundColor: this.state.isOpenDoctorLogin
                 //   ? "lightslategrey"
                 //   : "rgba(0, 28, 40, 0.38)",
