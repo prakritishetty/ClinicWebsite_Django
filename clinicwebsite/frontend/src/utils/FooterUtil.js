@@ -137,12 +137,12 @@ class FooterUtil extends Component {
             margin: "10px",
           }}
     
-          >Visit Us</h2>
+          ><b>Visit Us</b></h2>
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
-            color: "white",
+            color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
@@ -152,7 +152,7 @@ class FooterUtil extends Component {
     <p style={{
             fontFamily: "Playfair Display",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
-            color: "white",
+            color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",

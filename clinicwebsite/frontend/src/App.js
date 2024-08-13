@@ -266,9 +266,9 @@ class App extends Component {
   className="container-fluid"
   style={{
     borderWidth: "0.2vw",
-    margin: "2vw",
+    // margin: "2vw",
     borderColor: "black",
-    padding: "0.5vw",
+    padding: "1.5vw",
   }}
 >
   <h2
