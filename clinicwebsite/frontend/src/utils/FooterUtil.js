@@ -18,23 +18,14 @@ class FooterUtil extends Component {
       <>
         <Card
           class="container-fluid"
-          // style={{
-          //   // height: "clamp(10vw, 20vw, 50vw)",
-          //   borderWidth: "0.2vw",
-          //   margin: "0px",
-          //   borderColor: "white",
-          //   backgroundColor: "rgba(0, 28, 40, 0.38)",
-          // }}
           style={{
-            // padding: "2vw",
+            // height: "clamp(10vw, 20vw, 50vw)",
             borderWidth: "0.2vw",
-            margin: "2vw",
-            backgroundColor: "white",
-            // display: "flex", // Enables Flexbox
-            // alignItems: "center", // Vertical centering
-            // justifyContent: "center", // Horizontal centering (if needed)
-            // minHeight: "40vw", // Ensure card has a minimum height
+            margin: "0px",
+            borderColor: "white",
+            backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
+          
         >
           <div className="text-center p-3"
             style={{
@@ -124,15 +115,27 @@ class FooterUtil extends Component {
         </ListGroup> */}
         </div>
   <div className="col-md-4">
-    <h2 className="mb-3"  style={{
-            fontFamily: "Playfair Display",
-            fontSize: "clamp(2vw, 3vw, 3.5vw)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            // width: "100vw",
-            padding: "2vw",
-            margin: "10px",
-          }}>Visit Us</h2>
+    <h2 className="mb-3"  
+    // style={{
+    //         fontFamily: "Playfair Display",
+    //         fontSize: "clamp(2vw, 3vw, 3.5vw)",
+    //         color: "white",
+    //         backgroundColor: "rgba(0,0,0,0.5)",
+    //         // width: "100vw",
+    //         padding: "2vw",
+    //         margin: "10px",
+    //       }}
+    style={{
+      // padding: "2vw",
+      borderWidth: "0.2vw",
+      margin: "2vw",
+      backgroundColor: "white",
+      // display: "flex", // Enables Flexbox
+      // alignItems: "center", // Vertical centering
+      // justifyContent: "center", // Horizontal centering (if needed)
+      // minHeight: "40vw", // Ensure card has a minimum height
+    }}
+          >Visit Us</h2>
     <hr />
     <p  style={{
             fontFamily: "Playfair Display",
