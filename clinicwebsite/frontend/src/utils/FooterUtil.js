@@ -67,7 +67,7 @@ class FooterUtil extends Component {
         <br></br>
         <br></br>
 <Card style={{
-            // padding: "2vw",
+            padding: "2vw",
             borderWidth: "0.2vw",
             margin: "2vw",
             backgroundColor: "white",
@@ -133,8 +133,8 @@ class FooterUtil extends Component {
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
-            padding: "2vw",
-            margin: "10px",
+            padding: "1vw",
+            margin: "0.5vw",
           }}
     
           ><b>Visit Us</b></h2>
