@@ -7,6 +7,7 @@ import {
   NavItem,
   NavLink,
   Button,
+  CardBody,
 } from "reactstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { BsInstagram } from "react-icons/bs";
@@ -114,7 +115,16 @@ class FooterUtil extends Component {
           </ListGroup.Item>
         </ListGroup> */}
         </div>
-  <div className="col-md-4">
+  <Card className="col-md-4" style={{
+            // padding: "2vw",
+            borderWidth: "0.2vw",
+            margin: "2vw",
+            backgroundColor: "white",
+            // display: "flex", // Enables Flexbox
+            // alignItems: "center", // Vertical centering
+            // justifyContent: "center", // Horizontal centering (if needed)
+            // minHeight: "40vw", // Ensure card has a minimum height
+          }}>
     <h2 className="mb-3"  
     // style={{
     //         fontFamily: "Playfair Display",
@@ -125,16 +135,16 @@ class FooterUtil extends Component {
     //         padding: "2vw",
     //         margin: "10px",
     //       }}
-    style={{
-      // padding: "2vw",
-      borderWidth: "0.2vw",
-      margin: "2vw",
-      backgroundColor: "white",
-      // display: "flex", // Enables Flexbox
-      // alignItems: "center", // Vertical centering
-      // justifyContent: "center", // Horizontal centering (if needed)
-      // minHeight: "40vw", // Ensure card has a minimum height
-    }}
+    // style={{
+    //   // padding: "2vw",
+    //   borderWidth: "0.2vw",
+    //   margin: "2vw",
+    //   backgroundColor: "white",
+    //   // display: "flex", // Enables Flexbox
+    //   // alignItems: "center", // Vertical centering
+    //   // justifyContent: "center", // Horizontal centering (if needed)
+    //   // minHeight: "40vw", // Ensure card has a minimum height
+    // }}
           >Visit Us</h2>
     <hr />
     <p  style={{
@@ -157,7 +167,7 @@ class FooterUtil extends Component {
             margin: "0.2vw",
           }}>Mon - Sat:<br />10am to 2pm, 6pm to 9pm</p>
   </div>
-</div>
+</Card>
 
         <br></br>
         <br></br>
