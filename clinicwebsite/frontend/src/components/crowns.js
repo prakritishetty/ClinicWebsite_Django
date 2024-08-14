@@ -248,9 +248,9 @@ class App extends Component {
 
           <Card
             style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
+              padding: "1vw",
+              borderWidth: "0.2vw",
+              // margin: "0.",
               position: "float",
               backgroundColor: "white",
             }}
@@ -258,8 +258,9 @@ class App extends Component {
             <CardHeader
               style={{
                 color: "black",
-                fontSize: "35px",
+                fontSize: "2.5vw",
                 fontFamily: "Playfair Display",
+                
               }}
             >
               Decision: Which Crown Material to Choose?
@@ -267,14 +268,14 @@ class App extends Component {
             <CardBody>
               <CardText>
                 <br></br>
-                <h3 style={{ color: "black", fontSize: "25px" }}>
+                <h3 style={{ fontSize: "1.9vw", color:"black", fontFamily:"Playfair Display" }}>
                   At Dr Sandhya's Total Care, we help you make an informed
                   choice between the different choice of material available for
                   your crown.
                 </h3>
                 <br></br>
                 <br></br>
-                <p style={{ color: "black", fontSize: "20px" }}>
+                <p style={{ color: "black", fontSize: "1.8vw" }}>
                   There are several types of crowns available, including
                   porcelain, ceramic, and gold crowns.
                   <ul>

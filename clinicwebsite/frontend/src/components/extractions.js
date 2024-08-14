@@ -13,14 +13,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -30,19 +35,21 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
+          className="d-flex flex-column justify-content-center align-items-center"
           style={{
             padding: "0px",
             margin: "0px",
             backgroundImage: `url(${IMG_6441})`,
-            backgroundPosition: "center",
+            backgroundPosition: "center ",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             width: "100vw",
-            height: "90vh",
+            minHeight: "140vh",
+            overflowX:"auto"
           }}
         >
           <div
+            className="text-center"
             style={{
               fontFamily: "Playfair Display",
               fontSize: "6vw",
@@ -50,32 +57,33 @@ class App extends Component {
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
               padding: "10px",
-              margin: "10px",
+              margin: "2vw",
             }}
           >
             {" "}
             Teeth Extractions!
           </div>
           <Button
-            active
-            style={{
-              padding: "10px",
-              margin: "4px",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "Playfair Display",
-                fontSize: "35px",
-                align: "center",
-                color: "white",
-              }}
-            >
+           active
+           className="my-2"
+           style={{
+             padding: "0.5vw",
+            //  marginleft:"200vw",
+             borderColor: "white",
+             backgroundColor: "black",
+           }}
+         >
+           <div
+             className="text-center"
+             style={{
+               fontFamily: "Playfair Display",
+               fontSize: "3vw",
+               color: "white",
+             }}
+           >
               <a
                 href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
+                style={{ color: "white", textDecoration: "none" }}
               >
                 Book an appointment
               </a>
@@ -84,12 +92,12 @@ class App extends Component {
           <div
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "3vw",
+              fontSize: "2.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
+              width: "35vw",
+              padding: "1vw",
+              margin: "0.6vw",
             }}
           >
             {" "}
@@ -105,8 +113,8 @@ class App extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "1400px",
-            borderWidth: "2px",
+            // height: "1400px",
+            borderWidth: "0.2vw",
             margin: "5px",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
@@ -131,12 +139,17 @@ class App extends Component {
               <b>Teeth Extractions</b>
             </p>
             <CardText>
-            <img
-                  src={fallingtooth}
-                  alt="Card image cap"
-                  style={{ float: "right", height: "300px" }}
-                />
-                <br></br>
+            <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.25vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "10px",
+            // margin: "10px",
+          }}>
+          <div className="col-md-8" >
+           
             A tooth extraction is a procedure in which a tooth is removed from
             the mouth.<br></br>
             <br></br>
@@ -154,6 +167,14 @@ class App extends Component {
             <b>Infection:</b> If a tooth is infected and cannot be saved, it may
             need to be extracted to prevent the infection from spreading to
             other teeth or to other parts of the body.
+            </div>
+            <div className="col-md-3" >
+                <img
+                  src={fallingtooth}
+                  alt="Card image cap"
+                  style={{ float: "right", height: "300px" }}
+                />
+                </div></div>
             </CardText>
           </Card>
           <br></br>
@@ -254,7 +275,8 @@ class App extends Component {
                   Ensure that your Blood Pressure is normal (120/80) before you
                   come in for an extraction, to avoid emergency situations.
                 </h3>
-                <br></br>
+               
+                
               </CardText>
             </CardBody>
           </Card>
