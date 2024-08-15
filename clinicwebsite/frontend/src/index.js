@@ -49,7 +49,7 @@ root.render(
     <Route path="/cleaningexams" element={<CleaningExams/>} />
     <Route path="/crowns" element={<Crowns/>}/>
     <Route path="/extractions" element={<Extractions/>} />
-    <Route path="/gumtherapy" element={<GumTherapy/>} />
+    <Route path="/deepscaling" element={<GumTherapy/>} />
     <Route path="/bondingfillings" element={<BondingFillings/>} />
     <Route path="/dentures" element={<Dentures/>} />
     <Route path="/nightguards" element={<NightGuards/>} />

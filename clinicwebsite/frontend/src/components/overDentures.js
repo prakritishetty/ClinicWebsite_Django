@@ -11,14 +11,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -28,68 +33,71 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${IMG_6409})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            height: "90vh",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "6vw",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "100vw",
-              padding: "10px",
-              margin: "10px",
-            }}
-          >
+         className="d-flex flex-column justify-content-center align-items-center"
+         style={{
+           padding: "0px",
+           margin: "0px",
+           backgroundImage: `url(${IMG_6409})`,
+           backgroundPosition: "center ",
+           backgroundSize: "cover",
+           backgroundRepeat: "no-repeat",  
+           width: "100vw",
+           minHeight: "140vh",
+           overflowX:"auto"
+         }}
+       >
+         <div
+           className="text-center"
+           style={{
+             fontFamily: "Playfair Display",
+             fontSize: "6vw",
+             color: "white",
+             backgroundColor: "rgba(0,0,0,0.5)",
+             width: "100vw",
+             padding: "10px",
+             margin: "2vw",
+           }}
+         >
             {" "}
             Over Dentures!
           </div>
           <Button
-            active
-            style={{
-              padding: "10px",
-              margin: "4px",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
-          >
+           active
+           className="my-2"
+           style={{
+             padding: "0.5vw",
+            //  marginleft:"200vw",
+             borderColor: "white",
+             backgroundColor: "black",
+           }}
+         >
+           <div
+             className="text-center"
+             style={{
+               fontFamily: "Playfair Display",
+               fontSize: "3vw",
+               color: "white",
+             }}
+           >
+              <a
+                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
+                style={{ color: "white", textDecoration: "none" }}
+                >
+                  Book an appointment
+                </a>
+              </div>
+            </Button>
             <div
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "35px",
-                align: "center",
+                fontSize: "2.5vw",
                 color: "white",
+                backgroundColor: "rgba(0,0,0,0.5)",
+                width: "35vw",
+                padding: "1vw",
+                margin: "0.6vw",
               }}
             >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
-              >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "3vw",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
-            }}
-          >
             {" "}
             OR Call on (+91) 9833630985{" "}
           </div>
@@ -103,9 +111,9 @@ class App extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "1100px",
-            borderWidth: "2px",
-            margin: "5px",
+            // height: "1400px",
+            borderWidth: "0.2vw",
+            // margin: "0.",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
@@ -113,17 +121,17 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "30px",
+              fontSize: "1.9vw",
               color: "Black",
               position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
+              padding: "1vw",
+              margin: "0.5vw",
+              borderWidth: "0.2vw",
               borderColor: "black",
-              fontSize: "25px",
+              // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "40px" }}>
+            <p style={{ fontSize: "2.5vw" }}>
               <b>Over Dentures</b>
             </p>
             An overdenture is a type of removable dental appliance that is used
@@ -145,18 +153,22 @@ class App extends Component {
           <br></br>
 
           <Card
-            style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
-              position: "float",
-              backgroundColor: "white",
-            }}
+           style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.75vw",
+            color: "Black",
+            position: "center",
+            padding: "2vw",
+            margin: "1vw",
+            borderWidth: "0.2vw",
+            borderColor: "black",
+            // fontSize: "25px",
+          }}
           >
             <CardHeader
               style={{
                 color: "black",
-                fontSize: "35px",
+                fontSize: "2.5vw",
                 fontFamily: "Playfair Display",
               }}
             >
@@ -167,7 +179,7 @@ class App extends Component {
                 <p
                   style={{
                     color: "black",
-                    fontSize: "20px",
+                    fontSize: "1.9vw",
                     fontFamily: "Playfair Display",
                   }}
                 >

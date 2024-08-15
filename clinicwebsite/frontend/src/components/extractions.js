@@ -115,7 +115,7 @@ class App extends Component {
           style={{
             // height: "1400px",
             borderWidth: "0.2vw",
-            margin: "5px",
+            // margin: "0.",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
@@ -123,29 +123,29 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "30px",
+              fontSize: "2.5vw",
               color: "Black",
               position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
+              padding: "1vw",
+              margin: "0.5vw",
+              borderWidth: "0.2vw",
               borderColor: "black",
-              fontSize: "25px",
+              // fontSize: "25px",
             }}
           >
 
             
-            <p style={{ fontSize: "40px" }}>
+            <p style={{ fontSize: "2.5vw" }}>
               <b>Teeth Extractions</b>
             </p>
             <CardText>
             <div className="row" style={{
             fontFamily: "Playfair Display",
-            fontSize: "1.25vw",
+            fontSize: "1.9vw",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
-            padding: "10px",
+            padding: "1vw",
             // margin: "10px",
           }}>
           <div className="col-md-8" >
@@ -172,7 +172,7 @@ class App extends Component {
                 <img
                   src={fallingtooth}
                   alt="Card image cap"
-                  style={{ float: "right", height: "300px" }}
+                  style={{ height: "30vw", width:"30vw" }}
                 />
                 </div></div>
             </CardText>
@@ -182,9 +182,9 @@ class App extends Component {
 
           <Card
             style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
+              padding: "1vw",
+              borderWidth: "0.2vw",
+              margin: "0.5vw",
               position: "float",
               backgroundColor: "white",
             }}
@@ -192,7 +192,7 @@ class App extends Component {
             <CardHeader
               style={{
                 color: "black",
-                fontSize: "35px",
+                fontSize: "2.5vw",
                 fontFamily: "Playfair Display",
               }}
             >
@@ -205,11 +205,11 @@ class App extends Component {
                   <tr>
                     <th
                       style={{
-                        borderBottom: "1px solid black",
-                        borderRight: "1px solid black",
-                        padding: "20px",
+                        borderBottom: "0.2vw solid black",
+                        borderRight: "0.2vw solid black",
+                        padding: "1vw",
                         color: "black",
-                        fontSize: "25px",
+                        fontSize: "2.5vw",
                         fontFamily: "Playfair Display",
                       }}
                     >
@@ -217,10 +217,10 @@ class App extends Component {
                     </th>
                     <th
                       style={{
-                        borderBottom: "1px solid black",
-                        padding: "20px",
+                        borderBottom: "0.2vw solid black",
+                        padding: "1vw",
                         color: "black",
-                        fontSize: "25px",
+                        fontSize: "2.5vw",
                         fontFamily: "Playfair Display",
                       }}
                     >
@@ -231,10 +231,10 @@ class App extends Component {
                   <tr>
                     <td
                       style={{
-                        borderRight: "1px solid black",
-                        padding: "20px",
+                        borderRight: "0.2vw solid black",
+                        padding: "1vw",
                         color: "black",
-                        fontSize: "20px",
+                        fontSize: "1.9vw",
                         fontFamily: "Playfair Display",
                       }}
                     >
@@ -243,9 +243,9 @@ class App extends Component {
                     </td>
                     <td
                       style={{
-                        padding: "20px",
+                        padding: "1vw",
                         color: "black",
-                        fontSize: "20px",
+                        fontSize: "1.9vw",
                         fontFamily: "Playfair Display",
                       }}
                     >
@@ -260,18 +260,18 @@ class App extends Component {
                 </table>
                 <br></br>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Don't forget to get your vitals checked
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   Ensure that your Blood Pressure is normal (120/80) before you
                   come in for an extraction, to avoid emergency situations.
                 </h3>

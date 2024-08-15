@@ -12,14 +12,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -29,20 +34,21 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
+          className="d-flex flex-column justify-content-center align-items-center"
           style={{
             padding: "0px",
             margin: "0px",
             backgroundImage: `url(${IMG_6441})`,
-            backgroundPosition: "center",
+            backgroundPosition: "center ",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             width: "100vw",
-            height: "90vh",
-            // opacity:"0.6"
+            minHeight: "140vh",
+            overflowX:"auto"
           }}
         >
           <div
+            className="text-center"
             style={{
               fontFamily: "Playfair Display",
               fontSize: "6vw",
@@ -50,48 +56,49 @@ class App extends Component {
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
               padding: "10px",
-              margin: "10px",
+              margin: "2vw",
             }}
           >
             {" "}
             Implants!
           </div>
           <Button
-            active
-            style={{
-              padding: "10px",
-              margin: "4px",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
-          >
+           active
+           className="my-2"
+           style={{
+             padding: "0.5vw",
+            //  marginleft:"200vw",
+             borderColor: "white",
+             backgroundColor: "black",
+           }}
+         >
+           <div
+             className="text-center"
+             style={{
+               fontFamily: "Playfair Display",
+               fontSize: "3vw",
+               color: "white",
+             }}
+           >
+              <a
+                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
+                style={{ color: "white", textDecoration: "none" }}
+                >
+                  Book an appointment
+                </a>
+              </div>
+            </Button>
             <div
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "35px",
-                align: "center",
+                fontSize: "2.5vw",
                 color: "white",
+                backgroundColor: "rgba(0,0,0,0.5)",
+                width: "35vw",
+                padding: "1vw",
+                margin: "0.6vw",
               }}
-            >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
               >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "3vw",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
-            }}
-          >
             {" "}
             OR Call on (+91) 9833630985{" "}
           </div>
@@ -103,29 +110,29 @@ class App extends Component {
         <br></br>
 
         <Card
-          class="container-fluid"
-          style={{
-            height: "1000px",
-            borderWidth: "2px",
-            margin: "5px",
-            borderColor: "white",
-            backgroundColor: "rgba(0, 28, 40, 0.38)",
-          }}
+           class="container-fluid"
+           style={{
+             // height: "1400px",
+             borderWidth: "0.2vw",
+             // margin: "0.",
+             borderColor: "white",
+             backgroundColor: "rgba(0, 28, 40, 0.38)",
+           }}
         >
           <Card
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "30px",
+              fontSize: "1.9vw",
               color: "Black",
               position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
+              padding: "1vw",
+              margin: "0.5vw",
+              borderWidth: "0.2vw",
               borderColor: "black",
-              fontSize: "25px",
+              // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "40px" }}>
+            <p style={{ fontSize: "2.5vw" }}>
               <b>Implants</b>
             </p>
             Tooth implants are a type of dental restoration that involves the
@@ -141,9 +148,9 @@ class App extends Component {
 
           <Card
             style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
+              padding: "1vw",
+              borderWidth: "0.2vw",
+              margin: "0.5vw",
               position: "float",
               backgroundColor: "white",
             }}
@@ -151,7 +158,7 @@ class App extends Component {
             <CardHeader
               style={{
                 color: "black",
-                fontSize: "35px",
+                fontSize: "2.5vw",
                 fontFamily: "Playfair Display",
               }}
             >
@@ -159,53 +166,67 @@ class App extends Component {
             </CardHeader>
             <CardBody>
               <CardText>
-                <img
-                  src="https://teethq.com/wp-content/uploads/2021/03/dental-implant-3.gif"
-                  alt="Card image cap"
-                  style={{ float: "right", height: "300px" }}
-                />
-                <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+              <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.9vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "1vw",
+            // margin: "10px",
+          }}>
+          <div className="col-md-8" >
+                
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Aesthetics
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   They can help restore the appearance and function of the
                   missing tooth, allowing you to eat and speak normally.
                 </h3>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Structure
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:'1.75vw' }}>
                   They also help maintain the structure of the jawbone and
                   prevent tooth shifting, which can occur when a tooth is
                   missing.
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   Overall, tooth implants are a safe and effective way to
                   replace missing teeth and can help restore the appearance and
                   function of your mouth. If you are considering a tooth
                   implant, it is important to consult with a dental professional
                   to determine if this treatment option is right for you.
                 </h3>
+                </div>
+                <div className="col-md-3">
+                <img
+                  src="https://teethq.com/wp-content/uploads/2021/03/dental-implant-3.gif"
+                  alt="Card image cap"
+                  style={{ height: "30vw", width:'30vw' }}
+                />
+                </div>
+                </div>
               </CardText>
             </CardBody>
           </Card>

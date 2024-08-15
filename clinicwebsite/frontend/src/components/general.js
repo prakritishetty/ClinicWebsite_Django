@@ -10,14 +10,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -27,68 +32,71 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${clinic1})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            height: "90vh",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "6vw",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "100vw",
-              padding: "10px",
-              margin: "10px",
-            }}
-          >
+         className="d-flex flex-column justify-content-center align-items-center"
+         style={{
+           padding: "0px",
+           margin: "0px",
+           backgroundImage: `url(${clinic1})`,
+           backgroundPosition: "center ",
+           backgroundSize: "cover",
+           backgroundRepeat: "no-repeat",
+           width: "100vw",
+           minHeight: "140vh",
+           overflowX:"auto"
+         }}
+       >
+         <div
+           className="text-center"
+           style={{
+             fontFamily: "Playfair Display",
+             fontSize: "6vw",
+             color: "white",
+             backgroundColor: "rgba(0,0,0,0.5)",
+             width: "100vw",
+             padding: "10px",
+             margin: "2vw",
+           }}
+         >
             {" "}
             General Services!
           </div>
           <Button
-            active
-            style={{
-              padding: "10px",
-              margin: "4px",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
-          >
+           active
+           className="my-2"
+           style={{
+             padding: "0.5vw",
+            //  marginleft:"200vw",
+             borderColor: "white",
+             backgroundColor: "black",
+           }}
+         >
+           <div
+             className="text-center"
+             style={{
+               fontFamily: "Playfair Display",
+               fontSize: "3vw",
+               color: "white",
+             }}
+           >
+              <a
+                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
+                style={{ color: "white", textDecoration: "none" }}
+                >
+                  Book an appointment
+                </a>
+              </div>
+            </Button>
             <div
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "35px",
-                align: "center",
+                fontSize: "2.5vw",
                 color: "white",
+                backgroundColor: "rgba(0,0,0,0.5)",
+                width: "35vw",
+                padding: "1vw",
+                margin: "0.6vw",
               }}
             >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
-              >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "3vw",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
-            }}
-          >
             {" "}
             OR Call on (+91) 9833630985{" "}
           </div>
@@ -102,9 +110,9 @@ class App extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "700px",
-            borderWidth: "2px",
-            margin: "5px",
+            // height: "1400px",
+            borderWidth: "0.2vw",
+            // margin: "0.",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
@@ -112,17 +120,17 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "30px",
+              fontSize: "1.9vw",
               color: "Black",
               position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
+              padding: "1vw",
+              margin: "0.5vw",
+              borderWidth: "0.2vw",
               borderColor: "black",
-              fontSize: "25px",
+              // fontSize: "25px",
             }}
-          >
-            <p style={{ fontSize: "40px" }}>
+            >
+            <p style={{ fontSize: "2.5vw" }}>
               <b>General Services</b>
             </p>
             At Dr Sandhya's Total Dental Care, we host an array of general
@@ -133,39 +141,50 @@ class App extends Component {
           <br></br>
           <br></br>
 
-          <div
+          {/* <div
             display="flex"
             style={{
               display: "flex",
-              padding: "10px",
-              marginLeft: "0px",
-              paddingLeft: "0px",
+              padding: "1vw",
+              marginLeft: "0vw",
+              paddingLeft: "0vw",
             }}
-          >
+          > */}
+          <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.9vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "0.75vw",
+            // margin: "10px",
+          }}>
+          <div className="col-md-4" >
             <Button
+            // className="container-fluid"
               href="/cleaningexams"
               style={{
-                padding: "20px",
+                padding: "0.2vw",
                 borderColor: "white",
-                borderRadius: "20px",
+                borderRadius: "1vw",
               }}
             >
-              <Card style={{ width: "300px", padding: "10px" }}>
+              <Card >
                 <CardHeader
                   style={{
                     color: "black",
-                    fontSize: "25px",
+                    fontSize: "1.75vw",
                     fontFamily: "Playfair Display",
-                    padding: "5px",
+                    padding: "0.5vw",
                   }}
                 >
                   Cleaning and Examinations
                 </CardHeader>
                 <CardBody>
                   <CardText
-                    style={{
+                    style={{ 
                       color: "black",
-                      fontSize: "15px",
+                      fontSize: "1.3vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -173,34 +192,40 @@ class App extends Component {
                   </CardText>
                 </CardBody>
               </Card>
+            
+
             </Button>
-            <div
+            </div>
+            
+            <div className="col-md-4" >
+            {/* <div
               style={{ fontSize: "40px", paddingTop: "10px", margin: "40px" }}
-            />
+            /> */}
             <Button
+            // className="container-fluid"
               href="/crowns"
               style={{
-                padding: "20px",
+                padding: "0.2vw",
                 borderColor: "white",
-                borderRadius: "20px",
+                borderRadius: "1vw",
               }}
             >
-              <Card style={{ width: "300px", padding: "10px" }}>
+              <Card >
                 <CardHeader
                   style={{
                     color: "black",
-                    fontSize: "25px",
+                    fontSize: "1.75vw",
                     fontFamily: "Playfair Display",
-                    padding: "5px",
+                    padding: "0.5vw",
                   }}
                 >
                   Crowns
                 </CardHeader>
                 <CardBody>
                   <CardText
-                    style={{
+                    style={{ 
                       color: "black",
-                      fontSize: "15px",
+                      fontSize: "1.3vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -209,34 +234,34 @@ class App extends Component {
                 </CardBody>
               </Card>
             </Button>
+            </div>
 
-            <div
-              style={{ fontSize: "40px", paddingTop: "10px", margin: "40px" }}
-            />
+            <div className="col-md-4" >
             <Button
+            // className="container-fluid"
               href="/extractions"
               style={{
-                padding: "20px",
+                padding: "0.2vw",
                 borderColor: "white",
-                borderRadius: "20px",
+                borderRadius: "1vw",
               }}
             >
-              <Card style={{ width: "300px", padding: "10px" }}>
+              <Card >
                 <CardHeader
                   style={{
                     color: "black",
-                    fontSize: "25px",
+                    fontSize: "1.75vw",
                     fontFamily: "Playfair Display",
-                    padding: "5px",
+                    padding: "0.5vw",
                   }}
                 >
                   Tooth Extractions
                 </CardHeader>
                 <CardBody>
                   <CardText
-                    style={{
+                    style={{ 
                       color: "black",
-                      fontSize: "15px",
+                      fontSize: "1.3vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -245,45 +270,44 @@ class App extends Component {
                 </CardBody>
               </Card>
             </Button>
-            <div
-              style={{ fontSize: "40px", paddingTop: "10px", margin: "8px" }}
-            />
-            <br></br>
-            <br></br>
-          </div>
-          <div
-            display="flex"
-            style={{
-              display: "flex",
-              paddingLeft: "-10px",
-              marginLeft: "-10px",
-            }}
-          >
+            </div>
+            <br/> <br/>
+
+            <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.9vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "0.75vw",
+            // margin: "10px",
+          }}>
+            <div className="col-md-4" >
             <Button
+            // className="container-fluid"
               href="/gumtherapy"
               style={{
-                padding: "10px",
+                padding: "0.2vw",
                 borderColor: "white",
-                borderRadius: "10px",
+                borderRadius: "1vw",
               }}
             >
-              <Card style={{ width: "275px", padding: "10px" }}>
+              <Card >
                 <CardHeader
                   style={{
                     color: "black",
-                    fontSize: "25px",
+                    fontSize: "1.75vw",
                     fontFamily: "Playfair Display",
-                    padding: "5px",
+                    padding: "0.5vw",
                   }}
                 >
                   Gum Therapy
                 </CardHeader>
-                <CardBody style={{ width: "225px" }}>
+                <CardBody >
                   <CardText
-                    style={{
+                    style={{ 
                       color: "black",
-                      fontSize: "13px",
-                      width: "225px",
+                      fontSize: "1.3vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -292,33 +316,33 @@ class App extends Component {
                 </CardBody>
               </Card>
             </Button>
-            <div
-              style={{ fontSize: "40px", paddingTop: "10px", margin: "8px" }}
-            />
+            </div>
+            <div className="col-md-4" >
             <Button
+            // className="container-fluid"
               href="/bondingfillings"
               style={{
-                padding: "10px",
+                padding: "0.2vw",
                 borderColor: "white",
-                borderRadius: "10px",
+                borderRadius: "1vw",
               }}
             >
-              <Card style={{ width: "280px", padding: "10px" }}>
+              <Card >
                 <CardHeader
                   style={{
                     color: "black",
-                    fontSize: "22px",
+                    fontSize: "1.75vw",
                     fontFamily: "Playfair Display",
-                    padding: "5px",
+                    padding: "0.5vw",
                   }}
                 >
                   Bondings and White Fillings
                 </CardHeader>
                 <CardBody>
                   <CardText
-                    style={{
+                    style={{ 
                       color: "black",
-                      fontSize: "13px",
+                      fontSize: "1.3vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -327,33 +351,33 @@ class App extends Component {
                 </CardBody>
               </Card>
             </Button>
-            <div
-              style={{ fontSize: "40px", paddingTop: "10px", margin: "8px" }}
-            />
+            </div>
+            <div className="col-md-4" >
             <Button
+            // className="container-fluid"
               href="/dentures"
               style={{
-                padding: "10px",
+                padding: "0.2vw",
                 borderColor: "white",
-                borderRadius: "10px",
+                borderRadius: "1vw",
               }}
             >
-              <Card style={{ width: "250px", padding: "10px" }}>
+              <Card >
                 <CardHeader
                   style={{
                     color: "black",
-                    fontSize: "23px",
+                    fontSize: "1.75vw",
                     fontFamily: "Playfair Display",
-                    padding: "5px",
+                    padding: "0.5vw",
                   }}
                 >
                   Dentures
                 </CardHeader>
                 <CardBody>
                   <CardText
-                    style={{
+                    style={{ 
                       color: "black",
-                      fontSize: "15px",
+                      fontSize: "1.3vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -362,33 +386,48 @@ class App extends Component {
                 </CardBody>
               </Card>
             </Button>
-            <div
-              style={{ fontSize: "40px", paddingTop: "10px", margin: "8px" }}
-            />
+            </div>
+            </div>
+
+
+            <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.9vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "0.75vw",
+            // margin: "10px",
+          }}>
+
+
+
+            <div className="col-md-4" >
             <Button
+            // className="container-fluid"
               href="/nightguards"
               style={{
-                padding: "10px",
+                padding: "0.2vw",
                 borderColor: "white",
-                borderRadius: "10px",
+                borderRadius: "1vw",
               }}
             >
-              <Card style={{ width: "250px", padding: "10px" }}>
+              <Card >
                 <CardHeader
                   style={{
                     color: "black",
-                    fontSize: "22px",
+                    fontSize: "1.75vw",
                     fontFamily: "Playfair Display",
-                    padding: "5px",
+                    padding: "0.5vw",
                   }}
                 >
                   Night Guards
                 </CardHeader>
                 <CardBody>
                   <CardText
-                    style={{
+                    style={{ 
                       color: "black",
-                      fontSize: "13px",
+                      fontSize: "1.3vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -397,8 +436,12 @@ class App extends Component {
                 </CardBody>
               </Card>
             </Button>
+            </div>
+            </div>
+
           </div>
         </Card>
+        
 
         <br></br>
 

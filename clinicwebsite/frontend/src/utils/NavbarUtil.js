@@ -242,7 +242,7 @@ class NavbarUtil extends Component {
                   >
                     Tooth Extractions
                   </DropdownItem>
-                  <DropdownItem href="/gumtherapy" style={{
+                  <DropdownItem href="/deepscaling" style={{
                   fontFamily: "Playfair Display",
                   fontSize: "2vw",
                   // color: "white",
@@ -251,7 +251,7 @@ class NavbarUtil extends Component {
                   padding: "1vw",
                   // margin: "10px",
                 }}>
-                    Gum Therapy
+                    Deep Scaling
                   </DropdownItem>
                   <DropdownItem
                     href="/bondingfillings"

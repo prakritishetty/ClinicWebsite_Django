@@ -13,14 +13,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -30,19 +35,21 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
+          className="d-flex flex-column justify-content-center align-items-center"
           style={{
             padding: "0px",
             margin: "0px",
             backgroundImage: `url(${IMG_6447})`,
-            backgroundPosition: "center",
+            backgroundPosition: "center ",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             width: "100vw",
-            height: "90vh",
+            minHeight: "140vh",
+            overflowX:"auto"
           }}
         >
           <div
+            className="text-center"
             style={{
               fontFamily: "Playfair Display",
               fontSize: "6vw",
@@ -50,32 +57,34 @@ class App extends Component {
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
               padding: "10px",
-              margin: "10px",
+              margin: "2vw",
             }}
           >
             {" "}
-            Gum Therapy!
+            Deep Scaling!
           </div>
           <Button
             active
+            className="my-2"
             style={{
-              padding: "10px",
-              margin: "4px",
+              padding: "0.5vw",
+             //  marginleft:"200vw",
               borderColor: "white",
               backgroundColor: "black",
             }}
           >
             <div
+              className="text-center"
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "35px",
-                align: "center",
+                fontSize: "3vw",
                 color: "white",
               }}
             >
+            
               <a
                 href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
+                style={{ color: "white", textDecoration: "none" }}
               >
                 Book an appointment
               </a>
@@ -84,12 +93,12 @@ class App extends Component {
           <div
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "3vw",
+              fontSize: "2.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
+              width: "35vw",
+              padding: "1vw",
+              margin: "0.6vw",
             }}
           >
             {" "}
@@ -105,9 +114,9 @@ class App extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "900px",
-            borderWidth: "2px",
-            margin: "5px",
+            // height: "900px",
+            borderWidth: "0.2vw",
+            // margin: "0.5vw",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
@@ -115,20 +124,20 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "Playfair Display",
-              fontSize: "30px",
+              fontSize: "1.75vw",
               color: "Black",
               position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
+              padding: "2vw",
+              margin: "1vw",
+              borderWidth: "0.2vw",
               borderColor: "black",
-              fontSize: "25px",
+              // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "40px" }}>
-              <b>Gum Therapy</b>
+            <p style={{ fontSize: "2.5vw", fontFamily:"Playfair Display" }}>
+              <b>Deep Scaling</b>
             </p>
-            Gum therapy, also known as periodontal therapy, is a type of
+            Deep Scaling, also known as periodontal therapy, is a type of
             treatment for gum disease, which is an infection of the tissues that
             support your teeth. Gum disease can range from mild to severe, and
             it is caused by a build-up of plaque and tartar on the teeth and
@@ -150,7 +159,7 @@ class App extends Component {
             <CardHeader
               style={{
                 color: "black",
-                fontSize: "35px",
+                fontSize: "2.5vw",
                 fontFamily: "Playfair Display",
               }}
             >
@@ -158,65 +167,79 @@ class App extends Component {
             </CardHeader>
             <CardBody>
               <CardText>
-                <img
-                  src={IMG_6445}
-                  alt="Card image cap"
-                  style={{ float: "right", height: "300px" }}
-                />
-                <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+              <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.25vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "10px",
+            margin: "10px",
+          }}>
+          <div className="col-md-8" >
+                
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Scaling :
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
                   Removing plaque and tartar from the teeth
                 </h3>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Root Planing :
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
                   Smoothing the root surfaces of the teeth to help prevent
                   further build-up.
                 </h3>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Antibiotics :
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
                   To kill bacteria and laser therapy to kill bacteria and
                   stimulate the growth of healthy gum tissue.
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
                   The specific treatment plan will depend on the severity of the
                   gum disease and may involve a combination of different
                   procedures.
                 </h3>
+                </div>
+                <div className="col-md-3" >
+                <img
+                  src={IMG_6445}
+                  alt="Card image cap"
+                  style={{ height: "30vw", width:"30vw" }}
+                />
+                </div>
+                </div>
               </CardText>
             </CardBody>
           </Card>

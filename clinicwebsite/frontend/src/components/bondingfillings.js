@@ -19,14 +19,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -36,65 +41,68 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
+          className="d-flex flex-column justify-content-center align-items-center"
           style={{
             padding: "0px",
             margin: "0px",
             backgroundImage: `url(${IMG_6429})`,
-            backgroundPosition: "center",
+            backgroundPosition: "center ",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             width: "100vw",
-            height: "90vh",
+            minHeight: "140vh",
           }}
         >
           <div
-           style={{
-            fontFamily: "Playfair Display",
-            fontSize: "6vw",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            width: "100vw",
-            padding: "10px",
-            margin: "10px",
-          }}
+            className="text-center"
+            style={{
+              fontFamily: "Playfair Display",
+              fontSize: "6vw",
+              color: "white",
+              backgroundColor: "rgba(0,0,0,0.5)",
+              width: "100vw",
+              padding: "10px",
+              margin: "2vw",
+            }}
           >
             {" "}
             Bondings and White Fillings!
           </div>
           <Button
             active
+            className="my-2"
             style={{
-              padding: "10px",
-              // margin: "4px",
+              padding: "0.5vw",
+             //  marginleft:"200vw",
               borderColor: "white",
               backgroundColor: "black",
             }}
           >
             <div
+              className="text-center"
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "4vw",
+                fontSize: "3vw",
                 color: "white",
               }}
             >
               <a
                 href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
+                style={{ color: "white", textDecoration: "none" }}
               >
                 Book an appointment
               </a>
             </div>
           </Button>
           <div
-            style={{
+             style={{
               fontFamily: "Playfair Display",
-              fontSize: "3vw",
+              fontSize: "2.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
+              width: "35vw",
+              padding: "1vw",
+              margin: "0.6vw",
             }}
           >
             {" "}
@@ -110,7 +118,7 @@ class App extends Component {
         <br></br>
         <br></br>
 
-        <Navbar
+        {/* <Navbar
           style={{
             backgroundColor: "rgba(0, 28, 40, 0.38)",
             padding: "20px",
@@ -120,22 +128,23 @@ class App extends Component {
           }}
         >
           <Nav className="ms-auto">
-            <NavItem style={{ padding: "30px" }}>
+            <NavItem style={{ padding: "30px" }}> */}
+            <div className="row">
+            <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
               <Card
                 style={{
-                  fontSize: "20px",
-                  margin: "15px",
-                  width: "500px",
-                  padding: "35px",
-                  height: "600px",
+                  fontSize: "1.5vw",
+                  margin: "0.5vw",
+                  // width: "",
+                  padding: "1vw",
                 }}
               >
                 <CardHeader
                   style={{
-                    fontSize: "25px",
-                    width: "400px",
+                    fontSize: "1.5vw",
+                    // width: "400px",
                     color: "black",
-                    padding: "10px",
+                    padding: "1vw",
                     align: "center",
                   }}
                 >
@@ -143,7 +152,9 @@ class App extends Component {
                 </CardHeader>
 
                 <CardBody
-                  style={{ width: "400px", fontSize: "18px", color: "black" }}
+                   style={{ 
+                    // width: "400px", 
+                    fontSize: "1.5vw", color: "black" }}
                 >
                   Bonding is a cosmetic dental procedure in which a{" "}
                   <b>tooth-colored composite resin</b> is applied to the surface
@@ -156,6 +167,7 @@ class App extends Component {
                   <b>protect</b> the roots of teeth that have been exposed due
                   to receding gums.
                 </CardBody>
+              
                 <br></br>
                 <br></br>
                 <br></br>
@@ -163,24 +175,25 @@ class App extends Component {
                 <br></br>
                 <br></br>
               </Card>
-            </NavItem>
+              </div>
+            {/* </NavItem>
 
-            <NavItem style={{ padding: "30px" }}>
+            <NavItem style={{ padding: "30px" }}> */}
+            <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
               <Card
                 style={{
-                  fontSize: "20px",
-                  margin: "15px",
-                  width: "500px",
-                  padding: "35px",
-                  height: "600px",
+                  fontSize: "1.5vw",
+                  margin: "0.5vw",
+                  // width: "",
+                  padding: "1vw",
                 }}
               >
                 <CardHeader
                   style={{
-                    fontSize: "25px",
-                    width: "420px",
+                    fontSize: "1.5vw",
+                    // width: "400px",
                     color: "black",
-                    padding: "10px",
+                    padding: "1vw",
                     align: "center",
                   }}
                 >
@@ -188,7 +201,9 @@ class App extends Component {
                 </CardHeader>
 
                 <CardBody
-                  style={{ width: "400px", fontSize: "18px", color: "black" }}
+                  style={{ 
+                    // width: "400px", 
+                    fontSize: "1.5vw", color: "black" }}
                 >
                   <br></br>
                   White fillings, also known as composite fillings, are used to{" "}
@@ -203,9 +218,11 @@ class App extends Component {
                   color of the teeth.
                 </CardBody>
               </Card>
-            </NavItem>
+              </div>
+              </div>
+            {/* </NavItem>
           </Nav>
-        </Navbar>
+        </Navbar> */}
 
         <br></br>
         <br></br>

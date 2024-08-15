@@ -12,14 +12,19 @@ class App extends Component {
   render() {
     return (
       <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+      style={{
+        marginRight: "0",
+        marginLeft: "0",
+        paddingRight: "0",
+        paddingLeft: "0",
+        backgroundImage: `url(${clinic1})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        minHeight: "100vh",
+        overflowX: "hidden",
+      }}
       >
         <NavbarUtil />
 
@@ -29,19 +34,21 @@ class App extends Component {
         <br></br>
 
         <div
-          className="p-5 my-6 rounded"
+          className="d-flex flex-column justify-content-center align-items-center"
           style={{
             padding: "0px",
             margin: "0px",
             backgroundImage: `url(${clinic1})`,
-            backgroundPosition: "center",
+            backgroundPosition: "center ",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             width: "100vw",
-            height: "90vh",
+            minHeight: "140vh",
+            overflowX:"auto"
           }}
         >
           <div
+            className="text-center"
             style={{
               fontFamily: "Playfair Display",
               fontSize: "6vw",
@@ -49,48 +56,49 @@ class App extends Component {
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
               padding: "10px",
-              margin: "10px",
+              margin: "2vw",
             }}
           >
             {" "}
             Full Mouth Rehabilitation!
           </div>
           <Button
-            active
-            style={{
-              padding: "10px",
-              margin: "4px",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
-          >
+           active
+           className="my-2"
+           style={{
+             padding: "0.5vw",
+            //  marginleft:"200vw",
+             borderColor: "white",
+             backgroundColor: "black",
+           }}
+         >
+           <div
+             className="text-center"
+             style={{
+               fontFamily: "Playfair Display",
+               fontSize: "3vw",
+               color: "white",
+             }}
+           >
+              <a
+                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
+                style={{ color: "white", textDecoration: "none" }}
+                >
+                  Book an appointment
+                </a>
+              </div>
+            </Button>
             <div
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: "35px",
-                align: "center",
+                fontSize: "2.5vw",
                 color: "white",
+                backgroundColor: "rgba(0,0,0,0.5)",
+                width: "35vw",
+                padding: "1vw",
+                margin: "0.6vw",
               }}
-            >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white" }}
               >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "3vw",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
-            }}
-          >
             {" "}
             OR Call on (+91) 9833630985{" "}
           </div>
@@ -104,27 +112,27 @@ class App extends Component {
         <Card
           class="container-fluid"
           style={{
-            height: "1500px",
-            borderWidth: "2px",
-            margin: "5px",
+            // height: "1400px",
+            borderWidth: "0.2vw",
+            // margin: "0.",
             borderColor: "white",
             backgroundColor: "rgba(0, 28, 40, 0.38)",
           }}
         >
           <Card
-            style={{
-              fontFamily: "Playfair Display",
-              fontSize: "30px",
-              color: "Black",
-              position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
-              borderColor: "black",
-              fontSize: "25px",
-            }}
+           style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.9vw",
+            color: "Black",
+            position: "center",
+            padding: "1vw",
+            margin: "0.5vw",
+            borderWidth: "0.2vw",
+            borderColor: "black",
+            // fontSize: "25px",
+          }}
           >
-            <p style={{ fontSize: "40px" }}>
+            <p style={{ fontSize: "2.5vw" }}>
               <b>Full Mouth Rehabilitation</b>
             </p>
             Full mouth rehabilitation, also known as full mouth reconstruction
@@ -139,9 +147,9 @@ class App extends Component {
 
           <Card
             style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
+              padding: "1vw",
+              borderWidth: "0.2vw",
+              margin: "0.5vw",
               position: "float",
               backgroundColor: "white",
             }}
@@ -149,7 +157,7 @@ class App extends Component {
             <CardHeader
               style={{
                 color: "black",
-                fontSize: "35px",
+                fontSize: "2.5vw",
                 fontFamily: "Playfair Display",
               }}
             >
@@ -157,15 +165,18 @@ class App extends Component {
             </CardHeader>
             <CardBody>
               <CardText>
-                <br></br>
-                <img
-                  src={FMR}
-                  alt="Card image cap"
-                  style={{ float: "right", height: "500px" }}
-                />
-                <br></br>
-                <br></br>
-                <h3 style={{ color: "black" }}>
+              <div className="row" style={{
+            fontFamily: "Playfair Display",
+            fontSize: "1.9vw",
+            color: "black",
+            // backgroundColor: "rgba(0,0,0,0.5)",
+            // width: "100vw",
+            padding: "1vw",
+            // margin: "10px",
+          }}>
+          <div className="col-md-8" >
+                
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   Full mouth rehabilitation can be a complex and lengthy process
                   that may involve several different dental procedures. The
                   specific treatment plan will depend on the individual needs of
@@ -173,98 +184,101 @@ class App extends Component {
                 </h3>
                 <br></br>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Dental Exams and Cleanings:
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   These are performed to remove plaque and tartar from the teeth
                   and to identify any potential dental problems.
                 </h3>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Tooth Extractions:
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black" , fontSize:"1.75vw"}}>
                   If a tooth is severely damaged or decayed, it may need to be
                   removed.
                 </h3>
                 <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Fillings:
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   If a tooth has a cavity, a filling may be used to repair it.
                 </h3>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <br></br>
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Crowns and Bridges:
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black" , fontSize:"1.75vw"}}>
                   These are used to restore damaged or missing teeth.
                 </h3>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <br></br>
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Orthodontic Treatment:
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   This may include braces or other appliances to straighten the
                   teeth.
                 </h3>
-                <TfiCheckBox size={50} color="black" />{" "}
+                <br></br>
+                <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
                     fontFamily: "Playfair Display",
                     display: "inline",
-                    fontSize: "30px",
+                    fontSize: "1.9vw",
                     color: "black",
                   }}
                 >
                   Dental Implants:
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black" , fontSize:"1.75vw"}}>
                   These are used to replace missing teeth.
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
                   In some cases, full mouth rehabilitation may also involve
                   cosmetic procedures, such as teeth whitening or veneers, to
                   improve the appearance of the teeth.
@@ -276,6 +290,15 @@ class App extends Component {
                   work closely with a dental professional to develop a treatment
                   plan that meets your individual needs and goals.
                 </h3>
+                </div>
+                <div className="col-md-3">
+                <img
+                  src={FMR}
+                  alt="Card image cap"
+                  style={{ height: "30vw", width:"30vw" }}
+                />
+                </div>
+                </div>
               </CardText>
             </CardBody>
           </Card>
