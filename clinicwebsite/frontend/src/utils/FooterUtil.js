@@ -29,7 +29,7 @@ class FooterUtil extends Component {
         >
           <div className="text-center p-3"
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "clamp(1vw, 3vw, 3vw)",
               color: "white",
               padding: "clamp(1vw, 1vw, 1.5vw)",
@@ -43,7 +43,7 @@ class FooterUtil extends Component {
               color="light"
               className="d-block mx-auto my-3"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "2vw",
                 padding: "1vw",
                 display:"inline"
@@ -71,14 +71,14 @@ class FooterUtil extends Component {
             borderWidth: "0.2vw",
             margin: "2vw",
             backgroundColor: "white",
-            fontFamily:"Playfair Display"
+            fontFamily:"times new roman"
             // display: "flex", // Enables Flexbox
             // alignItems: "center", // Vertical centering
             // justifyContent: "center", // Horizontal centering (if needed)
             // minHeight: "40vw", // Ensure card has a minimum height
           }}>
         <div className="row" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "1.25vw",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
@@ -108,7 +108,7 @@ class FooterUtil extends Component {
           {/* </ListGroup.Item>
           <ListGroup.Item
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               backgroundColor: "white",
               color: "black",
               fontSize: "20px",
@@ -129,7 +129,7 @@ class FooterUtil extends Component {
   <div className="col-md-4" >
     <h2 className="mb-3"  
     style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "clamp(2vw, 2.5vw, 3.5vw)",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
@@ -141,7 +141,7 @@ class FooterUtil extends Component {
           ><b>Visit Us</b></h2>
     <hr />
     <p  style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
@@ -151,7 +151,7 @@ class FooterUtil extends Component {
           }}>Shop #9, Saidham Complex,<br />P.K road, Mulund West<br />Mumbai - 400080</p>
           <hr></hr>
     <p style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
@@ -183,7 +183,7 @@ class FooterUtil extends Component {
             <ListGroup>
               <ListGroup.Item
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   color: "white",
                   backgroundColor: "rgba(0, 28, 40, 0.38)",
                 }}
@@ -193,7 +193,7 @@ class FooterUtil extends Component {
                     padding: "20px",
                     paddingRight: "60px",
                     marginRight: "5px",
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     fontSize: "30px",
                     backgroundColor: "rgba(0, 28, 40, 0.38)",
                   }}
@@ -211,7 +211,7 @@ class FooterUtil extends Component {
             <ListGroup>
               <ListGroup.Item
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   color: "white",
                   backgroundColor: "rgba(0, 28, 40, 0.38)",
                 }}
@@ -222,7 +222,7 @@ class FooterUtil extends Component {
                     padding: "20px",
                     paddingRight: "80px",
                     rightMargin: "50px",
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     fontSize: "30px",
                     backgroundColor: "rgba(0, 28, 40, 0.38)",
                   }}
@@ -256,7 +256,7 @@ class FooterUtil extends Component {
             <ListGroup>
               <ListGroup.Item
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   color: "white",
                   backgroundColor: "rgba(0, 28, 40, 0.38)",
                 }}
@@ -267,7 +267,7 @@ class FooterUtil extends Component {
                     padding: "20px",
                     paddingRight: "80px",
                     rightMargin: "70px",
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     fontSize: "30px",
                     backgroundColor: "rgba(0, 28, 40, 0.38)",
                   }}
@@ -302,7 +302,7 @@ class FooterUtil extends Component {
             <ListGroup style={{ marginRight: "0px", paddingRight: "0px" }}>
               <ListGroup.Item
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   color: "white",
                   backgroundColor: "rgba(0, 28, 40, 0.38)",
                 }}
@@ -313,7 +313,7 @@ class FooterUtil extends Component {
                     padding: "20px",
                     paddingRight: "80px",
                     margin: "0px",
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     fontSize: "30px",
                     backgroundColor: "rgba(0, 28, 40, 0.38)",
                   }}
@@ -332,7 +332,7 @@ class FooterUtil extends Component {
         </Navbar> */}
 
 <div className="container-fluid text-white py-4" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "clamp(1vw, 1.5vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
@@ -342,7 +342,7 @@ class FooterUtil extends Component {
           }} >
   <div className="row" style={{paddingLeft:"35vw"}}>
     <div className="col-md-2 mb-3" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",
@@ -351,7 +351,7 @@ class FooterUtil extends Component {
             margin: "0.2vw",
           }}>
       <h3 style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
@@ -363,7 +363,7 @@ class FooterUtil extends Component {
       <AiOutlineLinkedin size="2em"  style={{padding: "0.5vw",}}/>
     </div>
     <div className="col-md-3 mb-3" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",
@@ -372,7 +372,7 @@ class FooterUtil extends Component {
             margin: "0.2vw",
           }}>
       <h3 style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
@@ -385,7 +385,7 @@ class FooterUtil extends Component {
       <NavLink href="/surgical" style={{padding: "0.5vw",}}>Surgical</NavLink>
     </div>
     <div className="col-md-3 mb-3" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",
@@ -394,7 +394,7 @@ class FooterUtil extends Component {
             margin: "0.2vw",
           }}>
       <h3 style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
@@ -407,7 +407,7 @@ class FooterUtil extends Component {
       <NavLink href="/doctorlogin" style={{padding: "0.5vw",}}>Doctor Login</NavLink>
     </div>
     <div className="col-md-3 mb-3" style={{
-            // fontFamily: "Playfair Display",
+            // fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
             // color: "white",
             backgroundColor: "rgba(0,0,0,0.38)",
@@ -416,7 +416,7 @@ class FooterUtil extends Component {
             margin: "0.2vw",
           }}>
       <h3 style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize:"clamp(1vw, 2vw, 2vw)",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
@@ -431,12 +431,12 @@ class FooterUtil extends Component {
   </div>
 </div>
 
-        <div className="container-fluid text-white py-4" style={{backgroundColor:"rgba(0, 28, 40, 0.38)", padding:"20px", fontFamily:"Playfair Display", fontSize:"clamp(1rem, 3vw, 1.75rem)"}}
+        <div className="container-fluid text-white py-4" style={{backgroundColor:"rgba(0, 28, 40, 0.38)", padding:"20px", fontFamily:"times new roman", fontSize:"clamp(1rem, 3vw, 1.75rem)"}}
           // className="text"
           // style={{
           //   paddingLeft: "750px",
           //   color: "white",
-          //   fontFamily: "Playfair Display",
+          //   fontFamily: "times new roman",
           //   fontSize: "15px",
           //   fontStyle: "italic",
           //   backgroundColor: "rgba(0, 28, 40, 0.38)",

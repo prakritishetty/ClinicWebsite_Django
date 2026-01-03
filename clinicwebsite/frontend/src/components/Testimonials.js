@@ -85,7 +85,7 @@ class App extends Component {
         >
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "6vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -108,7 +108,7 @@ class App extends Component {
           >
             <div
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "35px",
                 align: "center",
                 color: "white",
@@ -124,7 +124,7 @@ class App extends Component {
           </Button>
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "3vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -152,7 +152,7 @@ class App extends Component {
         >
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "35px",
               color: "white",
             }}
@@ -161,7 +161,7 @@ class App extends Component {
           </div>
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "20px",
               color: "white",
               textAlign: "right",
@@ -214,7 +214,7 @@ class App extends Component {
                   <div class="arrow-down"></div>
                   <div
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "25px",
                       color: "white",
                     }}

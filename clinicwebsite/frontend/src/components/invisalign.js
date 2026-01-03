@@ -51,7 +51,7 @@ class App extends Component {
           <div
             className="text-center"
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "6vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -76,7 +76,7 @@ class App extends Component {
            <div
              className="text-center"
              style={{
-               fontFamily: "Playfair Display",
+               fontFamily: "times new roman",
                fontSize: "3vw",
                color: "white",
              }}
@@ -91,7 +91,7 @@ class App extends Component {
           </Button>
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "2.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -122,7 +122,7 @@ class App extends Component {
         >
           <Card
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "2.5vw",
               color: "Black",
               position: "center",
@@ -138,7 +138,7 @@ class App extends Component {
             </p>
             <CardText>
             <div className="row" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "1.9vw",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
@@ -183,7 +183,7 @@ class App extends Component {
               style={{
                 color: "black",
                 fontSize: "2.5vw",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
               }}
             >
               Treatment and Prerequisites
@@ -200,7 +200,7 @@ class App extends Component {
                       padding: "1vw",
                       color: "black",
                       fontSize: "2.5vw",
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                     }}
                     >
                       Traditional Aligners
@@ -211,7 +211,7 @@ class App extends Component {
                         padding: "1vw",
                         color: "black",
                         fontSize: "2.5vw",
-                        fontFamily: "Playfair Display",
+                        fontFamily: "times new roman",
                       }}
                     >
                       Invisible Aligners
@@ -225,7 +225,7 @@ class App extends Component {
                         padding: "1vw",
                         color: "black",
                         fontSize: "1.9vw",
-                        fontFamily: "Playfair Display",
+                        fontFamily: "times new roman",
                       }}
                     >
                       Made of a hard plastic material and are visible when worn
@@ -235,7 +235,7 @@ class App extends Component {
                         padding: "1vw",
                         color: "black",
                         fontSize: "1.9vw",
-                        fontFamily: "Playfair Display",
+                        fontFamily: "times new roman",
                       }}
                     >
                       Made of a clear, flexible plastic material and are nearly
@@ -263,7 +263,7 @@ class App extends Component {
                 style={{
                   color: "black",
                   fontSize: "1.9vw",
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   padding: "1vw",
                 }}
               >
@@ -283,7 +283,7 @@ class App extends Component {
                 style={{
                   color: "black",
                   fontSize: "1.9vw",
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   padding: "1vw",
                 }}
               >
@@ -303,7 +303,7 @@ class App extends Component {
                 style={{
                   color: "black",
                   fontSize: "1.9vw",
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   padding: "1vw",
                 }}
               >
@@ -328,7 +328,7 @@ class App extends Component {
                 style={{
                   color: "black",
                   fontSize: "1.9vw",
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   padding: "1vw",
                 }}
               >
@@ -350,7 +350,7 @@ class App extends Component {
                 style={{
                   color: "black",
                   fontSize: "1.9vw",
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   padding: "1vw",
                 }}
               >
@@ -371,7 +371,7 @@ class App extends Component {
                 style={{
                   color: "black",
                   fontSize: "1.9vw",
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   padding: "1vw",
                 }}
               >

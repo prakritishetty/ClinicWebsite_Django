@@ -43,7 +43,7 @@ class App extends Component {
         >
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "6vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -66,7 +66,7 @@ class App extends Component {
           >
             <div
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "35px",
                 align: "center",
                 color: "white",
@@ -82,7 +82,7 @@ class App extends Component {
           </Button>
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "3vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -113,7 +113,7 @@ class App extends Component {
         >
           <Card
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "30px",
               color: "Black",
               position: "center",
@@ -150,7 +150,7 @@ class App extends Component {
               style={{
                 color: "black",
                 fontSize: "35px",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
               }}
             >
               Salient Features
@@ -166,7 +166,7 @@ class App extends Component {
                 <TfiCheckBox size={50} color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "30px",
                     color: "black",
@@ -183,7 +183,7 @@ class App extends Component {
                 <TfiCheckBox size={50} color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "30px",
                     color: "black",

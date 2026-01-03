@@ -99,19 +99,19 @@ class BeforeAfterUtil extends Component {
     return (
       <Card className = "container-fluid"
         style={{
-          fontFamily: "Playfair Display",
+          fontFamily: "times new roman",
           fontSize: "3vw",
           color: "Black",
           padding: "2vw",
           // margin: "0.5vw",
           backgroundColor: "rgba(255, 255, 255)",
-          borderWidth: "0.2vw",
+          // borderWidth: "0.2vw",
           // margin: "2vw",
           backgroundColor: "white",
           // height: "110vw",
         }}
       >
-        Case Histories - Before/After:
+        Clinical Transformations:
         <CardGroup className = "container-fluid" style={{ padding: "2vw", 
           // height: "90vw", 
           fontSize:"1.5vw" }}>

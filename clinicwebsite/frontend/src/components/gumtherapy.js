@@ -51,7 +51,7 @@ class App extends Component {
           <div
             className="text-center"
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "6vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -76,7 +76,7 @@ class App extends Component {
             <div
               className="text-center"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "3vw",
                 color: "white",
               }}
@@ -92,7 +92,7 @@ class App extends Component {
           </Button>
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "2.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -123,7 +123,7 @@ class App extends Component {
         >
           <Card
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "1.75vw",
               color: "Black",
               position: "center",
@@ -134,7 +134,7 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw", fontFamily:"Playfair Display" }}>
+            <p style={{ fontSize: "2.5vw", fontFamily:"times new roman" }}>
               <b>Deep Scaling</b>
             </p>
             Deep Scaling, also known as periodontal therapy, is a type of
@@ -160,7 +160,7 @@ class App extends Component {
               style={{
                 color: "black",
                 fontSize: "2.5vw",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
               }}
             >
               Treatment Procedures
@@ -168,7 +168,7 @@ class App extends Component {
             <CardBody>
               <CardText>
               <div className="row" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "1.25vw",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
@@ -181,7 +181,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
@@ -196,7 +196,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
@@ -212,7 +212,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",

@@ -175,7 +175,7 @@ class App extends Component {
               <TfiCheckBox size="3vw" color="black" />
               <h1 
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   display: "inline",
                   color: "black",
@@ -187,7 +187,7 @@ class App extends Component {
                 On time, every time
               </h1>
               <h3 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "1.5vw",
                   // display: "inline",
                   color: "black",
@@ -202,7 +202,7 @@ class App extends Component {
               <TfiCheckBox size="3vw" color="black" />{" "}
               <h1
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   display: "inline",
                   color: "black",
@@ -214,7 +214,7 @@ class App extends Component {
                 Quality First
               </h1>
               <h3 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "1.5vw",
                   // display: "inline",
                   color: "black",
@@ -229,7 +229,7 @@ class App extends Component {
               <TfiCheckBox size="3vw" color="black" />{" "}
               <h1
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   display: "inline",
                   color: "black",
@@ -241,7 +241,7 @@ class App extends Component {
                 Transparent Pricing
               </h1>
               <h3 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "1.5vw",
                   // display: "inline",
                   color: "black",
@@ -280,7 +280,7 @@ class App extends Component {
 >
   <h2
     style={{
-      fontFamily: "Playfair Display",
+      fontFamily: "times new roman",
       fontSize: "3vw",
       color: "Black",
       marginBottom: "20px",

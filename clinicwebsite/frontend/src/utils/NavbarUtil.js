@@ -102,7 +102,7 @@ class NavbarUtil extends Component {
         expand="md"
         style={{
           color: "white",
-          fontFamily: "Playfair Display",
+          fontFamily: "times new roman",
           // fontSize: "30px",
           position: "fixed",
           width: "100%",
@@ -110,7 +110,8 @@ class NavbarUtil extends Component {
           height:"6vw",
           // paddingLeft: "0px",
           // marginLeft: "0px",
-          backgroundColor: "rgba(0, 28, 40, 0.38)",
+          // backgroundColor: "rgba(0, 28, 40, 0.38)",
+          backgroundColor: "	#03396c",
           flexDirection: "column",
           padding:"0.5vw",
           alignItems: "stretch",
@@ -120,7 +121,7 @@ class NavbarUtil extends Component {
           href="/"
           className="text-white" 
         style={{
-          fontFamily: "Playfair Display",
+          fontFamily: "times new roman",
           fontSize: "3vw",
           color: "white",
           // backgroundColor: "rgba(0,0,0,0.5)",
@@ -146,7 +147,7 @@ class NavbarUtil extends Component {
               onClick=""
               href="/about"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "1.5vw",
                 color: "white",
                 // backgroundColor: "rgba(0,28,40,0.38)",
@@ -168,7 +169,7 @@ class NavbarUtil extends Component {
             <DropdownToggle
               // nav
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "1.5vw",
                 color: "white",
                 // backgroundColor: "rgba(0,28,40,0.38)",
@@ -188,7 +189,7 @@ class NavbarUtil extends Component {
               >
                 <DropdownToggle nav 
                 style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -203,7 +204,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/cleaningexams"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -217,7 +218,7 @@ class NavbarUtil extends Component {
 
                   <DropdownItem href="/crowns" 
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     fontSize: "2vw",
                     // color: "white",
                     // backgroundColor: "rgba(0,28,40,0.38)",
@@ -231,7 +232,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/extractions"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -243,7 +244,7 @@ class NavbarUtil extends Component {
                     Tooth Extractions
                   </DropdownItem>
                   <DropdownItem href="/deepscaling" style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -256,7 +257,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/bondingfillings"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -269,7 +270,7 @@ class NavbarUtil extends Component {
                   </DropdownItem>
                   <DropdownItem href="/dentures" 
                   style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -282,7 +283,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/nightguards"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -303,7 +304,7 @@ class NavbarUtil extends Component {
                 isOpen={this.state.isOpenC}
               >
                 <DropdownToggle nav style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -315,7 +316,7 @@ class NavbarUtil extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem href="/invisalign" style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -329,7 +330,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/teethwhitening"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -343,7 +344,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/bondingfillings"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -355,7 +356,7 @@ class NavbarUtil extends Component {
                     Bonding
                   </DropdownItem>
                   <DropdownItem href="/veneers" style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -368,7 +369,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/smilemakeover"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -382,7 +383,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/gummysmilereduction"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -396,7 +397,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/fullmouthrehab"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -417,7 +418,7 @@ class NavbarUtil extends Component {
                 isOpen={this.state.isOpenS}
               >
                 <DropdownToggle nav style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -429,7 +430,7 @@ class NavbarUtil extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem href="/implants" style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -442,7 +443,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/extractions"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -454,7 +455,7 @@ class NavbarUtil extends Component {
                     Extractions
                   </DropdownItem>
                   <DropdownItem href="/rootcanal" style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -465,7 +466,7 @@ class NavbarUtil extends Component {
                     Root Canal
                   </DropdownItem>
                   <DropdownItem href="/bonegraft" style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -478,7 +479,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/implantsupporteddentures"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -490,7 +491,7 @@ class NavbarUtil extends Component {
                     Implant-supported Dentures
                   </DropdownItem>
                   <DropdownItem href="/bridges" style={{
-                  fontFamily: "Playfair Display",
+                  fontFamily: "times new roman",
                   fontSize: "2vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
@@ -503,7 +504,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/overdentures"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -517,7 +518,7 @@ class NavbarUtil extends Component {
                   <DropdownItem
                     href="/samedayimplants"
                     style={{
-                      fontFamily: "Playfair Display",
+                      fontFamily: "times new roman",
                       fontSize: "2vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
@@ -542,7 +543,7 @@ class NavbarUtil extends Component {
               className="text-white"
               style={{
                 // color: "white",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "1.5vw",
                 padding:"1vw",
                 paddingTop:"1.5vw",
@@ -562,7 +563,7 @@ class NavbarUtil extends Component {
             active
             color="light"
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "1.5vw",
               color: "white",
               // backgroundColor: "rgba(0,0,0,0.5)",

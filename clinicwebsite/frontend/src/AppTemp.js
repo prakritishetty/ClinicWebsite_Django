@@ -100,7 +100,7 @@ class NavbarUtil extends Component {
       <Navbar
         style={{
           color: "white",
-          fontFamily: "Playfair Display",
+          fontFamily: "times new roman",
           fontSize: "30px",
           position: "fixed",
           width: "100%",
@@ -114,7 +114,7 @@ class NavbarUtil extends Component {
           href="/"
           style={{
             color: "white",
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "30px",
             paddingLeft: "0px",
             marginLeft: "0px",
@@ -132,7 +132,7 @@ class NavbarUtil extends Component {
               href="/about"
               style={{
                 color: "white",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "20px",
                 backgroundColor: "rgba(0, 28, 40, 0.38)",
               }}
@@ -150,7 +150,7 @@ class NavbarUtil extends Component {
               nav
               style={{
                 color: "white",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "20px",
                 backgroundColor: "rgba(0, 28, 40, 0.38)",
                 padding: "10px",
@@ -315,7 +315,7 @@ class NavbarUtil extends Component {
               href="/doctorlogin"
               style={{
                 color: "white",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "20px",
                 marginRight: "5px",
                 backgroundColor: this.state.isOpenDoctorLogin
@@ -329,7 +329,7 @@ class NavbarUtil extends Component {
           <Button
             active
             color="light"
-            style={{ fontFamily: "Playfair Display", fontSize: "20px" }}
+            style={{ fontFamily: "times new roman", fontSize: "20px" }}
           >
             <a
               href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
@@ -489,7 +489,7 @@ class NavbarUtil extends Component {
       >
         <NavbarBrand href="/" className="text-white" 
         style={{
-          fontFamily: "Playfair Display",
+          fontFamily: "times new roman",
           fontSize: "3vw",
           color: "white",
           // backgroundColor: "rgba(0,0,0,0.5)",
@@ -506,7 +506,7 @@ class NavbarUtil extends Component {
             <NavItem>
               <NavLink href="/about" className="text-white"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "1.75vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",
@@ -528,7 +528,7 @@ class NavbarUtil extends Component {
             >
               <DropdownToggle nav caret className="text-white"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "1.75vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",
@@ -586,7 +586,7 @@ class NavbarUtil extends Component {
             <NavItem>
               <NavLink href="/doctorlogin" className="text-white"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "1.75vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",
@@ -600,7 +600,7 @@ class NavbarUtil extends Component {
             <NavItem>
               <Button color="light" className="mt-2 mt-md-0 ml-md-2"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "1.75vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",

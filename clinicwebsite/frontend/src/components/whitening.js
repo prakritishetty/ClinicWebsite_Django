@@ -50,7 +50,7 @@ class App extends Component {
           <div
             className="text-center"
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "6vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -75,7 +75,7 @@ class App extends Component {
            <div
              className="text-center"
              style={{
-               fontFamily: "Playfair Display",
+               fontFamily: "times new roman",
                fontSize: "3vw",
                color: "white",
              }}
@@ -90,7 +90,7 @@ class App extends Component {
             </Button>
             <div
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "2.5vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
@@ -121,7 +121,7 @@ class App extends Component {
         >
           <Card
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "2.5vw",
               color: "Black",
               position: "center",
@@ -137,7 +137,7 @@ class App extends Component {
             </p>
             <CardText>
             <div className="row" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "1.9vw",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",

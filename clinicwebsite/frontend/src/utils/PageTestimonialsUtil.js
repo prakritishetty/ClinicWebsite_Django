@@ -78,7 +78,7 @@ const PageTestimonialsUtil = () => {
     >
       <div
         style={{
-          fontFamily: "Playfair Display",
+          fontFamily: "times new roman",
           fontSize: "3vw",
           color: "white",
         }}
@@ -96,7 +96,7 @@ const PageTestimonialsUtil = () => {
         >
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "1.75vw",
               color: "white",
               textAlign: "right",
@@ -123,7 +123,7 @@ const PageTestimonialsUtil = () => {
                 onExiting={onExiting}
                 onExited={onExited}
                 key={item.id}
-                style={{ color: "black", fontFamily: "Playfair Display" }}
+                style={{ color: "black", fontFamily: "times new roman" }}
                 className="text-secondary"
               >
                 <div
@@ -174,7 +174,7 @@ const PageTestimonialsUtil = () => {
                     <div className="arrow-down"></div>
                     <div
                       style={{
-                        fontFamily: "Playfair Display",
+                        fontFamily: "times new roman",
                         fontSize: "2vw",
                         color: "white",
                       }}

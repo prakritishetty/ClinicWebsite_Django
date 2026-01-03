@@ -41,7 +41,8 @@ class App extends Component {
         marginLeft: "0",
         paddingRight: "0",
         paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
+        // backgroundImage: `url(${clinic1})`,
+        backgroundColor:"#b3cde0",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -58,28 +59,28 @@ class App extends Component {
         <br></br>
 
         <div
-          // className="p-5 my-6 rounded"
-          className="d-flex flex-column justify-content-center align-items-center"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${ammawithbg})`,
-            backgroundPosition: "center ",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            minHeight: "140vh",
-            overflowX:"auto"
-          }}
+          // // className="p-5 my-6 rounded"
+          // className="d-flex flex-column justify-content-center align-items-center"
+          // style={{
+          //   padding: "0px",
+          //   margin: "0px",
+          //   backgroundImage: `url(${ammawithbg})`,
+          //   backgroundPosition: "center ",
+          //   // backgroundSize: "cover",
+          //   backgroundRepeat: "no-repeat",
+          //   width: "100vw",
+          //   minHeight: "140vh",
+          //   overflowX:"auto"
+          // }}
         >
           <div
             className="text-center"
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "6vw",
               color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "100vw",
+              backgroundColor: "	#6497b1",
+              width: "95vw",
               padding: "10px",
               margin: "2vw",
             }}
@@ -87,8 +88,8 @@ class App extends Component {
             {" "}
             About Us!
           </div>
-          <br></br><br></br>
-          <Button
+          {/* <br></br><br></br> */}
+          {/* <Button
            active
            className="my-2"
            style={{
@@ -101,7 +102,7 @@ class App extends Component {
             <div
               className="text-center"
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "3vw",
                 color: "white",
               }}
@@ -116,7 +117,7 @@ class App extends Component {
           </Button>
           <div
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "2.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -127,16 +128,17 @@ class App extends Component {
           >
             {" "}
             OR Call on (+91) 9833630985{" "}
-          </div>
+          </div> */}
+        
         </div>
+        {/* <br></br>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <br></br> */}
+        {/* <br></br>
         <br></br>
 
-        <br></br>
+        <br></br> */}
 
         {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "10vw" }}> */}
 
@@ -151,22 +153,62 @@ class App extends Component {
           }}
         > */}
         
+
+
+            
           <Card
             style={{
-              fontFamily: "Playfair Display",
-              fontSize: "2vw",
+              fontFamily: "times new roman",
+              fontSize: "1.5vw",
               color: "Black",
-              position: "center",
+              // position: "center",
+              width:"96vw",
               padding: "2vw",
-              // margin: "1vw",
-              borderWidth: "0.2vw",
-              borderColor: "black",
+              margin: "1vw",
+              marginRight:"1vw",
+              // borderWidth: "0.2vw",
+              // borderColor: "black",
             }}
           >
-            Greetings and welcome to Dr Sandhya's Total Dental Care! <br></br>We
-            value your trust in us and are committed to providing you with
-            excellent dental care
+            <Navbar
+          style={{
+            // backgroundColor: "rgba(0, 28, 40, 0.38)",
+            padding: "20px",
+            marginLeft: "0px",
+            paddingLeft: "0px",
+            display: "flex", 
+            flexDirection: "row"
+          }}
+        >
+          <Nav style={{ display: "flex", flexDirection: "row" }}>
+            <NavItem style={{ width: "65%" }}>
+            Welcome to our practice - where experience, precision, and compassion come together to create confident smiles. <br></br><br></br>
+            Founded and led by <b>Dr. Sandhya Shetty (BDS, Gold Medalist)</b> and <b>Dr. Pratiksha Shetty (BDS, MDS Prosthodontics)</b>, our practice has been a trusted name in dental care for over 15 years. Known for our ethical practice and ability to explain treatments with clarity and care, we have earned the trust and respect of a wide patient base.
+            
+            {/* With academic excellence backed by national conference presentations and peer-reviewed publications, she combines artistry with evidence-based dentistry. <br/><br/> */}
+            <br></br><br></br>
+            Together, we are committed to providing personalized, comfortable and high-quality dental care for every smile by coalescing need-based and want-based dentistry. 
+            </NavItem>
+            <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
+              <img
+                  src={ammawithbg}
+                  // align="center"
+                  
+                  style={{ marginLeft: "auto",
+                  marginRight: "auto", 
+                  height: "25vw", width: "33vw",
+                  // paddingTop:"10px" 
+                    // marginLeft:"20px" 
+                  }}
+                ></img>
+            </NavItem>
+
+          </Nav>
+
+          </Navbar>
           </Card>
+
+          
         {/* </Card> */}
 
 
@@ -184,18 +226,34 @@ class App extends Component {
         >
           <Nav className="ms-auto">
             <NavItem style={{ padding: "30px" }}> */}
-            <div className="row">
-            <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
-              <Card
-              className="container-fluid"
-                style={{
-                  fontSize: "1.5vw",
-                  margin: "0.5vw",
-                  // width: "",
-                  padding: "1vw",
-                }}
-              >
-                <CardHeader
+
+               <Card
+            style={{
+              fontFamily: "times new roman",
+              fontSize: "1.5vw",
+              color: "Black",
+              // position: "center",
+              width:"96vw",
+              padding: "2vw",
+              margin: "1vw",
+              marginRight:"1vw",
+              // borderWidth: "0.2vw",
+              // borderColor: "black",
+            }}
+          >
+            <Navbar
+          style={{
+            // backgroundColor: "rgba(0, 28, 40, 0.38)",
+            padding: "20px",
+            marginLeft: "0px",
+            paddingLeft: "0px",
+            display: "flex", 
+            flexDirection: "row"
+          }}
+        >
+          <Nav style={{ display: "flex", flexDirection: "row" }}>
+            <NavItem style={{ width: "65%" }}>
+              <CardHeader
                   style={{
                     fontSize: "1.5vw",
                     // width: "400px",
@@ -206,51 +264,70 @@ class App extends Component {
                 >
                   <b>Dr(Mrs.) Sandhya Shetty, B.D.S</b>
                 </CardHeader>
-
-                <CardBody
+            
+            <CardBody
                   style={{ 
                     // width: "400px", 
                     fontSize: "1.5vw", 
                     color: "black" }}
                 >
                   <br></br>
-                  Dr Sandhya Shetty is a Bachelor in Dental Surgery (B.D.S) from
-                  the <b>Government Dental College, Aurangabad</b>.<br></br>
-                  <br></br>
-                  She was the <b>University Topper</b> and <b>Gold Medalist</b>{" "}
-                  and with almost 15 years of experience, she knows her way
-                  around teeth like the back of her hand!
+                  Dr. Sandhya Shetty (BDS, Gold Medalist) completed her Bachelor of Dental Surgery from Government Dental College, Aurangabad, in 1994, earning the Gold Medal from Marathwada University for her outstanding academic performance. 
+                  <br/><br/>
+                  With over 25 years of clinical experience, she has honed her expertise in a wide range of dental procedures, including cosmetic fillings, root canal treatments and extractions. Renowned for her in-depth understanding of oral anatomy and exceptional diagnostic skills, Dr. Shetty ensures each patient receives accurate, personalized care. 
+                  <br/><br/>
+                  Her gentle technique and ability to explain the treatment plan in a methodical way, have made her a trusted and beloved dentist. She is deeply committed to recommending the most suitable and ethical treatment approach for every patient, ensuring long-term oral health and comfort.
                 </CardBody>
-                <br></br>
-                <br></br>
-                
-              
-
-                <img
+            </NavItem>
+            <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
+              <img
                   src={amma}
-                  align="center"
-                  style={{ height: "40vw", width: "35vw", 
+                  // align="center"
+                  
+                  style={{ marginLeft: "auto",
+                  marginRight: "auto", 
+                  height: "40vw", width: "33vw",
+                  paddingTop:"80px" 
                     // marginLeft:"20px" 
                   }}
                 ></img>
-              </Card>
+            </NavItem>
 
-              </div>
-              
-            {/* </NavItem> */}
-            {/* <NavItem style={{width:"80px"}}></NavItem> */}
-             {/* <NavItem style={{ padding: "30px" }}> */}
+          </Nav>
 
-             <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
-             <Card
-                style={{
-                  fontSize: "1.5vw",
-                  margin: "0.5vw",
-                  // width: "",
-                  padding: "1vw",
-                }}
-              >
-                <CardHeader
+          </Navbar>
+          </Card>
+
+
+
+
+               <Card
+            style={{
+              fontFamily: "times new roman",
+              fontSize: "1.5vw",
+              color: "Black",
+              // position: "center",
+              width:"96vw",
+              padding: "2vw",
+              margin: "1vw",
+              marginRight:"1vw",
+              // borderWidth: "0.2vw",
+              // borderColor: "black",
+            }}
+          >
+            <Navbar
+          style={{
+            // backgroundColor: "rgba(0, 28, 40, 0.38)",
+            padding: "20px",
+            marginLeft: "0px",
+            paddingLeft: "0px",
+            display: "flex", 
+            flexDirection: "row"
+          }}
+        >
+          <Nav style={{ display: "flex", flexDirection: "row" }}>
+            <NavItem style={{ width: "65%" }}>
+              <CardHeader
                   style={{
                     fontSize: "1.5vw",
                     // width: "400px",
@@ -259,46 +336,47 @@ class App extends Component {
                     align: "center",
                   }}
                 >
-                
                   <b>Dr Pratiksha Shetty, B.D.S, M.D.S</b>
                 </CardHeader>
-
-                <CardBody
+            
+            <CardBody
                   style={{ 
                     // width: "400px", 
-                    fontSize: "1.5vw", color: "black" }}
+                    fontSize: "1.5vw", 
+                    color: "black" }}
                 >
                   <br></br>
-                  Dr Pratiksha Shetty is pursuing Masters of Dental Surgery
-                  (M.D.S) in Prosthodontics from the{" "}
-                  <b>Government Dental College, Mumbai</b>.<br></br>
-                  <br></br>
-                  She secured an <b>All India Rank 68</b> in NEET-MDS Qualifying
-                  Exam.
-                  <br></br>
-                  <br></br>
-                  She has completed her Bachelors in Dental Surgery (B.D.S) from{" "}
-                  <b>Nair Hospital and Dental College, Mumbai</b>
-                  <br></br>
-                  <br></br>
-                  Dr Pratiksha Shetty is the perfect example of adding the
-                  enthusiasm of young and fresh state-of-the-art dentistry
-                  techniques to the years of wisdom Dr Sandhya has amassed!
+                  Dr. Pratiksha Shetty (BDS, MDS Prosthodontics and Crown & Bridge) is a skilled and passionate prosthodontist dedicated to restoring smiles with precision and artistry. 
+                  <br/><br/>
+                  She completed her BDS from Nair Hospital Dental College, Mumbai (2022) and pursued her MDS in Prosthodontics and Crown & Bridge from Government Dental College & Hospital, Mumbai, where she gained advanced training in comprehensive oral rehabilitation. 
+                  <br/><br/>
+                  Dr. Pratiksha has delivered presentations at national conferences and published research in peer-reviewed journals, reflecting her commitment to academic excellence. Her clinical expertise spans implants, full-mouth rehabilitation, veneers, digital dentistry and maxillofacial prosthodontics, with a special focus on restoring missing oral and facial structures to enhance both function and aesthetics. She integrates complete digital workflows into her practice to ensure comfort, accuracy and superior results, helping every patient regain not just their smile, but also their confidence.
+ 
+                  
                 </CardBody>
-                <br></br>
-
-                <img
+            </NavItem>
+            <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
+              <img
                   src={akka}
-                  style={{ height: "40vw", width: "35vw", 
+                  // align="center"
+                  
+                  style={{ marginLeft: "auto",
+                  marginRight: "auto", 
+                  height: "40vw", width: "33vw",
+                  paddingTop:"80px" 
                     // marginLeft:"20px" 
                   }}
                 ></img>
-              </Card>
-              </div>
-            {/* </NavItem>  */}
-          {/* </Nav>
-        </Navbar> */}
-        </div>
+            </NavItem>
+
+          </Nav>
+
+          </Navbar>
+          </Card>
+
+
+              
+
 
         {/* </div> */}
 

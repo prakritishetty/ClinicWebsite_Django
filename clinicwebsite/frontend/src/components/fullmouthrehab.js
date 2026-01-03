@@ -50,7 +50,7 @@ class App extends Component {
           <div
             className="text-center"
             style={{
-              fontFamily: "Playfair Display",
+              fontFamily: "times new roman",
               fontSize: "6vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
@@ -75,7 +75,7 @@ class App extends Component {
            <div
              className="text-center"
              style={{
-               fontFamily: "Playfair Display",
+               fontFamily: "times new roman",
                fontSize: "3vw",
                color: "white",
              }}
@@ -90,7 +90,7 @@ class App extends Component {
             </Button>
             <div
               style={{
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
                 fontSize: "2.5vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
@@ -121,7 +121,7 @@ class App extends Component {
         >
           <Card
            style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "1.9vw",
             color: "Black",
             position: "center",
@@ -158,7 +158,7 @@ class App extends Component {
               style={{
                 color: "black",
                 fontSize: "2.5vw",
-                fontFamily: "Playfair Display",
+                fontFamily: "times new roman",
               }}
             >
               Treatment Journey
@@ -166,7 +166,7 @@ class App extends Component {
             <CardBody>
               <CardText>
               <div className="row" style={{
-            fontFamily: "Playfair Display",
+            fontFamily: "times new roman",
             fontSize: "1.9vw",
             color: "black",
             // backgroundColor: "rgba(0,0,0,0.5)",
@@ -187,7 +187,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
@@ -203,7 +203,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
@@ -219,7 +219,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
@@ -234,7 +234,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
@@ -249,7 +249,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
@@ -265,7 +265,7 @@ class App extends Component {
                 <TfiCheckBox size="3vw" color="black" />{" "}
                 <h1
                   style={{
-                    fontFamily: "Playfair Display",
+                    fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "1.9vw",
                     color: "black",
