@@ -23,7 +23,7 @@ class FooterUtil extends Component {
             borderWidth: "0.2vw",
             margin: "0px",
             borderColor: "white",
-            backgroundColor: "rgba(0, 28, 40, 0.38)",
+            backgroundColor: "white",
           }}
           
         >
@@ -31,9 +31,9 @@ class FooterUtil extends Component {
             style={{
               fontFamily: "times new roman",
               fontSize: "clamp(1vw, 3vw, 3vw)",
-              color: "white",
+              color: "#B8860B",
               padding: "clamp(1vw, 1vw, 1.5vw)",
-              backgroundColor: "rgba(0, 28, 40, 0.38)",
+              backgroundColor: "white",
               // zIndex: 100,
             }}
           >
@@ -81,7 +81,7 @@ class FooterUtil extends Component {
             fontFamily: "times new roman",
             fontSize: "0.9375vw",
             color: "#B8860B",
-            // backgroundColor: "rgba(0,0,0,0.5)",
+            // backgroundColor: "white",
             // width: "100vw",
             padding: "10px",
             margin: "10px"
@@ -132,7 +132,7 @@ class FooterUtil extends Component {
             fontFamily: "times new roman",
             fontSize: "clamp(2vw, 2.5vw, 3.5vw)",
             color: "#B8860B",
-            // backgroundColor: "rgba(0,0,0,0.5)",
+            // backgroundColor: "white",
             // width: "100vw",
             padding: "1vw",
             margin: "0.5vw",
@@ -144,7 +144,7 @@ class FooterUtil extends Component {
             fontFamily: "times new roman",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
             color: "#B8860B",
-            // backgroundColor: "rgba(0,0,0,0.5)",
+            // backgroundColor: "white",
             // width: "100vw",
             padding: "0.5vw",
             margin: "0.2vw",
@@ -154,7 +154,7 @@ class FooterUtil extends Component {
             fontFamily: "times new roman",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
             color: "#B8860B",
-            // backgroundColor: "rgba(0,0,0,0.5)",
+            // backgroundColor: "white",
             // width: "100vw",
             padding: "0.5vw",
             margin: "0.2vw",
@@ -172,7 +172,7 @@ class FooterUtil extends Component {
             paddingRight: "0px",
             paddingLeft: "250px",
             marginBottom: "0px",
-            backgroundColor: "rgba(0, 28, 40, 0.38)",
+            backgroundColor: "white",
           }}
         >
           <NavbarToggler onClick={this.toggle} />
@@ -184,8 +184,8 @@ class FooterUtil extends Component {
               <ListGroup.Item
                 style={{
                   fontFamily: "times new roman",
-                  color: "white",
-                  backgroundColor: "rgba(0, 28, 40, 0.38)",
+                  color: "#B8860B",
+                  backgroundColor: "white",
                 }}
               >
                 <NavItem
@@ -195,7 +195,7 @@ class FooterUtil extends Component {
                     marginRight: "5px",
                     fontFamily: "times new roman",
                     fontSize: "30px",
-                    backgroundColor: "rgba(0, 28, 40, 0.38)",
+                    backgroundColor: "white",
                   }}
                 >
                   Social
@@ -212,8 +212,8 @@ class FooterUtil extends Component {
               <ListGroup.Item
                 style={{
                   fontFamily: "times new roman",
-                  color: "white",
-                  backgroundColor: "rgba(0, 28, 40, 0.38)",
+                  color: "#B8860B",
+                  backgroundColor: "white",
                 }}
               >
                 {" "}
@@ -224,7 +224,7 @@ class FooterUtil extends Component {
                     rightMargin: "50px",
                     fontFamily: "times new roman",
                     fontSize: "30px",
-                    backgroundColor: "rgba(0, 28, 40, 0.38)",
+                    backgroundColor: "white",
                   }}
                 >
                   Services
@@ -233,19 +233,19 @@ class FooterUtil extends Component {
                 <br></br>
                 <NavLink
                   href="/general"
-                  style={{ color: "white", fontSize: "15px" }}
+                  style={{ color: "#B8860B", fontSize: "15px" }}
                 >
                   General
                 </NavLink>
                 <NavLink
                   href="/cosmetic"
-                  style={{ color: "white", fontSize: "15px" }}
+                  style={{ color: "#B8860B", fontSize: "15px" }}
                 >
                   Cosmetic
                 </NavLink>
                 <NavLink
                   href="/surgical"
-                  style={{ color: "white", fontSize: "15px" }}
+                  style={{ color: "#B8860B", fontSize: "15px" }}
                 >
                   Surgical
                 </NavLink>
@@ -257,8 +257,8 @@ class FooterUtil extends Component {
               <ListGroup.Item
                 style={{
                   fontFamily: "times new roman",
-                  color: "white",
-                  backgroundColor: "rgba(0, 28, 40, 0.38)",
+                  color: "#B8860B",
+                  backgroundColor: "white",
                 }}
               >
                 {" "}
@@ -269,7 +269,7 @@ class FooterUtil extends Component {
                     rightMargin: "70px",
                     fontFamily: "times new roman",
                     fontSize: "30px",
-                    backgroundColor: "rgba(0, 28, 40, 0.38)",
+                    backgroundColor: "white",
                   }}
                 >
                   Our Office
@@ -278,19 +278,19 @@ class FooterUtil extends Component {
                 <br></br>
                 <NavLink
                   href="/"
-                  style={{ color: "white", fontSize: "15px" }}
+                  style={{ color: "#B8860B", fontSize: "15px" }}
                 >
                   Home
                 </NavLink>
                 <NavLink
                   href="/about"
-                  style={{ color: "white", fontSize: "15px" }}
+                  style={{ color: "#B8860B", fontSize: "15px" }}
                 >
                   About
                 </NavLink>
                 <NavLink
                   href="/doctorlogin"
-                  style={{ color: "white", fontSize: "15px" }}
+                  style={{ color: "#B8860B", fontSize: "15px" }}
                 >
                   Doctor Login
                 </NavLink>
@@ -303,8 +303,8 @@ class FooterUtil extends Component {
               <ListGroup.Item
                 style={{
                   fontFamily: "times new roman",
-                  color: "white",
-                  backgroundColor: "rgba(0, 28, 40, 0.38)",
+                  color: "#B8860B",
+                  backgroundColor: "white",
                 }}
               >
                 {" "}
@@ -315,7 +315,7 @@ class FooterUtil extends Component {
                     margin: "0px",
                     fontFamily: "times new roman",
                     fontSize: "30px",
-                    backgroundColor: "rgba(0, 28, 40, 0.38)",
+                    backgroundColor: "white",
                   }}
                 >
                   Contact Us
@@ -331,11 +331,11 @@ class FooterUtil extends Component {
           </Nav>
         </Navbar> */}
 
-<div className="container-fluid text-white py-4" style={{
+<div className="container-fluid  py-4" style={{
             fontFamily: "times new roman",
             fontSize: "clamp(1vw, 1.5vw, 2vw)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#B8860B",
+            backgroundColor: "white",
             // width: "100vw",
             padding: "2.5vw",
             margin: "0.5vw",
@@ -344,8 +344,8 @@ class FooterUtil extends Component {
     <div className="col-md-2 mb-3" style={{
             fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "white",
-            backgroundColor: "rgba(0,0,0,0.38)",
+            // color: "#B8860B",
+            backgroundColor: "white",
             // // width: "100vw",
             // padding: "0.5vw",
             margin: "0.2vw",
@@ -353,8 +353,8 @@ class FooterUtil extends Component {
       <h3 style={{
             fontFamily: "times new roman",
             fontSize: "clamp(1vw, 2vw, 2vw)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#B8860B",
+            backgroundColor: "white",
             // width: "100vw",
             padding: "0.5vw",
             margin: "1vw",
@@ -365,8 +365,8 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3" style={{
             fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "white",
-            backgroundColor: "rgba(0,0,0,0.38)",
+            // color: "#B8860B",
+            backgroundColor: "white",
             // // width: "100vw",
             // padding: "0.5vw",
             margin: "0.2vw",
@@ -374,8 +374,8 @@ class FooterUtil extends Component {
       <h3 style={{
             fontFamily: "times new roman",
             fontSize: "clamp(1vw, 2vw, 2vw)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#B8860B",
+            backgroundColor: "white",
             // width: "100vw",
             padding: "0.5vw",
             margin: "1vw",
@@ -387,8 +387,8 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3" style={{
             fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "white",
-            backgroundColor: "rgba(0,0,0,0.38)",
+            // color: "#B8860B",
+            backgroundColor: "white",
             // // width: "100vw",
             // padding: "0.5vw",
             margin: "0.2vw",
@@ -396,8 +396,8 @@ class FooterUtil extends Component {
       <h3 style={{
             fontFamily: "times new roman",
             fontSize: "clamp(1vw, 2vw, 2vw)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#B8860B",
+            backgroundColor: "white",
             // width: "100vw",
             padding: "0.5vw",
             margin: "1vw",
@@ -409,8 +409,8 @@ class FooterUtil extends Component {
     <div className="col-md-3 mb-3" style={{
             // fontFamily: "times new roman",
             // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "white",
-            backgroundColor: "rgba(0,0,0,0.38)",
+            // color: "#B8860B",
+            backgroundColor: "white",
             // // width: "100vw",
             padding: "0.5vw",
             margin: "0.2vw",
@@ -418,8 +418,8 @@ class FooterUtil extends Component {
       <h3 style={{
             fontFamily: "times new roman",
             fontSize:"clamp(1vw, 2vw, 2vw)",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#B8860B",
+            backgroundColor: "white",
             // width: "100vw",
             padding: "0.5vw",
             margin: "1vw",
@@ -431,15 +431,15 @@ class FooterUtil extends Component {
   </div>
 </div>
 
-        <div className="container-fluid text-white py-4" style={{backgroundColor:"rgba(0, 28, 40, 0.38)", padding:"20px", fontFamily:"times new roman", fontSize:"clamp(1rem, 3vw, 1.75rem)"}}
+        <div className="container-fluid  py-4" style={{color: "#B8860B", backgroundColor: "white", padding:"20px", fontFamily:"times new roman", fontSize:"clamp(1rem, 3vw, 1.75rem)"}}
           // className="text"
           // style={{
           //   paddingLeft: "750px",
-          //   color: "white",
+          //   color: "#B8860B",
           //   fontFamily: "times new roman",
           //   fontSize: "15px",
           //   fontStyle: "italic",
-          //   backgroundColor: "rgba(0, 28, 40, 0.38)",
+          //   backgroundColor: "white",
           // }}
         >
           @ Dr Sandhya's Total Dental Care | Copyright: 2022 | Designed by:

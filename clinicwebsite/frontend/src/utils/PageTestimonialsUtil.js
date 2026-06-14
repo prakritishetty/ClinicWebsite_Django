@@ -80,14 +80,14 @@ const PageTestimonialsUtil = () => {
         style={{
           fontFamily: "times new roman",
           fontSize: "2.25vw",
-          color: "white",
+          color: "#B8860B",
         }}
       >
         Here's what our patients have to say:
         <br />
         <div
           style={{
-            // backgroundColor: "rgba(0, 28, 40, 0.38)",
+            // backgroundColor: "white",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             position: "center",
@@ -98,7 +98,7 @@ const PageTestimonialsUtil = () => {
             style={{
               fontFamily: "times new roman",
               fontSize: "1.3125vw",
-              color: "white",
+              color: "#B8860B",
               textAlign: "right",
               padding: "2vw",
               textDecorationColor: "silver",
@@ -106,7 +106,7 @@ const PageTestimonialsUtil = () => {
           >
             <a
               href="/testimonials"
-              style={{ color: "white", textDecorationColor: "silver", fontSize: "1.125vw" }}
+              style={{ color: "#B8860B", textDecorationColor: "silver", fontSize: "1.125vw" }}
             >
               See all testimonials
             </a>
@@ -139,7 +139,7 @@ const PageTestimonialsUtil = () => {
                     <div
                       className="card"
                       style={{
-                        backgroundColor: "rgba(0, 28, 40, 0.38)",
+                        backgroundColor: "white",
                         borderColor: "white",
                         borderWidth: "1px",
                       }}
@@ -157,7 +157,7 @@ const PageTestimonialsUtil = () => {
                         </span>
                         <span
                           className="post-txt"
-                          style={{ color: "white" ,fontSize: "1.125vw",}}
+                          style={{ color: "#B8860B" ,fontSize: "1.125vw",}}
                         >
                           {item.headertext}
                           <br />
@@ -180,7 +180,7 @@ const PageTestimonialsUtil = () => {
                       style={{
                         fontFamily: "times new roman",
                         fontSize: "1.5vw",
-                        color: "white",
+                        color: "#B8860B",
                       }}
                     >
                       {item.person}

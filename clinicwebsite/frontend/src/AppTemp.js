@@ -99,7 +99,7 @@ class NavbarUtil extends Component {
     return (
       <Navbar
         style={{
-          color: "white",
+          color: "#B8860B",
           fontFamily: "times new roman",
           fontSize: "30px",
           position: "fixed",
@@ -107,13 +107,13 @@ class NavbarUtil extends Component {
           zIndex: "1",
           paddingLeft: "0px",
           marginLeft: "0px",
-          backgroundColor: "rgba(0, 28, 40, 0.38)",
+          backgroundColor: "white",
         }}
       >
         <NavbarBrand
           href="/"
           style={{
-            color: "white",
+            color: "#B8860B",
             fontFamily: "times new roman",
             fontSize: "30px",
             paddingLeft: "0px",
@@ -131,10 +131,10 @@ class NavbarUtil extends Component {
               onClick=""
               href="/about"
               style={{
-                color: "white",
+                color: "#B8860B",
                 fontFamily: "times new roman",
                 fontSize: "20px",
-                backgroundColor: "rgba(0, 28, 40, 0.38)",
+                backgroundColor: "white",
               }}
             >
               About
@@ -149,10 +149,10 @@ class NavbarUtil extends Component {
             <DropdownToggle
               nav
               style={{
-                color: "white",
+                color: "#B8860B",
                 fontFamily: "times new roman",
                 fontSize: "20px",
-                backgroundColor: "rgba(0, 28, 40, 0.38)",
+                backgroundColor: "white",
                 padding: "10px",
               }}
             >
@@ -314,7 +314,7 @@ class NavbarUtil extends Component {
               onMouseLeave={this.onMouseLeaveDoctorLogin}
               href="/doctorlogin"
               style={{
-                color: "white",
+                color: "#B8860B",
                 fontFamily: "times new roman",
                 fontSize: "20px",
                 marginRight: "5px",
@@ -481,18 +481,18 @@ class NavbarUtil extends Component {
       <Navbar
         expand="md"
         style={{
-          backgroundColor: "rgba(0, 28, 40, 0.38)",
+          backgroundColor: "white",
           position: "fixed",
           width: "100%",
           zIndex: "1000",
         }}
       >
-        <NavbarBrand href="/" className="text-white" 
+        <NavbarBrand href="/"  
         style={{
           fontFamily: "times new roman",
           fontSize: "2.25vw",
-          color: "white",
-          // backgroundColor: "rgba(0,0,0,0.5)",
+          color: "#B8860B",
+          // backgroundColor: "white",
           width: "100vw",
           padding: "10px",
           margin: "10px",
@@ -504,12 +504,12 @@ class NavbarUtil extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/about" className="text-white"
+              <NavLink href="/about" 
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "white",
-                // backgroundColor: "rgba(0,0,0,0.5)",
+                color: "#B8860B",
+                // backgroundColor: "white",
                 // width: "100vw",
                 padding: "10px",
                 margin: "10px",
@@ -526,12 +526,12 @@ class NavbarUtil extends Component {
              onMouseLeave={this.onMouseLeave}
               // toggle={() => this.onMouseEnter('isOpen')}
             >
-              <DropdownToggle nav caret className="text-white"
+              <DropdownToggle nav caret 
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "white",
-                // backgroundColor: "rgba(0,0,0,0.5)",
+                color: "#B8860B",
+                // backgroundColor: "white",
                 // width: "100vw",
                 padding: "10px",
                 margin: "10px",
@@ -584,12 +584,12 @@ class NavbarUtil extends Component {
               </DropdownMenu>
             </Dropdown>
             <NavItem>
-              <NavLink href="/doctorlogin" className="text-white"
+              <NavLink href="/doctorlogin" 
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "white",
-                // backgroundColor: "rgba(0,0,0,0.5)",
+                color: "#B8860B",
+                // backgroundColor: "white",
                 width: "11vw",
                 padding: "10px",
                 margin: "10px",
@@ -602,8 +602,8 @@ class NavbarUtil extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "white",
-                // backgroundColor: "rgba(0,0,0,0.5)",
+                color: "#B8860B",
+                // backgroundColor: "white",
                 width: "20vw",
                 padding: "10px",
                 margin: "10px",

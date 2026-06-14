@@ -35,8 +35,8 @@
 .gradient-custom {
   background: 
   /* radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%), */
-    linear-gradient(121.28deg, #d5d6d4 0%, #7f7e7e 100%);
-    /* linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+    white;
+    /* white,
     radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
     radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%); */
   background-blend-mode: screen, color-dodge, overlay, difference, normal;
@@ -59,14 +59,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #B8860B;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #B8860B;
 }
 
 .App-link {
@@ -84,19 +84,19 @@
 
 
 body {
-	background-color: white;
+	background-color: #B8860B;
 	background-repeat: no-repeat;
 	overflow-x: hidden;
 }
 
 .card {
     position: relative;
-    border: solid 1px #212121;
+    border: solid 1px #B8860B;
     padding: 45px 50px 25px 60px;
     margin-top: 20px;
-    background-color: white;
+    background-color: #B8860B;
     border-radius: 10px;
-    color: #fff;
+    color: #B8860B;
 }
 
 .post-txt {
@@ -123,7 +123,7 @@ body {
   height: 0; 
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-top: 20px solid #212121;
+  border-top: 20px solid #B8860B;
   margin-left: 85px;
 }
 
@@ -146,7 +146,7 @@ body {
     font-size: 22px;
     margin-top: 60px;
     left: 210px;
-    color: #616161;
+    color: #B8860B;
 }
 
 

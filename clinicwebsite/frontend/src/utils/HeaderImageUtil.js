@@ -23,8 +23,8 @@ class HeaderImageUtil extends Component {
           style={{
             fontFamily: "times new roman",
             fontSize: "4.5vw",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#B8860B",
+            backgroundColor: "white",
             width: "100vw",
             padding: "10px",
             margin: "10px",
@@ -46,12 +46,12 @@ class HeaderImageUtil extends Component {
             style={{
               fontFamily: "times new roman",
               fontSize: "3vw",
-              color: "white",
+              color: "#B8860B",
             }}
           >
             <a
               href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-              style={{ color: "white", textDecoration: "none" }}
+              style={{ color: "#B8860B", textDecoration: "none" }}
             >
               Book an appointment
             </a>
@@ -62,8 +62,8 @@ class HeaderImageUtil extends Component {
           style={{
             fontFamily: "times new roman",
             fontSize: "2.25vw",
-            color: "white",
-            backgroundColor: "rgba(0,0,0,0.5)",
+            color: "#B8860B",
+            backgroundColor: "white",
             width: "60vw",
             padding: "10px",
             margin: "6px",

@@ -327,7 +327,7 @@ class App extends Component {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(0,0,0,0.5)",
+            backgroundColor: "white",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -336,10 +336,10 @@ class App extends Component {
           <a href={image.link} style={{ textDecoration: "none" }}>
             <h3
               style={{
-                color: "white",
+                color: "#B8860B",
                 fontSize: "24px",
                 textAlign: "center",
-                textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+                textShadow: "none",
               }}
             >
               {image.title}

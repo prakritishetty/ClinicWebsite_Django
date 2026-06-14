@@ -78,7 +78,7 @@ class App extends Component {
             style={{
               fontFamily: "times new roman",
               fontSize: "4.5vw",
-              color: "white",
+              color: "#B8860B",
               backgroundColor: "	#6497b1",
               width: "95vw",
               padding: "10px",
@@ -104,12 +104,12 @@ class App extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "2.25vw",
-                color: "white",
+                color: "#B8860B",
               }}
             >
               <a
                 href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "#B8860B", textDecoration: "none" }}
               >
                 Book an appointment
               </a>
@@ -119,8 +119,8 @@ class App extends Component {
             style={{
               fontFamily: "times new roman",
               fontSize: "1.875vw",
-              color: "white",
-              backgroundColor: "rgba(0,0,0,0.5)",
+              color: "#B8860B",
+              backgroundColor: "white",
               width: "35vw",
               padding: "1vw",
               margin: "0.6vw",
@@ -140,7 +140,7 @@ class App extends Component {
 
         <br></br> */}
 
-        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "10vw" }}> */}
+        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "white", padding: "10vw" }}> */}
 
         {/* <Card
           class="container-fluid"
@@ -149,7 +149,7 @@ class App extends Component {
             borderWidth: "0.2vw",
             margin: "0.5vw",
             borderColor: "white",
-            backgroundColor: "rgba(0, 28, 40, 0.38)",
+            backgroundColor: "white",
           }}
         > */}
         
@@ -172,7 +172,7 @@ class App extends Component {
           >
             <Navbar
           style={{
-            // backgroundColor: "rgba(0, 28, 40, 0.38)",
+            // backgroundColor: "white",
             padding: "20px",
             marginLeft: "0px",
             paddingLeft: "0px",
@@ -220,7 +220,7 @@ class App extends Component {
 
         {/* <Navbar
           style={{
-            backgroundColor: "rgba(0, 28, 40, 0.38)",
+            backgroundColor: "white",
             padding: "20px",
             marginLeft: "0px",
             paddingLeft: "0px",
@@ -245,7 +245,7 @@ class App extends Component {
           >
             <Navbar
           style={{
-            // backgroundColor: "rgba(0, 28, 40, 0.38)",
+            // backgroundColor: "white",
             padding: "20px",
             marginLeft: "0px",
             paddingLeft: "0px",
@@ -321,7 +321,7 @@ class App extends Component {
           >
             <Navbar
           style={{
-            // backgroundColor: "rgba(0, 28, 40, 0.38)",
+            // backgroundColor: "white",
             padding: "20px",
             marginLeft: "0px",
             paddingLeft: "0px",
@@ -391,7 +391,7 @@ class App extends Component {
         <br></br>
         <br></br>
 
-        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "rgba(0, 28, 40, 0.38)", padding: "20vw" }}> */}
+        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "white", padding: "20vw" }}> */}
 
         <BeforeAfterUtil />
         {/* </div> */}

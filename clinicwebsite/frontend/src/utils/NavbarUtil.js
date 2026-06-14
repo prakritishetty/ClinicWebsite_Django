@@ -101,7 +101,7 @@ class NavbarUtil extends Component {
       <Navbar
         expand="md"
         style={{
-          color: "white",
+          color: "#B8860B",
           fontFamily: "times new roman",
           // fontSize: "30px",
           position: "fixed",
@@ -110,8 +110,8 @@ class NavbarUtil extends Component {
           height:"6vw",
           // paddingLeft: "0px",
           // marginLeft: "0px",
-          // backgroundColor: "rgba(0, 28, 40, 0.38)",
-          backgroundColor: "	#03396c",
+          // backgroundColor: "white",
+          backgroundColor: "white",
           flexDirection: "column",
           padding:"0.5vw",
           alignItems: "stretch",
@@ -119,12 +119,12 @@ class NavbarUtil extends Component {
       >
         <NavbarBrand
           href="/"
-          className="text-white" 
+           
         style={{
           fontFamily: "times new roman",
           fontSize: "2.25vw",
-          color: "white",
-          // backgroundColor: "rgba(0,0,0,0.5)",
+          color: "#B8860B",
+          // backgroundColor: "white",
           // width: "100vw",
           padding: "1vw",
           // margin: "10px",
@@ -149,8 +149,8 @@ class NavbarUtil extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.125vw",
-                color: "white",
-                // backgroundColor: "rgba(0,28,40,0.38)",
+                color: "#B8860B",
+                // backgroundColor: "white",
                 // width: "100vw",
                 padding: "1vw",
                 paddingTop:"1.5vw",
@@ -171,8 +171,8 @@ class NavbarUtil extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.125vw",
-                color: "white",
-                // backgroundColor: "rgba(0,28,40,0.38)",
+                color: "#B8860B",
+                // backgroundColor: "white",
                 // width: "100vw",
                 padding: "1vw",
                 margin: "0.5vw",
@@ -191,8 +191,8 @@ class NavbarUtil extends Component {
                 style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -206,8 +206,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -220,8 +220,8 @@ class NavbarUtil extends Component {
                   style={{
                     fontFamily: "times new roman",
                     fontSize: "1.5vw",
-                    // color: "white",
-                    // backgroundColor: "rgba(0,28,40,0.38)",
+                    // color: "#B8860B",
+                    // backgroundColor: "white",
                     // width: "100vw",
                     padding: "1vw",
                     // margin: "10px",
@@ -234,8 +234,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -246,8 +246,8 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/deepscaling" style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -259,8 +259,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -272,8 +272,8 @@ class NavbarUtil extends Component {
                   style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -285,8 +285,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -306,8 +306,8 @@ class NavbarUtil extends Component {
                 <DropdownToggle nav style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -318,8 +318,8 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/invisalign" style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -332,8 +332,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -346,8 +346,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -358,8 +358,8 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/veneers" style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -371,8 +371,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -385,8 +385,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -399,8 +399,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -420,8 +420,8 @@ class NavbarUtil extends Component {
                 <DropdownToggle nav style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -432,8 +432,8 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/implants" style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -445,8 +445,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -457,8 +457,8 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/rootcanal" style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -468,8 +468,8 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/bonegraft" style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -481,8 +481,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -493,8 +493,8 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/bridges" style={{
                   fontFamily: "times new roman",
                   fontSize: "1.5vw",
-                  // color: "white",
-                  // backgroundColor: "rgba(0,28,40,0.38)",
+                  // color: "#B8860B",
+                  // backgroundColor: "white",
                   // width: "100vw",
                   padding: "1vw",
                   // margin: "10px",
@@ -506,8 +506,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -520,8 +520,8 @@ class NavbarUtil extends Component {
                     style={{
                       fontFamily: "times new roman",
                       fontSize: "1.5vw",
-                      // color: "white",
-                      // backgroundColor: "rgba(0,28,40,0.38)",
+                      // color: "#B8860B",
+                      // backgroundColor: "white",
                       // width: "100vw",
                       padding: "1vw",
                       // margin: "10px",
@@ -540,9 +540,9 @@ class NavbarUtil extends Component {
               onMouseEnter={this.onMouseEnterDoctorLogin}
               onMouseLeave={this.onMouseLeaveDoctorLogin}
               href="/doctorlogin"
-              className="text-white"
+              
               style={{
-                // color: "white",
+                // color: "#B8860B",
                 fontFamily: "times new roman",
                 fontSize: "1.125vw",
                 padding:"1vw",
@@ -565,8 +565,8 @@ class NavbarUtil extends Component {
             style={{
               fontFamily: "times new roman",
               fontSize: "1.125vw",
-              color: "white",
-              // backgroundColor: "rgba(0,0,0,0.5)",
+              color: "#B8860B",
+              // backgroundColor: "white",
               width: "15vw",
               padding: "0.5vw",
               // margin: "0.5vw",
