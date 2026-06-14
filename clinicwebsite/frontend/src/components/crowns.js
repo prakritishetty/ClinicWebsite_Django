@@ -52,7 +52,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -77,7 +77,7 @@ class App extends Component {
               className="text-center"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "3vw",
+                fontSize: "2.25vw",
                 color: "white",
               }}
             >
@@ -92,7 +92,7 @@ class App extends Component {
           <div
              style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
+              fontSize: "1.875vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
@@ -123,8 +123,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.75vw",
-              color: "Black",
+              fontSize: "1.3125vw",
+              color: "#B8860B",
               position: "center",
               padding: "2vw",
               // margin: "1vw",
@@ -132,7 +132,7 @@ class App extends Component {
               borderColor: "black",
             }}
           >
-            <p style={{ fontSize: "2.5vw", fontFamily:"times new roman" }}>
+            <p style={{ fontSize: "1.875vw", fontFamily:"times new roman" }}>
               <b>Tooth Crowns</b>
             </p>
             A tooth crown, also known as a dental crown, is a type of dental
@@ -149,8 +149,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.75vw",
-              color: "Black",
+              fontSize: "1.3125vw",
+              color: "#B8860B",
               position: "center",
               padding: "2vw",
               // margin: "1vw",
@@ -161,8 +161,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -172,8 +172,8 @@ class App extends Component {
               <CardText>
               <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.25vw",
-            color: "black",
+            fontSize: "0.9375vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "10px",
@@ -186,13 +186,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Tooth Preparation
                 </h1>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   The dentist first prepares the tooth by removing any decay or
                   damage and shaping the surface to ensure a good fit for the
                   crown.
@@ -203,13 +203,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Impression
                 </h1>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   Next, an impression of the tooth is taken and used to create a
                   custom-made crown, just for you!
                 </h3>
@@ -219,23 +219,25 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Final step: Cementation
                 </h1>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   The crown is then cemented onto the prepared tooth.
                 </h3>
                 </div>
                 <div className="col-md-3" >
 
-                <img
+                {/* User requested to comment out photos
+<img
                   src={cosmetic}
                   alt="Card image cap"
                   style={{  height: "30vw", width:"30vw" }}
                 />
+*/}
                 <br></br>
                 </div>
                 </div>
@@ -257,8 +259,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
                 
               }}
@@ -268,14 +270,14 @@ class App extends Component {
             <CardBody>
               <CardText>
                 <br></br>
-                <h3 style={{ fontSize: "1.9vw", color:"black", fontFamily:"times new roman" }}>
+                <h3 style={{ fontSize: "1.4249999999999998vw", color: "#B8860B", fontFamily:"times new roman" }}>
                   At Dr Sandhya's Total Care, we help you make an informed
                   choice between the different choice of material available for
                   your crown.
                 </h3>
                 <br></br>
                 <br></br>
-                <p style={{ color: "black", fontSize: "1.8vw" }}>
+                <p style={{ color: "#B8860B", fontSize: "1.35vw" }}>
                   There are several types of crowns available, including
                   porcelain, ceramic, and gold crowns.
                   <ul>

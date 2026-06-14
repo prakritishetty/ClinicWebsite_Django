@@ -52,7 +52,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -77,7 +77,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -92,7 +92,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
+              fontSize: "1.875vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
@@ -123,8 +123,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
-              color: "Black",
+              fontSize: "1.875vw",
+              color: "#B8860B",
               position: "center",
               padding: "1vw",
               margin: "0.5vw",
@@ -133,14 +133,14 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Teeth Aligners</b>
             </p>
             <CardText>
             <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -159,11 +159,13 @@ class App extends Component {
             because they are more discreet and easier to care for.
             </div>
             <div className="col-md-3" >
-            <img
+            {/* User requested to comment out photos
+<img
                   src="https://media1.giphy.com/media/LRa7So1FwjIDmGtBB4/giphy.gif?cid=6c09b952jemwd5wd97roys01quwmi7rx0qztq15upb37y5nf&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"
                   alt="Card image cap"
                   style={{ height: "30vw", width:"30vw" }}
                 />
+*/}
                 </div></div>
             </CardText>
           </Card>
@@ -181,8 +183,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -198,8 +200,8 @@ class App extends Component {
                       borderBottom: "0.2vw solid black",
                       borderRight: "0.2vw solid black",
                       padding: "1vw",
-                      color: "black",
-                      fontSize: "2.5vw",
+                      color: "#B8860B",
+                      fontSize: "1.875vw",
                       fontFamily: "times new roman",
                     }}
                     >
@@ -209,8 +211,8 @@ class App extends Component {
                       style={{
                         borderBottom: "0.2vw solid black",
                         padding: "1vw",
-                        color: "black",
-                        fontSize: "2.5vw",
+                        color: "#B8860B",
+                        fontSize: "1.875vw",
                         fontFamily: "times new roman",
                       }}
                     >
@@ -223,8 +225,8 @@ class App extends Component {
                       style={{
                         borderRight: "0.2vw solid black",
                         padding: "1vw",
-                        color: "black",
-                        fontSize: "1.9vw",
+                        color: "#B8860B",
+                        fontSize: "1.4249999999999998vw",
                         fontFamily: "times new roman",
                       }}
                     >
@@ -233,8 +235,8 @@ class App extends Component {
                     <td
                       style={{
                         padding: "1vw",
-                        color: "black",
-                        fontSize: "1.9vw",
+                        color: "#B8860B",
+                        fontSize: "1.4249999999999998vw",
                         fontFamily: "times new roman",
                       }}
                     >
@@ -261,8 +263,8 @@ class App extends Component {
             <Card style={{ width: "30vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -270,19 +272,19 @@ class App extends Component {
                 Initial Consultation
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   Determine if you're a good candidate for aligners
                 </CardText>
               </CardBody>
             </Card>
             <FaArrowRight
-              style={{ fontSize: "2vw", paddingTop: "0.3vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
             />
             <Card style={{ width: "20vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -290,19 +292,19 @@ class App extends Component {
                 Records and Imaging
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   Take dental impressions or 3D scans of your teeth
                 </CardText>
               </CardBody>
             </Card>
             <FaArrowRight
-              style={{ fontSize: "2vw", paddingTop: "0.3vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
             />
             <Card style={{ width: "30vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -310,14 +312,14 @@ class App extends Component {
                 Treatment Planning
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   A series of aligners are designed to gradually move your
                   teeth.
                 </CardText>
               </CardBody>
             </Card>
             <FaArrowTurnDown
-              style={{ fontSize: "2vw", paddingTop: "0.3vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
             />
             <br></br>
             <br></br>
@@ -326,8 +328,8 @@ class App extends Component {
             <Card style={{ width: "30vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -335,7 +337,7 @@ class App extends Component {
                 Wearing your Aligners
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   Wear each set for about 1-2 weeks (as directed). Keep them in
                   for 20-22 hours per day. Remove only for eating, drinking
                   (except water), and oral hygiene.
@@ -343,13 +345,13 @@ class App extends Component {
               </CardBody>
             </Card>
             <FaArrowRight
-              style={{ fontSize: "2vw", paddingTop: "0.3vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
             />
             <Card style={{ width: "20vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -357,20 +359,20 @@ class App extends Component {
                 Progress Check-ups
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   Your dentist will monitor your progress and give you the next
                   sets of aligners.
                 </CardText>
               </CardBody>
             </Card>
             <FaArrowRight
-              style={{ fontSize: "2vw", paddingTop: "0.3vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
             />
             <Card style={{ width: "30vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -378,7 +380,7 @@ class App extends Component {
                 Retention
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   Follow instructions on wearing retainers (often full-time at
                   first, then nightly)
                 </CardText>

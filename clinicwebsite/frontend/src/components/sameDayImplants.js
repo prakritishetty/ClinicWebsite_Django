@@ -44,7 +44,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -83,7 +83,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "3vw",
+              fontSize: "2.25vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "60vw",
@@ -115,7 +115,7 @@ class App extends Component {
             style={{
               fontFamily: "times new roman",
               fontSize: "30px",
-              color: "Black",
+              color: "#B8860B",
               position: "center",
               padding: "20px",
               margin: "10px",
@@ -148,7 +148,7 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
+                color: "#B8860B",
                 fontSize: "35px",
                 fontFamily: "times new roman",
               }}
@@ -157,11 +157,13 @@ class App extends Component {
             </CardHeader>
             <CardBody>
               <CardText>
-                <img
+                {/* User requested to comment out photos
+<img
                   src="https://teethq.com/wp-content/uploads/2021/03/dental-implant-3.gif"
                   alt="Card image cap"
                   style={{ float: "right", height: "300px" }}
                 />
+*/}
                 <br></br>
                 <TfiCheckBox size={50} color="black" />{" "}
                 <h1
@@ -169,12 +171,12 @@ class App extends Component {
                     fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "30px",
-                    color: "black",
+                    color: "#B8860B",
                   }}
                 >
                   Procedure
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "#B8860B" }}>
                   The procedure involves extracting damaged teeth, placing
                   implants, and attaching temporary crowns or bridges all in one
                   appointment.
@@ -186,12 +188,12 @@ class App extends Component {
                     fontFamily: "times new roman",
                     display: "inline",
                     fontSize: "30px",
-                    color: "black",
+                    color: "#B8860B",
                   }}
                 >
                   It's not for everyone!
                 </h1>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "#B8860B" }}>
                   Careful patient selection is important - patients need
                   adequate bone density and volume to support immediate loading.
                   Not all patients are candidates - factors like smoking,
@@ -199,7 +201,7 @@ class App extends Component {
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black" }}>
+                <h3 style={{ color: "#B8860B" }}>
                   Overall, tooth implants are a safe and effective way to
                   replace missing teeth and can help restore the appearance and
                   function of your mouth. If you are considering a tooth

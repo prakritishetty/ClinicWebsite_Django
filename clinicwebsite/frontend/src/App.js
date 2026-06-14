@@ -121,7 +121,7 @@ class App extends Component {
         marginLeft: "0",
         paddingRight: "0",
         paddingLeft: "0",
-        backgroundImage: `url(${removeWM_clinic1})`,
+        /* User requested to comment out photos: backgroundImage: `url(${removeWM_clinic1})` */
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -176,9 +176,9 @@ class App extends Component {
               <h1 
                 style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   display: "inline",
-                  color: "black",
+                  color: "#B8860B",
                   // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
                   padding: "1vw",
                   // margin: "10px",
@@ -188,9 +188,9 @@ class App extends Component {
               </h1>
               <h3 style={{
                   fontFamily: "times new roman",
-                  fontSize: "1.5vw",
+                  fontSize: "1.125vw",
                   // display: "inline",
-                  color: "black",
+                  color: "#B8860B",
                   // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
                   padding: "1vw",
                   // margin: "10px",
@@ -203,9 +203,9 @@ class App extends Component {
               <h1
                 style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   display: "inline",
-                  color: "black",
+                  color: "#B8860B",
                   // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
                   padding: "1vw",
                   // margin: "10px",
@@ -215,9 +215,9 @@ class App extends Component {
               </h1>
               <h3 style={{
                   fontFamily: "times new roman",
-                  fontSize: "1.5vw",
+                  fontSize: "1.125vw",
                   // display: "inline",
-                  color: "black",
+                  color: "#B8860B",
                   // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
                   padding: "1vw",
                   // margin: "10px",
@@ -230,9 +230,9 @@ class App extends Component {
               <h1
                 style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   display: "inline",
-                  color: "black",
+                  color: "#B8860B",
                   // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
                   padding: "1vw",
                   // margin: "10px",
@@ -242,9 +242,9 @@ class App extends Component {
               </h1>
               <h3 style={{
                   fontFamily: "times new roman",
-                  fontSize: "1.5vw",
+                  fontSize: "1.125vw",
                   // display: "inline",
-                  color: "black",
+                  color: "#B8860B",
                   // backgroundColor: "rgba(0,28,40,0.6)", // Adjusted for better visibility
                   padding: "1vw",
                   // margin: "10px",
@@ -254,12 +254,14 @@ class App extends Component {
               </h3>
               </div>
               <div className="col-md-3" >
-              <img
+              {/* User requested to comment out photos
+<img
                 src={`${removeWM_clinic1}`}
                 alt="Card image cap"
                 // className="float-md-right mb-3 mb-md-0"
                 style={{ width: '30vw', height: '25vw' }}
               />
+*/}
               </div>
               </div>
             </CardText>
@@ -281,8 +283,8 @@ class App extends Component {
   <h2
     style={{
       fontFamily: "times new roman",
-      fontSize: "3vw",
-      color: "Black",
+      fontSize: "2.25vw",
+      color: "#B8860B",
       marginBottom: "20px",
     }}
   >
@@ -307,7 +309,8 @@ class App extends Component {
           borderRadius: "8px",
         }}
       >
-        <img
+        {/* User requested to comment out photos
+<img
           src={image.url}
           alt={image.title}
           style={{
@@ -316,6 +319,7 @@ class App extends Component {
             objectFit: "cover",
           }}
         />
+*/}
         <div
           style={{
             position: "absolute",

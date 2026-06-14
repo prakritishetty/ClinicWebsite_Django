@@ -22,7 +22,7 @@ class HeaderImageUtil extends Component {
           className="text-center"
           style={{
             fontFamily: "times new roman",
-            fontSize: "6vw",
+            fontSize: "4.5vw",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             width: "100vw",
@@ -45,7 +45,7 @@ class HeaderImageUtil extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "4vw",
+              fontSize: "3vw",
               color: "white",
             }}
           >
@@ -61,7 +61,7 @@ class HeaderImageUtil extends Component {
           className="text-center"
           style={{
             fontFamily: "times new roman",
-            fontSize: "3vw",
+            fontSize: "2.25vw",
             color: "white",
             backgroundColor: "rgba(0,0,0,0.5)",
             width: "60vw",

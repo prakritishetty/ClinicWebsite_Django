@@ -51,7 +51,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -76,7 +76,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -91,7 +91,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2.5vw",
+                fontSize: "1.875vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
                 width: "35vw",
@@ -122,8 +122,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
-              color: "Black",
+              fontSize: "1.875vw",
+              color: "#B8860B",
               position: "center",
               padding: "1vw",
               margin: "0.5vw",
@@ -132,14 +132,14 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Veneers</b>
             </p>
             <CardText>
             <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -164,11 +164,13 @@ class App extends Component {
 
             </div>
             <div className="col-md-3" >
-            <img
+            {/* User requested to comment out photos
+<img
                   src="https://media.tenor.com/RjQU1lX-hsIAAAAM/teeth-dentures.gif"
                   alt="Card image cap"
                   style={{height: "30vw", width:'30vw' }}
                 />
+*/}
                 </div>
                 </div>
             </CardText>
@@ -180,8 +182,8 @@ class App extends Component {
             <Card style={{ width: "30vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -189,7 +191,7 @@ class App extends Component {
                 Tooth Preparation
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   To place veneers, the dental professional will first prepare
                   the teeth by removing a small amount of enamel from the front
                   surface of the teeth.
@@ -197,13 +199,13 @@ class App extends Component {
               </CardBody>
             </Card>
             <FaArrowRight
-             style={{ fontSize: "2vw", paddingTop: "0.3vw", margin: "0.8vw" }}
+             style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
             />
             <Card style={{ width: "20vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -211,20 +213,20 @@ class App extends Component {
                 Dental Impressions
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   The dental professional will then take impressions of the
                   teeth and use them to create custom-made veneers.
                 </CardText>
               </CardBody>
             </Card>
             <FaArrowRight
-              style={{ fontSize: "2vw", paddingTop: "0.3vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
             />
             <Card style={{ width: "30vw", padding: "1vw" }}>
               <CardHeader
                 style={{
-                  color: "black",
-                  fontSize: "1.9vw",
+                  color: "#B8860B",
+                  fontSize: "1.4249999999999998vw",
                   fontFamily: "times new roman",
                   padding: "1vw",
                 }}
@@ -232,7 +234,7 @@ class App extends Component {
                 Alignment and Delivery
               </CardHeader>
               <CardBody>
-                <CardText style={{ color: "black", fontSize: "1.5vw" }}>
+                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
                   Once the veneers are ready, the dental professional will place
                   them on the teeth and make any necessary adjustments to ensure
                   a proper fit.

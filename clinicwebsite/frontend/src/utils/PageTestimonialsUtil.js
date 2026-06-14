@@ -79,7 +79,7 @@ const PageTestimonialsUtil = () => {
       <div
         style={{
           fontFamily: "times new roman",
-          fontSize: "3vw",
+          fontSize: "2.25vw",
           color: "white",
         }}
       >
@@ -97,7 +97,7 @@ const PageTestimonialsUtil = () => {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.75vw",
+              fontSize: "1.3125vw",
               color: "white",
               textAlign: "right",
               padding: "2vw",
@@ -106,7 +106,7 @@ const PageTestimonialsUtil = () => {
           >
             <a
               href="/testimonials"
-              style={{ color: "white", textDecorationColor: "silver", fontSize:"1.5vw" }}
+              style={{ color: "white", textDecorationColor: "silver", fontSize: "1.125vw" }}
             >
               See all testimonials
             </a>
@@ -123,7 +123,7 @@ const PageTestimonialsUtil = () => {
                 onExiting={onExiting}
                 onExited={onExited}
                 key={item.id}
-                style={{ color: "black", fontFamily: "times new roman" }}
+                style={{ color: "#B8860B", fontFamily: "times new roman" }}
                 className="text-secondary"
               >
                 <div
@@ -146,28 +146,32 @@ const PageTestimonialsUtil = () => {
                     >
                       <p className="post">
                         <span>
-                          <img
+                          {/* User requested to comment out photos
+<img
                             className="quote-img"
                             src="https://i.imgur.com/i06xx2I.png"
                             alt="quote"
                             size = "clamp(0.25vw, 0.25vw, 2vw)"
                           />
+*/}
                         </span>
                         <span
                           className="post-txt"
-                          style={{ color: "white" ,fontSize: "1.5vw",}}
+                          style={{ color: "white" ,fontSize: "1.125vw",}}
                         >
                           {item.headertext}
                           <br />
                           {item.text}
                         </span>
                         <span>
-                          <img
+                          {/* User requested to comment out photos
+<img
                             className="nice-img"
                             src="https://i.imgur.com/l5AkSHd.png"
                             alt="nice"
                             size = "clamp(0.25vw, 0.25vw, 2vw)"
                           />
+*/}
                         </span>
                       </p>
                     </div>
@@ -175,7 +179,7 @@ const PageTestimonialsUtil = () => {
                     <div
                       style={{
                         fontFamily: "times new roman",
-                        fontSize: "2vw",
+                        fontSize: "1.5vw",
                         color: "white",
                       }}
                     >

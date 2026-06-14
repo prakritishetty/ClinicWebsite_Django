@@ -122,7 +122,7 @@ class NavbarUtil extends Component {
           className="text-white" 
         style={{
           fontFamily: "times new roman",
-          fontSize: "3vw",
+          fontSize: "2.25vw",
           color: "white",
           // backgroundColor: "rgba(0,0,0,0.5)",
           // width: "100vw",
@@ -148,7 +148,7 @@ class NavbarUtil extends Component {
               href="/about"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "1.5vw",
+                fontSize: "1.125vw",
                 color: "white",
                 // backgroundColor: "rgba(0,28,40,0.38)",
                 // width: "100vw",
@@ -170,7 +170,7 @@ class NavbarUtil extends Component {
               // nav
               style={{
                 fontFamily: "times new roman",
-                fontSize: "1.5vw",
+                fontSize: "1.125vw",
                 color: "white",
                 // backgroundColor: "rgba(0,28,40,0.38)",
                 // width: "100vw",
@@ -190,7 +190,7 @@ class NavbarUtil extends Component {
                 <DropdownToggle nav 
                 style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -205,7 +205,7 @@ class NavbarUtil extends Component {
                     href="/cleaningexams"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -219,7 +219,7 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/crowns" 
                   style={{
                     fontFamily: "times new roman",
-                    fontSize: "2vw",
+                    fontSize: "1.5vw",
                     // color: "white",
                     // backgroundColor: "rgba(0,28,40,0.38)",
                     // width: "100vw",
@@ -233,7 +233,7 @@ class NavbarUtil extends Component {
                     href="/extractions"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -245,7 +245,7 @@ class NavbarUtil extends Component {
                   </DropdownItem>
                   <DropdownItem href="/deepscaling" style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -258,7 +258,7 @@ class NavbarUtil extends Component {
                     href="/bondingfillings"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -271,7 +271,7 @@ class NavbarUtil extends Component {
                   <DropdownItem href="/dentures" 
                   style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -284,7 +284,7 @@ class NavbarUtil extends Component {
                     href="/nightguards"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -305,7 +305,7 @@ class NavbarUtil extends Component {
               >
                 <DropdownToggle nav style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -317,7 +317,7 @@ class NavbarUtil extends Component {
                 <DropdownMenu>
                   <DropdownItem href="/invisalign" style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -331,7 +331,7 @@ class NavbarUtil extends Component {
                     href="/teethwhitening"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -345,7 +345,7 @@ class NavbarUtil extends Component {
                     href="/bondingfillings"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -357,7 +357,7 @@ class NavbarUtil extends Component {
                   </DropdownItem>
                   <DropdownItem href="/veneers" style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -370,7 +370,7 @@ class NavbarUtil extends Component {
                     href="/smilemakeover"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -384,7 +384,7 @@ class NavbarUtil extends Component {
                     href="/gummysmilereduction"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -398,7 +398,7 @@ class NavbarUtil extends Component {
                     href="/fullmouthrehab"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -419,7 +419,7 @@ class NavbarUtil extends Component {
               >
                 <DropdownToggle nav style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -431,7 +431,7 @@ class NavbarUtil extends Component {
                 <DropdownMenu>
                   <DropdownItem href="/implants" style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -444,7 +444,7 @@ class NavbarUtil extends Component {
                     href="/extractions"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -456,7 +456,7 @@ class NavbarUtil extends Component {
                   </DropdownItem>
                   <DropdownItem href="/rootcanal" style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -467,7 +467,7 @@ class NavbarUtil extends Component {
                   </DropdownItem>
                   <DropdownItem href="/bonegraft" style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -480,7 +480,7 @@ class NavbarUtil extends Component {
                     href="/implantsupporteddentures"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -492,7 +492,7 @@ class NavbarUtil extends Component {
                   </DropdownItem>
                   <DropdownItem href="/bridges" style={{
                   fontFamily: "times new roman",
-                  fontSize: "2vw",
+                  fontSize: "1.5vw",
                   // color: "white",
                   // backgroundColor: "rgba(0,28,40,0.38)",
                   // width: "100vw",
@@ -505,7 +505,7 @@ class NavbarUtil extends Component {
                     href="/overdentures"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -519,7 +519,7 @@ class NavbarUtil extends Component {
                     href="/samedayimplants"
                     style={{
                       fontFamily: "times new roman",
-                      fontSize: "2vw",
+                      fontSize: "1.5vw",
                       // color: "white",
                       // backgroundColor: "rgba(0,28,40,0.38)",
                       // width: "100vw",
@@ -544,7 +544,7 @@ class NavbarUtil extends Component {
               style={{
                 // color: "white",
                 fontFamily: "times new roman",
-                fontSize: "1.5vw",
+                fontSize: "1.125vw",
                 padding:"1vw",
                 paddingTop:"1.5vw",
                 margin: "0.5vw",
@@ -564,7 +564,7 @@ class NavbarUtil extends Component {
             color="light"
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.5vw",
+              fontSize: "1.125vw",
               color: "white",
               // backgroundColor: "rgba(0,0,0,0.5)",
               width: "15vw",
@@ -574,7 +574,7 @@ class NavbarUtil extends Component {
           >
             <a
               href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-              style={{ color: "black", textDecorationColor: "black" }}
+              style={{ color: "#B8860B", textDecorationColor: "black" }}
             >
               Book an appointment
             </a>

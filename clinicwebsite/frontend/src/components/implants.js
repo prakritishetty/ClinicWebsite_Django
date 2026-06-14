@@ -51,7 +51,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -76,7 +76,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -91,7 +91,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2.5vw",
+                fontSize: "1.875vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
                 width: "35vw",
@@ -122,8 +122,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.9vw",
-              color: "Black",
+              fontSize: "1.4249999999999998vw",
+              color: "#B8860B",
               position: "center",
               padding: "1vw",
               margin: "0.5vw",
@@ -132,7 +132,7 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Implants</b>
             </p>
             Tooth implants are a type of dental restoration that involves the
@@ -157,8 +157,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -168,8 +168,8 @@ class App extends Component {
               <CardText>
               <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -182,13 +182,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Aesthetics
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   They can help restore the appearance and function of the
                   missing tooth, allowing you to eat and speak normally.
                 </h3>
@@ -198,20 +198,20 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Structure
                 </h1>
-                <h3 style={{ color: "black", fontSize:'1.75vw' }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   They also help maintain the structure of the jawbone and
                   prevent tooth shifting, which can occur when a tooth is
                   missing.
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   Overall, tooth implants are a safe and effective way to
                   replace missing teeth and can help restore the appearance and
                   function of your mouth. If you are considering a tooth
@@ -220,11 +220,13 @@ class App extends Component {
                 </h3>
                 </div>
                 <div className="col-md-3">
-                <img
+                {/* User requested to comment out photos
+<img
                   src="https://teethq.com/wp-content/uploads/2021/03/dental-implant-3.gif"
                   alt="Card image cap"
                   style={{ height: "30vw", width:'30vw' }}
                 />
+*/}
                 </div>
                 </div>
               </CardText>

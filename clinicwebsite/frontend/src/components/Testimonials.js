@@ -86,7 +86,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -125,7 +125,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "3vw",
+              fontSize: "2.25vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "60vw",
@@ -193,10 +193,12 @@ class App extends Component {
                   >
                     <p class="post">
                       <span>
-                        <img
+                        {/* User requested to comment out photos
+<img
                           class="quote-img"
                           src="https://i.imgur.com/i06xx2I.png"
                         />
+*/}
                       </span>
                       <span class="post-txt">
                         {item.headertext}
@@ -204,10 +206,12 @@ class App extends Component {
                         {item.text}
                       </span>
                       <span>
-                        <img
+                        {/* User requested to comment out photos
+<img
                           class="nice-img"
                           src="https://i.imgur.com/l5AkSHd.png"
                         />
+*/}
                       </span>
                     </p>
                   </div>

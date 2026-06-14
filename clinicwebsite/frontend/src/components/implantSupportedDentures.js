@@ -50,7 +50,7 @@ class App extends Component {
            className="text-center"
            style={{
              fontFamily: "times new roman",
-             fontSize: "6vw",
+             fontSize: "4.5vw",
              color: "white",
              backgroundColor: "rgba(0,0,0,0.5)",
              width: "100vw",
@@ -75,7 +75,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -90,7 +90,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2.5vw",
+                fontSize: "1.875vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
                 width: "35vw",
@@ -121,8 +121,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.9vw",
-              color: "Black",
+              fontSize: "1.4249999999999998vw",
+              color: "#B8860B",
               position: "center",
               padding: "1vw",
               margin: "0.5vw",
@@ -131,15 +131,15 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Implant Supported Dentures</b>
             </p>
 
             <CardText>
             <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -164,11 +164,13 @@ class App extends Component {
             and clip attachments.
             </div>
             <div className="col-md-3">
-            <img
+            {/* User requested to comment out photos
+<img
                   src="https://media2.giphy.com/media/l2Jei5mr1P2wD70bu/200w.gif?cid=6c09b952v7jp7wn0vy29zshsh09k5dp67ya1y0yf3vxj481l&ep=v1_gifs_search&rid=200w.gif&ct=g"
                   alt="Card image cap"
                   style={{ height: "30vw", width:'30vw' }}
                 />
+*/}
             </div>
             </div>
             </CardText>
@@ -179,8 +181,8 @@ class App extends Component {
           <Card
            style={{
             fontFamily: "times new roman",
-            fontSize: "1.75vw",
-            color: "Black",
+            fontSize: "1.3125vw",
+            color: "#B8860B",
             position: "center",
             padding: "2vw",
             margin: "1vw",
@@ -191,8 +193,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -202,8 +204,8 @@ class App extends Component {
               <CardText>
                 <p
                   style={{
-                    color: "black",
-                    fontSize: "1.9vw",
+                    color: "#B8860B",
+                    fontSize: "1.4249999999999998vw",
                     fontFamily: "times new roman",
                   }}
                 >

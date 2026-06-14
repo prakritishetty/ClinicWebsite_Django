@@ -51,7 +51,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -76,7 +76,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -91,7 +91,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2.5vw",
+                fontSize: "1.875vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
                 width: "35vw",
@@ -122,8 +122,8 @@ class App extends Component {
           <Card
            style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "Black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             position: "center",
             padding: "1vw",
             margin: "0.5vw",
@@ -132,7 +132,7 @@ class App extends Component {
             // fontSize: "25px",
           }}
           >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Full Mouth Rehabilitation</b>
             </p>
             Full mouth rehabilitation, also known as full mouth reconstruction
@@ -156,8 +156,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -167,8 +167,8 @@ class App extends Component {
               <CardText>
               <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -176,7 +176,7 @@ class App extends Component {
           }}>
           <div className="col-md-8" >
                 
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   Full mouth rehabilitation can be a complex and lengthy process
                   that may involve several different dental procedures. The
                   specific treatment plan will depend on the individual needs of
@@ -189,13 +189,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Dental Exams and Cleanings:
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   These are performed to remove plaque and tartar from the teeth
                   and to identify any potential dental problems.
                 </h3>
@@ -205,13 +205,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Tooth Extractions:
                 </h1>
-                <h3 style={{ color: "black" , fontSize:"1.75vw"}}>
+                <h3 style={{ color: "#B8860B" , fontSize: "1.3125vw"}}>
                   If a tooth is severely damaged or decayed, it may need to be
                   removed.
                 </h3>
@@ -221,13 +221,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Fillings:
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   If a tooth has a cavity, a filling may be used to repair it.
                 </h3>
                 <br></br>
@@ -236,13 +236,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Crowns and Bridges:
                 </h1>
-                <h3 style={{ color: "black" , fontSize:"1.75vw"}}>
+                <h3 style={{ color: "#B8860B" , fontSize: "1.3125vw"}}>
                   These are used to restore damaged or missing teeth.
                 </h3>
                 <br></br>
@@ -251,13 +251,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Orthodontic Treatment:
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   This may include braces or other appliances to straighten the
                   teeth.
                 </h3>
@@ -267,18 +267,18 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Dental Implants:
                 </h1>
-                <h3 style={{ color: "black" , fontSize:"1.75vw"}}>
+                <h3 style={{ color: "#B8860B" , fontSize: "1.3125vw"}}>
                   These are used to replace missing teeth.
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   In some cases, full mouth rehabilitation may also involve
                   cosmetic procedures, such as teeth whitening or veneers, to
                   improve the appearance of the teeth.
@@ -292,11 +292,13 @@ class App extends Component {
                 </h3>
                 </div>
                 <div className="col-md-3">
-                <img
+                {/* User requested to comment out photos
+<img
                   src={FMR}
                   alt="Card image cap"
                   style={{ height: "30vw", width:"30vw" }}
                 />
+*/}
                 </div>
                 </div>
               </CardText>

@@ -333,7 +333,7 @@ class NavbarUtil extends Component {
           >
             <a
               href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-              style={{ color: "black", textDecorationColor: "black" }}
+              style={{ color: "#B8860B", textDecorationColor: "black" }}
             >
               Book an appointment
             </a>
@@ -490,7 +490,7 @@ class NavbarUtil extends Component {
         <NavbarBrand href="/" className="text-white" 
         style={{
           fontFamily: "times new roman",
-          fontSize: "3vw",
+          fontSize: "2.25vw",
           color: "white",
           // backgroundColor: "rgba(0,0,0,0.5)",
           width: "100vw",
@@ -507,7 +507,7 @@ class NavbarUtil extends Component {
               <NavLink href="/about" className="text-white"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "1.75vw",
+                fontSize: "1.3125vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",
                 // width: "100vw",
@@ -529,7 +529,7 @@ class NavbarUtil extends Component {
               <DropdownToggle nav caret className="text-white"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "1.75vw",
+                fontSize: "1.3125vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",
                 // width: "100vw",
@@ -587,7 +587,7 @@ class NavbarUtil extends Component {
               <NavLink href="/doctorlogin" className="text-white"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "1.75vw",
+                fontSize: "1.3125vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",
                 width: "11vw",
@@ -601,7 +601,7 @@ class NavbarUtil extends Component {
               <Button color="light" className="mt-2 mt-md-0 ml-md-2"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "1.75vw",
+                fontSize: "1.3125vw",
                 color: "white",
                 // backgroundColor: "rgba(0,0,0,0.5)",
                 width: "20vw",

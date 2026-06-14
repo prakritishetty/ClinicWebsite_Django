@@ -51,7 +51,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -76,7 +76,7 @@ class App extends Component {
               className="text-center"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "3vw",
+                fontSize: "2.25vw",
                 color: "white",
               }}
             >
@@ -91,7 +91,7 @@ class App extends Component {
           <div
              style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
+              fontSize: "1.875vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
@@ -123,8 +123,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.75vw",
-              color: "Black",
+              fontSize: "1.3125vw",
+              color: "#B8860B",
               position: "center",
               padding: "2vw",
               margin: "1vw",
@@ -133,7 +133,7 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw", fontFamily:"times new roman" }}>
+            <p style={{ fontSize: "1.875vw", fontFamily:"times new roman" }}>
               <b>Tooth Cleaning and Examinations</b>
             </p>
             Tooth cleaning and examination are important parts of maintaining
@@ -149,8 +149,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.75vw",
-              color: "Black",
+              fontSize: "1.3125vw",
+              color: "#B8860B",
               position: "center",
               padding: "2vw",
               margin: "1vw",
@@ -162,8 +162,8 @@ class App extends Component {
             
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -175,8 +175,8 @@ class App extends Component {
 
               <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.25vw",
-            color: "black",
+            fontSize: "0.9375vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "10px",
@@ -189,13 +189,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Examination
                 </h1>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   The dentist will examine your teeth and gums for any signs of
                   problems, such as tooth decay, gum disease, or oral cancer.
                 </h3>
@@ -205,13 +205,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   A stitch in time saves nine
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   It's generally recommended to have your teeth cleaned and
                   examined by a dentist at least twice a year, or more
                   frequently if you have gum disease or other oral health
@@ -223,13 +223,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Self-Care
                 </h1>
-                <h3 style={{ color: "black" , fontSize: "1.75vw"}}>
+                <h3 style={{ color: "#B8860B" , fontSize: "1.3125vw"}}>
                   In addition to regular cleanings and exams, it's important to
                   brush and floss your teeth daily to remove plaque and prevent
                   tooth decay and gum disease. Using fluoride toothpaste and
@@ -237,11 +237,13 @@ class App extends Component {
                 </h3>
                 </div>
                 <div className="col-md-3" >
-                <img
+                {/* User requested to comment out photos
+<img
                   src={cleaningteeth}
                   alt="Card image cap"
                   style={{ height: "30vw", width:"30vw" }}
                 />
+*/}
                 </div>
                 </div>
                 

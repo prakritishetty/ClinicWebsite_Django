@@ -52,7 +52,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -77,7 +77,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -92,7 +92,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
+              fontSize: "1.875vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
@@ -123,8 +123,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
-              color: "Black",
+              fontSize: "1.875vw",
+              color: "#B8860B",
               position: "center",
               padding: "1vw",
               margin: "0.5vw",
@@ -135,14 +135,14 @@ class App extends Component {
           >
 
             
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Teeth Extractions</b>
             </p>
             <CardText>
             <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -169,11 +169,13 @@ class App extends Component {
             other teeth or to other parts of the body.
             </div>
             <div className="col-md-3" >
-                <img
+                {/* User requested to comment out photos
+<img
                   src={fallingtooth}
                   alt="Card image cap"
                   style={{ height: "30vw", width:"30vw" }}
                 />
+*/}
                 </div></div>
             </CardText>
           </Card>
@@ -191,8 +193,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -208,8 +210,8 @@ class App extends Component {
                         borderBottom: "0.2vw solid black",
                         borderRight: "0.2vw solid black",
                         padding: "1vw",
-                        color: "black",
-                        fontSize: "2.5vw",
+                        color: "#B8860B",
+                        fontSize: "1.875vw",
                         fontFamily: "times new roman",
                       }}
                     >
@@ -219,8 +221,8 @@ class App extends Component {
                       style={{
                         borderBottom: "0.2vw solid black",
                         padding: "1vw",
-                        color: "black",
-                        fontSize: "2.5vw",
+                        color: "#B8860B",
+                        fontSize: "1.875vw",
                         fontFamily: "times new roman",
                       }}
                     >
@@ -233,8 +235,8 @@ class App extends Component {
                       style={{
                         borderRight: "0.2vw solid black",
                         padding: "1vw",
-                        color: "black",
-                        fontSize: "1.9vw",
+                        color: "#B8860B",
+                        fontSize: "1.4249999999999998vw",
                         fontFamily: "times new roman",
                       }}
                     >
@@ -244,8 +246,8 @@ class App extends Component {
                     <td
                       style={{
                         padding: "1vw",
-                        color: "black",
-                        fontSize: "1.9vw",
+                        color: "#B8860B",
+                        fontSize: "1.4249999999999998vw",
                         fontFamily: "times new roman",
                       }}
                     >
@@ -265,13 +267,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Don't forget to get your vitals checked
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   Ensure that your Blood Pressure is normal (120/80) before you
                   come in for an extraction, to avoid emergency situations.
                 </h3>

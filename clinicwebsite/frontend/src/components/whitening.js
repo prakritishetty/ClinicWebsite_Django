@@ -51,7 +51,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -76,7 +76,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -91,7 +91,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2.5vw",
+                fontSize: "1.875vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
                 width: "35vw",
@@ -122,8 +122,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
-              color: "Black",
+              fontSize: "1.875vw",
+              color: "#B8860B",
               position: "center",
               padding: "1vw",
               margin: "0.5vw",
@@ -132,14 +132,14 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Teeth Whitening</b>
             </p>
             <CardText>
             <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -165,11 +165,13 @@ class App extends Component {
             effects
             </div>
             <div className="col-md-3" >
-            <img
+            {/* User requested to comment out photos
+<img
                   src="https://thumbs.dreamstime.com/b/cleaning-teeth-mouthwash-dental-health-care-cleaning-teeth-mouthwash-dental-health-care-tooth-cartoon-vector-flat-style-cute-156111096.jpg"
                   alt="Card image cap"
                   style={{height: "30vw", width:"30vw" }}
                 />
+*/}
                 </div>
                 </div>
             </CardText>

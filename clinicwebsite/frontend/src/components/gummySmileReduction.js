@@ -51,7 +51,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -76,7 +76,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -91,7 +91,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2.5vw",
+                fontSize: "1.875vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
                 width: "35vw",
@@ -122,8 +122,8 @@ class App extends Component {
           <Card
            style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "Black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             position: "center",
             padding: "1vw",
             margin: "0.5vw",
@@ -132,7 +132,7 @@ class App extends Component {
             // fontSize: "25px",
           }}
           >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Gummy Smile Reduction</b>
             </p>
             A gummy smile is a term used to describe a smile that reveals too
@@ -156,8 +156,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -167,8 +167,8 @@ class App extends Component {
               <CardText>
               <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -181,13 +181,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Orthodontic Treatment
                 </h1>
-                <h3 style={{ color: "black", fontSize:'1.75vw' }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   In some cases, orthodontic treatment, such as braces, can be
                   used to move the teeth into a more aesthetically pleasing
                   position and expose more of the tooth surface.
@@ -198,13 +198,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Laser Gum Contouring
                 </h1>
-                <h3 style={{ color: "black" , fontSize:'1.75vw'}}>
+                <h3 style={{ color: "#B8860B" , fontSize: "1.3125vw"}}>
                   This procedure involves using a laser to remove excess gum
                   tissue and expose more of the tooth surface.
                 </h3>
@@ -214,13 +214,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Crown Lengthening
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   This procedure involves removing a small amount of gum tissue
                   and bone to expose more of the tooth.
                 </h3>
@@ -230,21 +230,21 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   
                   Porcelain Veneers
                 </h1>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   Veneers are thin, custom-made shells that are placed over the
                   front surface of the teeth. They can be used to cover up a
                   gummy smile and improve the appearance of the teeth.
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black", fontSize:"1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   The best treatment option for reducing a gummy smile will
                   depend on the underlying cause of the problem and the
                   individual needs and goals of the patient. It is important to
@@ -252,11 +252,13 @@ class App extends Component {
                   appropriate treatment plan.
                 </h3>
                 </div><div className="col-md-3" >
-                <img
+                {/* User requested to comment out photos
+<img
                   src="https://ih1.redbubble.net/image.780195444.4073/st,small,507x507-pad,600x600,f8f8f8.jpg"
                   alt="Card image cap"
                   style={{height: "30vw", width:"30vw" }}
                 />
+*/}
                 </div>
                 </div>
                 

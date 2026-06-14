@@ -44,7 +44,7 @@ class FooterUtil extends Component {
               className="d-block mx-auto my-3"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2vw",
+                fontSize: "1.5vw",
                 padding: "1vw",
                 display:"inline"
                 // margin: "15px",
@@ -54,7 +54,7 @@ class FooterUtil extends Component {
             >
               <a
                 href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "black", textDecoration: "black", zIndex: 100 }}
+                style={{ color: "#B8860B", textDecoration: "black", zIndex: 100 }}
               >
                 Book your appointment today!
               </a>
@@ -79,8 +79,8 @@ class FooterUtil extends Component {
           }}>
         <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.25vw",
-            color: "black",
+            fontSize: "0.9375vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "10px",
@@ -110,7 +110,7 @@ class FooterUtil extends Component {
             style={{
               fontFamily: "times new roman",
               backgroundColor: "white",
-              color: "black",
+              color: "#B8860B",
               fontSize: "20px",
               width: "400px",
               borderWidth: "5px",
@@ -131,7 +131,7 @@ class FooterUtil extends Component {
     style={{
             fontFamily: "times new roman",
             fontSize: "clamp(2vw, 2.5vw, 3.5vw)",
-            color: "black",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "1vw",
@@ -143,7 +143,7 @@ class FooterUtil extends Component {
     <p  style={{
             fontFamily: "times new roman",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
-            color: "black",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",
@@ -153,7 +153,7 @@ class FooterUtil extends Component {
     <p style={{
             fontFamily: "times new roman",
             fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
-            color: "black",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.5vw",

@@ -77,7 +77,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "	#6497b1",
               width: "95vw",
@@ -103,7 +103,7 @@ class App extends Component {
               className="text-center"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "3vw",
+                fontSize: "2.25vw",
                 color: "white",
               }}
             >
@@ -118,7 +118,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
+              fontSize: "1.875vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
@@ -159,8 +159,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.5vw",
-              color: "Black",
+              fontSize: "1.125vw",
+              color: "#B8860B",
               // position: "center",
               width:"96vw",
               padding: "2vw",
@@ -190,7 +190,8 @@ class App extends Component {
             Together, we are committed to providing personalized, comfortable and high-quality dental care for every smile by coalescing need-based and want-based dentistry. 
             </NavItem>
             <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
-              <img
+              {/* User requested to comment out photos
+<img
                   src={ammawithbg}
                   // align="center"
                   
@@ -201,6 +202,7 @@ class App extends Component {
                     // marginLeft:"20px" 
                   }}
                 ></img>
+*/}
             </NavItem>
 
           </Nav>
@@ -230,8 +232,8 @@ class App extends Component {
                <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.5vw",
-              color: "Black",
+              fontSize: "1.125vw",
+              color: "#B8860B",
               // position: "center",
               width:"96vw",
               padding: "2vw",
@@ -255,9 +257,9 @@ class App extends Component {
             <NavItem style={{ width: "65%" }}>
               <CardHeader
                   style={{
-                    fontSize: "1.5vw",
+                    fontSize: "1.125vw",
                     // width: "400px",
-                    color: "black",
+                    color: "#B8860B",
                     padding: "1vw",
                     align: "center",
                   }}
@@ -268,8 +270,8 @@ class App extends Component {
             <CardBody
                   style={{ 
                     // width: "400px", 
-                    fontSize: "1.5vw", 
-                    color: "black" }}
+                    fontSize: "1.125vw", 
+                    color: "#B8860B" }}
                 >
                   <br></br>
                   Dr. Sandhya Shetty (BDS, Gold Medalist) completed her Bachelor of Dental Surgery from Government Dental College, Aurangabad, in 1994, earning the Gold Medal from Marathwada University for her outstanding academic performance. 
@@ -280,7 +282,8 @@ class App extends Component {
                 </CardBody>
             </NavItem>
             <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
-              <img
+              {/* User requested to comment out photos
+<img
                   src={amma}
                   // align="center"
                   
@@ -291,6 +294,7 @@ class App extends Component {
                     // marginLeft:"20px" 
                   }}
                 ></img>
+*/}
             </NavItem>
 
           </Nav>
@@ -304,8 +308,8 @@ class App extends Component {
                <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.5vw",
-              color: "Black",
+              fontSize: "1.125vw",
+              color: "#B8860B",
               // position: "center",
               width:"96vw",
               padding: "2vw",
@@ -329,9 +333,9 @@ class App extends Component {
             <NavItem style={{ width: "65%" }}>
               <CardHeader
                   style={{
-                    fontSize: "1.5vw",
+                    fontSize: "1.125vw",
                     // width: "400px",
-                    color: "black",
+                    color: "#B8860B",
                     padding: "1vw",
                     align: "center",
                   }}
@@ -342,8 +346,8 @@ class App extends Component {
             <CardBody
                   style={{ 
                     // width: "400px", 
-                    fontSize: "1.5vw", 
-                    color: "black" }}
+                    fontSize: "1.125vw", 
+                    color: "#B8860B" }}
                 >
                   <br></br>
                   Dr. Pratiksha Shetty (BDS, MDS Prosthodontics and Crown & Bridge) is a skilled and passionate prosthodontist dedicated to restoring smiles with precision and artistry. 
@@ -356,7 +360,8 @@ class App extends Component {
                 </CardBody>
             </NavItem>
             <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
-              <img
+              {/* User requested to comment out photos
+<img
                   src={akka}
                   // align="center"
                   
@@ -367,6 +372,7 @@ class App extends Component {
                     // marginLeft:"20px" 
                   }}
                 ></img>
+*/}
             </NavItem>
 
           </Nav>

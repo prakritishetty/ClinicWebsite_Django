@@ -52,7 +52,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -77,7 +77,7 @@ class App extends Component {
               className="text-center"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "3vw",
+                fontSize: "2.25vw",
                 color: "white",
               }}
             >
@@ -93,7 +93,7 @@ class App extends Component {
           <div
             style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
+              fontSize: "1.875vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
@@ -124,8 +124,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.75vw",
-              color: "Black",
+              fontSize: "1.3125vw",
+              color: "#B8860B",
               position: "center",
               padding: "2vw",
               margin: "1vw",
@@ -134,7 +134,7 @@ class App extends Component {
               // fontSize: "25px",
             }}
           >
-            <p style={{ fontSize: "2.5vw", fontFamily:"times new roman" }}>
+            <p style={{ fontSize: "1.875vw", fontFamily:"times new roman" }}>
               <b>Deep Scaling</b>
             </p>
             Deep Scaling, also known as periodontal therapy, is a type of
@@ -158,8 +158,8 @@ class App extends Component {
           >
             <CardHeader
               style={{
-                color: "black",
-                fontSize: "2.5vw",
+                color: "#B8860B",
+                fontSize: "1.875vw",
                 fontFamily: "times new roman",
               }}
             >
@@ -169,8 +169,8 @@ class App extends Component {
               <CardText>
               <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.25vw",
-            color: "black",
+            fontSize: "0.9375vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "10px",
@@ -183,13 +183,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Scaling :
                 </h1>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   Removing plaque and tartar from the teeth
                 </h3>
                 <br></br>
@@ -198,13 +198,13 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Root Planing :
                 </h1>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   Smoothing the root surfaces of the teeth to help prevent
                   further build-up.
                 </h3>
@@ -214,30 +214,32 @@ class App extends Component {
                   style={{
                     fontFamily: "times new roman",
                     display: "inline",
-                    fontSize: "1.9vw",
-                    color: "black",
+                    fontSize: "1.4249999999999998vw",
+                    color: "#B8860B",
                   }}
                 >
                   Antibiotics :
                 </h1>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   To kill bacteria and laser therapy to kill bacteria and
                   stimulate the growth of healthy gum tissue.
                 </h3>
                 <br></br>
                 <br></br>
-                <h3 style={{ color: "black", fontSize: "1.75vw" }}>
+                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
                   The specific treatment plan will depend on the severity of the
                   gum disease and may involve a combination of different
                   procedures.
                 </h3>
                 </div>
                 <div className="col-md-3" >
-                <img
+                {/* User requested to comment out photos
+<img
                   src={IMG_6445}
                   alt="Card image cap"
                   style={{ height: "30vw", width:"30vw" }}
                 />
+*/}
                 </div>
                 </div>
               </CardText>

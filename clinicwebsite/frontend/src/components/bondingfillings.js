@@ -57,7 +57,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -82,7 +82,7 @@ class App extends Component {
               className="text-center"
               style={{
                 fontFamily: "times new roman",
-                fontSize: "3vw",
+                fontSize: "2.25vw",
                 color: "white",
               }}
             >
@@ -97,7 +97,7 @@ class App extends Component {
           <div
              style={{
               fontFamily: "times new roman",
-              fontSize: "2.5vw",
+              fontSize: "1.875vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "35vw",
@@ -133,7 +133,7 @@ class App extends Component {
             <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
               <Card
                 style={{
-                  fontSize: "1.5vw",
+                  fontSize: "1.125vw",
                   margin: "0.5vw",
                   // width: "",
                   padding: "1vw",
@@ -141,9 +141,9 @@ class App extends Component {
               >
                 <CardHeader
                   style={{
-                    fontSize: "1.5vw",
+                    fontSize: "1.125vw",
                     // width: "400px",
-                    color: "black",
+                    color: "#B8860B",
                     padding: "1vw",
                     align: "center",
                   }}
@@ -154,7 +154,7 @@ class App extends Component {
                 <CardBody
                    style={{ 
                     // width: "400px", 
-                    fontSize: "1.5vw", color: "black" }}
+                    fontSize: "1.125vw", color: "#B8860B" }}
                 >
                   Bonding is a cosmetic dental procedure in which a{" "}
                   <b>tooth-colored composite resin</b> is applied to the surface
@@ -182,7 +182,7 @@ class App extends Component {
             <div className="col-md-5" style={{margin:"4vw", padding:"2vw"}} >
               <Card
                 style={{
-                  fontSize: "1.5vw",
+                  fontSize: "1.125vw",
                   margin: "0.5vw",
                   // width: "",
                   padding: "1vw",
@@ -190,9 +190,9 @@ class App extends Component {
               >
                 <CardHeader
                   style={{
-                    fontSize: "1.5vw",
+                    fontSize: "1.125vw",
                     // width: "400px",
-                    color: "black",
+                    color: "#B8860B",
                     padding: "1vw",
                     align: "center",
                   }}
@@ -203,7 +203,7 @@ class App extends Component {
                 <CardBody
                   style={{ 
                     // width: "400px", 
-                    fontSize: "1.5vw", color: "black" }}
+                    fontSize: "1.125vw", color: "#B8860B" }}
                 >
                   <br></br>
                   White fillings, also known as composite fillings, are used to{" "}

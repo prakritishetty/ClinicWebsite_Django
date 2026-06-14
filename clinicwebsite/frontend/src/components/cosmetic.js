@@ -50,7 +50,7 @@ class App extends Component {
             className="text-center"
             style={{
               fontFamily: "times new roman",
-              fontSize: "6vw",
+              fontSize: "4.5vw",
               color: "white",
               backgroundColor: "rgba(0,0,0,0.5)",
               width: "100vw",
@@ -75,7 +75,7 @@ class App extends Component {
              className="text-center"
              style={{
                fontFamily: "times new roman",
-               fontSize: "3vw",
+               fontSize: "2.25vw",
                color: "white",
              }}
            >
@@ -90,7 +90,7 @@ class App extends Component {
             <div
               style={{
                 fontFamily: "times new roman",
-                fontSize: "2.5vw",
+                fontSize: "1.875vw",
                 color: "white",
                 backgroundColor: "rgba(0,0,0,0.5)",
                 width: "35vw",
@@ -121,8 +121,8 @@ class App extends Component {
           <Card
             style={{
               fontFamily: "times new roman",
-              fontSize: "1.9vw",
-              color: "Black",
+              fontSize: "1.4249999999999998vw",
+              color: "#B8860B",
               position: "center",
               padding: "1vw",
               margin: "0.5vw",
@@ -131,7 +131,7 @@ class App extends Component {
               // fontSize: "25px",
             }}
             >
-            <p style={{ fontSize: "2.5vw" }}>
+            <p style={{ fontSize: "1.875vw" }}>
               <b>Cosmetic Services</b>
             </p>
             At Dr Sandhya's Total Dental Care, we host an array of cosmetic
@@ -144,8 +144,8 @@ class App extends Component {
 
           <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.75vw",
@@ -164,8 +164,8 @@ class App extends Component {
               <Card >
                 <CardHeader
                   style={{
-                    color: "black",
-                    fontSize: "1.75vw",
+                    color: "#B8860B",
+                    fontSize: "1.3125vw",
                     fontFamily: "times new roman",
                     padding: "0.5vw",
                   }}
@@ -175,8 +175,8 @@ class App extends Component {
                 <CardBody>
                   <CardText
                     style={{ 
-                      color: "black",
-                      fontSize: "1.3vw",
+                      color: "#B8860B",
+                      fontSize: "0.9750000000000001vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -199,8 +199,8 @@ class App extends Component {
               <Card >
                 <CardHeader
                   style={{
-                    color: "black",
-                    fontSize: "1.75vw",
+                    color: "#B8860B",
+                    fontSize: "1.3125vw",
                     fontFamily: "times new roman",
                     padding: "0.5vw",
                   }}
@@ -210,8 +210,8 @@ class App extends Component {
                 <CardBody>
                   <CardText
                     style={{ 
-                      color: "black",
-                      fontSize: "1.3vw",
+                      color: "#B8860B",
+                      fontSize: "0.9750000000000001vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -235,8 +235,8 @@ class App extends Component {
               <Card >
                 <CardHeader
                   style={{
-                    color: "black",
-                    fontSize: "1.75vw",
+                    color: "#B8860B",
+                    fontSize: "1.3125vw",
                     fontFamily: "times new roman",
                     padding: "0.5vw",
                   }}
@@ -246,8 +246,8 @@ class App extends Component {
                 <CardBody>
                   <CardText
                     style={{ 
-                      color: "black",
-                      fontSize: "1.3vw",
+                      color: "#B8860B",
+                      fontSize: "0.9750000000000001vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -262,15 +262,15 @@ class App extends Component {
 
 
             <div
-              style={{ fontSize: "1.5vw", paddingTop: "1vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.125vw", paddingTop: "1vw", margin: "0.8vw" }}
             />
             
          
 
           <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "1.9vw",
-            color: "black",
+            fontSize: "1.4249999999999998vw",
+            color: "#B8860B",
             // backgroundColor: "rgba(0,0,0,0.5)",
             // width: "100vw",
             padding: "0.75vw",
@@ -289,8 +289,8 @@ class App extends Component {
               <Card >
                 <CardHeader
                   style={{
-                    color: "black",
-                    fontSize: "1.75vw",
+                    color: "#B8860B",
+                    fontSize: "1.3125vw",
                     fontFamily: "times new roman",
                     padding: "0.5vw",
                   }}
@@ -300,8 +300,8 @@ class App extends Component {
                 <CardBody >
                   <CardText
                     style={{ 
-                      color: "black",
-                      fontSize: "1.3vw",
+                      color: "#B8860B",
+                      fontSize: "0.9750000000000001vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -326,8 +326,8 @@ class App extends Component {
               <Card >
                 <CardHeader
                   style={{
-                    color: "black",
-                    fontSize: "1.75vw",
+                    color: "#B8860B",
+                    fontSize: "1.3125vw",
                     fontFamily: "times new roman",
                     padding: "0.5vw",
                   }}
@@ -337,8 +337,8 @@ class App extends Component {
                 <CardBody>
                   <CardText
                     style={{ 
-                      color: "black",
-                      fontSize: "1.3vw",
+                      color: "#B8860B",
+                      fontSize: "0.9750000000000001vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -363,8 +363,8 @@ class App extends Component {
               <Card >
                 <CardHeader
                   style={{
-                    color: "black",
-                    fontSize: "1.75vw",
+                    color: "#B8860B",
+                    fontSize: "1.3125vw",
                     fontFamily: "times new roman",
                     padding: "0.5vw",
                   }}
@@ -374,8 +374,8 @@ class App extends Component {
                 <CardBody>
                   <CardText
                     style={{ 
-                      color: "black",
-                      fontSize: "1.3vw",
+                      color: "#B8860B",
+                      fontSize: "0.9750000000000001vw",
                       whiteSpace: "normal",
                     }}
                   >
@@ -387,7 +387,7 @@ class App extends Component {
             </div>
 
             <div
-              style={{ fontSize: "1.5vw", paddingTop: "1vw", margin: "0.8vw" }}
+              style={{ fontSize: "1.125vw", paddingTop: "1vw", margin: "0.8vw" }}
             />
 
             <div className="col-md-5" >
@@ -403,8 +403,8 @@ class App extends Component {
               <Card >
                 <CardHeader
                   style={{
-                    color: "black",
-                    fontSize: "1.75vw",
+                    color: "#B8860B",
+                    fontSize: "1.3125vw",
                     fontFamily: "times new roman",
                     padding: "0.5vw",
                   }}
@@ -414,8 +414,8 @@ class App extends Component {
                 <CardBody>
                   <CardText
                     style={{ 
-                      color: "black",
-                      fontSize: "1.3vw",
+                      color: "#B8860B",
+                      fontSize: "0.9750000000000001vw",
                       whiteSpace: "normal",
                     }}
                   >
