@@ -99,7 +99,7 @@ class NavbarUtil extends Component {
     return (
       <Navbar
         style={{
-          color: "#B8860B",
+          color: "#0A2342",
           fontFamily: "times new roman",
           fontSize: "30px",
           position: "fixed",
@@ -113,7 +113,7 @@ class NavbarUtil extends Component {
         <NavbarBrand
           href="/"
           style={{
-            color: "#B8860B",
+            color: "#0A2342",
             fontFamily: "times new roman",
             fontSize: "30px",
             paddingLeft: "0px",
@@ -131,7 +131,7 @@ class NavbarUtil extends Component {
               onClick=""
               href="/about"
               style={{
-                color: "#B8860B",
+                color: "#0A2342",
                 fontFamily: "times new roman",
                 fontSize: "20px",
                 backgroundColor: "white",
@@ -149,7 +149,7 @@ class NavbarUtil extends Component {
             <DropdownToggle
               nav
               style={{
-                color: "#B8860B",
+                color: "#0A2342",
                 fontFamily: "times new roman",
                 fontSize: "20px",
                 backgroundColor: "white",
@@ -314,7 +314,7 @@ class NavbarUtil extends Component {
               onMouseLeave={this.onMouseLeaveDoctorLogin}
               href="/doctorlogin"
               style={{
-                color: "#B8860B",
+                color: "#0A2342",
                 fontFamily: "times new roman",
                 fontSize: "20px",
                 marginRight: "5px",
@@ -328,12 +328,12 @@ class NavbarUtil extends Component {
           </NavItem>
           <Button
             active
-            color="light"
+            
             style={{ fontFamily: "times new roman", fontSize: "20px" }}
           >
             <a
               href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-              style={{ color: "#B8860B", textDecorationColor: "black" }}
+              style={{ color: "#0A2342", textDecoration: "none" }}
             >
               Book an appointment
             </a>
@@ -491,7 +491,7 @@ class NavbarUtil extends Component {
         style={{
           fontFamily: "times new roman",
           fontSize: "2.25vw",
-          color: "#B8860B",
+          color: "#0A2342",
           // backgroundColor: "white",
           width: "100vw",
           padding: "10px",
@@ -508,7 +508,7 @@ class NavbarUtil extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "#B8860B",
+                color: "#0A2342",
                 // backgroundColor: "white",
                 // width: "100vw",
                 padding: "10px",
@@ -530,7 +530,7 @@ class NavbarUtil extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "#B8860B",
+                color: "#0A2342",
                 // backgroundColor: "white",
                 // width: "100vw",
                 padding: "10px",
@@ -588,7 +588,7 @@ class NavbarUtil extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "#B8860B",
+                color: "#0A2342",
                 // backgroundColor: "white",
                 width: "11vw",
                 padding: "10px",
@@ -598,11 +598,11 @@ class NavbarUtil extends Component {
               >Doctor Login</NavLink>
             </NavItem>
             <NavItem>
-              <Button color="light" className="mt-2 mt-md-0 ml-md-2"
+              <Button  className="mt-2 mt-md-0 ml-md-2"
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.3125vw",
-                color: "#B8860B",
+                color: "#0A2342",
                 // backgroundColor: "white",
                 width: "20vw",
                 padding: "10px",

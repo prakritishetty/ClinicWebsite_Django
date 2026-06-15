@@ -59,14 +59,14 @@
 }
 
 .App-header {
-  background-color: #B8860B;
+  background-color: #173A5E;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #B8860B;
+  color: #FFFFFF;
 }
 
 .App-link {
@@ -84,19 +84,19 @@
 
 
 body {
-	background-color: #B8860B;
+	background-color: #f9f9f9;
 	background-repeat: no-repeat;
 	overflow-x: hidden;
 }
 
 .card {
     position: relative;
-    border: solid 1px #B8860B;
+    border: solid 1px #173A5E;
     padding: 45px 50px 25px 60px;
     margin-top: 20px;
-    background-color: #B8860B;
+    background-color: #173A5E;
     border-radius: 10px;
-    color: #B8860B;
+    color: #FFFFFF;
 }
 
 .post-txt {
@@ -123,7 +123,7 @@ body {
   height: 0; 
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-top: 20px solid #B8860B;
+  border-top: 20px solid #173A5E;
   margin-left: 85px;
 }
 
@@ -146,7 +146,7 @@ body {
     font-size: 22px;
     margin-top: 60px;
     left: 210px;
-    color: #B8860B;
+    color: #0A2342;
 }
 
 

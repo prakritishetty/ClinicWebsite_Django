@@ -1,212 +1,30 @@
-import React, { Component } from "react";
-import { Button, Card, CardText } from "reactstrap";
-import clinic1 from "../images/79.jpeg";
-import IMG_6413 from "../images/IMG_6413.JPG"
-import NavbarUtil from "../utils/NavbarUtil.js";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
-import FooterUtil from "../utils/FooterUtil.js";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
+import React from "react";
+import TreatmentLayout from "./TreatmentLayout";
 
-class App extends Component {
-  render() {
-    return (
-      <div
-      style={{
-        marginRight: "0",
-        marginLeft: "0",
-        paddingRight: "0",
-        paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-      >
-        <NavbarUtil />
+const Whitening = () => {
+  return (
+    <TreatmentLayout
+      title="Teeth Whitening"
+      cursiveAccent="Reveal a brighter, more confident you"
+      intro="Professional teeth whitening is a fast, safe, and highly effective way to lighten the color of your teeth. We offer advanced whitening treatments that penetrate deep into the enamel to remove years of stubborn stains and discoloration."
+      offerings={[
+        { title: "Immediate Results", desc: "Our in-office whitening treatments can make your teeth several shades whiter in just a single visit." },
+        { title: "Safe & Professional", desc: "Supervised by dental professionals to ensure your gums and enamel are protected throughout the process." },
+        { title: "Customized At-Home Kits", desc: "We also offer custom-fitted trays and professional-grade gel for convenient whitening at home." }
+      ]}
+      whenToConsider={[
+        "You have an upcoming special event (wedding, graduation, interview).",
+        "Your teeth are stained from coffee, tea, wine, or tobacco use.",
+        "You feel self-conscious about a dull or yellowing smile.",
+        "You are about to receive dental restorations and want to match them to a brighter shade."
+      ]}
+      faqs={[
+        { q: "Does teeth whitening cause sensitivity?", a: "Some patients experience temporary tooth sensitivity. We use advanced formulas designed to minimize discomfort, and any sensitivity typically subsides within a few days." },
+        { q: "How long do the results last?", a: "Results can last from several months to a few years. It largely depends on your lifestyle, such as your consumption of staining foods and beverages, and your oral hygiene routine." },
+        { q: "Is professional whitening better than over-the-counter strips?", a: "Yes. Professional treatments use stronger, more effective bleaching agents and custom-fitted trays to ensure even whitening and to protect your delicate gum tissue." }
+      ]}
+    />
+  );
+};
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <div
-          // className="p-5 my-6 rounded"
-          className="d-flex flex-column justify-content-center align-items-center"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${IMG_6413})`,
-            backgroundPosition: "center ",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            minHeight: "140vh",
-            overflowX:"auto"
-          }}
-        >
-          <div
-            className="text-center"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "100vw",
-              padding: "10px",
-              margin: "2vw",
-            }}
-          >
-            {" "}
-            Teeth Whitening!
-          </div>
-          <Button
-           active
-           className="my-2"
-           style={{
-             padding: "0.5vw",
-            //  marginleft:"200vw",
-             borderColor: "white",
-             backgroundColor: "black",
-           }}
-         >
-           <div
-             className="text-center"
-             style={{
-               fontFamily: "times new roman",
-               fontSize: "2.25vw",
-               color: "#B8860B",
-             }}
-           >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
-                >
-                  Book an appointment
-                </a>
-              </div>
-            </Button>
-            <div
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "1.875vw",
-                color: "#B8860B",
-                backgroundColor: "white",
-                width: "35vw",
-                padding: "1vw",
-                margin: "0.6vw",
-              }}
-            >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <Card
-          class="container-fluid"
-          style={{
-            // height: "1400px",
-            borderWidth: "0.2vw",
-            // margin: "0.",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        >
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.875vw",
-              color: "#B8860B",
-              position: "center",
-              padding: "1vw",
-              margin: "0.5vw",
-              borderWidth: "0.2vw",
-              borderColor: "black",
-              // fontSize: "25px",
-            }}
-          >
-            <p style={{ fontSize: "1.875vw" }}>
-              <b>Teeth Whitening</b>
-            </p>
-            <CardText>
-            <div className="row" style={{
-            fontFamily: "times new roman",
-            fontSize: "1.4249999999999998vw",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "1vw",
-            // margin: "10px",
-          }}>
-          <div className="col-md-8" >
-                
-               
-            
-            Teeth whitening is a cosmetic dental procedure that is designed to
-            lighten the color of the teeth and improve the appearance of the
-            smile. It is often used to address tooth discoloration or staining
-            caused by factors such as aging, tobacco use, certain medications,
-            and consumption of staining foods and drinks.
-            <br></br>
-            <br></br>
-            Teeth whitening is generally safe and effective when performed by a
-            dental professional or when using products that have been approved
-            by the American Dental Association (ADA). However, it is important
-            to follow the instructions provided by the dental professional or
-            the product manufacturer to avoid overuse or improper use of the
-            whitening agent, which can cause tooth sensitivity or other side
-            effects
-            </div>
-            <div className="col-md-3" >
-            {/* User requested to comment out photos
-<img
-                  src="https://thumbs.dreamstime.com/b/cleaning-teeth-mouthwash-dental-health-care-cleaning-teeth-mouthwash-dental-health-care-tooth-cartoon-vector-flat-style-cute-156111096.jpg"
-                  alt="Card image cap"
-                  style={{height: "30vw", width:"30vw" }}
-                />
-*/}
-                </div>
-                </div>
-            </CardText>
-          </Card>
-          <br></br>
-          <br></br>
-        </Card>
-
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <BeforeAfterUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <PageTestimonialsUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <FooterUtil />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default Whitening;

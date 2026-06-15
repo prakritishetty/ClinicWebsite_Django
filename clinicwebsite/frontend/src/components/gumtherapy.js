@@ -1,279 +1,30 @@
-import React, { Component } from "react";
-import { Button, Card, CardBody, CardHeader, CardText } from "reactstrap";
-import { TfiCheckBox } from "react-icons/tfi";
-import clinic1 from "../images/79.jpeg";
-import IMG_6447 from "../images/IMG_6447.JPG"
-import IMG_6445 from "../images/IMG_6445.JPG"
-import NavbarUtil from "../utils/NavbarUtil.js";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
-import FooterUtil from "../utils/FooterUtil.js";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
+import React from "react";
+import TreatmentLayout from "./TreatmentLayout";
 
-class App extends Component {
-  render() {
-    return (
-      <div
-      style={{
-        marginRight: "0",
-        marginLeft: "0",
-        paddingRight: "0",
-        paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-      >
-        <NavbarUtil />
+const GumTherapy = () => {
+  return (
+    <TreatmentLayout
+      title="Gum Therapy"
+      cursiveAccent="Healthy gums, healthy body"
+      intro="Periodontal (gum) disease is a serious infection that damages the soft tissue and bone supporting your teeth. Our advanced gum therapy treatments are designed to halt the progression of the disease, eliminate infection, and restore the health of your gums."
+      offerings={[
+        { title: "Deep Cleaning (Scaling & Root Planing)", desc: "Meticulously removes plaque and tartar from deep below the gumline and smooths the tooth roots." },
+        { title: "Laser Therapy", desc: "Utilizes advanced lasers to comfortably remove infected tissue and bacteria while promoting faster healing." },
+        { title: "Maintenance Programs", desc: "Customized periodontal maintenance schedules to ensure your gums stay healthy long-term." }
+      ]}
+      whenToConsider={[
+        "Your gums bleed easily when you brush or floss.",
+        "Your gums are red, swollen, or tender.",
+        "You suffer from persistent bad breath or a bad taste in your mouth.",
+        "You notice your gums are pulling away from your teeth (receding)."
+      ]}
+      faqs={[
+        { q: "Can gum disease be cured?", a: "Early-stage gum disease (gingivitis) can be reversed. Advanced gum disease (periodontitis) cannot be cured, but it can be effectively managed and halted with professional therapy." },
+        { q: "Is deep cleaning painful?", a: "We use local anesthesia to numb your gums before a deep cleaning, ensuring you are comfortable throughout the entire process." },
+        { q: "Is there a link between gum disease and overall health?", a: "Yes. Studies have linked periodontal disease to an increased risk of heart disease, stroke, diabetes complications, and other serious systemic health issues." }
+      ]}
+    />
+  );
+};
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <div
-          className="d-flex flex-column justify-content-center align-items-center"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${IMG_6447})`,
-            backgroundPosition: "center ",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            minHeight: "140vh",
-            overflowX:"auto"
-          }}
-        >
-          <div
-            className="text-center"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "100vw",
-              padding: "10px",
-              margin: "2vw",
-            }}
-          >
-            {" "}
-            Deep Scaling!
-          </div>
-          <Button
-            active
-            className="my-2"
-            style={{
-              padding: "0.5vw",
-             //  marginleft:"200vw",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
-          >
-            <div
-              className="text-center"
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "2.25vw",
-                color: "#B8860B",
-              }}
-            >
-            
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
-              >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.875vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "35vw",
-              padding: "1vw",
-              margin: "0.6vw",
-            }}
-          >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <Card
-          class="container-fluid"
-          style={{
-            // height: "900px",
-            borderWidth: "0.2vw",
-            // margin: "0.5vw",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        >
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.3125vw",
-              color: "#B8860B",
-              position: "center",
-              padding: "2vw",
-              margin: "1vw",
-              borderWidth: "0.2vw",
-              borderColor: "black",
-              // fontSize: "25px",
-            }}
-          >
-            <p style={{ fontSize: "1.875vw", fontFamily:"times new roman" }}>
-              <b>Deep Scaling</b>
-            </p>
-            Deep Scaling, also known as periodontal therapy, is a type of
-            treatment for gum disease, which is an infection of the tissues that
-            support your teeth. Gum disease can range from mild to severe, and
-            it is caused by a build-up of plaque and tartar on the teeth and
-            gums. If left untreated, gum disease can lead to tooth loss and
-            other serious health problems.
-          </Card>
-          <br></br>
-          <br></br>
-
-          <Card
-            style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
-              position: "float",
-              backgroundColor: "white",
-            }}
-          >
-            <CardHeader
-              style={{
-                color: "#B8860B",
-                fontSize: "1.875vw",
-                fontFamily: "times new roman",
-              }}
-            >
-              Treatment Procedures
-            </CardHeader>
-            <CardBody>
-              <CardText>
-              <div className="row" style={{
-            fontFamily: "times new roman",
-            fontSize: "0.9375vw",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "10px",
-            margin: "10px",
-          }}>
-          <div className="col-md-8" >
-                
-                <TfiCheckBox size="3vw" color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "1.4249999999999998vw",
-                    color: "#B8860B",
-                  }}
-                >
-                  Scaling :
-                </h1>
-                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
-                  Removing plaque and tartar from the teeth
-                </h3>
-                <br></br>
-                <TfiCheckBox size="3vw" color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "1.4249999999999998vw",
-                    color: "#B8860B",
-                  }}
-                >
-                  Root Planing :
-                </h1>
-                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
-                  Smoothing the root surfaces of the teeth to help prevent
-                  further build-up.
-                </h3>
-                <br></br>
-                <TfiCheckBox size="3vw" color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "1.4249999999999998vw",
-                    color: "#B8860B",
-                  }}
-                >
-                  Antibiotics :
-                </h1>
-                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
-                  To kill bacteria and laser therapy to kill bacteria and
-                  stimulate the growth of healthy gum tissue.
-                </h3>
-                <br></br>
-                <br></br>
-                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
-                  The specific treatment plan will depend on the severity of the
-                  gum disease and may involve a combination of different
-                  procedures.
-                </h3>
-                </div>
-                <div className="col-md-3" >
-                {/* User requested to comment out photos
-<img
-                  src={IMG_6445}
-                  alt="Card image cap"
-                  style={{ height: "30vw", width:"30vw" }}
-                />
-*/}
-                </div>
-                </div>
-              </CardText>
-            </CardBody>
-          </Card>
-        </Card>
-
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <BeforeAfterUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <PageTestimonialsUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <FooterUtil />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default GumTherapy;

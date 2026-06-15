@@ -1,275 +1,30 @@
-import React, { Component } from "react";
-import { Button, Card, CardBody, CardHeader, CardText } from "reactstrap";
-import { FaArrowRight } from "react-icons/fa";
-import clinic1 from "../images/79.jpeg";
-import IMG_6402 from "../images/IMG_6402.JPG"
-import NavbarUtil from "../utils/NavbarUtil.js";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
-import FooterUtil from "../utils/FooterUtil.js";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
+import React from "react";
+import TreatmentLayout from "./TreatmentLayout";
 
-class App extends Component {
-  render() {
-    return (
-      <div
-      style={{
-        marginRight: "0",
-        marginLeft: "0",
-        paddingRight: "0",
-        paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-      >
-        <NavbarUtil />
+const Veneers = () => {
+  return (
+    <TreatmentLayout
+      title="Porcelain Veneers"
+      cursiveAccent="Design the smile of your dreams"
+      intro="Porcelain veneers are ultra-thin, custom-made shells of tooth-colored materials designed to cover the front surface of teeth. They are an ideal choice for improving the appearance of your smile, correcting discoloration, chips, and misalignment."
+      offerings={[
+        { title: "Flawless Aesthetics", desc: "Veneers dramatically transform the color, shape, size, and length of your teeth for a picture-perfect smile." },
+        { title: "Stain Resistance", desc: "Unlike natural enamel, porcelain veneers are highly resistant to stains from coffee, tea, and red wine." },
+        { title: "Minimally Invasive", desc: "Veneers require less enamel removal than crowns, preserving more of your natural tooth structure." }
+      ]}
+      whenToConsider={[
+        "Your teeth are severely discolored and don't respond to traditional whitening.",
+        "You have teeth that are worn down, chipped, or broken.",
+        "You have misaligned, uneven, or irregularly shaped teeth.",
+        "You have noticeable gaps between your front teeth."
+      ]}
+      faqs={[
+        { q: "How long do veneers last?", a: "With proper care and good oral hygiene, high-quality porcelain veneers can last 10 to 15 years, or even longer." },
+        { q: "Are veneers reversible?", a: "Because a small amount of enamel must be removed to accommodate the veneer, the process is not considered reversible." },
+        { q: "Will veneers look fake?", a: "Not at all. We meticulously custom-design your veneers to match the translucency and color of your surrounding natural teeth." }
+      ]}
+    />
+  );
+};
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <div
-          className="d-flex flex-column justify-content-center align-items-center"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${IMG_6402})`,
-            backgroundPosition: "center ",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            minHeight: "140vh",
-            overflowX:"auto"
-          }}
-        >
-          <div
-            className="text-center"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "100vw",
-              padding: "10px",
-              margin: "2vw",
-            }}
-          >
-            {" "}
-            Veneers!
-          </div>
-          <Button
-           active
-           className="my-2"
-           style={{
-             padding: "0.5vw",
-            //  marginleft:"200vw",
-             borderColor: "white",
-             backgroundColor: "black",
-           }}
-         >
-           <div
-             className="text-center"
-             style={{
-               fontFamily: "times new roman",
-               fontSize: "2.25vw",
-               color: "#B8860B",
-             }}
-           >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
-                >
-                  Book an appointment
-                </a>
-              </div>
-            </Button>
-            <div
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "1.875vw",
-                color: "#B8860B",
-                backgroundColor: "white",
-                width: "35vw",
-                padding: "1vw",
-                margin: "0.6vw",
-              }}
-            >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <Card
-          class="container-fluid"
-          style={{
-            // height: "1400px",
-            borderWidth: "0.2vw",
-            // margin: "0.",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        >
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.875vw",
-              color: "#B8860B",
-              position: "center",
-              padding: "1vw",
-              margin: "0.5vw",
-              borderWidth: "0.2vw",
-              borderColor: "black",
-              // fontSize: "25px",
-            }}
-          >
-            <p style={{ fontSize: "1.875vw" }}>
-              <b>Veneers</b>
-            </p>
-            <CardText>
-            <div className="row" style={{
-            fontFamily: "times new roman",
-            fontSize: "1.4249999999999998vw",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "1vw",
-            // margin: "10px",
-          }}>
-          <div className="col-md-8" >
-                
-                
-            
-            Veneers are thin, custom-made shells of porcelain or composite
-            material that are designed to cover the front surface of the teeth.
-            <br></br>
-            <br></br>They are often used to improve the appearance of the teeth
-            and smile and can be used to address a variety of cosmetic concerns,
-            such as stained, chipped, crooked, or misshapen teeth.
-            <br></br>
-            <br></br>Veneers are generally easy to care for and can be
-            maintained with regular brushing and flossing. They are durable and
-            can last for many years with proper care. However, they are not
-            indestructible and can be damaged by biting on hard objects or
-            grinding the teeth.
-
-            </div>
-            <div className="col-md-3" >
-            {/* User requested to comment out photos
-<img
-                  src="https://media.tenor.com/RjQU1lX-hsIAAAAM/teeth-dentures.gif"
-                  alt="Card image cap"
-                  style={{height: "30vw", width:'30vw' }}
-                />
-*/}
-                </div>
-                </div>
-            </CardText>
-          </Card>
-          <br></br>
-          <br></br>
-
-          <div display="flex" style={{ display: "flex" }}>
-            <Card style={{ width: "30vw", padding: "1vw" }}>
-              <CardHeader
-                style={{
-                  color: "#B8860B",
-                  fontSize: "1.4249999999999998vw",
-                  fontFamily: "times new roman",
-                  padding: "1vw",
-                }}
-              >
-                Tooth Preparation
-              </CardHeader>
-              <CardBody>
-                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
-                  To place veneers, the dental professional will first prepare
-                  the teeth by removing a small amount of enamel from the front
-                  surface of the teeth.
-                </CardText>
-              </CardBody>
-            </Card>
-            <FaArrowRight
-             style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
-            />
-            <Card style={{ width: "20vw", padding: "1vw" }}>
-              <CardHeader
-                style={{
-                  color: "#B8860B",
-                  fontSize: "1.4249999999999998vw",
-                  fontFamily: "times new roman",
-                  padding: "1vw",
-                }}
-              >
-                Dental Impressions
-              </CardHeader>
-              <CardBody>
-                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
-                  The dental professional will then take impressions of the
-                  teeth and use them to create custom-made veneers.
-                </CardText>
-              </CardBody>
-            </Card>
-            <FaArrowRight
-              style={{ fontSize: "1.5vw", paddingTop: "0.3vw", margin: "0.8vw" }}
-            />
-            <Card style={{ width: "30vw", padding: "1vw" }}>
-              <CardHeader
-                style={{
-                  color: "#B8860B",
-                  fontSize: "1.4249999999999998vw",
-                  fontFamily: "times new roman",
-                  padding: "1vw",
-                }}
-              >
-                Alignment and Delivery
-              </CardHeader>
-              <CardBody>
-                <CardText style={{ color: "#B8860B", fontSize: "1.125vw" }}>
-                  Once the veneers are ready, the dental professional will place
-                  them on the teeth and make any necessary adjustments to ensure
-                  a proper fit.
-                </CardText>
-              </CardBody>
-            </Card>
-          </div>
-        </Card>
-
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <BeforeAfterUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <PageTestimonialsUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <FooterUtil />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default Veneers;

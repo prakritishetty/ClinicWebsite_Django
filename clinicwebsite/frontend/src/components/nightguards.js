@@ -1,195 +1,30 @@
-import React, { Component } from "react";
-import { Button, Card } from "reactstrap";
-import clinic1 from "../images/79.jpeg";
-import IMG_6455 from "../images/IMG_6455.JPG"
-import NavbarUtil from "../utils/NavbarUtil.js";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
-import FooterUtil from "../utils/FooterUtil.js";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
+import React from "react";
+import TreatmentLayout from "./TreatmentLayout";
 
-class App extends Component {
-  render() {
-    return (
-      <div
-      style={{
-        marginRight: "0",
-        marginLeft: "0",
-        paddingRight: "0",
-        paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-      >
-        <NavbarUtil />
+const NightGuards = () => {
+  return (
+    <TreatmentLayout
+      title="Custom Night Guards"
+      cursiveAccent="Protect your smile while you sleep"
+      intro="Bruxism, or teeth grinding, often occurs subconsciously while you sleep and can cause severe damage to your teeth, jaw, and restorative work. A custom-fitted night guard provides a comfortable, protective barrier that absorbs the force of grinding."
+      offerings={[
+        { title: "Custom Fit", desc: "Our night guards are molded exactly to your teeth, offering vastly superior comfort compared to over-the-counter boil-and-bite guards." },
+        { title: "Prevents Tooth Damage", desc: "Stops the wear, chipping, and cracking of your natural teeth and expensive dental work." },
+        { title: "Alleviates Jaw Pain", desc: "Helps to reduce or eliminate morning jaw pain, headaches, and TMJ discomfort caused by clenching." }
+      ]}
+      whenToConsider={[
+        "You wake up with dull headaches, jaw soreness, or facial pain.",
+        "Your dentist has noticed that your teeth are flattened, fractured, or chipped.",
+        "You have a history of grinding your teeth in your sleep (often noticed by a partner).",
+        "You have had extensive restorative work (like veneers or crowns) that you want to protect."
+      ]}
+      faqs={[
+        { q: "Why shouldn't I just buy a night guard at the pharmacy?", a: "Over-the-counter guards are bulky, uncomfortable, and can actually encourage more grinding. A custom guard is slim, comfortable, and properly distributes bite forces." },
+        { q: "How long does a custom night guard last?", a: "Depending on the severity of your grinding, a high-quality custom night guard can last several years." },
+        { q: "Is it hard to sleep with a night guard?", a: "Because our guards are custom-fitted to your exact bite, most patients find them very comfortable and get used to sleeping with them within a few nights." }
+      ]}
+    />
+  );
+};
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <div
-          className="d-flex flex-column justify-content-center align-items-center"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${IMG_6455})`,
-            backgroundPosition: "center ",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            minHeight: "140vh",
-            overflowX:"auto"
-          }}
-        >
-          <div
-            className="text-center"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "100vw",
-              padding: "10px",
-              margin: "2vw",
-            }}
-          >
-            {" "}
-            Night Guards!
-          </div>
-          <Button
-           active
-           className="my-2"
-           style={{
-             padding: "0.5vw",
-            //  marginleft:"200vw",
-             borderColor: "white",
-             backgroundColor: "black",
-           }}
-         >
-           <div
-             className="text-center"
-             style={{
-               fontFamily: "times new roman",
-               fontSize: "2.25vw",
-               color: "#B8860B",
-             }}
-           >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
-              >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.875vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "35vw",
-              padding: "1vw",
-              margin: "0.6vw",
-            }}
-          >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <Card
-          class="container-fluid"
-          style={{
-            // height: "1400px",
-            borderWidth: "0.2vw",
-            // margin: "0.",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        >
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.5vw",
-              color: "#B8860B",
-              position: "center",
-              padding: "1vw",
-              margin: "0.5vw",
-              borderWidth: "0.2vw",
-              borderColor: "black",
-              // fontSize: "25px",
-            }}
-          >
-            <p style={{ fontSize: "1.5vw" }}>
-              <b>Night Guards</b>
-            </p>
-            A nightguard is a dental appliance that is worn over the teeth at
-            night to protect them from grinding or clenching. It is also known
-            as a dental splint or occlusal guard
-            <br></br>
-            <br></br>
-            <hr></hr>
-            <b>Why Nightguards?</b>
-            Nightguards are often used to treat bruxism, a condition in which
-            the person grinds or clenches their teeth while sleeping. Bruxism
-            can cause a number of problems, including tooth sensitivity, tooth
-            damage, and jaw pain. A nightguard can help protect the teeth from
-            the damaging effects of grinding and clenching, reducing the risk of
-            tooth sensitivity and damage.
-            <br></br>
-            <br></br>
-            <hr></hr>
-            <b>What are Nightguards made of?</b>
-            Nightguards are typically made of a hard plastic material and are
-            custom-fitted to the person's teeth. They are worn over the upper or
-            lower teeth and are held in place by suction or a small amount of
-            saliva. Nightguards are generally easy to use and comfortable to
-            wear.
-            <br></br>
-            <br></br>
-          </Card>
-          <br></br>
-          <br></br>
-        </Card>
-
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <BeforeAfterUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <PageTestimonialsUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <FooterUtil />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default NightGuards;

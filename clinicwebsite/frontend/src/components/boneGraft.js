@@ -1,272 +1,30 @@
-import React, { Component } from "react";
-import { Button, CardHeader, CardText, Card, CardBody } from "reactstrap";
-import { TfiCheckBox } from "react-icons/tfi";
+import React from "react";
+import TreatmentLayout from "./TreatmentLayout";
 
-import clinic1 from "../images/79.jpeg";
-import IMG_6445 from "../images/IMG_6445.JPG"
-import NavbarUtil from "../utils/NavbarUtil";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil";
-import FooterUtil from "../utils/FooterUtil";
+const BoneGraft = () => {
+  return (
+    <TreatmentLayout
+      title="Bone Grafting"
+      cursiveAccent="Building a solid foundation"
+      intro="A bone graft is a surgical procedure used to rebuild or strengthen the jawbone. This is often a necessary prerequisite for dental implants, ensuring there is enough healthy, dense bone to securely anchor the implant post."
+      offerings={[
+        { title: "Implant Preparation", desc: "Creates the necessary bone volume to ensure a successful, long-lasting dental implant." },
+        { title: "Preserves Facial Structure", desc: "Prevents the facial sagging and premature aging that occurs when jawbone deteriorates after tooth loss." },
+        { title: "Advanced Techniques", desc: "We use the latest grafting materials and techniques to promote rapid healing and bone regeneration." }
+      ]}
+      whenToConsider={[
+        "You are planning to get dental implants but have suffered from bone loss.",
+        "You have had a tooth extracted and want to preserve the socket for a future implant.",
+        "You have suffered jawbone deterioration due to severe gum disease (periodontitis).",
+        "You have experienced facial trauma affecting the jaw."
+      ]}
+      faqs={[
+        { q: "Does a bone graft hurt?", a: "The procedure is performed under local anesthesia and/or sedation, so you won't feel pain. Post-operative discomfort is usually mild and easily managed with medication." },
+        { q: "Where does the bone come from?", a: "Grafting material can come from your own body, a tissue bank, or synthetic sources. We will discuss the best option for your specific case." },
+        { q: "How long does it take to heal?", a: "It typically takes 3 to 6 months for the graft to fully fuse with your natural bone and be ready to support a dental implant." }
+      ]}
+    />
+  );
+};
 
-class App extends Component {
-  render() {
-    return (
-      <div
-      style={{
-        marginRight: "0",
-        marginLeft: "0",
-        paddingRight: "0",
-        paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-      >
-        <NavbarUtil />
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div
-         className="d-flex flex-column justify-content-center align-items-center"
-         style={{
-           padding: "0px",
-           margin: "0px",
-           backgroundImage: `url(${IMG_6445})`,
-           backgroundPosition: "center ",
-           backgroundSize: "cover",
-           backgroundRepeat: "no-repeat",
-           width: "100vw",
-           minHeight: "140vh",
-           overflowX:"auto"
-         }}
-       >
-         <div
-           className="text-center"
-           style={{
-             fontFamily: "times new roman",
-             fontSize: "4.5vw",
-             color: "#B8860B",
-             backgroundColor: "white",
-             width: "100vw",
-             padding: "10px",
-             margin: "2vw",
-           }}
-         >
-            {" "}
-            Bone Grafts!
-          </div>
-          <Button
-           active
-           className="my-2"
-           style={{
-             padding: "0.5vw",
-            //  marginleft:"200vw",
-             borderColor: "white",
-             backgroundColor: "black",
-           }}
-         >
-           <div
-             className="text-center"
-             style={{
-               fontFamily: "times new roman",
-               fontSize: "2.25vw",
-               color: "#B8860B",
-             }}
-           >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
-                >
-                  Book an appointment
-                </a>
-              </div>
-            </Button>
-            <div
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "1.875vw",
-                color: "#B8860B",
-                backgroundColor: "white",
-                width: "35vw",
-                padding: "1vw",
-                margin: "0.6vw",
-              }}
-            >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <Card
-          class="container-fluid"
-          style={{
-            // height: "1400px",
-            borderWidth: "0.2vw",
-            // margin: "0.",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        >
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.4249999999999998vw",
-              color: "#B8860B",
-              position: "center",
-              padding: "1vw",
-              margin: "0.5vw",
-              borderWidth: "0.2vw",
-              borderColor: "black",
-              // fontSize: "25px",
-            }}
-          >
-            <p style={{ fontSize: "1.875vw" }}>
-              <b>Bone Grafts</b>
-            </p>
-            A tooth bone graft is a surgical procedure in which bone tissue is
-            added to the jawbone in order to repair or rebuild it. This type of
-            procedure may be necessary if the jawbone has been damaged or has
-            deteriorated due to periodontal disease, trauma, or tooth loss.
-          </Card>
-          <br></br>
-          <br></br>
-
-          <Card
-           style={{
-            fontFamily: "times new roman",
-            fontSize: "1.3125vw",
-            color: "#B8860B",
-            position: "center",
-            padding: "2vw",
-            margin: "1vw",
-            borderWidth: "0.2vw",
-            borderColor: "black",
-            // fontSize: "25px",
-          }}
-          >
-            <CardHeader
-              style={{
-                color: "#B8860B",
-                fontSize: "1.875vw",
-                fontFamily: "times new roman",
-              }}
-            >
-              Need for Tooth Bone Grafts
-            </CardHeader>
-            <CardBody>
-              <CardText>
-              <div className="row" style={{
-            fontFamily: "times new roman",
-            fontSize: "1.4249999999999998vw",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "1vw",
-            // margin: "10px",
-          }}>
-          <div className="col-md-8" >
-              
-                <TfiCheckBox size="3vw" color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "1.4249999999999998vw",
-                    color: "#B8860B",
-                  }}
-                >
-                  Replace
-                </h1>
-                <h3 style={{ color: "#B8860B" , fontSize: "1.3125vw"}}>
-                  Replace bone that has been lost due to periodontal disease or
-                  trauma
-                </h3>
-                <br></br>
-                <TfiCheckBox size="3vw" color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "1.4249999999999998vw",
-                    color: "#B8860B",
-                  }}
-                >
-                  Repair
-                </h1>
-                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
-                  Repair bone that has been damaged by infection or injury
-                </h3>
-                <br></br>
-                <TfiCheckBox size="3vw" color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "1.4249999999999998vw",
-                    color: "#B8860B",
-                  }}
-                >
-                  Strengthen
-                </h1>
-                <h3 style={{ color: "#B8860B" , fontSize: "1.3125vw"}}>
-                  Strengthen the jawbone in preparation for dental implant
-                  surgery
-                </h3>
-                <br></br>
-                <br></br>
-                <h3 style={{ color: "#B8860B", fontSize: "1.3125vw" }}>
-                  There are several different types of bone grafting materials
-                  that can be used, including synthetic bone substitutes, donor
-                  bone tissue, and the patient's own bone tissue. The type of
-                  material used will depend on the specific needs of the patient
-                  and the location of the graft.
-                </h3>
-                </div>
-                <div className="col-md-3">
-                {/* User requested to comment out photos
-<img
-                  src="https://i.makeagif.com/media/11-28-2021/mp-izn.gif"
-                  alt="Card image cap"
-                  style={{height: "30vw", width:"30vw" }}
-                />
-*/}
-                </div>
-                </div>
-              </CardText>
-            </CardBody>
-          </Card>
-        </Card>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <BeforeAfterUtil />
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <PageTestimonialsUtil />
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <FooterUtil />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default BoneGraft;

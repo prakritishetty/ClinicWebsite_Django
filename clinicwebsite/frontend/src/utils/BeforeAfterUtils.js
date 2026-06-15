@@ -97,51 +97,53 @@ class BeforeAfterUtil extends Component {
       "https://hindalkindi1992.files.wordpress.com/2013/11/portrait_eyes_23.jpg";
 
     return (
-      <Card className = "container-fluid"
+      <Card className="container-fluid"
         style={{
           fontFamily: "times new roman",
-          fontSize: "2.25vw",
-          color: "#B8860B",
-          padding: "2vw",
-          // margin: "0.5vw",
-          backgroundColor: "rgba(255, 255, 255)",
-          // borderWidth: "0.2vw",
-          // margin: "2vw",
-          backgroundColor: "white",
-          // height: "110vw",
+          color: "#FFFFFF",
+          padding: "4vw",
+          backgroundColor: "#173A5E",
+          border: "none",
+          margin: "2vw 0"
         }}
       >
-        Clinical Transformations:
-        <CardGroup className = "container-fluid" style={{ padding: "2vw", 
-          // height: "90vw", 
-          fontSize: "1.125vw" }}>
-          <Card style={{ padding: "2vw", 
-            // height: "30vw", 
-            fontSize: "1.125vw"  }}>
+        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3vw", textAlign: "center", marginBottom: "3vw" }}>
+          Clinical Transformations
+        </h2>
+        <CardGroup className="container-fluid" style={{ gap: "2vw" }}>
+          <Card style={{ backgroundColor: "#0A2342", border: "none", borderRadius: "10px", padding: "1vw" }}>
             <ReactCompareImage leftImage={veneerpre} rightImage={veneerpost} />
-            <CardBody style={{fontSize: "1.125vw" }}>
-              <CardSubtitle className="mb-2 text-muted" style={{fontSize: "1.125vw" }}>
-                Veneers
-              </CardSubtitle>
+            <CardBody style={{ padding: "2vw" }}>
+              <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", color: "#FFFFFF", marginBottom: "1vw" }}>
+                Porcelain Veneers
+              </h4>
+              <p style={{ fontFamily: "times new roman", fontSize: "1.1vw", color: "#FFFFFF", margin: 0 }}>
+                Custom-made, ultra-thin shells crafted from high-quality porcelain to completely cover the front surface of teeth. This transformative procedure corrects discoloration, chips, and misalignment, resulting in a flawless, natural-looking smile that lasts for years.
+              </p>
             </CardBody>
           </Card>
-          <Card className = "container-fluid"
-          style={{ padding: "2vw", 
-            // height: "30vw", 
-            fontSize: "1.125vw"  }}>
+          
+          <Card style={{ backgroundColor: "#0A2342", border: "none", borderRadius: "10px", padding: "1vw" }}>
             <ReactCompareImage leftImage={cleftpalatepre} rightImage={cleftpalatepost} />
-            <CardBody>
-              <CardSubtitle className="mb-2 text-muted" style={{fontSize: "1.125vw"}}>
-                Cleft Palate Missing Tooth Treatment
-              </CardSubtitle>
+            <CardBody style={{ padding: "2vw" }}>
+              <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", color: "#FFFFFF", marginBottom: "1vw" }}>
+                Cleft Palate Missing Tooth
+              </h4>
+              <p style={{ fontFamily: "times new roman", fontSize: "1.1vw", color: "#FFFFFF", margin: 0 }}>
+                A highly specialized prosthetic and surgical intervention designed to restore both aesthetic harmony and functional capability for patients with congenital cleft palate. This treatment seamlessly bridges gaps, enabling confident smiles and improved speech and mastication.
+              </p>
             </CardBody>
           </Card>
-          <Card className = "container-fluid" style={{ padding: "2vw" }}>
+          
+          <Card style={{ backgroundColor: "#0A2342", border: "none", borderRadius: "10px", padding: "1vw" }}>
             <ReactCompareImage leftImage={compositepre} rightImage={compositepost} />
-            <CardBody>
-              <CardSubtitle className="mb-2 text-muted" style={{fontSize: "1.125vw"}}>
+            <CardBody style={{ padding: "2vw" }}>
+              <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", color: "#FFFFFF", marginBottom: "1vw" }}>
                 Composite Restoration
-              </CardSubtitle>
+              </h4>
+              <p style={{ fontFamily: "times new roman", fontSize: "1.1vw", color: "#FFFFFF", margin: 0 }}>
+                An immediate, minimally invasive cosmetic solution using tooth-colored resin material. Carefully sculpted and bonded directly to the tooth structure, it repairs decay or damage while flawlessly blending with the surrounding natural enamel for an invisible finish.
+              </p>
             </CardBody>
           </Card>
         </CardGroup>

@@ -1,460 +1,85 @@
-import React, { Component } from "react";
-import { Button, Card, CardBody, CardHeader, CardText } from "reactstrap";
+import React from "react";
+import { Button } from "reactstrap";
+import { motion } from "framer-motion";
+import NavbarUtil from "../utils/NavbarUtil.js";
+import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
+import FooterUtil from "../utils/FooterUtil.js";
+import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
 
-import clinic1 from "../images/79.jpeg";
-import NavbarUtil from "../utils/NavbarUtil";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil";
-import FooterUtil from "../utils/FooterUtil";
+const services = [
+  { title: "Teeth Aligners", desc: "Invisible braces for straightening teeth.", link: "/invisalign" },
+  { title: "Teeth Whitening", desc: "Procedure to brighten and lighten tooth color.", link: "/whitening" },
+  { title: "Bonding", desc: "Applying tooth-colored resin to repair or improve tooth appearance.", link: "/bondingfillings" },
+  { title: "Veneers", desc: "Thin shells placed over teeth to enhance aesthetics.", link: "/veneers" },
+  { title: "Gummy Smile Reduction", desc: "Procedure to reduce excess gum visibility when smiling.", link: "/gummysmilereduction" },
+  { title: "Smile Makeover", desc: "Comprehensive cosmetic dental treatment plan.", link: "/smilemakeover" },
+  { title: "Full Mouth Rehabilitation", desc: "Complete restoration of oral health and function.", link: "/fullmouthrehab" },
+];
 
-class App extends Component {
-  render() {
-    return (
-      <div
-      style={{
-        marginRight: "0",
-        marginLeft: "0",
-        paddingRight: "0",
-        paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-      >
-        <NavbarUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <div
-          className="d-flex flex-column justify-content-center align-items-center"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${clinic1})`,
-            backgroundPosition: "center ",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            minHeight: "140vh",
-            overflowX:"auto"
-          }}
+const Cosmetic = () => {
+  return (
+    <div style={{ backgroundColor: "#fcfcfc", minHeight: "100vh", overflowX: "hidden" }}>
+      <NavbarUtil />
+      <br /><br /><br /><br />
+      
+      <div className="d-flex flex-column justify-content-center align-items-center" style={{ width: "100vw", padding: "2vw" }}>
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          style={{ fontFamily: "'Playfair Display', serif", fontSize: "4.5vw", color: "#0A2342", marginBottom: "2vw" }}
         >
-          <div
-            className="text-center"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "100vw",
-              padding: "10px",
-              margin: "2vw",
-            }}
-          >
-            {" "}
-            Cosmetic Services!
-          </div>
-          <Button
-           active
-           className="my-2"
-           style={{
-             padding: "0.5vw",
-            //  marginleft:"200vw",
-             borderColor: "white",
-             backgroundColor: "black",
-           }}
-         >
-           <div
-             className="text-center"
-             style={{
-               fontFamily: "times new roman",
-               fontSize: "2.25vw",
-               color: "#B8860B",
-             }}
-           >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
-                >
-                  Book an appointment
-                </a>
-              </div>
-            </Button>
-            <div
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "1.875vw",
-                color: "#B8860B",
-                backgroundColor: "white",
-                width: "35vw",
-                padding: "1vw",
-                margin: "0.6vw",
-              }}
-            >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <Card
-          class="container-fluid"
-          style={{
-            // height: "1400px",
-            borderWidth: "0.2vw",
-            // margin: "0.",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        >
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.4249999999999998vw",
-              color: "#B8860B",
-              position: "center",
-              padding: "1vw",
-              margin: "0.5vw",
-              borderWidth: "0.2vw",
-              borderColor: "black",
-              // fontSize: "25px",
-            }}
-            >
-            <p style={{ fontSize: "1.875vw" }}>
-              <b>Cosmetic Services</b>
-            </p>
-            At Dr Sandhya's Total Dental Care, we host an array of cosmetic
-            services for you to choose from:
-          </Card>
-
-          <br></br>
-          <br></br>
-          <br></br>
-
-          <div className="row" style={{
-            fontFamily: "times new roman",
-            fontSize: "1.4249999999999998vw",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.75vw",
-            // margin: "10px",
-          }}>
-          <div className="col-md-4" >
-            <Button
-            // className="container-fluid"
-              href="/invisalign"
-              style={{
-                padding: "0.2vw",
-                borderColor: "white",
-                borderRadius: "1vw",
-              }}
-            >
-              <Card >
-                <CardHeader
-                  style={{
-                    color: "#B8860B",
-                    fontSize: "1.3125vw",
-                    fontFamily: "times new roman",
-                    padding: "0.5vw",
-                  }}
-                >
-                  Teeth Aligners
-                </CardHeader>
-                <CardBody>
-                  <CardText
-                    style={{ 
-                      color: "#B8860B",
-                      fontSize: "0.9750000000000001vw",
-                      whiteSpace: "normal",
-                    }}
-                  >
-                    Invisible braces for straightening teeth.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Button>
-            </div>
-            <div className="col-md-4" >
-            <Button
-            // className="container-fluid"
-              href="/whitening"
-              style={{
-                padding: "0.2vw",
-                borderColor: "white",
-                borderRadius: "1vw",
-              }}
-            >
-              <Card >
-                <CardHeader
-                  style={{
-                    color: "#B8860B",
-                    fontSize: "1.3125vw",
-                    fontFamily: "times new roman",
-                    padding: "0.5vw",
-                  }}
-                >
-                  Teeth Whitening
-                </CardHeader>
-                <CardBody>
-                  <CardText
-                    style={{ 
-                      color: "#B8860B",
-                      fontSize: "0.9750000000000001vw",
-                      whiteSpace: "normal",
-                    }}
-                  >
-                    Procedure to brighten and lighten tooth color.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Button>
-            </div>
-
-            <div className="col-md-4" >
-            <Button
-            // className="container-fluid"
-              href="/bondingfillings"
-              style={{
-                padding: "0.2vw",
-                borderColor: "white",
-                borderRadius: "1vw",
-              }}
-            >
-              <Card >
-                <CardHeader
-                  style={{
-                    color: "#B8860B",
-                    fontSize: "1.3125vw",
-                    fontFamily: "times new roman",
-                    padding: "0.5vw",
-                  }}
-                >
-                  Bonding
-                </CardHeader>
-                <CardBody>
-                  <CardText
-                    style={{ 
-                      color: "#B8860B",
-                      fontSize: "0.9750000000000001vw",
-                      whiteSpace: "normal",
-                    }}
-                  >
-                    Applying tooth-colored resin to repair or improve tooth
-                    appearance.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Button>
-            </div>
-            </div>
-
-
-            <div
-              style={{ fontSize: "1.125vw", paddingTop: "1vw", margin: "0.8vw" }}
-            />
-            
-         
-
-          <div className="row" style={{
-            fontFamily: "times new roman",
-            fontSize: "1.4249999999999998vw",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.75vw",
-            // margin: "10px",
-          }}>
-           <div className="col-md-4" >
-            <Button
-            // className="container-fluid"
-              href="/veneers"
-              style={{
-                padding: "0.2vw",
-                borderColor: "white",
-                borderRadius: "1vw",
-              }}
-            >
-              <Card >
-                <CardHeader
-                  style={{
-                    color: "#B8860B",
-                    fontSize: "1.3125vw",
-                    fontFamily: "times new roman",
-                    padding: "0.5vw",
-                  }}
-                >
-                  Veneers
-                </CardHeader>
-                <CardBody >
-                  <CardText
-                    style={{ 
-                      color: "#B8860B",
-                      fontSize: "0.9750000000000001vw",
-                      whiteSpace: "normal",
-                    }}
-                  >
-                    Thin shells placed over teeth to enhance aesthetics.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Button>
-            </div>
-
-
-            <div className="col-md-4" >
-            <Button
-            // className="container-fluid"
-              href="/gummysmilereduction"
-              style={{
-                padding: "0.2vw",
-                borderColor: "white",
-                borderRadius: "1vw",
-              }}
-            >
-              <Card >
-                <CardHeader
-                  style={{
-                    color: "#B8860B",
-                    fontSize: "1.3125vw",
-                    fontFamily: "times new roman",
-                    padding: "0.5vw",
-                  }}
-                >
-                  Gummy Smile Reduction
-                </CardHeader>
-                <CardBody>
-                  <CardText
-                    style={{ 
-                      color: "#B8860B",
-                      fontSize: "0.9750000000000001vw",
-                      whiteSpace: "normal",
-                    }}
-                  >
-                    Procedure to reduce excess gum visibility when smiling.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Button>
-            </div>
-
-
-            <div className="col-md-4" >
-            <Button
-            // className="container-fluid"
-              href="/smilemakeover"
-              style={{
-                padding: "0.2vw",
-                borderColor: "white",
-                borderRadius: "1vw",
-              }}
-            >
-              <Card >
-                <CardHeader
-                  style={{
-                    color: "#B8860B",
-                    fontSize: "1.3125vw",
-                    fontFamily: "times new roman",
-                    padding: "0.5vw",
-                  }}
-                >
-                  Smile Makeover
-                </CardHeader>
-                <CardBody>
-                  <CardText
-                    style={{ 
-                      color: "#B8860B",
-                      fontSize: "0.9750000000000001vw",
-                      whiteSpace: "normal",
-                    }}
-                  >
-                    Comprehensive cosmetic dental treatment plan.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Button>
-            </div>
-
-            <div
-              style={{ fontSize: "1.125vw", paddingTop: "1vw", margin: "0.8vw" }}
-            />
-
-            <div className="col-md-5" >
-            <Button
-            // className="container-fluid"
-              href="/fullmouthrehab"
-              style={{
-                padding: "0.2vw",
-                borderColor: "white",
-                borderRadius: "1vw",
-              }}
-            >
-              <Card >
-                <CardHeader
-                  style={{
-                    color: "#B8860B",
-                    fontSize: "1.3125vw",
-                    fontFamily: "times new roman",
-                    padding: "0.5vw",
-                  }}
-                >
-                  Full Mouth Rehabilitation
-                </CardHeader>
-                <CardBody>
-                  <CardText
-                    style={{ 
-                      color: "#B8860B",
-                      fontSize: "0.9750000000000001vw",
-                      whiteSpace: "normal",
-                    }}
-                  >
-                    Complete restoration of oral health and function.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Button>
-            </div>
-          </div>
-        </Card>
-
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <BeforeAfterUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <PageTestimonialsUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <FooterUtil />
+          Cosmetic Services
+        </motion.h1>
+        <Button style={{ padding: "10px", borderColor: "#173A5E", backgroundColor: "#173A5E", marginBottom: "1vw" }}>
+          <a href="https://wa.me/919833630985?text=Hello" style={{ color: "#FFFFFF", textDecoration: "none", fontSize: "2vw", fontFamily: "times new roman" }}>
+            Book an appointment
+          </a>
+        </Button>
+        <p style={{ fontFamily: "times new roman", fontSize: "1.5vw", color: "#0A2342" }}>OR Call on (+91) 9833630985</p>
       </div>
-    );
-  }
-}
 
-export default App;
+      <div style={{ padding: "4vw", backgroundColor: "white", margin: "2vw", borderRadius: "10px", boxShadow: "0 4px 15px rgba(0,0,0,0.05)" }}>
+        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.5vw", color: "#0A2342", textAlign: "center", marginBottom: "3vw" }}>
+          Enhance Your Smile's Beauty
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2vw" }}>
+          {services.map((svc, i) => (
+            <motion.a 
+              href={svc.link} 
+              key={i}
+              whileHover={{ scale: 1.05, backgroundColor: "#0A2342" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              style={{
+                textDecoration: "none",
+                backgroundColor: "#173A5E",
+                padding: "3vw",
+                borderRadius: "10px",
+                color: "#FFFFFF",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                boxShadow: "0 5px 15px rgba(23, 58, 94, 0.2)"
+              }}
+            >
+              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", marginBottom: "1vw", color: "#FFFFFF" }}>{svc.title}</h3>
+              <p style={{ fontFamily: "times new roman", fontSize: "1.2vw", margin: 0, color: "#FFFFFF" }}>{svc.desc}</p>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+
+      <BeforeAfterUtil />
+      <br /><br /><br />
+      <PageTestimonialsUtil />
+      <br /><br /><br />
+      <FooterUtil />
+    </div>
+  );
+};
+
+export default Cosmetic;

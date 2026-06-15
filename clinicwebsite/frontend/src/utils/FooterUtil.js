@@ -1,453 +1,144 @@
-import React, { Component } from "react";
-import {
-  Card,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
-} from "reactstrap";
-import ListGroup from "react-bootstrap/ListGroup";
+import React from "react";
+import { Button, Card, NavLink } from "reactstrap";
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineLinkedin } from "react-icons/ai";
 
-class FooterUtil extends Component {
-  render() {
-    return (
-      <>
-        <Card
-          class="container-fluid"
+const FooterUtil = () => {
+  return (
+    <div style={{ backgroundColor: "#173A5E", color: "#FFFFFF", fontFamily: "times new roman" }}>
+      {/* Call to Action Banner */}
+      <Card
+        className="container-fluid"
+        style={{
+          border: "none",
+          backgroundColor: "#0A2342",
+          padding: "5vw",
+          textAlign: "center"
+        }}
+      >
+        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3.5vw", color: "#FFFFFF", marginBottom: "2vw" }}>
+          So what are you waiting for? Smile wide!
+        </h2>
+        <Button
           style={{
-            // height: "clamp(10vw, 20vw, 50vw)",
-            borderWidth: "0.2vw",
-            margin: "0px",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-          
-        >
-          <div className="text-center p-3"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "clamp(1vw, 3vw, 3vw)",
-              color: "#B8860B",
-              padding: "clamp(1vw, 1vw, 1.5vw)",
-              backgroundColor: "white",
-              // zIndex: 100,
-            }}
-          >
-            So what are you waiting for? Smile wide, and
-            <Button
-              active
-              color="light"
-              className="d-block mx-auto my-3"
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "1.5vw",
-                padding: "1vw",
-                display:"inline"
-                // margin: "15px",
-                // marginLeft: "80px",
-                // zIndex: 100,
-              }}
-            >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "black", zIndex: 100 }}
-              >
-                Book your appointment today!
-              </a>
-            </Button>
-          </div>
-        </Card>
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-<Card style={{
-            padding: "2vw",
-            borderWidth: "0.2vw",
-            margin: "2vw",
-            backgroundColor: "white",
-            fontFamily:"times new roman"
-            // display: "flex", // Enables Flexbox
-            // alignItems: "center", // Vertical centering
-            // justifyContent: "center", // Horizontal centering (if needed)
-            // minHeight: "40vw", // Ensure card has a minimum height
-          }}>
-        <div className="row" style={{
             fontFamily: "times new roman",
-            fontSize: "0.9375vw",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "10px",
-            margin: "10px"
-          }}>
-          <div className="col-md-8" >
+            fontSize: "1.5vw",
+            padding: "1.2vw 3vw",
+            backgroundColor: "#173A5E",
+            borderColor: "#FFFFFF",
+            borderWidth: "2px",
+            borderRadius: "40px",
+            margin: "0 auto",
+            display: "inline-block",
+            boxShadow: "0 5px 15px rgba(0,0,0,0.3)"
+          }}
+        >
+          <a
+            href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment"
+            style={{ color: "#FFFFFF", textDecoration: "none" }}
+          >
+            Book your appointment today!
+          </a>
+        </Button>
+      </Card>
+
+      {/* Map and Visit Us Section - At the top as requested */}
+      <div style={{ padding: "5vw 4vw", backgroundColor: "#173A5E" }}>
+        <div className="row" style={{ alignItems: "center", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px", padding: "3vw", backgroundColor: "rgba(255, 255, 255, 0.05)" }}>
+          <div className="col-md-8">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.627340847596!2d72.94237301412522!3d19.167783054063854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8f7c2d76931%3A0xa2d85150fddd96c8!2sDr%20Sandhya&#39;s%20Total%20Dental%20Care!5e0!3m2!1sen!2sin!4v1670239514055!5m2!1sen!2sin"
-              // style={{
-              //   width: "900px",
-              //   height: "250px",
-              //   border: "50px",
-              //   allowfullscreen: "",
-              //   loading: "lazy",
-              //   referrerpolicy: "no-referrer-when-downgrade",
-              //   padding: "20px",
-              // }}
               style={{
                 width: "100%",
-                height: "25vw",
-                border: "0",
-                backgroundColor:"white"
+                height: "30vw",
+                border: "none",
+                borderRadius: "15px",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
               }}
+              title="Clinic Map"
             ></iframe>
-          {/* </ListGroup.Item>
-          <ListGroup.Item
-            style={{
-              fontFamily: "times new roman",
-              backgroundColor: "white",
-              color: "#B8860B",
-              fontSize: "20px",
-              width: "400px",
-              borderWidth: "5px",
-              borderColor: "white",
-            }}
-          >
-            <div style={{ fontSize: "30px", borderWidth: "5px" }}>Visit Us</div>{" "}
-            <hr color="black"></hr>Shop #9, Saidham Complex, <br></br>P.K road,
-            Mulund West <br></br>Mumbai - 400080<br></br>
-            <br></br>Mon - Sat: <br></br>10am to 2pm, 6pm to 9pm
-          </ListGroup.Item>
-        </ListGroup> */}
+          </div>
+          <div className="col-md-4" style={{ paddingLeft: "3vw" }}>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3vw", marginBottom: "1.5vw" }}>Visit Us</h2>
+            <hr style={{ borderColor: "rgba(255, 255, 255, 0.3)", borderWidth: "2px" }} />
+            <p style={{ fontSize: "1.4vw", lineHeight: "1.8" }}>
+              Shop #9, Saidham Complex,<br />
+              P.K road, Mulund West<br />
+              Mumbai - 400080
+            </p>
+            <hr style={{ borderColor: "rgba(255, 255, 255, 0.3)" }} />
+            <p style={{ fontSize: "1.4vw", lineHeight: "1.8" }}>
+              <strong>Mon - Sat:</strong><br />
+              10:00 AM to 2:00 PM<br />
+              6:00 PM to 9:00 PM
+            </p>
+          </div>
         </div>
+      </div>
 
+      {/* Navigation Links Footer - Tall 4 columns side by side */}
+      <div className="container-fluid" style={{ backgroundColor: "#0A2342", padding: "6vw 4vw" }}>
+        <div className="row" style={{ maxWidth: "1400px", margin: "0 auto" }}>
+          
+          <div className="col-md-3 mb-5">
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2vw", borderBottom: "2px solid rgba(255, 255, 255, 0.2)", paddingBottom: "1vw", marginBottom: "2vw" }}>
+              Social
+            </h3>
+            <div style={{ display: "flex", gap: "1.5vw" }}>
+              <BsInstagram size="2.5vw" style={{ cursor: "pointer" }} />
+              <AiOutlineLinkedin size="2.5vw" style={{ cursor: "pointer" }} />
+            </div>
+          </div>
 
-  <div className="col-md-4" >
-    <h2 className="mb-3"  
-    style={{
-            fontFamily: "times new roman",
-            fontSize: "clamp(2vw, 2.5vw, 3.5vw)",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "1vw",
-            margin: "0.5vw",
-          }}
-    
-          ><b>Visit Us</b></h2>
-    <hr />
-    <p  style={{
-            fontFamily: "times new roman",
-            fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "0.2vw",
-          }}>Shop #9, Saidham Complex,<br />P.K road, Mulund West<br />Mumbai - 400080</p>
-          <hr></hr>
-    <p style={{
-            fontFamily: "times new roman",
-            fontSize: "clamp(1.5vw, 1.5vw, 2vw)",
-            color: "#B8860B",
-            // backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "0.2vw",
-          }}>Mon - Sat:<br />10am to 2pm, 6pm to 9pm</p>
-  </div>
-</div>
-</Card>
+          <div className="col-md-3 mb-5">
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2vw", borderBottom: "2px solid rgba(255, 255, 255, 0.2)", paddingBottom: "1vw", marginBottom: "2vw" }}>
+              Services
+            </h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.5vw", fontSize: "1.4vw" }}>
+              <NavLink href="/general" style={{ color: "#FFFFFF", padding: 0 }}>General Dentistry</NavLink>
+              <NavLink href="/cosmetic" style={{ color: "#FFFFFF", padding: 0 }}>Cosmetic Dentistry</NavLink>
+              <NavLink href="/surgical" style={{ color: "#FFFFFF", padding: 0 }}>Surgical Procedures</NavLink>
+            </div>
+          </div>
 
-        <br></br>
-        <br></br>
+          <div className="col-md-3 mb-5">
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2vw", borderBottom: "2px solid rgba(255, 255, 255, 0.2)", paddingBottom: "1vw", marginBottom: "2vw" }}>
+              Our Office
+            </h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.5vw", fontSize: "1.4vw" }}>
+              <NavLink href="/" style={{ color: "#FFFFFF", padding: 0 }}>Home</NavLink>
+              <NavLink href="/about" style={{ color: "#FFFFFF", padding: 0 }}>About Our Practice</NavLink>
+              <NavLink href="/doctorlogin" style={{ color: "#FFFFFF", padding: 0 }}>Doctor Login</NavLink>
+            </div>
+          </div>
 
-        {/* <Navbar
-          style={{
-            marginRight: "0px",
-            paddingRight: "0px",
-            paddingLeft: "250px",
-            marginBottom: "0px",
-            backgroundColor: "white",
-          }}
-        >
-          <NavbarToggler onClick={this.toggle} />
+          <div className="col-md-3 mb-5">
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2vw", borderBottom: "2px solid rgba(255, 255, 255, 0.2)", paddingBottom: "1vw", marginBottom: "2vw" }}>
+              Contact Us
+            </h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.5vw", fontSize: "1.4vw" }}>
+              <p style={{ margin: 0 }}>Call (+91) 9833630985</p>
+              <p style={{ margin: 0, lineHeight: "1.6" }}>Shop #9, Saidham Complex,<br />P.K road, Mulund West</p>
+            </div>
+          </div>
 
-          <Nav style={{ marginRight: "0px", paddingRight: "0px" }}>
-            <NavItem></NavItem>
-
-            <ListGroup>
-              <ListGroup.Item
-                style={{
-                  fontFamily: "times new roman",
-                  color: "#B8860B",
-                  backgroundColor: "white",
-                }}
-              >
-                <NavItem
-                  style={{
-                    padding: "20px",
-                    paddingRight: "60px",
-                    marginRight: "5px",
-                    fontFamily: "times new roman",
-                    fontSize: "30px",
-                    backgroundColor: "white",
-                  }}
-                >
-                  Social
-                </NavItem>
-                <br></br>
-                <br></br>
-                <BsInstagram size="45px" style={{ padding: "5px" }} />{" "}
-                <AiOutlineLinkedin size="50px" style={{ padding: "3px" }} />
-              </ListGroup.Item>
-            </ListGroup>
-            <NavItem></NavItem>
-            <NavItem></NavItem>
-            <ListGroup>
-              <ListGroup.Item
-                style={{
-                  fontFamily: "times new roman",
-                  color: "#B8860B",
-                  backgroundColor: "white",
-                }}
-              >
-                {" "}
-                <NavItem
-                  style={{
-                    padding: "20px",
-                    paddingRight: "80px",
-                    rightMargin: "50px",
-                    fontFamily: "times new roman",
-                    fontSize: "30px",
-                    backgroundColor: "white",
-                  }}
-                >
-                  Services
-                </NavItem>
-                <br></br>
-                <br></br>
-                <NavLink
-                  href="/general"
-                  style={{ color: "#B8860B", fontSize: "15px" }}
-                >
-                  General
-                </NavLink>
-                <NavLink
-                  href="/cosmetic"
-                  style={{ color: "#B8860B", fontSize: "15px" }}
-                >
-                  Cosmetic
-                </NavLink>
-                <NavLink
-                  href="/surgical"
-                  style={{ color: "#B8860B", fontSize: "15px" }}
-                >
-                  Surgical
-                </NavLink>
-                <br></br>
-                <br></br>
-              </ListGroup.Item>
-            </ListGroup>
-            <ListGroup>
-              <ListGroup.Item
-                style={{
-                  fontFamily: "times new roman",
-                  color: "#B8860B",
-                  backgroundColor: "white",
-                }}
-              >
-                {" "}
-                <NavItem
-                  style={{
-                    padding: "20px",
-                    paddingRight: "80px",
-                    rightMargin: "70px",
-                    fontFamily: "times new roman",
-                    fontSize: "30px",
-                    backgroundColor: "white",
-                  }}
-                >
-                  Our Office
-                </NavItem>
-                <br></br>
-                <br></br>
-                <NavLink
-                  href="/"
-                  style={{ color: "#B8860B", fontSize: "15px" }}
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  href="/about"
-                  style={{ color: "#B8860B", fontSize: "15px" }}
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  href="/doctorlogin"
-                  style={{ color: "#B8860B", fontSize: "15px" }}
-                >
-                  Doctor Login
-                </NavLink>
-                <br></br>
-                <br></br>
-              </ListGroup.Item>
-            </ListGroup>
-            <NavItem></NavItem>
-            <ListGroup style={{ marginRight: "0px", paddingRight: "0px" }}>
-              <ListGroup.Item
-                style={{
-                  fontFamily: "times new roman",
-                  color: "#B8860B",
-                  backgroundColor: "white",
-                }}
-              >
-                {" "}
-                <NavItem
-                  style={{
-                    padding: "20px",
-                    paddingRight: "80px",
-                    margin: "0px",
-                    fontFamily: "times new roman",
-                    fontSize: "30px",
-                    backgroundColor: "white",
-                  }}
-                >
-                  Contact Us
-                </NavItem>
-                <div style={{ fontSize: "15px" }}>
-                  Call (+91) 9833630985<br></br>
-                  <br></br>Shop #9, Saidham Complex, <br></br>P.K road, Mulund
-                  West <br></br>Mumbai - 400080<br></br>
-                  <br></br>Mon - Sat: <br></br>10am to 2pm,<br></br>6pm to 9pm
-                </div>
-              </ListGroup.Item>
-            </ListGroup>
-          </Nav>
-        </Navbar> */}
-
-<div className="container-fluid  py-4" style={{
-            fontFamily: "times new roman",
-            fontSize: "clamp(1vw, 1.5vw, 2vw)",
-            color: "#B8860B",
-            backgroundColor: "white",
-            // width: "100vw",
-            padding: "2.5vw",
-            margin: "0.5vw",
-          }} >
-  <div className="row" style={{paddingLeft:"35vw"}}>
-    <div className="col-md-2 mb-3" style={{
-            fontFamily: "times new roman",
-            // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "#B8860B",
-            backgroundColor: "white",
-            // // width: "100vw",
-            // padding: "0.5vw",
-            margin: "0.2vw",
-          }}>
-      <h3 style={{
-            fontFamily: "times new roman",
-            fontSize: "clamp(1vw, 2vw, 2vw)",
-            color: "#B8860B",
-            backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "1vw",
-          }}>Social</h3>
-      <BsInstagram size="2em" className="mr-2" style={{ padding:"0.5vw"}}/>
-      <AiOutlineLinkedin size="2em"  style={{padding: "0.5vw",}}/>
-    </div>
-    <div className="col-md-3 mb-3" style={{
-            fontFamily: "times new roman",
-            // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "#B8860B",
-            backgroundColor: "white",
-            // // width: "100vw",
-            // padding: "0.5vw",
-            margin: "0.2vw",
-          }}>
-      <h3 style={{
-            fontFamily: "times new roman",
-            fontSize: "clamp(1vw, 2vw, 2vw)",
-            color: "#B8860B",
-            backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "1vw",
-          }}>Services</h3>
-      <NavLink href="/general" style={{padding: "0.5vw",}}>General</NavLink>
-      <NavLink href="/cosmetic" style={{padding: "0.5vw",}}>Cosmetic</NavLink>
-      <NavLink href="/surgical" style={{padding: "0.5vw",}}>Surgical</NavLink>
-    </div>
-    <div className="col-md-3 mb-3" style={{
-            fontFamily: "times new roman",
-            // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "#B8860B",
-            backgroundColor: "white",
-            // // width: "100vw",
-            // padding: "0.5vw",
-            margin: "0.2vw",
-          }}>
-      <h3 style={{
-            fontFamily: "times new roman",
-            fontSize: "clamp(1vw, 2vw, 2vw)",
-            color: "#B8860B",
-            backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "1vw",
-          }}>Our Office</h3>
-      <NavLink href="/" style={{padding: "0.5vw",}}>Home</NavLink>
-      <NavLink href="/about" style={{padding: "0.5vw",}}>About</NavLink>
-      <NavLink href="/doctorlogin" style={{padding: "0.5vw",}}>Doctor Login</NavLink>
-    </div>
-    <div className="col-md-3 mb-3" style={{
-            // fontFamily: "times new roman",
-            // fontSize:"clamp(1vw, 2vw, 2vw)",
-            // color: "#B8860B",
-            backgroundColor: "white",
-            // // width: "100vw",
-            padding: "0.5vw",
-            margin: "0.2vw",
-          }}>
-      <h3 style={{
-            fontFamily: "times new roman",
-            fontSize:"clamp(1vw, 2vw, 2vw)",
-            color: "#B8860B",
-            backgroundColor: "white",
-            // width: "100vw",
-            padding: "0.5vw",
-            margin: "1vw",
-          }}>Contact Us</h3>
-      <p style={{padding: "0.5vw",}}>Call (+91) 9833630985</p>
-      <p style={{padding: "0.5vw",}}>Shop #9, Saidham Complex,<br />P.K road, Mulund West<br />Mumbai - 400080</p>
-      <p style={{padding: "0.5vw",}}>Mon - Sat: 10am to 2pm, 6pm to 9pm</p>
-    </div>
-  </div>
-</div>
-
-        <div className="container-fluid  py-4" style={{color: "#B8860B", backgroundColor: "white", padding:"20px", fontFamily:"times new roman", fontSize:"clamp(1rem, 3vw, 1.75rem)"}}
-          // className="text"
-          // style={{
-          //   paddingLeft: "750px",
-          //   color: "#B8860B",
-          //   fontFamily: "times new roman",
-          //   fontSize: "15px",
-          //   fontStyle: "italic",
-          //   backgroundColor: "white",
-          // }}
-        >
-          @ Dr Sandhya's Total Dental Care | Copyright: 2022 | Designed by:
-          Prakriti Shetty
         </div>
-      </>
-    );
-  }
-}
+      </div>
+
+      {/* Copyright */}
+      <div 
+        className="text-center py-4" 
+        style={{ 
+          backgroundColor: "#173A5E", 
+          borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+          fontSize: "1.2vw",
+          color: "rgba(255, 255, 255, 0.6)"
+        }}
+      >
+        © Dr Sandhya's Total Dental Care | Copyright: 2022 | Designed by: Prakriti Shetty
+      </div>
+    </div>
+  );
+};
 
 export default FooterUtil;

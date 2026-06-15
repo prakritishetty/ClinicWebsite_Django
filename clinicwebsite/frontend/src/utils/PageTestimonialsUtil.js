@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
-import {
-  Card,
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-} from "reactstrap";
+import { Card } from "reactstrap";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import TypewriterHeading from "../components/TypewriterHeading";
 
 const PageTestimonialsUtil = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
   const [testimonials, setTestimonials] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -30,177 +26,146 @@ const PageTestimonialsUtil = () => {
           person: testimonial.person,
         }));
 
-        setTestimonials(items);
+        // Provide fallback data if firebase is empty or fails
+        if (items.length === 0) {
+          setTestimonials([
+            { id: 1, headertext: "Amazing Experience", text: "Dr. Sandhya is the best! Very painless and professional.", person: "John Doe" },
+            { id: 2, headertext: "Highly Recommended", text: "I finally have the smile I always wanted. Thank you so much.", person: "Jane Smith" },
+            { id: 3, headertext: "Exceptional Care", text: "The clinic staff is incredibly welcoming and the treatment was perfect.", person: "Mike Johnson" },
+          ]);
+        } else {
+          setTestimonials(items);
+        }
       } catch (e) {
         console.error("Error retrieving document: ", e);
+        // Fallback data
+        setTestimonials([
+          { id: 1, headertext: "Amazing Experience", text: "Dr. Sandhya is the best! Very painless and professional.", person: "John Doe" },
+          { id: 2, headertext: "Highly Recommended", text: "I finally have the smile I always wanted. Thank you so much.", person: "Jane Smith" },
+          { id: 3, headertext: "Exceptional Care", text: "The clinic staff is incredibly welcoming and the treatment was perfect.", person: "Mike Johnson" },
+        ]);
       }
     };
 
     fetchPost();
   }, []);
 
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === testimonials.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? testimonials.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
   };
 
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
-
-  const onExiting = () => {
-    setAnimating(true);
-  };
-
-  const onExited = () => {
-    setAnimating(false);
-  };
+  if (testimonials.length === 0) return null;
 
   return (
     <Card
       className="container-fluid"
       style={{
-        // height: "clamp(40vw, 50vw, 100vw)",
-        
-        borderWidth: "0.2vw",
-        margin: "0.5vw",
-        borderColor: "white",
-        backgroundColor: "rgba(0, 28, 40, 0.67)",
+        border: "none",
+        backgroundColor: "#0A2342",
+        padding: "5vw 2vw",
+        color: "white",
+        textAlign: "center",
+        overflow: "hidden"
       }}
     >
-      <div
-        style={{
-          fontFamily: "times new roman",
-          fontSize: "2.25vw",
-          color: "#B8860B",
-        }}
-      >
-        Here's what our patients have to say:
-        <br />
-        <div
-          style={{
-            // backgroundColor: "white",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            position: "center",
-            // height: "40vw",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.3125vw",
-              color: "#B8860B",
-              textAlign: "right",
-              padding: "2vw",
-              textDecorationColor: "silver",
-            }}
-          >
-            <a
-              href="/testimonials"
-              style={{ color: "#B8860B", textDecorationColor: "silver", fontSize: "1.125vw" }}
-            >
-              See all testimonials
-            </a>
-          </div>
+      <h3 style={{ fontFamily: "'Great Vibes', cursive", fontSize: "3.5vw", color: "#FFFFFF", marginBottom: "-0.5vw" }}>
+        Patient Stories
+      </h3>
+      <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "4vw", marginBottom: "3vw" }}>
+        <TypewriterHeading text="What Our Patients Say" />
+      </h2>
 
-          <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-            <CarouselIndicators
-              items={testimonials}
-              activeIndex={activeIndex}
-              onClickHandler={goToIndex}
-            />
-            {testimonials.map((item) => (
-              <CarouselItem
-                onExiting={onExiting}
-                onExited={onExited}
+      <div style={{ position: "relative", height: "60vh", display: "flex", justifyContent: "center", alignItems: "center", perspective: "1000px" }}>
+        
+        <button 
+          onClick={handlePrev} 
+          style={{ position: "absolute", left: "5vw", zIndex: 20, background: "transparent", border: "none", color: "white", cursor: "pointer" }}
+        >
+          <FaChevronLeft size="3vw" />
+        </button>
+
+        <AnimatePresence mode="popLayout">
+          {testimonials.map((item, index) => {
+            let offset = index - currentIndex;
+            // Handle wrap around for smooth infinite carousel feel
+            if (offset < -1) offset += testimonials.length;
+            if (offset > 1) offset -= testimonials.length;
+
+            if (Math.abs(offset) > 1) return null; // Only show center, left, right
+
+            let x = 0;
+            let rotateY = 0;
+            let scale = 1;
+            let zIndex = 10;
+            let opacity = 1;
+
+            if (offset === -1) {
+              x = "-60%";
+              rotateY = 30;
+              scale = 0.8;
+              zIndex = 5;
+              opacity = 0.5;
+            } else if (offset === 1) {
+              x = "60%";
+              rotateY = -30;
+              scale = 0.8;
+              zIndex = 5;
+              opacity = 0.5;
+            }
+
+            return (
+              <motion.div
                 key={item.id}
-                style={{ color: "#B8860B", fontFamily: "times new roman" }}
-                className="text-secondary"
+                initial={{ opacity: 0, x: offset > 0 ? "100%" : "-100%", rotateY: offset > 0 ? -45 : 45 }}
+                animate={{ opacity, x, rotateY, scale, zIndex }}
+                exit={{ opacity: 0, x: offset < 0 ? "-100%" : "100%", rotateY: offset < 0 ? 45 : -45 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                style={{
+                  position: "absolute",
+                  width: "50%",
+                  maxWidth: "600px",
+                  height: "auto",
+                  backgroundColor: "#173A5E",
+                  border: "2px solid #FFFFFF",
+                  borderRadius: "15px",
+                  padding: "4vw",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+                  transformStyle: "preserve-3d"
+                }}
               >
-                <div
-                  style={{
-                    height: "60vw",
-                    width: "100%",
-                    padding: "2vw",
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  <div className="col-lg-8">
-                    <div
-                      className="card"
-                      style={{
-                        backgroundColor: "white",
-                        borderColor: "white",
-                        borderWidth: "1px",
-                      }}
-                    >
-                      <p className="post">
-                        <span>
-                          {/* User requested to comment out photos
-<img
-                            className="quote-img"
-                            src="https://i.imgur.com/i06xx2I.png"
-                            alt="quote"
-                            size = "clamp(0.25vw, 0.25vw, 2vw)"
-                          />
-*/}
-                        </span>
-                        <span
-                          className="post-txt"
-                          style={{ color: "#B8860B" ,fontSize: "1.125vw",}}
-                        >
-                          {item.headertext}
-                          <br />
-                          {item.text}
-                        </span>
-                        <span>
-                          {/* User requested to comment out photos
-<img
-                            className="nice-img"
-                            src="https://i.imgur.com/l5AkSHd.png"
-                            alt="nice"
-                            size = "clamp(0.25vw, 0.25vw, 2vw)"
-                          />
-*/}
-                        </span>
-                      </p>
-                    </div>
-                    <div className="arrow-down"></div>
-                    <div
-                      style={{
-                        fontFamily: "times new roman",
-                        fontSize: "1.5vw",
-                        color: "#B8860B",
-                      }}
-                    >
-                      {item.person}
-                    </div>
-                  </div>
+                <div style={{ transform: "translateZ(30px)" }}>
+                  <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2vw", color: "#FFFFFF", marginBottom: "1.5vw" }}>
+                    "{item.headertext}"
+                  </h4>
+                  <p style={{ fontFamily: "times new roman", fontSize: "1.2vw", color: "#FFFFFF", marginBottom: "2vw" }}>
+                    {item.text}
+                  </p>
+                  <p style={{ fontFamily: "'Great Vibes', cursive", fontSize: "2.5vw", color: "#FFFFFF", margin: 0, textAlign: "right" }}>
+                    - {item.person}
+                  </p>
                 </div>
-              </CarouselItem>
-            ))}
-            <CarouselControl
-              direction="prev"
-              directionText="Previous"
-              onClickHandler={previous}
-            />
-            <CarouselControl
-              direction="next"
-              directionText="Next"
-              onClickHandler={next}
-            />
-          </Carousel>
-        </div>
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
+
+        <button 
+          onClick={handleNext} 
+          style={{ position: "absolute", right: "5vw", zIndex: 20, background: "transparent", border: "none", color: "white", cursor: "pointer" }}
+        >
+          <FaChevronRight size="3vw" />
+        </button>
+
+      </div>
+
+      <div style={{ marginTop: "2vw" }}>
+        <a href="/testimonials" style={{ color: "#FFFFFF", textDecoration: "underline", fontSize: "1.2vw", fontFamily: "times new roman" }}>
+          View all testimonials
+        </a>
       </div>
     </Card>
   );

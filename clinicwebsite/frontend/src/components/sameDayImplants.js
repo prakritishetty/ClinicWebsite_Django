@@ -1,245 +1,30 @@
-import React, { Component } from "react";
-import { Button, Card, CardBody, CardHeader, CardText } from "reactstrap";
-import { TfiCheckBox } from "react-icons/tfi";
-import clinic1 from "../images/79.jpeg";
-import IMG_6441 from "../images/IMG_6441.JPG";
-import NavbarUtil from "../utils/NavbarUtil.js";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
-import FooterUtil from "../utils/FooterUtil.js";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
+import React from "react";
+import TreatmentLayout from "./TreatmentLayout";
 
-class App extends Component {
-  render() {
-    return (
-      <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundImage: `url(${clinic1})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <NavbarUtil />
+const SameDayImplants = () => {
+  return (
+    <TreatmentLayout
+      title="Same-Day Implants"
+      cursiveAccent="A brand new smile in one day"
+      intro="Same-Day Implants (often known as 'Teeth in a Day' or 'All-on-4') are a revolutionary procedure that allows you to walk into our clinic with failing teeth and walk out the very same day with a beautiful, fully functional set of fixed replacement teeth."
+      offerings={[
+        { title: "Immediate Results", desc: "You never have to go without teeth. Your failing teeth are removed, implants are placed, and new teeth are attached in a single visit." },
+        { title: "Fewer Surgeries", desc: "Combines extraction, bone grafting (if needed), and implant placement into one streamlined procedure." },
+        { title: "Rapid Recovery", desc: "Because the new teeth are fixed immediately to the implants, they act like a splint, often resulting in less post-operative discomfort." }
+      ]}
+      whenToConsider={[
+        "You are facing the loss of all your teeth in an arch.",
+        "You currently wear dentures and want a permanent, non-removable solution.",
+        "You want a fast transformation without waiting months for traditional implants to heal before getting teeth.",
+        "Your teeth are severely failing due to extensive decay or gum disease."
+      ]}
+      faqs={[
+        { q: "How is it possible to get teeth in one day?", a: "By placing 4 to 6 implants at specific angles, we achieve immediate stability. This allows us to securely attach a temporary, but highly functional, set of teeth the same day." },
+        { q: "Are the teeth I get on the first day my permanent teeth?", a: "No, they are a temporary set designed to look beautiful while your gums heal and the implants fuse to your bone. You will receive your final, permanent bridge several months later." },
+        { q: "Am I a candidate for Same-Day Implants?", a: "Most patients with missing or failing teeth are candidates. We will perform a comprehensive 3D scan during your consultation to evaluate your bone density and plan your procedure." }
+      ]}
+    />
+  );
+};
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <div
-          className="p-5 my-6 rounded"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundImage: `url(${IMG_6441})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            height: "90vh",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "100vw",
-              padding: "10px",
-              margin: "10px",
-            }}
-          >
-            {" "}
-            Same Day Implants!
-          </div>
-          <Button
-            active
-            style={{
-              padding: "10px",
-              margin: "4px",
-              borderColor: "white",
-              backgroundColor: "black",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "35px",
-                align: "center",
-                color: "#B8860B",
-              }}
-            >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B" }}
-              >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "2.25vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
-            }}
-          >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <Card
-          class="container-fluid"
-          style={{
-            height: "1000px",
-            borderWidth: "2px",
-            margin: "5px",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        >
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "30px",
-              color: "#B8860B",
-              position: "center",
-              padding: "20px",
-              margin: "10px",
-              borderWidth: "2px",
-              borderColor: "black",
-              fontSize: "25px",
-            }}
-          >
-            <p style={{ fontSize: "40px" }}>
-              <b>Same Day Implants</b>
-            </p>
-            Tooth implants are a type of dental restoration that involves the
-            placement of a metal post or frame into the jawbone to serve as a
-            replacement for the root of a missing tooth. <br></br>Same day
-            dental implants, also known as immediate load dental implants, allow
-            patients to receive implants and temporary teeth in a single day,
-            rather than waiting months between procedures
-          </Card>
-          <br></br>
-          <br></br>
-
-          <Card
-            style={{
-              padding: 20,
-              borderWidth: "1px",
-              margin: "5px",
-              position: "float",
-              backgroundColor: "white",
-            }}
-          >
-            <CardHeader
-              style={{
-                color: "#B8860B",
-                fontSize: "35px",
-                fontFamily: "times new roman",
-              }}
-            >
-              Salient Features
-            </CardHeader>
-            <CardBody>
-              <CardText>
-                {/* User requested to comment out photos
-<img
-                  src="https://teethq.com/wp-content/uploads/2021/03/dental-implant-3.gif"
-                  alt="Card image cap"
-                  style={{ float: "right", height: "300px" }}
-                />
-*/}
-                <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "30px",
-                    color: "#B8860B",
-                  }}
-                >
-                  Procedure
-                </h1>
-                <h3 style={{ color: "#B8860B" }}>
-                  The procedure involves extracting damaged teeth, placing
-                  implants, and attaching temporary crowns or bridges all in one
-                  appointment.
-                </h3>
-                <br></br>
-                <TfiCheckBox size={50} color="black" />{" "}
-                <h1
-                  style={{
-                    fontFamily: "times new roman",
-                    display: "inline",
-                    fontSize: "30px",
-                    color: "#B8860B",
-                  }}
-                >
-                  It's not for everyone!
-                </h1>
-                <h3 style={{ color: "#B8860B" }}>
-                  Careful patient selection is important - patients need
-                  adequate bone density and volume to support immediate loading.
-                  Not all patients are candidates - factors like smoking,
-                  diabetes, and bone quality affect eligibility.
-                </h3>
-                <br></br>
-                <br></br>
-                <h3 style={{ color: "#B8860B" }}>
-                  Overall, tooth implants are a safe and effective way to
-                  replace missing teeth and can help restore the appearance and
-                  function of your mouth. If you are considering a tooth
-                  implant, it is important to consult with a dental professional
-                  to determine if this treatment option is right for you.
-                </h3>
-              </CardText>
-            </CardBody>
-          </Card>
-        </Card>
-
-        <br></br>
-        <br></br>
-
-        <br></br>
-        <br></br>
-
-        <BeforeAfterUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <PageTestimonialsUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <FooterUtil />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default SameDayImplants;

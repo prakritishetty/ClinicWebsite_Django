@@ -15,7 +15,7 @@ class App extends Component {
         marginLeft: "0",
         paddingRight: "0",
         paddingLeft: "0",
-        backgroundImage: `url(${clinic1})`,
+        backgroundColor: "#fcfcfc",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -36,7 +36,7 @@ class App extends Component {
          style={{
            padding: "0px",
            margin: "0px",
-           backgroundImage: `url(${clinic1})`,
+           backgroundColor: "#fcfcfc",
            backgroundPosition: "center ",
            backgroundSize: "cover",
            backgroundRepeat: "no-repeat",
@@ -50,7 +50,7 @@ class App extends Component {
            style={{
              fontFamily: "times new roman",
              fontSize: "4.5vw",
-             color: "#B8860B",
+             color: "#0A2342",
              backgroundColor: "white",
              width: "100vw",
              padding: "10px",
@@ -64,7 +64,7 @@ class App extends Component {
             style={{
               fontFamily: "times new roman",
               fontSize: "3vw",
-              color: "#B8860B",
+              color: "#0A2342",
               backgroundColor: "white",
               width: "100vw",
               padding: "10px",
@@ -80,8 +80,8 @@ class App extends Component {
            style={{
              padding: "0.5vw",
             //  marginleft:"200vw",
-             borderColor: "white",
-             backgroundColor: "black",
+             borderColor: "#173A5E",
+             backgroundColor: "#f9f9f9",
            }}
          >
            <div
@@ -89,12 +89,12 @@ class App extends Component {
              style={{
                fontFamily: "times new roman",
                fontSize: "2.25vw",
-               color: "#B8860B",
+               color: "#0A2342",
              }}
            >
               <a
                 href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
+                style={{ color: "#0A2342", textDecoration: "none" }}
                 >
                   Book an appointment
                 </a>
@@ -104,7 +104,7 @@ class App extends Component {
               style={{
                 fontFamily: "times new roman",
                 fontSize: "1.875vw",
-                color: "#B8860B",
+                color: "#0A2342",
                 backgroundColor: "white",
                 width: "35vw",
                 padding: "1vw",

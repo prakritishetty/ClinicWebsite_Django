@@ -1,420 +1,130 @@
-import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavItem,
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-} from "reactstrap";
-import clinic1 from "../images/79.jpeg";
-import ammawithbg from "../images/61.jpeg"
-// import ammawithbg from "../images/46.jpeg"
-// import amma from "../images/amma.JPG"
-import amma from "../images/46.jpeg"
-import akka from "../images/41.jpeg"
+import React from "react";
+import { motion } from "framer-motion";
 import NavbarUtil from "../utils/NavbarUtil.js";
 import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
 import FooterUtil from "../utils/FooterUtil.js";
 import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
 
-class App extends Component {
-  render() { 
-    return (
-      <div
-      // style={{
-      //   marginRight: "0",
-      //   marginLeft: "0",
-      //   paddingRight: "0",
-      //   paddingLeft: "0",
-      //   backgroundImage: `url(${clinic1})`,
-      //   backgroundPosition: "center",
-      //   backgroundSize: "auto",
-      //   backgroundRepeat: "no-repeat",
-      //   width: "100vw",
-      //   // height: "90vh",
-      //   // overflowX: "hidden",
-      // }}
-      style={{
-        marginRight: "0",
-        marginLeft: "0",
-        paddingRight: "0",
-        paddingLeft: "0",
-        // backgroundImage: `url(${clinic1})`,
-        backgroundColor:"#b3cde0",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-      >
-        <NavbarUtil />
+const AboutUs = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
+  };
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
 
-        <div
-          // // className="p-5 my-6 rounded"
-          // className="d-flex flex-column justify-content-center align-items-center"
-          // style={{
-          //   padding: "0px",
-          //   margin: "0px",
-          //   backgroundImage: `url(${ammawithbg})`,
-          //   backgroundPosition: "center ",
-          //   // backgroundSize: "cover",
-          //   backgroundRepeat: "no-repeat",
-          //   width: "100vw",
-          //   minHeight: "140vh",
-          //   overflowX:"auto"
-          // }}
+  return (
+    <div style={{ backgroundColor: "#fcfcfc", minHeight: "100vh", overflowX: "hidden" }}>
+      <NavbarUtil />
+      <br /><br /><br /><br />
+
+      {/* Hero Section */}
+      <div className="d-flex flex-column justify-content-center align-items-center" style={{ width: "100vw", padding: "6vw 2vw" }}>
+        <h3 style={{ fontFamily: "'Great Vibes', cursive", fontSize: "4vw", color: "#173A5E", marginBottom: "-1vw" }}>
+          Behind the smiles
+        </h3>
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          style={{ fontFamily: "'Playfair Display', serif", fontSize: "5vw", color: "#0A2342", marginBottom: "2vw" }}
         >
-          <div
-            className="text-center"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#B8860B",
-              backgroundColor: "	#6497b1",
-              width: "95vw",
-              padding: "10px",
-              margin: "2vw",
-            }}
-          >
-            {" "}
-            About Us!
-          </div>
-          {/* <br></br><br></br> */}
-          {/* <Button
-           active
-           className="my-2"
-           style={{
-             padding: "0.5vw",
-            //  marginleft:"200vw",
-             borderColor: "white",
-             backgroundColor: "black",
-           }}
-          >
-            <div
-              className="text-center"
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "2.25vw",
-                color: "#B8860B",
-              }}
-            >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#B8860B", textDecoration: "none" }}
-              >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.875vw",
-              color: "#B8860B",
-              backgroundColor: "white",
-              width: "35vw",
-              padding: "1vw",
-              margin: "0.6vw",
-            }}
-          >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div> */}
-        
-        </div>
-        {/* <br></br>
-        <br></br>
-        <br></br>
-        <br></br> */}
-        {/* <br></br>
-        <br></br>
-
-        <br></br> */}
-
-        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "white", padding: "10vw" }}> */}
-
-        {/* <Card
-          class="container-fluid"
-          style={{
-            // height: "70vw",
-            borderWidth: "0.2vw",
-            margin: "0.5vw",
-            borderColor: "white",
-            backgroundColor: "white",
-          }}
-        > */}
-        
-
-
-            
-          <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.125vw",
-              color: "#B8860B",
-              // position: "center",
-              width:"96vw",
-              padding: "2vw",
-              margin: "1vw",
-              marginRight:"1vw",
-              // borderWidth: "0.2vw",
-              // borderColor: "black",
-            }}
-          >
-            <Navbar
-          style={{
-            // backgroundColor: "white",
-            padding: "20px",
-            marginLeft: "0px",
-            paddingLeft: "0px",
-            display: "flex", 
-            flexDirection: "row"
-          }}
-        >
-          <Nav style={{ display: "flex", flexDirection: "row" }}>
-            <NavItem style={{ width: "65%" }}>
-            Welcome to our practice - where experience, precision, and compassion come together to create confident smiles. <br></br><br></br>
-            Founded and led by <b>Dr. Sandhya Shetty (BDS, Gold Medalist)</b> and <b>Dr. Pratiksha Shetty (BDS, MDS Prosthodontics)</b>, our practice has been a trusted name in dental care for over 15 years. Known for our ethical practice and ability to explain treatments with clarity and care, we have earned the trust and respect of a wide patient base.
-            
-            {/* With academic excellence backed by national conference presentations and peer-reviewed publications, she combines artistry with evidence-based dentistry. <br/><br/> */}
-            <br></br><br></br>
-            Together, we are committed to providing personalized, comfortable and high-quality dental care for every smile by coalescing need-based and want-based dentistry. 
-            </NavItem>
-            <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
-              {/* User requested to comment out photos
-<img
-                  src={ammawithbg}
-                  // align="center"
-                  
-                  style={{ marginLeft: "auto",
-                  marginRight: "auto", 
-                  height: "25vw", width: "33vw",
-                  // paddingTop:"10px" 
-                    // marginLeft:"20px" 
-                  }}
-                ></img>
-*/}
-            </NavItem>
-
-          </Nav>
-
-          </Navbar>
-          </Card>
-
-          
-        {/* </Card> */}
-
-
-        <br></br>
-        <br></br>
-        <br></br>
-
-        {/* <Navbar
-          style={{
-            backgroundColor: "white",
-            padding: "20px",
-            marginLeft: "0px",
-            paddingLeft: "0px",
-          }}
-        >
-          <Nav className="ms-auto">
-            <NavItem style={{ padding: "30px" }}> */}
-
-               <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.125vw",
-              color: "#B8860B",
-              // position: "center",
-              width:"96vw",
-              padding: "2vw",
-              margin: "1vw",
-              marginRight:"1vw",
-              // borderWidth: "0.2vw",
-              // borderColor: "black",
-            }}
-          >
-            <Navbar
-          style={{
-            // backgroundColor: "white",
-            padding: "20px",
-            marginLeft: "0px",
-            paddingLeft: "0px",
-            display: "flex", 
-            flexDirection: "row"
-          }}
-        >
-          <Nav style={{ display: "flex", flexDirection: "row" }}>
-            <NavItem style={{ width: "65%" }}>
-              <CardHeader
-                  style={{
-                    fontSize: "1.125vw",
-                    // width: "400px",
-                    color: "#B8860B",
-                    padding: "1vw",
-                    align: "center",
-                  }}
-                >
-                  <b>Dr(Mrs.) Sandhya Shetty, B.D.S</b>
-                </CardHeader>
-            
-            <CardBody
-                  style={{ 
-                    // width: "400px", 
-                    fontSize: "1.125vw", 
-                    color: "#B8860B" }}
-                >
-                  <br></br>
-                  Dr. Sandhya Shetty (BDS, Gold Medalist) completed her Bachelor of Dental Surgery from Government Dental College, Aurangabad, in 1994, earning the Gold Medal from Marathwada University for her outstanding academic performance. 
-                  <br/><br/>
-                  With over 25 years of clinical experience, she has honed her expertise in a wide range of dental procedures, including cosmetic fillings, root canal treatments and extractions. Renowned for her in-depth understanding of oral anatomy and exceptional diagnostic skills, Dr. Shetty ensures each patient receives accurate, personalized care. 
-                  <br/><br/>
-                  Her gentle technique and ability to explain the treatment plan in a methodical way, have made her a trusted and beloved dentist. She is deeply committed to recommending the most suitable and ethical treatment approach for every patient, ensuring long-term oral health and comfort.
-                </CardBody>
-            </NavItem>
-            <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
-              {/* User requested to comment out photos
-<img
-                  src={amma}
-                  // align="center"
-                  
-                  style={{ marginLeft: "auto",
-                  marginRight: "auto", 
-                  height: "40vw", width: "33vw",
-                  paddingTop:"80px" 
-                    // marginLeft:"20px" 
-                  }}
-                ></img>
-*/}
-            </NavItem>
-
-          </Nav>
-
-          </Navbar>
-          </Card>
-
-
-
-
-               <Card
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "1.125vw",
-              color: "#B8860B",
-              // position: "center",
-              width:"96vw",
-              padding: "2vw",
-              margin: "1vw",
-              marginRight:"1vw",
-              // borderWidth: "0.2vw",
-              // borderColor: "black",
-            }}
-          >
-            <Navbar
-          style={{
-            // backgroundColor: "white",
-            padding: "20px",
-            marginLeft: "0px",
-            paddingLeft: "0px",
-            display: "flex", 
-            flexDirection: "row"
-          }}
-        >
-          <Nav style={{ display: "flex", flexDirection: "row" }}>
-            <NavItem style={{ width: "65%" }}>
-              <CardHeader
-                  style={{
-                    fontSize: "1.125vw",
-                    // width: "400px",
-                    color: "#B8860B",
-                    padding: "1vw",
-                    align: "center",
-                  }}
-                >
-                  <b>Dr Pratiksha Shetty, B.D.S, M.D.S</b>
-                </CardHeader>
-            
-            <CardBody
-                  style={{ 
-                    // width: "400px", 
-                    fontSize: "1.125vw", 
-                    color: "#B8860B" }}
-                >
-                  <br></br>
-                  Dr. Pratiksha Shetty (BDS, MDS Prosthodontics and Crown & Bridge) is a skilled and passionate prosthodontist dedicated to restoring smiles with precision and artistry. 
-                  <br/><br/>
-                  She completed her BDS from Nair Hospital Dental College, Mumbai (2022) and pursued her MDS in Prosthodontics and Crown & Bridge from Government Dental College & Hospital, Mumbai, where she gained advanced training in comprehensive oral rehabilitation. 
-                  <br/><br/>
-                  Dr. Pratiksha has delivered presentations at national conferences and published research in peer-reviewed journals, reflecting her commitment to academic excellence. Her clinical expertise spans implants, full-mouth rehabilitation, veneers, digital dentistry and maxillofacial prosthodontics, with a special focus on restoring missing oral and facial structures to enhance both function and aesthetics. She integrates complete digital workflows into her practice to ensure comfort, accuracy and superior results, helping every patient regain not just their smile, but also their confidence.
- 
-                  
-                </CardBody>
-            </NavItem>
-            <NavItem style={{ width: "35%", paddingLeft:"20px" }}>
-              {/* User requested to comment out photos
-<img
-                  src={akka}
-                  // align="center"
-                  
-                  style={{ marginLeft: "auto",
-                  marginRight: "auto", 
-                  height: "40vw", width: "33vw",
-                  paddingTop:"80px" 
-                    // marginLeft:"20px" 
-                  }}
-                ></img>
-*/}
-            </NavItem>
-
-          </Nav>
-
-          </Navbar>
-          </Card>
-
-
-              
-
-
-        {/* </div> */}
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        {/* <div className="d-flex flex-wrap justify-content-around" style={{ backgroundColor: "white", padding: "20vw" }}> */}
-
-        <BeforeAfterUtil />
-        {/* </div> */}
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <PageTestimonialsUtil />
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <FooterUtil />
+          About Our Practice
+        </motion.h1>
       </div>
-    );
-  }
-}
 
-export default App;
+      {/* Intro Section - Offset Layout */}
+      <motion.div 
+        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants}
+        style={{ maxWidth: "1200px", margin: "0 auto", padding: "4vw", position: "relative" }}
+      >
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4vw" }}>
+          <motion.div variants={itemVariants} style={{ flex: "1 1 500px", position: "relative" }}>
+             <div style={{ width: "100%", height: "400px", backgroundColor: "#0A2342", borderRadius: "0 60px 0 60px", display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }}>
+                <span style={{ fontFamily: "times new roman", color: "#888" }}>[ Video Placeholder: Clinic Tour / Welcome ]</span>
+             </div>
+             <div style={{ position: "absolute", bottom: "-20px", right: "-20px", width: "150px", height: "150px", backgroundColor: "#173A5E", borderRadius: "50%", zIndex: -1, opacity: 0.5 }}></div>
+          </motion.div>
+          <motion.div variants={itemVariants} style={{ flex: "1 1 400px" }}>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3vw", color: "#173A5E", marginBottom: "2vw" }}>Where Experience Meets Compassion</h2>
+            <p style={{ fontFamily: "times new roman", fontSize: "1.4vw", color: "#0A2342", lineHeight: "1.8" }}>
+              Welcome to our practice - where experience, precision, and compassion come together to create confident smiles. Founded and led by <b>Dr. Sandhya Shetty</b> and <b>Dr. Pratiksha Shetty</b>, our practice has been a trusted name in dental care for over 15 years.
+            </p>
+            <p style={{ fontFamily: "times new roman", fontSize: "1.4vw", color: "#0A2342", lineHeight: "1.8" }}>
+              Known for our ethical practice and ability to explain treatments with clarity and care, we are committed to providing personalized, comfortable and high-quality dental care for every smile.
+            </p>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Dr. Sandhya Section */}
+      <motion.div 
+        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants}
+        style={{ padding: "8vw 4vw", backgroundColor: "#173A5E", color: "white", marginTop: "4vw", position: "relative", clipPath: "polygon(0 5%, 100% 0, 100% 100%, 0 95%)" }}
+      >
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexWrap: "wrap-reverse", alignItems: "center", gap: "4vw" }}>
+          <motion.div variants={itemVariants} style={{ flex: "1 1 400px" }}>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3.5vw", marginBottom: "1vw" }}>Dr(Mrs.) Sandhya Shetty</h2>
+            <h3 style={{ fontFamily: "times new roman", fontSize: "1.5vw", color: "#A0C4FF", marginBottom: "2vw", fontStyle: "italic" }}>B.D.S., Gold Medalist</h3>
+            <p style={{ fontFamily: "times new roman", fontSize: "1.3vw", lineHeight: "1.8", color: "#E0E0E0" }}>
+              With over 25 years of clinical experience, Dr. Sandhya has honed her expertise in a wide range of dental procedures. Renowned for her in-depth understanding of oral anatomy and exceptional diagnostic skills, she ensures each patient receives accurate, personalized care. Her gentle technique and ethical treatment approach have made her a deeply trusted and beloved dentist in the community.
+            </p>
+            <div style={{ marginTop: "3vw", padding: "2vw", backgroundColor: "rgba(255,255,255,0.05)", borderLeft: "4px solid #A0C4FF" }}>
+              <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", marginBottom: "1vw" }}>Wall of Excellence</h4>
+              <div style={{ display: "flex", gap: "1vw", flexWrap: "wrap" }}>
+                <div style={{ width: "120px", height: "80px", backgroundColor: "rgba(0,0,0,0.3)", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "8px" }}><span style={{ fontSize: "0.8vw", color: "#888", textAlign: "center" }}>[ Gold Medal Cert Placeholder ]</span></div>
+                <div style={{ width: "120px", height: "80px", backgroundColor: "rgba(0,0,0,0.3)", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "8px" }}><span style={{ fontSize: "0.8vw", color: "#888", textAlign: "center" }}>[ Degree Cert Placeholder ]</span></div>
+                <div style={{ width: "120px", height: "80px", backgroundColor: "rgba(0,0,0,0.3)", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "8px" }}><span style={{ fontSize: "0.8vw", color: "#888", textAlign: "center" }}>[ Award Placeholder ]</span></div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div variants={itemVariants} style={{ flex: "1 1 400px", display: "flex", justifyContent: "center" }}>
+             <div style={{ width: "80%", aspectRatio: "3/4", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: "20px 0 20px 0", display: "flex", justifyContent: "center", alignItems: "center", border: "1px solid rgba(255,255,255,0.2)" }}>
+                <span style={{ fontFamily: "times new roman", color: "#E0E0E0" }}>[ Photo Placeholder: Dr. Sandhya ]</span>
+             </div>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Dr. Pratiksha Section */}
+      <motion.div 
+        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants}
+        style={{ maxWidth: "1200px", margin: "8vw auto 4vw auto", padding: "0 4vw" }}
+      >
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4vw" }}>
+          <motion.div variants={itemVariants} style={{ flex: "1 1 400px", display: "flex", justifyContent: "center" }}>
+             <div style={{ width: "80%", aspectRatio: "3/4", backgroundColor: "#E0E0E0", borderRadius: "0 20px 0 20px", display: "flex", justifyContent: "center", alignItems: "center", boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}>
+                <span style={{ fontFamily: "times new roman", color: "#888" }}>[ Photo Placeholder: Dr. Pratiksha ]</span>
+             </div>
+          </motion.div>
+          <motion.div variants={itemVariants} style={{ flex: "1 1 400px" }}>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3.5vw", color: "#173A5E", marginBottom: "1vw" }}>Dr. Pratiksha Shetty</h2>
+            <h3 style={{ fontFamily: "times new roman", fontSize: "1.5vw", color: "#0A2342", marginBottom: "2vw", fontStyle: "italic" }}>B.D.S., M.D.S. Prosthodontics</h3>
+            <p style={{ fontFamily: "times new roman", fontSize: "1.3vw", lineHeight: "1.8", color: "#0A2342" }}>
+              A skilled and passionate prosthodontist, Dr. Pratiksha integrates complete digital workflows into her practice to ensure comfort, accuracy, and superior results. Her clinical expertise spans implants, full-mouth rehabilitation, veneers, and maxillofacial prosthodontics.
+            </p>
+            <div style={{ marginTop: "3vw", padding: "2vw", backgroundColor: "white", borderLeft: "4px solid #173A5E", boxShadow: "0 5px 15px rgba(0,0,0,0.05)" }}>
+              <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", color: "#173A5E", marginBottom: "1vw" }}>Research & Innovation</h4>
+              <p style={{ fontFamily: "times new roman", fontSize: "1.1vw", color: "#555", fontStyle: "italic", marginBottom: "1vw" }}>Dedicated to academic excellence and advancing dental science.</p>
+              <ul style={{ fontFamily: "times new roman", fontSize: "1.2vw", color: "#0A2342", paddingLeft: "1.5vw" }}>
+                <li style={{ marginBottom: "0.5vw" }}>[ Journal Placeholder: Title of published paper 1 ]</li>
+                <li style={{ marginBottom: "0.5vw" }}>[ Journal Placeholder: Title of published paper 2 ]</li>
+                <li>[ Conference Placeholder: Presentation at National Conference ]</li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      <BeforeAfterUtil />
+      <br /><br /><br />
+      <PageTestimonialsUtil />
+      <br /><br /><br />
+      <FooterUtil />
+    </div>
+  );
+};
+
+export default AboutUs;
