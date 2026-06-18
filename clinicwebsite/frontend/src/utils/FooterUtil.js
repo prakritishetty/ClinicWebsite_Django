@@ -78,8 +78,8 @@ const FooterUtil = () => {
 
       {/* Navigation Links Footer - Tall 4 columns side by side */}
       <div className="container-fluid" style={{ backgroundColor: "#0A2342", padding: "6vw 4vw" }}>
-        <div className="row" style={{ maxWidth: "1400px", margin: "0 auto" }}>
-          
+        <div className="row" style={{ width: "100%", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
+
           <div className="col-md-3 mb-5">
             <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2vw", borderBottom: "2px solid rgba(255, 255, 255, 0.2)", paddingBottom: "1vw", marginBottom: "2vw" }}>
               Social
@@ -95,9 +95,9 @@ const FooterUtil = () => {
               Services
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5vw", fontSize: "1.4vw" }}>
-              <NavLink href="/general" style={{ color: "#FFFFFF", padding: 0 }}>General Dentistry</NavLink>
-              <NavLink href="/cosmetic" style={{ color: "#FFFFFF", padding: 0 }}>Cosmetic Dentistry</NavLink>
-              <NavLink href="/surgical" style={{ color: "#FFFFFF", padding: 0 }}>Surgical Procedures</NavLink>
+              <NavLink href="/#our-services" style={{ color: "#FFFFFF", padding: 0 }}>General Dentistry</NavLink>
+              <NavLink href="/#our-services" style={{ color: "#FFFFFF", padding: 0 }}>Cosmetic Dentistry</NavLink>
+              <NavLink href="/#our-services" style={{ color: "#FFFFFF", padding: 0 }}>Surgical Procedures</NavLink>
             </div>
           </div>
 
@@ -126,10 +126,10 @@ const FooterUtil = () => {
       </div>
 
       {/* Copyright */}
-      <div 
-        className="text-center py-4" 
-        style={{ 
-          backgroundColor: "#173A5E", 
+      <div
+        className="text-center py-4"
+        style={{
+          backgroundColor: "#173A5E",
           borderTop: "1px solid rgba(255, 255, 255, 0.1)",
           fontSize: "1.2vw",
           color: "rgba(255, 255, 255, 0.6)"

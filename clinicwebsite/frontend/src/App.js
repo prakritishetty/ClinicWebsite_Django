@@ -4,6 +4,7 @@ import "./App.css";
 import { CardText, Card, CardBody } from "reactstrap";
 import { styled } from "@mui/material/styles";
 import { TfiCheckBox } from "react-icons/tfi";
+import { FaTooth } from "react-icons/fa";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 
@@ -11,39 +12,82 @@ import cleaningteeth from "./images/cleaningteeth.jpg";
 import implant from "./images/implant.jpg"
 import cosmetic from "./images/cosmetic.png"
 import removeWM_clinic1 from "./images/79.jpeg";
+import coreValuesImg from "./images/61.jpeg";
 import NavbarUtil from "./utils/NavbarUtil.js";
 import PageTestimonialsUtil from "./utils/PageTestimonialsUtil.js";
 import HeaderImageUtil from "./utils/HeaderImageUtil.js";
 import FooterUtil from "./utils/FooterUtil.js";
-import CountUp from "./components/CountUp";
+import BeforeAfterUtil from "./utils/BeforeAfterUtils.js";
+import CoreValuesUtil from "./utils/CoreValuesUtil.js";
+import WhyChooseUsUtil from "./utils/WhyChooseUsUtil.js";
 import TypewriterHeading from "./components/TypewriterHeading";
-import SmileJourney from "./components/SmileJourney";
 import ComfortTech from "./components/ComfortTech";
+import FaqUtil from "./utils/FaqUtil.js";
 //Janice fernandes
 
 const images = [
   {
     ID: 1,
-    link: "/general",
+    link: "/general-dentistry",
     url: `${cleaningteeth}`,
-    title: "GENERAL",
-    width: "400px",
+    title: "General Dentistry",
+    desc: "Keeping your teeth and gums healthy for the long run.",
+    items: [
+      { name: "Dental Check-ups & Consultations", link: "/checkups" },
+      { name: "Professional Cleaning (Scaling & Polishing)", link: "/cleaning" },
+      { name: "Fillings (Tooth-Coloured Restorations)", link: "/fillings" },
+      { name: "Root Canal Treatment", link: "/root-canal" },
+      { name: "Crowns & Bridges", link: "/crowns-bridges" },
+      { name: "Complete and Partial Dentures", link: "/dentures" },
+      { name: "Treatment of Tooth Sensitivity", link: "/sensitivity" },
+      { name: "Treatment of temporomandibular joint disorders", link: "/tmj-treatment" },
+      { name: "Fluoride Therapy", link: "/fluoride-therapy" },
+      { name: "Night Guards / Mouth Guards", link: "/mouth-guards" },
+      { name: "Management of Gum Disease", link: "/gum-disease" },
+      { name: "Emergency Dental Care", link: "/emergency" },
+      { name: "Pediatric Dental Care", link: "/pediatric" }
+    ]
   },
   {
     ID: 2,
-    link: "/cosmetic",
+    link: "/cosmetic-dentistry",
     url: `${cosmetic}`,
-    title: "COSMETIC",
-    width: "400px",
+    title: "Cosmetic Dentistry",
+    desc: "Enhancing the appearance of your smile while maintaining function.",
+    items: [
+      { name: "Teeth Whitening", link: "/teeth-whitening" },
+      { name: "Smile Designing", link: "/smile-designing" },
+      { name: "Veneers", link: "/veneers" },
+      { name: "Tooth-Coloured Fillings", link: "/tooth-colored-fillings" },
+      { name: "Gum Contouring", link: "/gum-contouring" },
+      { name: "Diastema (Gap) Closure", link: "/gap-closure" },
+      { name: "Aesthetic Crowns", link: "/aesthetic-crowns" },
+      { name: "Clear Aligners / Invisible Braces", link: "/clear-aligners" }
+    ]
   },
   {
     ID: 3,
-    link: "/surgical",
+    link: "/surgical-implant-dentistry",
     url: `${implant}`,
-    title: "SURGICAL",
-    width: "400px",
+    title: "Surgical & Implant Dentistry",
+    desc: "Advanced procedures focused on restoring health, function, and missing teeth.",
+    items: [
+      { name: "Dental Implants", link: "/dental-implants" },
+      { name: "Full Mouth Implant Rehabilitation", link: "/full-mouth-rehab" },
+      { name: "Tooth Extractions", link: "/extractions" },
+      { name: "Surgical Wisdom Tooth Removal", link: "/wisdom-tooth-removal" },
+      { name: "Bone Grafting", link: "/bone-grafting" },
+      { name: "Sinus Lift Procedures", link: "/sinus-lift" },
+      { name: "Soft Tissue Grafting", link: "/soft-tissue-grafting" },
+      { name: "Implant Site Development", link: "/implant-site-development" },
+      { name: "Exposure of Impacted Teeth", link: "/impacted-teeth" },
+      { name: "Apicoectomy (Root-End Surgery)", link: "/apicoectomy" },
+      { name: "Oral Biopsies", link: "/oral-biopsies" },
+      { name: "Pre-Prosthetic Surgery", link: "/pre-prosthetic-surgery" }
+    ]
   },
 ];
+
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -144,168 +188,19 @@ const App = () => {
       <br></br>
       <br></br>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
-      >
-        <Card
-          style={{
-            borderWidth: "0.2vw",
-            margin: "2vw",
-            backgroundColor: "white",
-          }}
-        >
-          <CardBody>
-            <CardText>
-              <div className="row">
-                <div className="col-md-8">
-                  <motion.div variants={itemVariants}>
-                    <TfiCheckBox size="3vw" color="#0A2342" />
-                    <h1
-                      style={{
-                        fontFamily: "times new roman",
-                        fontSize: "1.5vw",
-                        display: "inline",
-                        color: "#0A2342",
-                        padding: "1vw",
-                      }}
-                    >
-                      On time, every time
-                    </h1>
-                    <h3
-                      style={{
-                        fontFamily: "times new roman",
-                        fontSize: "1.125vw",
-                        color: "#0A2342",
-                        padding: "1vw",
-                      }}
-                    >
-                      Appointments always start on time. We know how packed your
-                      schedule is.
-                    </h3>
-                  </motion.div>
-                  <br></br>
-                  <motion.div variants={itemVariants}>
-                    <TfiCheckBox size="3vw" color="#0A2342" />{" "}
-                    <h1
-                      style={{
-                        fontFamily: "times new roman",
-                        fontSize: "1.5vw",
-                        display: "inline",
-                        color: "#0A2342",
-                        padding: "1vw",
-                      }}
-                    >
-                      Quality First
-                    </h1>
-                    <h3
-                      style={{
-                        fontFamily: "times new roman",
-                        fontSize: "1.125vw",
-                        color: "#0A2342",
-                        padding: "1vw",
-                      }}
-                    >
-                      Rest assured, we encourage the use of only the finest materials
-                      available.
-                    </h3>
-                  </motion.div>
-                  <br></br>
-                  <motion.div variants={itemVariants}>
-                    <TfiCheckBox size="3vw" color="#0A2342" />{" "}
-                    <h1
-                      style={{
-                        fontFamily: "times new roman",
-                        fontSize: "1.5vw",
-                        display: "inline",
-                        color: "#0A2342",
-                        padding: "1vw",
-                      }}
-                    >
-                      Transparent Pricing
-                    </h1>
-                    <h3
-                      style={{
-                        fontFamily: "times new roman",
-                        fontSize: "1.125vw",
-                        color: "#0A2342",
-                        padding: "1vw",
-                      }}
-                    >
-                      We accept a wide variety of payment methods for hassle-free
-                      payment
-                    </h3>
-                  </motion.div>
-                </div>
-                <div className="col-md-3">
-                  {/* User requested to comment out photos
-                  {/* <img
-                    src={`${removeWM_clinic1}`}
-                    alt="Card image cap"
-                    style={{ width: '30vw', height: '25vw' }}
-                  /> */}
-                  */}
-                </div>
-              </div>
-            </CardText>
-          </CardBody>
-        </Card>
-      </motion.div>
+      <CoreValuesUtil />
 
       <br></br>
       <br></br>
 
       {/* STATS SECTION */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
-        style={{
-          backgroundColor: "#173A5E",
-          padding: "5vw",
-          color: "white",
-          textAlign: "center",
-          margin: "2vw 0"
-        }}
-      >
-        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3vw", marginBottom: "3vw" }}>
-          <TypewriterHeading text="Why Choose Us?" />
-        </h2>
-        <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: "2vw" }}>
-          <motion.div variants={itemVariants}>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "4vw", margin: 0 }}>
-              <CountUp to={15} suffix="+" />
-            </h3>
-            <p style={{ fontFamily: "times new roman", fontSize: "1.5vw" }}>Years of Excellence</p>
-          </motion.div>
-          <motion.div variants={itemVariants}>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "4vw", margin: 0 }}>
-              <CountUp to={10000} suffix="+" />
-            </h3>
-            <p style={{ fontFamily: "times new roman", fontSize: "1.5vw" }}>Happy Smiles Restored</p>
-          </motion.div>
-          <motion.div variants={itemVariants}>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "4vw", margin: 0 }}>
-              <CountUp to={500} suffix="+" />
-            </h3>
-            <p style={{ fontFamily: "times new roman", fontSize: "1.5vw" }}>Implants Placed</p>
-          </motion.div>
-          <motion.div variants={itemVariants}>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "4vw", margin: 0 }}>
-              <CountUp to={2} />
-            </h3>
-            <p style={{ fontFamily: "times new roman", fontSize: "1.5vw" }}>Expert Specialists</p>
-          </motion.div>
-        </div>
-      </motion.div>
+      <WhyChooseUsUtil />
 
       <br></br>
       <br></br>
 
       <motion.div
+        id="our-services"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -337,7 +232,7 @@ const App = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "3vw",
               justifyContent: "center",
               padding: "0 2vw"
@@ -347,43 +242,85 @@ const App = () => {
               <motion.div
                 variants={itemVariants}
                 key={image.title}
-                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 255, 255, 0.4)" }}
-                style={{
-                  position: "relative",
-                  height: "250px",
-                  overflow: "hidden",
-                  borderRadius: "15px",
-                  boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
-                  border: "2px solid rgba(255, 255, 255, 0.1)"
-                }}
+                style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
               >
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 255, 255, 0.4)" }}
                   style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: "#0A2342",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    transition: "all 0.3s ease"
+                    position: "relative",
+                    height: "120px",
+                    width: "100%",
+                    overflow: "hidden",
+                    borderRadius: "15px",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
+                    border: "2px solid rgba(255, 255, 255, 0.1)",
+                    marginBottom: "1vw"
                   }}
                 >
-                  <a href={image.link} style={{ textDecoration: "none", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <h3
-                      style={{
-                        color: "#FFFFFF",
-                        fontFamily: "'Playfair Display', serif",
-                        fontSize: "2vw",
-                        textAlign: "center",
-                        margin: 0
-                      }}
-                    >
-                      {image.title}
-                    </h3>
-                  </a>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      backgroundColor: "#0A2342",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    <a href={image.link} style={{ textDecoration: "none", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <h3
+                        style={{
+                          color: "#FFFFFF",
+                          fontFamily: "'Playfair Display', serif",
+                          fontSize: "2vw",
+                          textAlign: "center",
+                          margin: 0
+                        }}
+                      >
+                        {image.title}
+                      </h3>
+                    </a>
+                  </div>
+                </motion.div>
+                <p style={{ fontFamily: "times new roman", fontStyle: "italic", fontSize: "1.2vw", color: "#A0C4FF", textAlign: "center", marginBottom: "1.5vw" }}>
+                  {image.desc}
+                </p>
+
+                <div style={{ position: "relative", paddingLeft: "1vw", marginTop: "1vw", width: "100%" }}>
+                  <div style={{ position: "absolute", left: "1.5vw", top: "5px", bottom: "5px", width: "2px", backgroundColor: "rgba(255,255,255,0.2)" }}></div>
+                  {image.items.map((item, idx) => (
+                    <div key={idx} style={{ position: "relative", paddingLeft: "2vw", marginBottom: "1vw", display: "flex", alignItems: "center" }}>
+                      <div style={{ position: "absolute", left: "0.2vw", top: "50%", transform: "translateY(-50%)", width: "8px", height: "8px", backgroundColor: "#A0C4FF", borderRadius: "50%", zIndex: 2, boxShadow: "0 0 5px #A0C4FF" }}></div>
+                      <a
+                        href={item.link}
+                        style={{
+                          color: "#FFFFFF",
+                          fontSize: "1.1vw",
+                          fontFamily: "times new roman",
+                          textDecoration: "none",
+                          transition: "all 0.3s ease",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "0.5vw"
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.color = "#A0C4FF";
+                          e.target.style.transform = "translateX(5px)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.color = "#FFFFFF";
+                          e.target.style.transform = "translateX(0px)";
+                        }}
+                      >
+                        <FaTooth size="1vw" color="#A0C4FF" />
+                        {item.name}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             ))}
@@ -391,9 +328,7 @@ const App = () => {
         </Card>
       </motion.div>
 
-      <SmileJourney />
-      <ComfortTech />
-
+      <BeforeAfterUtil />
       <br></br>
       <br></br>
 
@@ -403,29 +338,11 @@ const App = () => {
       <br></br>
 
       {/* FAQ SECTION */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
-        style={{ padding: "4vw", backgroundColor: "white", margin: "2vw" }}
-      >
-        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "3vw", color: "#0A2342", textAlign: "center", marginBottom: "3vw" }}>Frequently Asked Questions</h2>
-        
-        <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "1vw" }}>
-          {[
-            { q: "What should I expect during my first visit?", a: "Your first visit involves a comprehensive oral examination, x-rays if necessary, and a consultation to discuss your dental health goals." },
-            { q: "Do you accept dental insurance?", a: "We accept most major dental insurance plans. Please contact our office to verify your specific coverage." },
-            { q: "How often should I get a dental checkup?", a: "We recommend a routine checkup and cleaning every 6 months to maintain optimal oral health." },
-            { q: "Do you offer emergency dental services?", a: "Yes, we handle dental emergencies. If you are experiencing severe pain or trauma, call us immediately." }
-          ].map((faq, i) => (
-            <motion.div variants={itemVariants} key={i} style={{ borderBottom: "1px solid #ccc", paddingBottom: "1vw" }}>
-              <h4 style={{ fontFamily: "'Playfair Display', serif", color: "#173A5E", fontSize: "1.5vw", marginBottom: "0.5vw" }}>{faq.q}</h4>
-              <p style={{ fontFamily: "times new roman", color: "#0A2342", fontSize: "1.2vw" }}>{faq.a}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+      <FaqUtil faqs={[
+        { q: "What should I expect during my first visit?", a: "Your first visit involves a comprehensive oral examination, x-rays if necessary, and a consultation to discuss your dental health goals." },
+        { q: "How often should I get a dental checkup?", a: "We recommend a routine checkup and cleaning every 6 months to maintain optimal oral health." },
+        { q: "Do you offer emergency dental services?", a: "Yes, we handle dental emergencies. If you are experiencing severe pain or trauma, call us immediately." }
+      ]} />
 
       <br></br>
       <br></br>

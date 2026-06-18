@@ -79,10 +79,10 @@ const PageTestimonialsUtil = () => {
         <TypewriterHeading text="What Our Patients Say" />
       </h2>
 
-      <div style={{ position: "relative", height: "60vh", display: "flex", justifyContent: "center", alignItems: "center", perspective: "1000px" }}>
-        
-        <button 
-          onClick={handlePrev} 
+      <div style={{ position: "relative", minHeight: "calc(400px + 30vw)", height: "auto", padding: "10vw 0", display: "flex", justifyContent: "center", alignItems: "center", perspective: "1000px" }}>
+
+        <button
+          onClick={handlePrev}
           style={{ position: "absolute", left: "5vw", zIndex: 20, background: "transparent", border: "none", color: "white", cursor: "pointer" }}
         >
           <FaChevronLeft size="3vw" />
@@ -126,8 +126,9 @@ const PageTestimonialsUtil = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 style={{
                   position: "absolute",
-                  width: "50%",
-                  maxWidth: "600px",
+                  width: "50vw",
+                  minWidth: "300px",
+                  maxWidth: "none",
                   height: "auto",
                   backgroundColor: "#173A5E",
                   border: "2px solid #FFFFFF",
@@ -153,8 +154,8 @@ const PageTestimonialsUtil = () => {
           })}
         </AnimatePresence>
 
-        <button 
-          onClick={handleNext} 
+        <button
+          onClick={handleNext}
           style={{ position: "absolute", right: "5vw", zIndex: 20, background: "transparent", border: "none", color: "white", cursor: "pointer" }}
         >
           <FaChevronRight size="3vw" />

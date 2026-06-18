@@ -10,7 +10,7 @@ import AboutUs from './components/AboutUs.js'
 import General from './components/general.js'
 import Cosmetic from './components/cosmetic.js'
 import Surgical from './components/surgical.js'
-import CleaningExams from './components/cleaningexams.js'
+import Cleaning from './components/cleaning.js'
 import Crowns from './components/crowns.js'
 import Extractions from './components/extractions.js'
 import GumTherapy from './components/gumtherapy.js'
@@ -46,7 +46,7 @@ root.render(
     <Route path="/general" element={<General/>} />
     <Route path="/cosmetic" element={<Cosmetic/>} />
     <Route path="/surgical" element={<Surgical/>} />
-    <Route path="/cleaningexams" element={<CleaningExams/>} />
+    <Route path="/cleaning" element={<Cleaning/>} />
     <Route path="/crowns" element={<Crowns/>}/>
     <Route path="/extractions" element={<Extractions/>} />
     <Route path="/deepscaling" element={<GumTherapy/>} />
