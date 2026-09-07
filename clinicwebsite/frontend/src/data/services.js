@@ -4,6 +4,9 @@
  * the previous menus pointed at ~30 URLs that had no route and rendered blank.
  */
 
+/** Where every "Book" button goes. WhatsApp is kept for direct conversation. */
+export const BOOKING_URL = "/book";
+
 export const WHATSAPP =
   "https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic";
 

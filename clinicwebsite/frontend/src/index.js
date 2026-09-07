@@ -32,6 +32,7 @@ import OverDentures from './components/overDentures.js'
 import SameDayImplants from './components/sameDayImplants.js'
 import DoctorLogin from './components/doctorLogin.js'
 import Testimonials from "./components/Testimonials.js"
+import BookAppointment from "./components/BookAppointment.js"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -67,6 +68,7 @@ root.render(
     <Route path="/overdentures" element={<OverDentures/>} />
     <Route path="/samedayimplants" element={<SameDayImplants/>} />
     <Route path="/testimonials" element={<Testimonials/>} />
+    <Route path="/book" element={<BookAppointment/>} />
     <Route path="/doctorlogin" element={<DoctorLogin/>} />
     <Route path="*" element={<App/>}/>
   </Routes>

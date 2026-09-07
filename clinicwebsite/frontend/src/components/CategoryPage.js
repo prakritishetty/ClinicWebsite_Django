@@ -3,7 +3,7 @@ import NavbarUtil from "../utils/NavbarUtil.js";
 import FooterUtil from "../utils/FooterUtil.js";
 import Reveal from "./Reveal.js";
 import ToothMark from "./ToothMark.js";
-import { CATEGORIES, WHATSAPP } from "../data/services.js";
+import { BOOKING_URL, CATEGORIES } from "../data/services.js";
 
 const COPY = {
   general: "Routine care, done attentively. Most problems are cheaper, smaller and less painful when caught here.",
@@ -80,7 +80,7 @@ const CategoryPage = ({ id }) => {
           </div>
 
           <Reveal style={{ textAlign: "center", marginTop: "clamp(2.5rem, 5vw, 4rem)" }}>
-            <a className="btn-lux" href={WHATSAPP}>
+            <a className="btn-lux" href={BOOKING_URL}>
               Not sure which? Ask us
             </a>
           </Reveal>

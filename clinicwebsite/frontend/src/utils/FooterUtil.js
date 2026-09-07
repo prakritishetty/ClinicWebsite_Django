@@ -3,7 +3,7 @@ import { BsInstagram } from "react-icons/bs";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import Reveal from "../components/Reveal.js";
 import ToothMark from "../components/ToothMark.js";
-import { CATEGORIES, PHONE, WHATSAPP } from "../data/services.js";
+import { BOOKING_URL, CATEGORIES, PHONE } from "../data/services.js";
 
 const MAP_SRC =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.627340847596!2d72.94237301412522!3d19.167783054063854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8f7c2d76931%3A0xa2d85150fddd96c8!2sDr%20Sandhya's%20Total%20Dental%20Care!5e0!3m2!1sen!2sin!4v1670239514055!5m2!1sen!2sin";
@@ -39,7 +39,7 @@ const FooterUtil = () => (
           </p>
         </Reveal>
         <Reveal i={2} style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-          <a className="btn-lux btn-lux--light" href={WHATSAPP}>
+          <a className="btn-lux btn-lux--light" href={BOOKING_URL}>
             Book an appointment
           </a>
           <a className="btn-lux btn-lux--light" href="tel:+919833630985">

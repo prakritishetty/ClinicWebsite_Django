@@ -4,7 +4,7 @@ import FooterUtil from "../utils/FooterUtil.js";
 import FaqUtil from "../utils/FaqUtil.js";
 import Placeholder from "./Placeholder.js";
 import Reveal from "./Reveal.js";
-import { WHATSAPP } from "../data/services.js";
+import { BOOKING_URL } from "../data/services.js";
 
 /**
  * Compact layout shared by every treatment page.
@@ -43,7 +43,7 @@ const TreatmentLayout = ({
             {intro}
           </p>
           <div style={{ marginTop: "2rem" }}>
-            <a className="btn-lux" href={WHATSAPP}>
+            <a className="btn-lux" href={BOOKING_URL}>
               Book a consultation
             </a>
           </div>

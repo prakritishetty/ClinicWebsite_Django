@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Placeholder from "../components/Placeholder.js";
 import ToothMark from "../components/ToothMark.js";
-import { PHONE, WHATSAPP } from "../data/services.js";
+import { BOOKING_URL, PHONE } from "../data/services.js";
 
 const LINE_1 = "Dentistry";
 const LINE_2 = "done properly.";
@@ -91,7 +91,7 @@ const HeaderImageUtil = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05, duration: 0.9 }}
           >
-            <a className="btn-lux" href={WHATSAPP}>
+            <a className="btn-lux" href={BOOKING_URL}>
               Book an appointment
             </a>
             <a className="btn-lux btn-lux--ghost" href="tel:+919833630985">

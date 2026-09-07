@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ScrollProgress from "../components/ScrollProgress.js";
-import { CATEGORIES, WHATSAPP } from "../data/services.js";
+import { BOOKING_URL, CATEGORIES, WHATSAPP } from "../data/services.js";
 
 const LINKS = [
   { label: "The Practice", href: "/about" },
@@ -64,7 +64,7 @@ const NavbarUtil = () => {
               </a>
             </li>
             <li>
-              <a className="btn-lux" href={WHATSAPP}>
+              <a className="btn-lux" href={BOOKING_URL}>
                 Book
               </a>
             </li>
@@ -160,7 +160,7 @@ const NavbarUtil = () => {
                     </ul>
                   </div>
                 ))}
-                <a className="btn-lux" href={WHATSAPP} style={{ marginTop: ".5rem" }}>
+                <a className="btn-lux" href={BOOKING_URL} style={{ marginTop: ".5rem" }}>
                   Book an appointment
                 </a>
               </div>

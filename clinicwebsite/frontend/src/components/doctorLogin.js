@@ -3,7 +3,7 @@ import NavbarUtil from "../utils/NavbarUtil.js";
 import FooterUtil from "../utils/FooterUtil.js";
 import Reveal from "./Reveal.js";
 import ToothMark from "./ToothMark.js";
-import { WHATSAPP } from "../data/services.js";
+import { BOOKING_URL } from "../data/services.js";
 
 const DoctorLogin = () => (
   <div style={{ background: "var(--paper)" }}>
@@ -51,7 +51,7 @@ const DoctorLogin = () => (
           </p>
         </Reveal>
         <Reveal i={3}>
-          <a className="btn-lux" href={WHATSAPP}>
+          <a className="btn-lux" href={BOOKING_URL}>
             Book an appointment instead
           </a>
         </Reveal>
