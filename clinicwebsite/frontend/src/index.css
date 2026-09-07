@@ -1,8 +1,8 @@
 /* ==========================================================================
    Dr Sandhya's Total Dental Care - design system
    White canvas + "Beautiful Blues" (color-hex palette 1294) + a whisper of gold.
-   Display face: Monotype Corsiva (system) with Parisienne as the web fallback.
-   Body face:    Cormorant Garamond.
+   Display face: Cormorant Garamond italic 500 (chancery italic, webfont only).
+   Body face:    Cormorant Garamond roman.
    Every size is fluid (clamp) so nothing breaks on window resize.
    ========================================================================== */
 
@@ -27,8 +27,13 @@
   --hairline-light: rgba(255, 255, 255, 0.16);
 
   /* --- type ----------------------------------------------------------- */
-  --font-display: "Monotype Corsiva", "Corsiva", "Apple Chancery", "Z003",
-    "URW Chancery L", "Parisienne", cursive;
+  /* Display face is Cormorant Garamond *italic 500*, a chancery italic that is
+     near-identical to Monotype Corsiva. Corsiva itself is a licensed Windows
+     system font, so relying on it made Windows render one thing and Android
+     fall back to a much loopier script. This is a webfont on every device, so
+     phone and laptop now match exactly. */
+  --font-display: "Cormorant Garamond", "EB Garamond", Georgia,
+    "Times New Roman", serif;
   --font-body: "Cormorant Garamond", "EB Garamond", Georgia, "Times New Roman",
     serif;
   --font-ui: "Jost", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -122,7 +127,8 @@ a {
 
 .display {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-style: italic;
+  font-weight: 500;
   line-height: 1.02;
   letter-spacing: 0.005em;
   color: var(--ink);
@@ -542,6 +548,8 @@ a {
 
 .nav-brand {
   font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
   font-size: clamp(1.15rem, 0.8rem + 1.35vw, 2rem);
   color: var(--ink);
   line-height: 1.1;
@@ -612,6 +620,8 @@ a {
 
 .mega__title {
   font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
   font-size: var(--fs-lg);
   color: var(--ink);
   margin: 0 0 0.85rem;
@@ -943,6 +953,8 @@ a {
   gap: 1.5rem;
   padding: clamp(0.9rem, 1.8vw, 1.4rem) 0;
   font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
   font-size: var(--fs-md);
   color: var(--ink);
   transition: color 0.35s var(--ease);
@@ -1021,6 +1033,8 @@ a {
 
 .stat-value {
   font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
   font-size: var(--fs-2xl);
   line-height: 1;
   color: inherit;
@@ -1039,6 +1053,8 @@ a {
 
 .quote-mark {
   font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
   font-size: clamp(3.5rem, 9vw, 7rem);
   line-height: 0.6;
   color: var(--gold);
