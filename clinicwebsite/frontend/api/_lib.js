@@ -28,15 +28,30 @@ const getDb = () => {
   return require("firebase-admin").firestore();
 };
 
-const sign = (docId, action) => {
+/**
+ * Approval links are per-recipient: `who` is the recipient's index in
+ * REVIEW_NOTIFY_TO, so we can record which doctor decided without putting
+ * their email address in a URL. It is signed too, so the index cannot be
+ * edited to impersonate the other doctor.
+ */
+const recipients = () =>
+  (process.env.REVIEW_NOTIFY_TO || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+
+const sign = (docId, action, who) => {
   const secret = process.env.REVIEW_ACTION_SECRET;
   if (!secret) throw new Error("REVIEW_ACTION_SECRET is not set");
-  return crypto.createHmac("sha256", secret).update(`${docId}:${action}`).digest("hex");
+  return crypto
+    .createHmac("sha256", secret)
+    .update(`${docId}:${action}:${who}`)
+    .digest("hex");
 };
 
-const verify = (docId, action, token) => {
+const verify = (docId, action, who, token) => {
   if (!token) return false;
-  const expected = Buffer.from(sign(docId, action));
+  const expected = Buffer.from(sign(docId, action, who));
   const given = Buffer.from(String(token));
   return expected.length === given.length && crypto.timingSafeEqual(expected, given);
 };
@@ -56,4 +71,4 @@ const siteUrl = (req) => {
   return `https://${host}`;
 };
 
-module.exports = { getDb, sign, verify, escapeHtml, siteUrl };
+module.exports = { getDb, sign, verify, recipients, escapeHtml, siteUrl };
