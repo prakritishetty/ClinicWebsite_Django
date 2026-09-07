@@ -19,7 +19,6 @@ import denturesPhoto from "../imagesnew/dentures.JPG";
 import alignersPhoto from "../imagesnew/Aligners.jpeg";
 
 import implant1 from "../imagesnew/implant 1.jpg";
-import implant2 from "../imagesnew/implant2.JPG";
 import implantCrown from "../imagesnew/Implant crown.jpeg";
 import implantDrivers from "../imagesnew/Implant drivers.jpeg";
 
@@ -36,7 +35,8 @@ export const CROWN_PHOTOS = [bridge, bridge1];
 // above with its exact filename, and append it to CROWN_PHOTOS.
 export const DENTURE_PHOTOS = [denturesPhoto];
 export const ALIGNER_PHOTOS = [alignersPhoto];
-export const IMPLANT_PHOTOS = [implant1, implant2, implantCrown, implantDrivers];
+// implant2.JPG deliberately left out of the rotation.
+export const IMPLANT_PHOTOS = [implant1, implantCrown, implantDrivers];
 
 export const VENEERS_BEFORE = veneersPre;
 export const VENEERS_AFTER = veneersPost;
