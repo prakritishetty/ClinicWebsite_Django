@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
-const prefersReducedMotion = () =>
-  typeof window !== "undefined" &&
-  window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-
-/** Crossfades through a set of photos. A single photo just renders still. */
+/**
+ * Crossfades through a set of photos. A single photo just renders still.
+ *
+ * prefers-reduced-motion must not stop the photos changing - they are content,
+ * not decoration. It only drops the zoom and shortens the fade, which is the
+ * part that can actually trigger vestibular discomfort.
+ */
 const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 5000, style }) => {
   const [index, setIndex] = useState(0);
+  const reduce = useReducedMotion();
 
   useEffect(() => {
-    if (photos.length < 2 || prefersReducedMotion()) return undefined;
+    if (photos.length < 2) return undefined;
     const id = setInterval(() => setIndex((i) => (i + 1) % photos.length), interval);
     return () => clearInterval(id);
   }, [photos.length, interval]);
@@ -36,10 +39,10 @@ const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 5000,
           src={photos[index]}
           alt={alt}
           loading="lazy"
-          initial={{ opacity: 0, scale: 1.04 }}
+          initial={{ opacity: 0, scale: reduce ? 1 : 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: reduce ? 0.35 : 1.1, ease: [0.22, 1, 0.36, 1] }}
           style={{
             position: "absolute",
             inset: 0,

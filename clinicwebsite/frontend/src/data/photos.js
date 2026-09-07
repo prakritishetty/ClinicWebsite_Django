@@ -32,6 +32,8 @@ export const DOCTORS_PHOTO = psAndSs;
 export const PRATIKSHA_PHOTO = ps;
 
 export const CROWN_PHOTOS = [bridge, bridge1];
+// To add the AI-generated crown photo: drop the file in src/imagesnew, import it
+// above with its exact filename, and append it to CROWN_PHOTOS.
 export const DENTURE_PHOTOS = [denturesPhoto];
 export const ALIGNER_PHOTOS = [alignersPhoto];
 export const IMPLANT_PHOTOS = [implant1, implant2, implantCrown, implantDrivers];

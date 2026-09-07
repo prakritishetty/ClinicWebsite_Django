@@ -1,6 +1,7 @@
 import React from "react";
-import Placeholder from "../components/Placeholder.js";
+import PhotoShuffle from "../components/PhotoShuffle.js";
 import Reveal from "../components/Reveal.js";
+import { DOCTORS_PHOTO } from "../data/photos.js";
 
 const VALUES = [
   {
@@ -21,8 +22,11 @@ const CoreValuesUtil = () => (
   <section className="section">
     <div className="shell grid grid-2" style={{ alignItems: "center" }}>
       <Reveal>
-        {/* PHOTO: was src/images/61.jpeg (core values) */}
-        <Placeholder ratio="1 / 1" label="Practice" note="src/images/61.jpeg" />
+        <PhotoShuffle
+          photos={[DOCTORS_PHOTO]}
+          ratio="1 / 1"
+          alt="Dr. Sandhya Shetty and Dr. Pratiksha Shetty"
+        />
       </Reveal>
 
       <div>
