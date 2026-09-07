@@ -117,7 +117,15 @@ const SubmitTestimonial = () => {
           size: "invisible",
         });
       }
-      setConfirmation(await signInWithPhoneNumber(auth, phone, verifierRef.current));
+      try {
+        setConfirmation(await signInWithPhoneNumber(auth, phone, verifierRef.current));
+      } catch (err) {
+        // A failed attempt consumes the reCAPTCHA token, so the verifier has to
+        // be thrown away or every retry fails too.
+        verifierRef.current?.clear?.();
+        verifierRef.current = null;
+        throw err;
+      }
     });
   };
 
