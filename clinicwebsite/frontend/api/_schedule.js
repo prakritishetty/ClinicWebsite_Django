@@ -77,6 +77,13 @@ const isBeyondHorizon = (dateIso) =>
 
 const slotKey = (dateIso, time) => `${dateIso}T${time}`;
 
+/** Shift an ISO date by whole days, staying in IST. */
+const shiftDate = (dateIso, days) => {
+  const [y, m, d] = dateIso.split("-").map(Number);
+  const t = new Date(Date.UTC(y, m - 1, d) + days * 86400000);
+  return `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())}`;
+};
+
 const isRealSlot = (dateIso, time) => slotsForDate(dateIso).includes(time);
 
 /**
@@ -132,6 +139,7 @@ module.exports = {
   isTooSoon,
   isBeyondHorizon,
   slotKey,
+  shiftDate,
   isRealSlot,
   followingSlots,
   formatSlot,

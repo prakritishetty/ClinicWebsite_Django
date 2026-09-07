@@ -9,6 +9,7 @@ const {
   bookableDates,
   slotInstant,
   slotKey,
+  shiftDate,
   followingSlots,
   formatSlot,
 } = require("./_schedule");
@@ -85,62 +86,105 @@ const releaseHolds = async (db, id) => {
 const patientNotes = (a) =>
   [MEAL_ADVICE[a.mealAdvice] || "", a.instructions || ""].filter(Boolean).join("\n");
 
-/** Sends the calendar invite to the patient and both doctors. */
+/**
+ * The address the invite is sent "from" as far as calendars are concerned.
+ * It must not be either doctor's own address - see buildIcs for why.
+ */
+const organiserEmail = () => process.env.CLINIC_EMAIL || mailFrom();
+
+/** 19:00 the evening before, and 08:00 on the morning of the appointment. */
+const reminderTimes = (dateIso) => [
+  {
+    triggerMs: slotInstant(shiftDate(dateIso, -1), "19:00"),
+    description: "Dental appointment tomorrow",
+  },
+  {
+    triggerMs: slotInstant(dateIso, "08:00"),
+    description: "Dental appointment today",
+  },
+];
+
+/** Sends the calendar invite to the patient and, separately, to both doctors. */
 const sendInvite = async (appt, id, { cancelled = false } = {}) => {
   const startMs = slotInstant(appt.date, appt.time);
   const endMs = startMs + (appt.durationMinutes || SLOT_MINUTES) * 60000;
   const notes = patientNotes(appt);
+  const organizerEmail = organiserEmail();
 
-  const ics = buildIcs({
-    uid: `appt-${id.replace(/[^\w-]/g, "")}@drsandhyadental`,
-    sequence: appt.sequence || 0,
-    method: cancelled ? "CANCEL" : "REQUEST",
-    startMs,
-    endMs,
-    summary: cancelled
-      ? "Cancelled - Dental appointment"
-      : `Dental appointment - ${appt.patient?.name || "Patient"}`,
-    description:
-      (appt.reason ? `Reason: ${appt.reason}\n` : "") +
-      (notes ? `\n${notes}\n` : "") +
-      "\nTo change anything, message us on WhatsApp: +91 98336 30985",
-    location: CLINIC,
-    organizerName: "Dr Sandhya's Total Dental Care",
-    organizerEmail: mailFrom(),
-    attendees: [
-      appt.patient?.email ? { name: appt.patient.name, email: appt.patient.email } : null,
-      ...recipients().map((email) => ({ email })),
-    ],
-    cancelled,
-  });
+  const ics = (attendees) =>
+    buildIcs({
+      uid: `appt-${id.replace(/[^\w-]/g, "")}@drsandhyadental`,
+      sequence: appt.sequence || 0,
+      method: cancelled ? "CANCEL" : "REQUEST",
+      startMs,
+      endMs,
+      summary: cancelled
+        ? "Cancelled - Dental appointment"
+        : `Dental appointment - ${appt.patient?.name || "Patient"}`,
+      description:
+        (appt.reason ? `Reason: ${appt.reason}\n` : "") +
+        (notes ? `\n${notes}\n` : "") +
+        "\nTo change anything, message us on WhatsApp: +91 98336 30985",
+      location: CLINIC,
+      organizerName: "Dr Sandhya's Total Dental Care",
+      organizerEmail,
+      attendees,
+      alarms: cancelled ? [] : reminderTimes(appt.date),
+      cancelled,
+    });
 
-  const html = `<div style="max-width:560px;margin:0 auto;font-family:Georgia,serif;color:#16233a">
+  const html = (forDoctors) => `<div style="max-width:560px;margin:0 auto;font-family:Georgia,serif;color:#16233a">
       <p style="font:400 11px/1 Segoe UI,system-ui,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#b99247">${cancelled ? "Cancelled" : "Confirmed"}</p>
       <h2 style="font-style:italic;font-weight:500;color:#011f4b">${escapeHtml(when(appt))}</h2>
+      ${forDoctors ? `<p style="line-height:1.7">${escapeHtml(appt.patient?.name || "")} &middot; ${escapeHtml(appt.patient?.phone || "")}</p>` : ""}
       ${cancelled ? "<p>This appointment has been cancelled.</p>" : ""}
       ${notes ? `<div style="background:#fdf6e7;border-radius:8px;padding:14px 18px;margin:18px 0;color:#6b5524;white-space:pre-wrap">${escapeHtml(notes)}</div>` : ""}
-      ${cancelled ? "" : `<p style="line-height:1.7">The invite attached will add this to your calendar and remind you the day before.</p>`}
+      ${cancelled ? "" : `<p style="line-height:1.7">The attached invite adds this to your calendar and will remind you at 7pm the night before and 8am on the day.</p>`}
       <p style="line-height:1.7">To change anything, message us on
         <a href="https://wa.me/919833630985" style="color:#005b96">WhatsApp</a>.</p>
       <p style="font-size:14px;color:#3b4757">${escapeHtml(CLINIC)}</p>
     </div>`;
 
-  const to = [appt.patient?.email, ...recipients()].filter(Boolean);
-  if (!to.length) return;
+  const subject = `${cancelled ? "Cancelled" : "Confirmed"}: dental appointment - ${when(appt)}`;
+  const transport = mailer();
+  const doctors = recipients();
+  const jobs = [];
 
-  await mailer()
-    .sendMail({
-      from: mailFrom(),
-      to,
-      subject: `${cancelled ? "Cancelled" : "Confirmed"}: dental appointment - ${when(appt)}`,
-      html,
-      icalEvent: {
-        method: cancelled ? "CANCEL" : "REQUEST",
-        filename: "appointment.ics",
-        content: ics,
-      },
-    })
-    .catch((e) => console.error("invite send failed", e));
+  // Separate emails so each recipient is an attendee on their own copy.
+  if (appt.patient?.email) {
+    jobs.push(
+      transport.sendMail({
+        from: mailFrom(),
+        to: appt.patient.email,
+        subject,
+        html: html(false),
+        icalEvent: {
+          method: cancelled ? "CANCEL" : "REQUEST",
+          filename: "appointment.ics",
+          content: ics([{ name: appt.patient.name, email: appt.patient.email }]),
+        },
+      })
+    );
+  }
+
+  if (doctors.length) {
+    jobs.push(
+      transport.sendMail({
+        from: mailFrom(),
+        to: doctors,
+        subject,
+        html: html(true),
+        icalEvent: {
+          method: cancelled ? "CANCEL" : "REQUEST",
+          filename: "appointment.ics",
+          content: ics(doctors.map((email) => ({ email }))),
+        },
+      })
+    );
+  }
+
+  const results = await Promise.allSettled(jobs);
+  results.filter((r) => r.status === "rejected").forEach((r) => console.error("invite send failed", r.reason));
 };
 
 module.exports = async (req, res) => {

@@ -51,8 +51,16 @@ const buildIcs = ({
   organizerName,
   organizerEmail,
   attendees = [],
+  alarms = [],
   cancelled = false,
 }) => {
+  // Google assumes the organizer already has the event on their calendar, so an
+  // address must never appear as both organizer and attendee - it silently stops
+  // the invite being added for that person.
+  const guests = attendees
+    .filter(Boolean)
+    .filter((a) => a.email && a.email.toLowerCase() !== String(organizerEmail).toLowerCase());
+
   const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
@@ -70,27 +78,22 @@ const buildIcs = ({
     `LOCATION:${esc(location)}`,
     `STATUS:${cancelled ? "CANCELLED" : "CONFIRMED"}`,
     `ORGANIZER;CN=${esc(organizerName)}:mailto:${organizerEmail}`,
-    ...attendees
-      .filter(Boolean)
-      .map(
-        (a) =>
-          `ATTENDEE;CN=${esc(a.name || a.email)};ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:${a.email}`
-      ),
+    ...guests.map(
+      (a) =>
+        `ATTENDEE;CN=${esc(a.name || a.email)};ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:${a.email}`
+    ),
   ];
 
   if (!cancelled) {
-    lines.push(
-      "BEGIN:VALARM",
-      "TRIGGER:-PT24H",
-      "ACTION:DISPLAY",
-      "DESCRIPTION:Dental appointment tomorrow",
-      "END:VALARM",
-      "BEGIN:VALARM",
-      "TRIGGER:-PT2H",
-      "ACTION:DISPLAY",
-      "DESCRIPTION:Dental appointment in 2 hours",
-      "END:VALARM"
-    );
+    for (const alarm of alarms) {
+      lines.push(
+        "BEGIN:VALARM",
+        `TRIGGER;VALUE=DATE-TIME:${toIcsUtc(alarm.triggerMs)}`,
+        "ACTION:DISPLAY",
+        `DESCRIPTION:${esc(alarm.description)}`,
+        "END:VALARM"
+      );
+    }
   }
 
   lines.push("END:VEVENT", "END:VCALENDAR");
