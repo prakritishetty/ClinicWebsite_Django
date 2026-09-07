@@ -1,8 +1,9 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Placeholder from "../components/Placeholder.js";
+import PhotoShuffle from "../components/PhotoShuffle.js";
 import ToothMark from "../components/ToothMark.js";
 import { BOOKING_URL, PHONE } from "../data/services.js";
+import { CLINIC_PHOTOS } from "../data/photos.js";
 
 const LINE_1 = "Dentistry";
 const LINE_2 = "done properly.";
@@ -101,8 +102,11 @@ const HeaderImageUtil = () => {
         </motion.div>
 
         <motion.div style={{ y: artY, position: "relative" }}>
-          {/* PHOTO: was src/images/79.jpeg (clinic interior) */}
-          <Placeholder ratio="4 / 5" label="Clinic" note="src/images/79.jpeg" />
+          <PhotoShuffle
+            photos={CLINIC_PHOTOS}
+            ratio="4 / 5"
+            alt="Dr Sandhya's Total Dental Care, Mulund West"
+          />
           <ToothMark
             size="clamp(70px, 9vw, 130px)"
             style={{

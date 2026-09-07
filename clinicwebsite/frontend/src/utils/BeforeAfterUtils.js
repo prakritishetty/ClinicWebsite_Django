@@ -1,19 +1,19 @@
 import React from "react";
 import CompareSlider from "../components/CompareSlider.js";
 import Reveal from "../components/Reveal.js";
+import { VENEERS_AFTER, VENEERS_BEFORE } from "../data/photos.js";
 
 /*
- * Clinical photography is on hold - every pane below is the shared placeholder.
- * The original asset for each pane is recorded in `beforeNote` / `afterNote`
- * so the real images can be dropped straight back in.
- * All three use one aspect ratio (4:3) so the row never goes ragged.
+ * Only the veneers case has photography so far; the other two still use the
+ * shared placeholder, with the original asset recorded in the note so it can be
+ * dropped straight in. All three share one aspect ratio so the row stays even.
  */
 const CASES = [
   {
     title: "Porcelain veneers",
     desc: "Ultra-thin shells, colour matched, bonded in two visits.",
-    beforeNote: "src/images/veneerspreop.JPG",
-    afterNote: "src/images/veneerspostop.JPG",
+    beforeSrc: VENEERS_BEFORE,
+    afterSrc: VENEERS_AFTER,
   },
   {
     title: "Cleft palate, missing tooth",
@@ -48,6 +48,8 @@ const BeforeAfterUtil = ({ bare = false }) => {
           <Reveal key={c.title} i={i}>
             <CompareSlider
               ratio={RATIO}
+              beforeSrc={c.beforeSrc}
+              afterSrc={c.afterSrc}
               beforeNote={c.beforeNote}
               afterNote={c.afterNote}
             />

@@ -148,9 +148,25 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
   const subject = `${cancelled ? "Cancelled" : "Confirmed"}: dental appointment - ${when(appt)}`;
   const transport = mailer();
   const doctors = recipients();
+
+  // One shared guest list so every calendar shows the same people. buildIcs
+  // drops whichever address is the organizer, since Google ignores an invite
+  // where the recipient is also the organizer.
+  const guests = [
+    appt.patient?.email ? { name: appt.patient.name, email: appt.patient.email } : null,
+    ...doctors.map((email) => ({ email })),
+  ].filter(Boolean);
+
+  const invite = {
+    method: cancelled ? "CANCEL" : "REQUEST",
+    filename: "appointment.ics",
+    content: ics(guests),
+  };
+
   const jobs = [];
 
-  // Separate emails so each recipient is an attendee on their own copy.
+  // Still two emails, so the patient never sees the doctors' addresses in To:
+  // and the doctors' copy can carry the patient's contact details.
   if (appt.patient?.email) {
     jobs.push(
       transport.sendMail({
@@ -158,11 +174,7 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
         to: appt.patient.email,
         subject,
         html: html(false),
-        icalEvent: {
-          method: cancelled ? "CANCEL" : "REQUEST",
-          filename: "appointment.ics",
-          content: ics([{ name: appt.patient.name, email: appt.patient.email }]),
-        },
+        icalEvent: invite,
       })
     );
   }
@@ -174,11 +186,7 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
         to: doctors,
         subject,
         html: html(true),
-        icalEvent: {
-          method: cancelled ? "CANCEL" : "REQUEST",
-          filename: "appointment.ics",
-          content: ics(doctors.map((email) => ({ email }))),
-        },
+        icalEvent: invite,
       })
     );
   }

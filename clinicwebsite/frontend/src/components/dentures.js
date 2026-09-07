@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { DENTURE_PHOTOS } from "../data/photos.js";
 
 const Dentures = () => {
   return (
     <TreatmentLayout
       title="Dentures"
       cursiveAccent="Reclaim your confident smile"
+      photos={DENTURE_PHOTOS}
       intro="Dentures are custom-crafted, removable replacements for missing teeth and surrounding tissues. Whether you need full dentures to replace all your teeth or partial dentures to fill in gaps, we design them to fit comfortably and look incredibly natural."
       offerings={[
         { title: "Customized Fit", desc: "Our dentures are meticulously molded to the exact contours of your gums for a secure, comfortable fit." },

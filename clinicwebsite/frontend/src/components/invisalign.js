@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { ALIGNER_PHOTOS } from "../data/photos.js";
 
 const Invisalign = () => {
   return (
     <TreatmentLayout
       title="Teeth Aligners"
       cursiveAccent="A perfectly straight smile"
+      photos={ALIGNER_PHOTOS}
       intro="Teeth aligners are a modern, discreet orthodontic treatment used to straighten teeth and improve your bite. Unlike traditional metal braces, clear aligners are virtually invisible, removable and designed for maximum comfort."
       offerings={[
         { title: "Invisible & Discreet", desc: "Crafted from transparent, medical-grade plastic, these aligners go virtually unnoticed." },

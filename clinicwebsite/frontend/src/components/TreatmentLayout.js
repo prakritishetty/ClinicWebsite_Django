@@ -3,6 +3,7 @@ import NavbarUtil from "../utils/NavbarUtil.js";
 import FooterUtil from "../utils/FooterUtil.js";
 import FaqUtil from "../utils/FaqUtil.js";
 import Placeholder from "./Placeholder.js";
+import PhotoShuffle from "./PhotoShuffle.js";
 import Reveal from "./Reveal.js";
 import { BOOKING_URL } from "../data/services.js";
 
@@ -19,6 +20,7 @@ const TreatmentLayout = ({
   offerings = [],
   whenToConsider = [],
   faqs = [],
+  photos = [],
   photoNote,
 }) => (
   <div style={{ background: "var(--paper)" }}>
@@ -50,8 +52,11 @@ const TreatmentLayout = ({
         </Reveal>
 
         <Reveal i={1}>
-          {/* PHOTO: placeholder until clinical photography is supplied */}
-          <Placeholder ratio="4 / 3" label="Treatment" note={photoNote || "to be supplied"} />
+          {photos.length ? (
+            <PhotoShuffle photos={photos} ratio="4 / 3" alt={title} />
+          ) : (
+            <Placeholder ratio="4 / 3" label="Treatment" note={photoNote || "to be supplied"} />
+          )}
         </Reveal>
       </div>
     </section>

@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { IMPLANT_PHOTOS } from "../data/photos.js";
 
 const Implants = () => {
   return (
     <TreatmentLayout
       title="Dental Implants"
       cursiveAccent="A permanent, natural-looking solution"
+      photos={IMPLANT_PHOTOS}
       intro="Dental implants are the gold standard for replacing missing teeth. They provide a strong, permanent foundation for fixed or removable replacement teeth that are made to match your natural teeth perfectly."
       offerings={[
         { title: "Lifelike Appearance", desc: "Designed to look, feel and function like your natural teeth." },

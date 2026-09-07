@@ -7,8 +7,10 @@ import FooterUtil from "../utils/FooterUtil.js";
 import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
 import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
 import Placeholder from "./Placeholder.js";
+import PhotoShuffle from "./PhotoShuffle.js";
 import Reveal from "./Reveal.js";
 import ToothMark from "./ToothMark.js";
+import { DOCTORS_PHOTO, PRATIKSHA_PHOTO } from "../data/photos.js";
 
 const TABS = [
   { id: "practice", label: "The Practice" },
@@ -25,11 +27,14 @@ const fade = {
   transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
 };
 
-const Doctor = ({ name, creds, photoNote, atAGlance, children }) => (
+const Doctor = ({ name, creds, photo, photoNote, atAGlance, children }) => (
   <div className="shell grid grid-2" style={{ alignItems: "start" }}>
     <Reveal style={{ position: "relative" }}>
-      {/* PHOTO: original portrait recorded in the placeholder note below */}
-      <Placeholder ratio="3 / 4" label="Portrait" note={photoNote} />
+      {photo ? (
+        <PhotoShuffle photos={[photo]} ratio="3 / 4" alt={name} />
+      ) : (
+        <Placeholder ratio="3 / 4" label="Portrait" note={photoNote} />
+      )}
       <ToothMark
         size="clamp(52px, 6vw, 88px)"
         style={{
@@ -143,8 +148,12 @@ const AboutUs = () => {
                   dental care for every smile by coalescing need-based and want-based dentistry.
                 </p>
               </Reveal>
-              <Reveal i={2} style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}>
-                <ToothMark size="clamp(60px, 7vw, 100px)" />
+              <Reveal i={2} style={{ marginTop: "3rem" }}>
+                <PhotoShuffle
+                  photos={[DOCTORS_PHOTO]}
+                  ratio="16 / 10"
+                  alt="Dr. Sandhya Shetty and Dr. Pratiksha Shetty"
+                />
               </Reveal>
             </div>
           )}
@@ -183,7 +192,7 @@ const AboutUs = () => {
             <Doctor
               name="Dr. Pratiksha Shetty"
               creds="BDS &middot; MDS Prosthodontics and Crown &amp; Bridge"
-              photoNote="src/images/IMG_6469.JPG"
+              photo={PRATIKSHA_PHOTO}
               atAGlance={[
                 { k: "Degree", v: "BDS, Nair Hospital Dental College, Mumbai (2022)" },
                 { k: "Speciality", v: "MDS Prosthodontics & Crown and Bridge, Government Dental College & Hospital, Mumbai" },

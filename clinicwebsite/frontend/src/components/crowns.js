@@ -1,14 +1,16 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { CROWN_PHOTOS } from "../data/photos.js";
 
-/* Per request: no "materials choice" section and no crown animation graphic. */
+/* Per request: no "materials choice" section and no crown animation graphic.
+   Showing the bridge photography for now - crown imagery is still to be made. */
 const Crowns = () => {
   return (
     <TreatmentLayout
       title="Dental Crowns"
       cursiveAccent="General · Restorative"
+      photos={CROWN_PHOTOS}
       intro="A cap that goes over a damaged tooth to give back its shape, strength and appearance. Custom made to fit and colour-matched, so it disappears next to your own teeth."
-      photoNote="src/images/IMG_6432.JPG"
       offerings={[
         { title: "Precision made", desc: "Custom made and shade-matched to the tooth beside it." },
         { title: "Protection", desc: "Encases the whole tooth so a weak one stops breaking down." },
