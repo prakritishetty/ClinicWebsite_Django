@@ -44,7 +44,7 @@ const HeaderImageUtil = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.15, duration: 0.8 }}
           >
-            Mulund West &middot; Since 1994
+            Mulund West &middot; 20+ years of expertise
           </motion.p>
 
           <motion.h1

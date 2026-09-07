@@ -7,7 +7,6 @@ const LINKS = [
   { label: "The Practice", href: "/about" },
   { label: "Transformations", href: "/about?tab=transformations" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "Doctor Login", href: "/doctorlogin" },
 ];
 
 const NavbarUtil = () => {
@@ -62,11 +61,6 @@ const NavbarUtil = () => {
             <li>
               <a className="nav-link" href="/testimonials">
                 Testimonials
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="/doctorlogin">
-                Doctor Login
               </a>
             </li>
             <li>

@@ -3,7 +3,9 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import NavbarUtil from "../utils/NavbarUtil.js";
 import FooterUtil from "../utils/FooterUtil.js";
+import { cleanHeading } from "../utils/reviewText.js";
 import Reveal from "./Reveal.js";
+import SubmitTestimonial from "./SubmitTestimonial.js";
 import ToothMark from "./ToothMark.js";
 
 const Testimonials = () => {
@@ -16,7 +18,10 @@ const Testimonials = () => {
     getDocs(collection(db, "testimonials"))
       .then((snap) => {
         if (cancelled) return;
-        setItems(snap.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        const all = snap.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        // Submissions awaiting approval carry approved:false; the original
+        // imported reviews have no such field, so they stay visible.
+        setItems(all.filter((r) => r.approved !== false));
         setState("ready");
       })
       .catch(() => {
@@ -103,9 +108,11 @@ const Testimonials = () => {
                         &ldquo;
                       </span>
                       <blockquote style={{ margin: ".5rem 0 0" }}>
-                        <p className="display display--md" style={{ marginBottom: ".7rem" }}>
-                          {item.headertext}
-                        </p>
+                        {cleanHeading(item.headertext) && (
+                          <p className="display display--md" style={{ marginBottom: ".7rem" }}>
+                            {cleanHeading(item.headertext)}
+                          </p>
+                        )}
                         <p className="post-txt text-quiet" style={{ margin: 0 }}>
                           {item.text}
                         </p>
@@ -130,6 +137,8 @@ const Testimonials = () => {
           )}
         </div>
       </section>
+
+      <SubmitTestimonial />
 
       <FooterUtil />
     </div>

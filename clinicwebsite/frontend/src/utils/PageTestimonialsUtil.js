@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import { cleanHeading } from "./reviewText.js";
 import Reveal from "../components/Reveal.js";
 
 const FALLBACK = [
@@ -37,7 +38,9 @@ const PageTestimonialsUtil = ({ bare = false }) => {
       .then((snap) => {
         if (cancelled) return;
         const data = snap.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-        if (data.length) setItems(data);
+        // approved:false marks a submission still awaiting the practice's review.
+        const live = data.filter((r) => r.approved !== false && r.text);
+        if (live.length) setItems(live);
       })
       .catch(() => {
         /* Firestore unreachable - the curated fallback quotes stay in place. */
@@ -91,7 +94,7 @@ const PageTestimonialsUtil = ({ bare = false }) => {
               className="display display--lg"
               style={{ margin: "0 0 1.2rem", color: "var(--ink)", lineHeight: 1.25 }}
             >
-              {current.headertext}
+              {cleanHeading(current.headertext)}
             </p>
             <p className="lede" style={{ maxWidth: "56ch", margin: "0 auto" }}>
               {current.text}
