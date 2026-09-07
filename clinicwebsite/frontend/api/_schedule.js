@@ -125,6 +125,7 @@ module.exports = {
   SESSIONS,
   istNow,
   todayIso,
+  slotInstant,
   isValidDate,
   slotsForDate,
   bookableDates,

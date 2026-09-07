@@ -44,7 +44,9 @@ const prettyDate = (iso) => {
 };
 
 const Field = ({ label, children, hint }) => (
-  <label style={{ display: "block" }}>
+  // minWidth:0 matters: grid and flex items default to min-width:auto, which lets
+  // a wide child (the date strip) push the whole page sideways instead of scrolling.
+  <label style={{ display: "block", minWidth: 0 }}>
     <span
       style={{
         display: "block",
@@ -85,6 +87,8 @@ const Chip = ({ active, onClick, children, disabled }) => (
       padding: ".55rem 1rem",
       borderRadius: 999,
       border: 0,
+      flexShrink: 0,
+      whiteSpace: "nowrap",
       cursor: disabled ? "not-allowed" : "pointer",
       opacity: disabled ? 0.35 : 1,
       color: active ? "#fff" : "var(--ink)",
@@ -212,11 +216,11 @@ const BookingForm = () => {
   }
 
   return (
-    <form onSubmit={submit} style={{ display: "grid", gap: "2.5rem" }}>
+    <form onSubmit={submit} style={{ display: "grid", gap: "2.5rem", minWidth: 0 }}>
       {/* Date + slot */}
-      <div>
+      <div style={{ minWidth: 0 }}>
         <Field label="Choose a day">
-          <div style={{ display: "flex", gap: ".5rem", overflowX: "auto", paddingBottom: ".5rem" }}>
+          <div style={{ display: "flex", gap: ".5rem", overflowX: "auto", paddingBottom: ".5rem", minWidth: 0 }}>
             {dates.map((d) => (
               <Chip key={d} active={d === date} onClick={() => setDate(d)}>
                 {prettyDate(d)}
@@ -225,14 +229,17 @@ const BookingForm = () => {
           </div>
         </Field>
 
-        <div style={{ marginTop: "1.5rem" }}>
-          <Field label="Choose a time" hint="Each appointment is 30 minutes. Mon–Sat, 10:00–14:00 and 18:00–21:00.">
+        <div style={{ marginTop: "1.5rem", minWidth: 0 }}>
+          <Field
+            label="Choose a time"
+            hint="You're booking a 30-minute slot. If the doctor feels more time is needed, they'll send you an updated invite. Mon–Sat, 10:00–14:00 and 18:00–21:00."
+          >
             {loadingSlots ? (
               <p className="text-quiet">Checking availability…</p>
             ) : slots.length === 0 ? (
               <p className="text-quiet">The clinic is closed on this day. Please pick another.</p>
             ) : (
-              <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem", minWidth: 0 }}>
                 {slots.map((s) => (
                   <Chip
                     key={s.time}
@@ -263,7 +270,7 @@ const BookingForm = () => {
         </div>
       </Field>
 
-      <div style={{ display: "grid", gap: "1.2rem", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))" }}>
+      <div style={{ display: "grid", gap: "1.2rem", minWidth: 0, gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))" }}>
         <Field label="Patient's name">
           <input style={inputStyle} required value={form.patientName} onChange={set("patientName")} />
         </Field>
@@ -279,7 +286,7 @@ const BookingForm = () => {
       </div>
 
       {bookingFor === "other" && (
-        <div style={{ display: "grid", gap: "1.2rem", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))" }}>
+        <div style={{ display: "grid", gap: "1.2rem", minWidth: 0, gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))" }}>
           <Field label="Your name">
             <input style={inputStyle} required value={form.bookerName} onChange={set("bookerName")} />
           </Field>
@@ -299,7 +306,7 @@ const BookingForm = () => {
 
       {/* Reason */}
       <Field label="Reason for visit" hint="Tap a suggestion or write your own.">
-        <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem", marginBottom: ".8rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem", marginBottom: ".8rem", minWidth: 0 }}>
           {REASON_PROMPTS.map((p) => (
             <Chip key={p} active={form.reason === p} onClick={() => setForm((f) => ({ ...f, reason: p }))}>
               {p}
@@ -316,7 +323,7 @@ const BookingForm = () => {
       </Field>
 
       <Field label="Medical history" hint="Tick anything that applies. This helps us treat you safely.">
-        <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem", marginBottom: ".8rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem", marginBottom: ".8rem", minWidth: 0 }}>
           {MEDICAL_FLAGS.map((f) => (
             <Chip key={f} active={medicalFlags.includes(f)} onClick={() => toggleFlag(f)}>
               {f}
@@ -331,7 +338,7 @@ const BookingForm = () => {
         />
       </Field>
 
-      <div style={{ display: "grid", gap: "1.2rem", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))" }}>
+      <div style={{ display: "grid", gap: "1.2rem", minWidth: 0, gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))" }}>
         <Field label="If we need to reschedule" hint="Days or times that suit you best.">
           <input
             style={inputStyle}
