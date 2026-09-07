@@ -126,7 +126,7 @@ const SubmitTestimonial = () => {
   const submit = (e) => {
     e.preventDefault();
     return run(async () => {
-      await addDoc(collection(db, "testimonials"), {
+      const ref = await addDoc(collection(db, "testimonials"), {
         headertext: headertext.trim(),
         text: text.trim(),
         person: person.trim() || "Anonymous",
@@ -135,6 +135,15 @@ const SubmitTestimonial = () => {
         approved: false,
         createdAt: serverTimestamp(),
       });
+
+      // Emails the doctors an approve/reject link. The review is already saved,
+      // so a mail failure must not surface as a submission failure.
+      fetch("/api/notify-review", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ docId: ref.id }),
+      }).catch(() => {});
+
       setDone(true);
     });
   };
