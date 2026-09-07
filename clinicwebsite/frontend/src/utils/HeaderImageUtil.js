@@ -1,115 +1,138 @@
 import React from "react";
-import { Button } from "reactstrap";
-import clinic1 from "../images/79.jpeg";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Placeholder from "../components/Placeholder.js";
+import ToothMark from "../components/ToothMark.js";
+import { PHONE, WHATSAPP } from "../data/services.js";
+
+const LINE_1 = "Dentistry";
+const LINE_2 = "done properly.";
+
+const word = {
+  hidden: { opacity: 0, y: "0.4em", filter: "blur(8px)" },
+  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+};
 
 const HeaderImageUtil = () => {
-  const text = "Exceptional dental care for all ages";
-  
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { staggerChildren: 0.05, delayChildren: 0.2 },
-    }),
-  };
-
-  const child = {
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-  };
+  const { scrollYProgress } = useScroll();
+  const artY = useTransform(scrollYProgress, [0, 0.3], [0, -70]);
+  const typeY = useTransform(scrollYProgress, [0, 0.3], [0, 40]);
 
   return (
-    <div
-      className="d-flex flex-column justify-content-center align-items-center"
+    <section
+      className="section"
       style={{
-        padding: "0px",
-        margin: "0px",
-        backgroundColor: "#173A5E",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        width: "100vw",
-        height: "90vh",
+        position: "relative",
+        minHeight: "min(88vh, 900px)",
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
       }}
     >
-      <motion.div
-        className="text-center"
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        style={{
-          fontFamily: "times new roman",
-          fontSize: "4.5vw",
-          color: "#FFFFFF",
-          backgroundColor: "transparent",
-          width: "100vw",
-          padding: "10px",
-          margin: "10px",
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
-        }}
+      <div className="aurora">
+        <span className="aurora__blob aurora__blob--a" />
+        <span className="aurora__blob aurora__blob--b" />
+      </div>
+
+      <div
+        className="shell grid grid-2"
+        style={{ position: "relative", zIndex: 1, alignItems: "center", rowGap: "clamp(2rem,5vw,4rem)" }}
       >
-        {text.split("").map((char, index) => (
-          <motion.span variants={child} key={index}>
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        ))}
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 2, duration: 0.5 }}
-      >
-        <Button
-          className="my-2"
-          style={{
-            padding: "10px",
-            borderColor: "#0A2342",
-            backgroundColor: "#0A2342",
-          }}
-        >
-          <div
-            className="text-center"
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "3vw",
-            }}
+        <motion.div style={{ y: typeY }}>
+          <motion.p
+            className="eyebrow"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.15, duration: 0.8 }}
           >
-            <a
-              href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-              style={{ color: "#FFFFFF", textDecoration: "none" }}
-            >
+            Mulund West &middot; Since 1994
+          </motion.p>
+
+          <motion.h1
+            className="display display--hero"
+            style={{ margin: "0.6rem 0 1.4rem" }}
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.12, delayChildren: 0.25 }}
+          >
+            {[LINE_1, LINE_2].map((line, li) => (
+              <span key={line} style={{ display: "block" }}>
+                {line.split(" ").map((w, i) => (
+                  <motion.span
+                    key={`${w}-${i}`}
+                    variants={word}
+                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                    style={{
+                      display: "inline-block",
+                      marginRight: "0.24em",
+                      color: li === 1 ? "var(--blue)" : undefined,
+                    }}
+                  >
+                    {w}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+          </motion.h1>
+
+          <motion.p
+            className="lede"
+            style={{ maxWidth: "36ch" }}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.85, duration: 0.9 }}
+          >
+            Two dentists, one chair at a time. Gentle, unhurried, and measured to the
+            tenth of a millimetre.
+          </motion.p>
+
+          <motion.div
+            style={{ display: "flex", flexWrap: "wrap", gap: "0.9rem", marginTop: "2rem" }}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.05, duration: 0.9 }}
+          >
+            <a className="btn-lux" href={WHATSAPP}>
               Book an appointment
             </a>
-          </div>
-        </Button>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.5, duration: 1 }}
-        className="text-center"
+            <a className="btn-lux btn-lux--ghost" href="tel:+919833630985">
+              {PHONE}
+            </a>
+          </motion.div>
+        </motion.div>
+
+        <motion.div style={{ y: artY, position: "relative" }}>
+          {/* PHOTO: was src/images/79.jpeg (clinic interior) */}
+          <Placeholder ratio="4 / 5" label="Clinic" note="src/images/79.jpeg" />
+          <ToothMark
+            size="clamp(70px, 9vw, 130px)"
+            style={{
+              position: "absolute",
+              right: "-4%",
+              bottom: "-5%",
+              background: "var(--paper)",
+              borderRadius: "50%",
+              padding: "clamp(.8rem, 1.4vw, 1.4rem)",
+              boxShadow: "var(--shadow-soft)",
+            }}
+          />
+        </motion.div>
+      </div>
+
+      <motion.span
+        aria-hidden="true"
         style={{
-          fontFamily: "times new roman",
-          fontSize: "2.25vw",
-          color: "#FFFFFF",
-          backgroundColor: "transparent",
-          width: "60vw",
-          padding: "10px",
-          margin: "6px",
+          position: "absolute",
+          left: "50%",
+          bottom: "clamp(1rem, 3vw, 2.5rem)",
+          translate: "-50% 0",
+          width: 1,
+          height: "clamp(28px, 4vw, 52px)",
+          background: "linear-gradient(180deg, var(--gold), transparent)",
         }}
-      >
-        OR Call on (+91) 9833630985
-      </motion.div>
-    </div>
+        animate={{ opacity: [0.2, 1, 0.2] }}
+        transition={{ repeat: Infinity, duration: 2.6, ease: "easeInOut" }}
+      />
+    </section>
   );
 };
 

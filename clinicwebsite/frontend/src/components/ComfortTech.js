@@ -1,70 +1,68 @@
 import React from "react";
-import { motion } from "framer-motion";
+import Placeholder from "./Placeholder.js";
+import Reveal from "./Reveal.js";
 
-const ComfortTech = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
-  };
+const TECH = [
+  {
+    title: "Laser dentistry",
+    desc: "Soft-tissue work without the drill, and healing measured in days.",
+    note: "src/images/IMG_6440.JPG",
+  },
+  {
+    title: "3D intraoral scanning",
+    desc: "Digital impressions in seconds. No trays, no gagging, better fits.",
+    note: "src/images/IMG_6445.JPG",
+  },
+  {
+    title: "Quiet chairs",
+    desc: "Headphones, a blanket, and as many pauses as you need.",
+    note: "src/images/Blue chair.JPG",
+  },
+];
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
+const ComfortTech = () => (
+  <section className="section section--ink on-dark" style={{ overflow: "hidden" }}>
+    <div className="aurora">
+      <span className="aurora__blob aurora__blob--b" />
+    </div>
 
-  return (
-    <motion.div 
-      initial="hidden" 
-      whileInView="visible" 
-      viewport={{ once: true, margin: "-100px" }} 
-      variants={containerVariants}
-      style={{ 
-        padding: "8vw 4vw", 
-        backgroundColor: "#0A2342", 
-        position: "relative",
-        clipPath: "polygon(0 5%, 100% 0, 100% 95%, 0 100%)",
-        color: "white"
-      }}
-    >
-      <h3 style={{ fontFamily: "'Great Vibes', cursive", fontSize: "3vw", color: "#FFFFFF", textAlign: "center", marginBottom: "-0.5vw" }}>
-        Uncompromising care
-      </h3>
-      <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "4vw", textAlign: "center", marginBottom: "4vw" }}>
-        Technology & Comfort
-      </h2>
+    <div className="shell-wide" style={{ position: "relative", zIndex: 1 }}>
+      <Reveal>
+        <div className="section-head section-head--center">
+          <p className="eyebrow eyebrow--light eyebrow--center">Uncompromising care</p>
+          <h2 className="display display--xl" style={{ color: "#fff" }}>
+            Technology &amp; comfort
+          </h2>
+        </div>
+      </Reveal>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "3vw", maxWidth: "1200px", margin: "0 auto", padding: "0 2vw" }}>
-        
-        {/* Tech 1 */}
-        <motion.div variants={itemVariants} whileHover={{ y: -10 }} style={{ backgroundColor: "rgba(255,255,255,0.05)", backdropFilter: "blur(10px)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "30px 0 30px 0", padding: "3vw" }}>
-          <div style={{ width: "100%", height: "150px", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "15px", marginBottom: "2vw", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <span style={{ fontFamily: "times new roman", color: "#888" }}>[ Video/Photo Placeholder: Laser Dentistry ]</span>
-          </div>
-          <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", marginBottom: "1vw" }}>Laser Dentistry</h4>
-          <p style={{ fontFamily: "times new roman", fontSize: "1.2vw", color: "#E0E0E0", lineHeight: "1.6" }}>Experience pain-free treatments with our advanced soft-tissue lasers. Say goodbye to the drill and hello to rapid, comfortable healing.</p>
-        </motion.div>
-
-        {/* Tech 2 */}
-        <motion.div variants={itemVariants} whileHover={{ y: -10 }} style={{ backgroundColor: "rgba(255,255,255,0.05)", backdropFilter: "blur(10px)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "30px 0 30px 0", padding: "3vw" }}>
-          <div style={{ width: "100%", height: "150px", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "15px", marginBottom: "2vw", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <span style={{ fontFamily: "times new roman", color: "#888" }}>[ Video/Photo Placeholder: 3D Scanner ]</span>
-          </div>
-          <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", marginBottom: "1vw" }}>3D Intraoral Scanning</h4>
-          <p style={{ fontFamily: "times new roman", fontSize: "1.2vw", color: "#E0E0E0", lineHeight: "1.6" }}>No more messy impression goop. We take highly precise digital impressions of your teeth in seconds, ensuring perfect fits for crowns and aligners.</p>
-        </motion.div>
-
-        {/* Tech 3 */}
-        <motion.div variants={itemVariants} whileHover={{ y: -10 }} style={{ backgroundColor: "rgba(255,255,255,0.05)", backdropFilter: "blur(10px)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "30px 0 30px 0", padding: "3vw" }}>
-          <div style={{ width: "100%", height: "150px", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "15px", marginBottom: "2vw", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <span style={{ fontFamily: "times new roman", color: "#888" }}>[ Video/Photo Placeholder: Spa Room ]</span>
-          </div>
-          <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8vw", marginBottom: "1vw" }}>Spa-Like Comforts</h4>
-          <p style={{ fontFamily: "times new roman", fontSize: "1.2vw", color: "#E0E0E0", lineHeight: "1.6" }}>Your anxiety melts away here. Enjoy noise-canceling headphones, soothing ambient music, and sedation options for ultimate relaxation.</p>
-        </motion.div>
-
+      <div className="grid grid-3">
+        {TECH.map((t, i) => (
+          <Reveal key={t.title} i={i}>
+            <article className="card-lux card-lux--glass" style={{ height: "100%" }}>
+              {/* PHOTO: see note on each placeholder for the original asset */}
+              <Placeholder ratio="16 / 10" label="Photo" note={t.note} dark />
+              <h3
+                className="display display--md"
+                style={{ color: "#fff", margin: "1.2rem 0 .3rem" }}
+              >
+                {t.title}
+              </h3>
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: "var(--fs-sm)",
+                  color: "rgba(255,255,255,.7)",
+                }}
+              >
+                {t.desc}
+              </p>
+            </article>
+          </Reveal>
+        ))}
       </div>
-    </motion.div>
-  );
-};
+    </div>
+  </section>
+);
 
 export default ComfortTech;

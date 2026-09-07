@@ -1,175 +1,196 @@
-import React, { useState, useEffect } from "react";
-import { Card } from "reactstrap";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import TypewriterHeading from "../components/TypewriterHeading";
+import Reveal from "../components/Reveal.js";
 
-const PageTestimonialsUtil = () => {
-  const [testimonials, setTestimonials] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+const FALLBACK = [
+  {
+    id: "f1",
+    headertext: "Painless, start to finish",
+    text: "I had put off a root canal for two years. It was over before I realised it had started.",
+    person: "Ananya R.",
+  },
+  {
+    id: "f2",
+    headertext: "They explained everything",
+    text: "For the first time I understood what was being done to my teeth and why. No pressure, no upselling.",
+    person: "Rohit M.",
+  },
+  {
+    id: "f3",
+    headertext: "Worth the travel",
+    text: "We drive across the city for our appointments. The care and the finish are simply not the same elsewhere.",
+    person: "Meera & Sunil K.",
+  },
+];
+
+const PageTestimonialsUtil = ({ bare = false }) => {
+  const [items, setItems] = useState(FALLBACK);
+  const [index, setIndex] = useState(0);
+  const [dir, setDir] = useState(1);
 
   useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "testimonials"));
-        const newData = querySnapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
+    let cancelled = false;
 
-        const items = newData.map((testimonial, i) => ({
-          id: i + 3,
-          headertext: testimonial.headertext,
-          text: testimonial.text,
-          person: testimonial.person,
-        }));
+    getDocs(collection(db, "testimonials"))
+      .then((snap) => {
+        if (cancelled) return;
+        const data = snap.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        if (data.length) setItems(data);
+      })
+      .catch(() => {
+        /* Firestore unreachable - the curated fallback quotes stay in place. */
+      });
 
-        // Provide fallback data if firebase is empty or fails
-        if (items.length === 0) {
-          setTestimonials([
-            { id: 1, headertext: "Amazing Experience", text: "Dr. Sandhya is the best! Very painless and professional.", person: "John Doe" },
-            { id: 2, headertext: "Highly Recommended", text: "I finally have the smile I always wanted. Thank you so much.", person: "Jane Smith" },
-            { id: 3, headertext: "Exceptional Care", text: "The clinic staff is incredibly welcoming and the treatment was perfect.", person: "Mike Johnson" },
-          ]);
-        } else {
-          setTestimonials(items);
-        }
-      } catch (e) {
-        console.error("Error retrieving document: ", e);
-        // Fallback data
-        setTestimonials([
-          { id: 1, headertext: "Amazing Experience", text: "Dr. Sandhya is the best! Very painless and professional.", person: "John Doe" },
-          { id: 2, headertext: "Highly Recommended", text: "I finally have the smile I always wanted. Thank you so much.", person: "Jane Smith" },
-          { id: 3, headertext: "Exceptional Care", text: "The clinic staff is incredibly welcoming and the treatment was perfect.", person: "Mike Johnson" },
-        ]);
-      }
+    return () => {
+      cancelled = true;
     };
-
-    fetchPost();
   }, []);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  useEffect(() => {
+    const t = setInterval(() => {
+      setDir(1);
+      setIndex((i) => (i + 1) % items.length);
+    }, 8000);
+    return () => clearInterval(t);
+  }, [items.length]);
+
+  const go = (step) => {
+    setDir(step);
+    setIndex((i) => (i + step + items.length) % items.length);
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
+  const current = items[index];
 
-  if (testimonials.length === 0) return null;
+  const body = (
+    <div className="shell" style={{ maxWidth: "min(900px, 90vw)", textAlign: "center" }}>
+      <Reveal>
+        <div className="section-head section-head--center">
+          <p className="eyebrow eyebrow--center">Patient stories</p>
+          <h2 className="display display--xl">In their words</h2>
+        </div>
+      </Reveal>
 
-  return (
-    <Card
-      className="container-fluid"
-      style={{
-        border: "none",
-        backgroundColor: "#0A2342",
-        padding: "5vw 2vw",
-        color: "white",
-        textAlign: "center",
-        overflow: "hidden"
-      }}
-    >
-      <h3 style={{ fontFamily: "'Great Vibes', cursive", fontSize: "3.5vw", color: "#FFFFFF", marginBottom: "-0.5vw" }}>
-        Patient Stories
-      </h3>
-      <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "4vw", marginBottom: "3vw" }}>
-        <TypewriterHeading text="What Our Patients Say" />
-      </h2>
+      <span className="quote-mark" aria-hidden="true">
+        &ldquo;
+      </span>
 
-      <div style={{ position: "relative", minHeight: "calc(400px + 30vw)", height: "auto", padding: "10vw 0", display: "flex", justifyContent: "center", alignItems: "center", perspective: "1000px" }}>
-
-        <button
-          onClick={handlePrev}
-          style={{ position: "absolute", left: "5vw", zIndex: 20, background: "transparent", border: "none", color: "white", cursor: "pointer" }}
-        >
-          <FaChevronLeft size="3vw" />
-        </button>
-
-        <AnimatePresence mode="popLayout">
-          {testimonials.map((item, index) => {
-            let offset = index - currentIndex;
-            // Handle wrap around for smooth infinite carousel feel
-            if (offset < -1) offset += testimonials.length;
-            if (offset > 1) offset -= testimonials.length;
-
-            if (Math.abs(offset) > 1) return null; // Only show center, left, right
-
-            let x = 0;
-            let rotateY = 0;
-            let scale = 1;
-            let zIndex = 10;
-            let opacity = 1;
-
-            if (offset === -1) {
-              x = "-60%";
-              rotateY = 30;
-              scale = 0.8;
-              zIndex = 5;
-              opacity = 0.5;
-            } else if (offset === 1) {
-              x = "60%";
-              rotateY = -30;
-              scale = 0.8;
-              zIndex = 5;
-              opacity = 0.5;
-            }
-
-            return (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, x: offset > 0 ? "100%" : "-100%", rotateY: offset > 0 ? -45 : 45 }}
-                animate={{ opacity, x, rotateY, scale, zIndex }}
-                exit={{ opacity: 0, x: offset < 0 ? "-100%" : "100%", rotateY: offset < 0 ? 45 : -45 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                style={{
-                  position: "absolute",
-                  width: "50vw",
-                  minWidth: "300px",
-                  maxWidth: "none",
-                  height: "auto",
-                  backgroundColor: "#173A5E",
-                  border: "2px solid #FFFFFF",
-                  borderRadius: "15px",
-                  padding: "4vw",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
-                  transformStyle: "preserve-3d"
-                }}
-              >
-                <div style={{ transform: "translateZ(30px)" }}>
-                  <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2vw", color: "#FFFFFF", marginBottom: "1.5vw" }}>
-                    "{item.headertext}"
-                  </h4>
-                  <p style={{ fontFamily: "times new roman", fontSize: "1.2vw", color: "#FFFFFF", marginBottom: "2vw" }}>
-                    {item.text}
-                  </p>
-                  <p style={{ fontFamily: "'Great Vibes', cursive", fontSize: "2.5vw", color: "#FFFFFF", margin: 0, textAlign: "right" }}>
-                    - {item.person}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+      <div style={{ position: "relative", minHeight: "clamp(200px, 26vw, 280px)", marginTop: "1rem" }}>
+        <AnimatePresence mode="wait" custom={dir}>
+          <motion.blockquote
+            key={current.id ?? index}
+            custom={dir}
+            initial={{ opacity: 0, x: dir * 40, filter: "blur(6px)" }}
+            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            exit={{ opacity: 0, x: dir * -40, filter: "blur(6px)" }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            style={{ margin: 0 }}
+          >
+            <p
+              className="display display--lg"
+              style={{ margin: "0 0 1.2rem", color: "var(--ink)", lineHeight: 1.25 }}
+            >
+              {current.headertext}
+            </p>
+            <p className="lede" style={{ maxWidth: "56ch", margin: "0 auto" }}>
+              {current.text}
+            </p>
+            <footer
+              style={{
+                marginTop: "1.8rem",
+                fontFamily: "var(--font-ui)",
+                fontSize: "var(--fs-micro)",
+                letterSpacing: ".28em",
+                textTransform: "uppercase",
+                color: "var(--gold)",
+              }}
+            >
+              {current.person}
+            </footer>
+          </motion.blockquote>
         </AnimatePresence>
+      </div>
 
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "1.6rem",
+          marginTop: "1rem",
+        }}
+      >
         <button
-          onClick={handleNext}
-          style={{ position: "absolute", right: "5vw", zIndex: 20, background: "transparent", border: "none", color: "white", cursor: "pointer" }}
+          type="button"
+          onClick={() => go(-1)}
+          aria-label="Previous testimonial"
+          className="nav-link"
+          style={{ letterSpacing: 0 }}
         >
-          <FaChevronRight size="3vw" />
+          &larr;
         </button>
 
+        <div style={{ display: "flex", gap: ".55rem", alignItems: "center" }}>
+          {items.length > 7 ? (
+            // Firestore returns dozens of reviews - a dot per review is unreadable.
+            <span
+              style={{
+                fontFamily: "var(--font-ui)",
+                fontSize: "var(--fs-micro)",
+                letterSpacing: ".24em",
+                color: "var(--muted)",
+              }}
+            >
+              {String(index + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+            </span>
+          ) : (
+            items.map((it, i) => (
+              <button
+                key={it.id ?? i}
+                type="button"
+                aria-label={`Testimonial ${i + 1}`}
+                onClick={() => {
+                  setDir(i > index ? 1 : -1);
+                  setIndex(i);
+                }}
+                style={{
+                  width: i === index ? 22 : 6,
+                  height: 2,
+                  border: 0,
+                  padding: 0,
+                  cursor: "pointer",
+                  background: i === index ? "var(--gold)" : "var(--hairline)",
+                  transition: "width .5s var(--ease), background .5s var(--ease)",
+                }}
+              />
+            ))
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => go(1)}
+          aria-label="Next testimonial"
+          className="nav-link"
+          style={{ letterSpacing: 0 }}
+        >
+          &rarr;
+        </button>
       </div>
 
-      <div style={{ marginTop: "2vw" }}>
-        <a href="/testimonials" style={{ color: "#FFFFFF", textDecoration: "underline", fontSize: "1.2vw", fontFamily: "times new roman" }}>
-          View all testimonials
-        </a>
-      </div>
-    </Card>
+      {!bare && (
+        <div style={{ marginTop: "2.5rem" }}>
+          <a className="link-underline" href="/testimonials">
+            Read every review
+          </a>
+        </div>
+      )}
+    </div>
   );
+
+  // White + gold, as requested - this section deliberately stays light.
+  return bare ? body : <section className="section">{body}</section>;
 };
 
 export default PageTestimonialsUtil;

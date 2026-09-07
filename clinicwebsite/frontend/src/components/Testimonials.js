@@ -1,245 +1,139 @@
-import React, { Component } from "react";
-import { Button, Card } from "reactstrap";
-import clinic1 from "../images/clinic1.jpg";
-import { collection } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import { getDocs } from "firebase/firestore";
 import NavbarUtil from "../utils/NavbarUtil.js";
-import PageTestimonialsUtil from "../utils/PageTestimonialsUtil.js";
 import FooterUtil from "../utils/FooterUtil.js";
-import BeforeAfterUtil from "../utils/BeforeAfterUtils.js";
+import Reveal from "./Reveal.js";
+import ToothMark from "./ToothMark.js";
 
-const items1 = [];
+const Testimonials = () => {
+  const [items, setItems] = useState([]);
+  const [state, setState] = useState("loading");
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      testimonials: [],
-    };
-  }
+  useEffect(() => {
+    let cancelled = false;
 
-  componentDidMount() {
-    this.fetchPost();
-  }
-  fetchPost = async () => {
-    try {
-      await getDocs(collection(db, "testimonials")).then((querySnapshot) => {
-        const newData = querySnapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        // this.setState({todos:newData});
-
-        console.log("hi from inside fetch before", newData);
-
-        newData.map((testimonial, i) => {
-          console.log(i + 3);
-          items1.push({
-            id: i + 3,
-            headertext: testimonial.headertext,
-            text: testimonial.text,
-            person: testimonial.person,
-          });
-        });
-
-        console.log("hi from inside fetch", items1);
-        this.setState({ testimonials: items1 });
+    getDocs(collection(db, "testimonials"))
+      .then((snap) => {
+        if (cancelled) return;
+        setItems(snap.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        setState("ready");
+      })
+      .catch(() => {
+        if (!cancelled) setState("error");
       });
-    } catch (e) {
-      console.error("Error retrieving document: ", e);
-    }
-  };
 
-  render() {
-    return (
-      <div
-        style={{
-          paddingLeft: "0px",
-          marginLeft: "0px",
-          backgroundColor: "#fcfcfc",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <NavbarUtil />
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+  return (
+    <div style={{ background: "var(--paper)" }}>
+      <NavbarUtil />
 
-        <div
-          className="p-5 my-6 rounded"
-          style={{
-            padding: "0px",
-            margin: "0px",
-            backgroundColor: "#fcfcfc",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            width: "100vw",
-            height: "90vh",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "4.5vw",
-              color: "#0A2342",
-              backgroundColor: "white",
-              width: "100vw",
-              padding: "10px",
-              margin: "10px",
-            }}
-          >
-            {" "}
-            All Testimonials!
-          </div>
-          <Button
-            active
-            style={{
-              padding: "10px",
-              margin: "4px",
-              borderColor: "#173A5E",
-              backgroundColor: "#f9f9f9",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "times new roman",
-                fontSize: "35px",
-                align: "center",
-                color: "#0A2342",
-              }}
-            >
-              <a
-                href="https://wa.me/919833630985?text=Hello%20Dr%20Sandhya,%20I%27m%20interested%20in%20booking%20an%20appointment%20at%20your%20clinic%0D%0AMy%20name%20is%20:%0D%0AMy%20chief%20complaint%20is:"
-                style={{ color: "#0A2342" }}
-              >
-                Book an appointment
-              </a>
-            </div>
-          </Button>
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "2.25vw",
-              color: "#0A2342",
-              backgroundColor: "white",
-              width: "60vw",
-              padding: "10px",
-              margin: "6px",
-            }}
-          >
-            {" "}
-            OR Call on (+91) 9833630985{" "}
-          </div>
+      <section className="section" style={{ position: "relative", overflow: "hidden" }}>
+        <div className="aurora">
+          <span className="aurora__blob aurora__blob--b" />
         </div>
-
-        <br></br>
-        <br></br>
-
-        <Card
-          class="container-fluid"
+        <div
+          className="shell"
           style={{
-            height: "800px",
-            backgroundColor: "white",
-            borderColor: "#173A5E",
-            borderWidth: "2px",
+            position: "relative",
+            zIndex: 1,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            gap: "1rem",
           }}
         >
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "35px",
-              color: "#0A2342",
-            }}
-          >
-            Here's what our patients have to say (All Testimonials):
-          </div>
-          <div
-            style={{
-              fontFamily: "times new roman",
-              fontSize: "20px",
-              color: "#0A2342",
-              textAlign: "right",
-              padding: "20px",
-              textDecorationColor: "white",
-            }}
-          >
-            {items1.length} results
-          </div>
-          {console.log("see all items", items1)}
+          <Reveal>
+            <p className="eyebrow eyebrow--center">Patient stories</p>
+          </Reveal>
+          <Reveal i={1}>
+            <h1 className="display display--hero" style={{ margin: 0 }}>
+              Every review, unedited
+            </h1>
+          </Reveal>
+          <Reveal i={2}>
+            <ToothMark size="clamp(46px, 6vw, 78px)" />
+          </Reveal>
+        </div>
+      </section>
 
-          <div
-            class="row justify-content-center"
-            style={{ maxHeight: "650px", overflowY: "scroll", padding: "20px" }}
-          >
-            {items1.map((item) => {
-              console.log("we're at display", item);
-              return (
-                //   <div class="row justify-content-center" style={{ height: "600px", padding:"20px" }}>
+      <section className="section section--warm" style={{ paddingTop: 0 }}>
+        <div className="shell-wide">
+          {state === "loading" && (
+            <p className="text-quiet" style={{ textAlign: "center" }}>
+              Loading&hellip;
+            </p>
+          )}
 
-                <div class=" col-lg-8 ">
-                  <div
-                    class="card"
-                    style={{
-                      backgroundColor: "white",
-                      borderColor: "#173A5E",
-                      borderWidth: "1px",
-                    }}
-                  >
-                    <p class="post">
-                      <span>
-                        {/* User requested to comment out photos
-{/* <img
-                          class="quote-img"
-                          src="https://i.imgur.com/i06xx2I.png"
-                        /> */}
-*/}
+          {state === "error" && (
+            <p className="text-quiet" style={{ textAlign: "center" }}>
+              We couldn&rsquo;t load the reviews just now. Please try again shortly.
+            </p>
+          )}
+
+          {state === "ready" && (
+            <>
+              <p
+                style={{
+                  fontFamily: "var(--font-ui)",
+                  fontSize: "var(--fs-micro)",
+                  letterSpacing: ".28em",
+                  textTransform: "uppercase",
+                  color: "var(--gold)",
+                  textAlign: "center",
+                  marginBottom: "clamp(2rem, 4vw, 3.5rem)",
+                }}
+              >
+                {items.length} {items.length === 1 ? "review" : "reviews"}
+              </p>
+
+              <div
+                className="grid"
+                style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 320px), 1fr))" }}
+              >
+                {items.map((item, i) => (
+                  <Reveal key={item.id} i={i % 3}>
+                    <figure className="card-lux" style={{ height: "100%", margin: 0 }}>
+                      <span className="quote-mark" aria-hidden="true">
+                        &ldquo;
                       </span>
-                      <span class="post-txt">
-                        {item.headertext}
-                        <br></br>
-                        {item.text}
-                      </span>
-                      <span>
-                        {/* User requested to comment out photos
-{/* <img
-                          class="nice-img"
-                          src="https://i.imgur.com/l5AkSHd.png"
-                        /> */}
-*/}
-                      </span>
-                    </p>
-                  </div>
-                  <div class="arrow-down"></div>
-                  <div
-                    style={{
-                      fontFamily: "times new roman",
-                      fontSize: "25px",
-                      color: "#0A2342",
-                    }}
-                  >
-                    {item.person}
-                  </div>
-                </div>
-                //   </div>
-              );
-            })}
-          </div>
-        </Card>
+                      <blockquote style={{ margin: ".5rem 0 0" }}>
+                        <p className="display display--md" style={{ marginBottom: ".7rem" }}>
+                          {item.headertext}
+                        </p>
+                        <p className="post-txt text-quiet" style={{ margin: 0 }}>
+                          {item.text}
+                        </p>
+                      </blockquote>
+                      <figcaption
+                        style={{
+                          marginTop: "1.4rem",
+                          fontFamily: "var(--font-ui)",
+                          fontSize: "var(--fs-micro)",
+                          letterSpacing: ".24em",
+                          textTransform: "uppercase",
+                          color: "var(--gold)",
+                        }}
+                      >
+                        {item.person}
+                      </figcaption>
+                    </figure>
+                  </Reveal>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <FooterUtil />
-      </div>
-    );
-  }
-}
+      <FooterUtil />
+    </div>
+  );
+};
 
-export default App;
+export default Testimonials;

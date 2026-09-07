@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
+import './index.css'; // must load after bootstrap so the design system wins
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import App from './App.js';
@@ -68,9 +68,7 @@ root.render(
     <Route path="/samedayimplants" element={<SameDayImplants/>} />
     <Route path="/testimonials" element={<Testimonials/>} />
     <Route path="/doctorlogin" element={<DoctorLogin/>} />
-
-
-    
+    <Route path="*" element={<App/>}/>
   </Routes>
 
   

@@ -1,50 +1,55 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+import Reveal from "../components/Reveal.js";
 
-const FaqUtil = ({ faqs }) => {
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+const FaqUtil = ({ faqs, title = "Questions, answered" }) => {
+  const [open, setOpen] = useState(null);
 
   if (!faqs || faqs.length === 0) return null;
 
   return (
-    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} style={{ padding: "4vw", width: "90vw", maxWidth: "none", margin: "0 auto" }}>
-      <motion.h2 variants={itemVariants} style={{ fontFamily: "'Playfair Display', serif", fontSize: "3vw", color: "#0A2342", textAlign: "center", marginBottom: "3vw" }}>
-        Frequently Asked Questions
-      </motion.h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.5vw" }}>
-        {faqs.map((faq, idx) => (
-          <motion.div key={idx} variants={itemVariants} style={{ border: "1px solid rgba(23, 58, 94, 0.2)", borderRadius: "0 20px 0 20px", overflow: "hidden", boxShadow: "0 4px 10px rgba(0,0,0,0.03)" }}>
-            <div 
-              onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-              style={{ padding: "2vw", backgroundColor: openFaq === idx ? "#173A5E" : "white", color: openFaq === idx ? "white" : "#0A2342", display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer", transition: "all 0.3s ease" }}
-            >
-              <h4 style={{ fontFamily: "'Playfair Display', serif", margin: 0, fontSize: "1.6vw" }}>{faq.q}</h4>
-              {openFaq === idx ? <FaChevronUp size="1.5vw" /> : <FaChevronDown size="1.5vw" />}
-            </div>
-            <AnimatePresence>
-              {openFaq === idx && (
-                <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} style={{ backgroundColor: "#f9f9f9" }}>
-                  <div style={{ padding: "2vw", fontFamily: "times new roman", fontSize: "1.3vw", color: "#0A2342", borderTop: "1px solid rgba(23, 58, 94, 0.1)" }}>
-                    {faq.a}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        ))}
+    <section className="section">
+      <div className="shell" style={{ maxWidth: "min(860px, 90vw)" }}>
+        <Reveal>
+          <div className="section-head section-head--center">
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="display display--xl">{title}</h2>
+          </div>
+        </Reveal>
+
+        {faqs.map((faq, i) => {
+          const isOpen = open === i;
+          return (
+            <Reveal key={faq.q} i={i}>
+              <div className="faq-row" data-open={isOpen}>
+                <button
+                  type="button"
+                  className="faq-q"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                >
+                  {faq.q}
+                  <span className="faq-sign" aria-hidden="true" />
+                </button>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      className="faq-a"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      <div className="faq-a__inner">{faq.a}</div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </Reveal>
+          );
+        })}
       </div>
-    </motion.div>
+    </section>
   );
 };
 

@@ -1,27 +1,29 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
 
+/* Per request: no "materials choice" section and no crown animation graphic. */
 const Crowns = () => {
   return (
     <TreatmentLayout
       title="Dental Crowns"
-      cursiveAccent="Restore strength and beauty"
-      intro="A dental crown is a custom-made cap placed over a damaged or decayed tooth to restore its shape, size, strength, and appearance. Using high-quality porcelain or ceramic, our crowns are designed to blend seamlessly with your natural teeth."
+      cursiveAccent="General · Restorative"
+      intro="A cap that goes over a damaged tooth to give back its shape, strength and appearance. Milled to fit and colour-matched, so it disappears next to your own teeth."
+      photoNote="src/images/IMG_6432.JPG"
       offerings={[
-        { title: "Custom Craftsmanship", desc: "Each crown is precision-milled and color-matched to ensure it looks indistinguishable from your natural teeth." },
-        { title: "Structural Protection", desc: "Crowns encase the entire visible portion of the tooth, protecting weak teeth from breaking." },
-        { title: "Versatile Restoration", desc: "Can be used to cover dental implants, hold dental bridges in place, or restore a tooth after a root canal." }
+        { title: "Custom fit", desc: "Precision-milled and shade-matched to the tooth beside it." },
+        { title: "Protection", desc: "Encases the whole tooth so a weak one stops breaking down." },
+        { title: "Versatile", desc: "Tops an implant, anchors a bridge, or finishes a root canal." }
       ]}
       whenToConsider={[
-        "You have a tooth that is severely decayed or damaged.",
-        "You recently had a root canal and need to protect the remaining tooth structure.",
-        "You have a large filling with very little natural tooth remaining.",
-        "You want to cover a misshapen or severely discolored tooth."
+        "A tooth is badly decayed or cracked.",
+        "You have just had a root canal.",
+        "A large old filling has left little tooth behind.",
+        "A tooth is misshapen or deeply discoloured."
       ]}
       faqs={[
-        { q: "How long does it take to get a crown?", a: "Traditionally, it takes two visits. The first for preparation and impressions, and the second for placement. However, we also offer Same-Day Crowns using advanced CAD/CAM technology." },
-        { q: "Is it painful to have a crown placed?", a: "Your dentist will use local anesthesia to numb the area, making the procedure virtually painless. You may experience some mild sensitivity for a few days after placement." },
-        { q: "How long will my dental crown last?", a: "With excellent oral hygiene and regular dental checkups, a high-quality crown can last between 10 and 15 years, and often much longer." }
+        { q: "How many visits does it take?", a: "Usually two - one to prepare and scan, one to fit. Same-day crowns are available for suitable cases." },
+        { q: "Will it hurt?", a: "The area is fully numbed, so no. Mild sensitivity for a few days afterwards is normal." },
+        { q: "How long does a crown last?", a: "Ten to fifteen years with good hygiene and regular checkups, and frequently much longer." }
       ]}
     />
   );
