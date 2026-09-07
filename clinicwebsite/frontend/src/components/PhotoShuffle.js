@@ -1,33 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { animate, motion, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
 
-const COLS = 6;
-const ROWS = 4;
+const FEATHER = 26; // width of the soft edge, in % of the frame
 
 /**
- * Tile order: alternating squares go first, then the rest, with a diagonal
- * offset on top. That reads as a checkerboard dissolving into the next photo
- * rather than a single flat fade.
+ * Photos flow into one another behind a soft-edged wipe: a gradient mask sweeps
+ * across the incoming image so it arrives gradually from one side rather than
+ * fading in on the spot. The outgoing photo stays underneath throughout, so
+ * there is never a moment where nothing is on screen.
  */
-const tileDelay = (row, col) => ((row + col) % 2) * 0.26 + (row + col) * 0.045;
-
-const TILES = Array.from({ length: ROWS * COLS }, (_, i) => {
-  const row = Math.floor(i / COLS);
-  const col = i % COLS;
-  return {
-    row,
-    col,
-    delay: tileDelay(row, col),
-    // Standard sprite trick: blow the background up to grid size, then offset
-    // each tile so together they reassemble one image.
-    position: `${(col / (COLS - 1)) * 100}% ${(row / (ROWS - 1)) * 100}%`,
-  };
-});
-
-/** Crossfades through a set of photos with a checkerboard reveal. */
-const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 6000, style }) => {
+const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 6500, style }) => {
   const [pair, setPair] = useState({ prev: 0, curr: 0 });
   const reduce = useReducedMotion();
+
+  const progress = useMotionValue(1);
+
+  // Black reveals, transparent hides. Sweeping the pair of stops from off one
+  // edge to off the other walks the feathered boundary across the frame.
+  const mask = useTransform(progress, (p) => {
+    const edge = -FEATHER + p * (100 + FEATHER * 2);
+    return `linear-gradient(105deg, #000 ${edge}%, rgba(0,0,0,0) ${edge + FEATHER}%)`;
+  });
+  const scale = useTransform(progress, [0, 1], reduce ? [1, 1] : [1.05, 1]);
+
+  useEffect(() => {
+    if (pair.prev === pair.curr) {
+      progress.set(1);
+      return undefined;
+    }
+    progress.set(0);
+    // Only the gentle zoom is dropped for reduced motion; the wipe itself moves
+    // no content, so it stays slow enough to read as a flow rather than a cut.
+    const controls = animate(progress, 1, {
+      duration: reduce ? 1.4 : 1.9,
+      ease: [0.65, 0, 0.35, 1],
+    });
+    return () => controls.stop();
+  }, [pair, progress, reduce]);
 
   useEffect(() => {
     if (photos.length < 2) return undefined;
@@ -38,7 +47,6 @@ const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 6000,
     return () => clearInterval(id);
   }, [photos.length, interval]);
 
-  // Decode the next photo ahead of time so tiles never reveal a blank frame.
   useEffect(() => {
     photos.forEach((src) => {
       const img = new Image();
@@ -48,63 +56,45 @@ const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 6000,
 
   if (!photos.length) return null;
 
-  const goTo = (i) => setPair((p) => ({ prev: p.curr, curr: i }));
-
-  const frame = {
-    position: "relative",
+  const layer = {
+    position: "absolute",
+    inset: 0,
     width: "100%",
-    aspectRatio: ratio,
-    borderRadius: "var(--radius-lg)",
-    overflow: "hidden",
-    background: "var(--paper-cool)",
-    boxShadow: "var(--shadow-soft)",
-    ...style,
+    height: "100%",
+    objectFit: "cover",
   };
 
   return (
-    <div style={frame}>
-      {/* The photo being replaced stays underneath while the tiles come in. */}
-      <img
-        src={photos[pair.prev]}
-        alt={alt}
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-      />
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        aspectRatio: ratio,
+        borderRadius: "var(--radius-lg)",
+        overflow: "hidden",
+        background: "var(--paper-cool)",
+        boxShadow: "var(--shadow-soft)",
+        ...style,
+      }}
+    >
+      <img src={photos[pair.prev]} alt={alt} style={layer} />
 
-      <div
+      <motion.img
         key={pair.curr}
-        style={{
-          position: "absolute",
-          inset: 0,
-          display: "grid",
-          gridTemplateColumns: `repeat(${COLS}, 1fr)`,
-          gridTemplateRows: `repeat(${ROWS}, 1fr)`,
-        }}
+        src={photos[pair.curr]}
+        alt=""
         aria-hidden="true"
-      >
-        {TILES.map((t) => (
-          <motion.div
-            key={`${t.row}-${t.col}`}
-            initial={{ opacity: pair.prev === pair.curr ? 1 : 0 }}
-            animate={{ opacity: 1 }}
-            // Opacity only, no movement, so the checkerboard is kept even under
-            // reduced motion - it just runs quicker.
-            transition={{
-              duration: reduce ? 0.3 : 0.55,
-              delay: reduce ? t.delay * 0.45 : t.delay,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            style={{
-              // Must be quoted: several filenames contain spaces, and an
-              // unquoted url() with a space is invalid CSS, so the browser
-              // drops the declaration and the tile renders empty.
-              backgroundImage: `url(${JSON.stringify(photos[pair.curr])})`,
-              backgroundSize: `${COLS * 100}% ${ROWS * 100}%`,
-              backgroundPosition: t.position,
-              backgroundRepeat: "no-repeat",
-            }}
-          />
-        ))}
-      </div>
+        style={{
+          ...layer,
+          scale,
+          WebkitMaskImage: mask,
+          maskImage: mask,
+          WebkitMaskSize: "100% 100%",
+          maskSize: "100% 100%",
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+        }}
+      />
 
       {photos.length > 1 && (
         <div
@@ -124,7 +114,7 @@ const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 6000,
               key={p}
               type="button"
               aria-label={`Photo ${i + 1}`}
-              onClick={() => goTo(i)}
+              onClick={() => setPair((c) => ({ prev: c.curr, curr: i }))}
               style={{
                 width: i === pair.curr ? 20 : 6,
                 height: 3,
