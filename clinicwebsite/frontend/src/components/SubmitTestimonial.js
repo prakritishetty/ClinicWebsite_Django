@@ -21,7 +21,10 @@ const friendlyError = (err) => {
     case "auth/operation-not-allowed":
       return "That sign-in method isn't switched on for this site yet. Please try another one.";
     case "auth/unauthorized-domain":
-      return "This domain isn't authorised for sign-in yet. Please try again later.";
+    case "auth/unauthorized-continue-uri":
+      return "This site isn't authorised for sign-in yet. Please try another method or come back shortly.";
+    case "auth/billing-not-enabled":
+      return "Phone sign-in isn't available right now. Please use Google or email instead.";
     case "auth/popup-closed-by-user":
     case "auth/cancelled-popup-request":
       return "Sign-in was cancelled.";
