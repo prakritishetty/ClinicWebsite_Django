@@ -35,6 +35,27 @@ const PAYMENT_METHODS = ["Cash", "UPI", "Card", "Insurance / reimbursement"];
 
 const str = (v, max) => String(v ?? "").trim().slice(0, max);
 
+/**
+ * Indian mobile numbers, tolerant about how they are typed: +91, 0091, a
+ * leading 0, spaces and dashes all normalise to the bare 10 digits.
+ * Returns null when it isn't a usable number.
+ */
+const normalisePhone = (raw) => {
+  let d = String(raw ?? "").replace(/\D/g, "");
+  if (d.length > 10 && d.startsWith("0091")) d = d.slice(4);
+  else if (d.length > 10 && d.startsWith("91")) d = d.slice(2);
+  if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
+  return /^[6-9]\d{9}$/.test(d) ? d : null;
+};
+
+const isEmail = (raw) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(raw ?? "").trim());
+
+// Number("") is 0, so an empty value would otherwise pass as a valid age.
+const isAge = (raw) => {
+  const s = String(raw ?? "").trim();
+  return /^\d{1,3}$/.test(s) && Number(s) <= 120;
+};
+
 const waLink = (phone, text) => {
   const digits = String(phone || "").replace(/\D/g, "");
   const withCode = digits.length === 10 ? `91${digits}` : digits;
@@ -71,37 +92,59 @@ module.exports = async (req, res) => {
     }
 
     const forSomeoneElse = body.bookingFor === "other";
+
+    // The browser's own validation is only a convenience; this endpoint is
+    // reachable directly, so everything is re-checked here.
+    const patientPhone = normalisePhone(body.patientPhone);
+    const bookerPhone = forSomeoneElse ? normalisePhone(body.bookerPhone) : null;
+
+    // Whoever booked is who we write to, so a child without an inbox is fine as
+    // long as the adult booking for them gave one.
+    const contactEmail = forSomeoneElse
+      ? str(body.bookerEmail, 120)
+      : str(body.patientEmail, 120);
+
+    const fail = (error) => res.status(400).json({ error });
+
+    if (!str(body.patientName, 80)) return fail("Please enter the patient's name.");
+    if (!patientPhone) return fail("Please enter a valid 10-digit mobile number for the patient.");
+    if (!isAge(body.patientAge)) return fail("Please enter the patient's age.");
+    if (!isEmail(contactEmail)) return fail("Please enter a valid email address so we can send the confirmation.");
+    if (!str(body.reason, 600)) return fail("Please tell us the reason for the visit.");
+    if (!PAYMENT_METHODS.includes(body.paymentMethod)) return fail("Please choose a payment method.");
+    if (body.consent !== true) return fail("Please agree to the consent notice to continue.");
+
+    if (forSomeoneElse) {
+      if (!str(body.bookerName, 80)) return fail("Please enter your name.");
+      if (!bookerPhone) return fail("Please enter a valid 10-digit mobile number for yourself.");
+      if (!str(body.relationship, 60)) return fail("Please tell us your relationship to the patient.");
+    }
+
     const appointment = {
       patient: {
         name: str(body.patientName, 80),
-        phone: str(body.patientPhone, 20),
+        phone: patientPhone,
         email: str(body.patientEmail, 120),
         age: str(body.patientAge, 3),
       },
       bookedBy: forSomeoneElse
         ? {
             name: str(body.bookerName, 80),
-            phone: str(body.bookerPhone, 20),
+            phone: bookerPhone,
             email: str(body.bookerEmail, 120),
             relationship: str(body.relationship, 60),
           }
         : null,
+      contactEmail,
       reason: str(body.reason, 600),
       medicalFlags: Array.isArray(body.medicalFlags)
         ? body.medicalFlags.filter((f) => MEDICAL_FLAGS.includes(f))
         : [],
       medicalNotes: str(body.medicalNotes, 800),
       reschedulePreference: str(body.reschedulePreference, 300),
-      paymentMethod: PAYMENT_METHODS.includes(body.paymentMethod) ? body.paymentMethod : "",
-      consent: body.consent === true,
+      paymentMethod: body.paymentMethod,
+      consent: true,
     };
-
-    if (!appointment.patient.name || !appointment.patient.phone || !appointment.reason) {
-      return res.status(400).json({ error: "Name, phone and reason for visit are required." });
-    }
-    if (!appointment.consent) {
-      return res.status(400).json({ error: "Please agree to the consent notice to continue." });
-    }
 
     const db = getDb();
     const settings = await db.collection("settings").doc("schedule").get();
@@ -201,11 +244,11 @@ module.exports = async (req, res) => {
       ),
     ];
 
-    if (appointment.patient.email) {
+    if (appointment.contactEmail) {
       mail.push(
         transport.sendMail({
           from: mailFrom(),
-          to: appointment.patient.email,
+          to: appointment.contactEmail,
           subject: `We received your appointment request - ${when}`,
           html: patientHtml,
         })

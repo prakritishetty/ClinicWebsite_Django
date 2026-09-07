@@ -153,7 +153,9 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
   // drops whichever address is the organizer, since Google ignores an invite
   // where the recipient is also the organizer.
   const guests = [
-    appt.patient?.email ? { name: appt.patient.name, email: appt.patient.email } : null,
+    appt.contactEmail || appt.patient?.email
+      ? { name: appt.patient?.name, email: appt.contactEmail || appt.patient.email }
+      : null,
     ...doctors.map((email) => ({ email })),
   ].filter(Boolean);
 
@@ -167,11 +169,12 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
 
   // Still two emails, so the patient never sees the doctors' addresses in To:
   // and the doctors' copy can carry the patient's contact details.
-  if (appt.patient?.email) {
+  const patientEmail = appt.contactEmail || appt.patient?.email;
+  if (patientEmail) {
     jobs.push(
       transport.sendMail({
         from: mailFrom(),
-        to: appt.patient.email,
+        to: patientEmail,
         subject,
         html: html(false),
         icalEvent: invite,

@@ -43,6 +43,23 @@ const prettyDate = (iso) => {
   });
 };
 
+// Mirrors the checks in api/book.js so problems surface before submitting.
+const normalisePhone = (raw) => {
+  let d = String(raw ?? "").replace(/\D/g, "");
+  if (d.length > 10 && d.startsWith("0091")) d = d.slice(4);
+  else if (d.length > 10 && d.startsWith("91")) d = d.slice(2);
+  if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
+  return /^[6-9]\d{9}$/.test(d) ? d : null;
+};
+
+const isEmail = (raw) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(raw ?? "").trim());
+
+// Number("") is 0, so an empty value would otherwise pass as a valid age.
+const isAge = (raw) => {
+  const s = String(raw ?? "").trim();
+  return /^\d{1,3}$/.test(s) && Number(s) <= 120;
+};
+
 const Field = ({ label, children, hint }) => (
   // minWidth:0 matters: grid and flex items default to min-width:auto, which lets
   // a wide child (the date strip) push the whole page sideways instead of scrolling.
@@ -174,7 +191,20 @@ const BookingForm = () => {
     e.preventDefault();
     setError(null);
 
+    const forOther = bookingFor === "other";
+    const contactEmail = forOther ? form.bookerEmail : form.patientEmail;
+
     if (!time) return setError("Please choose a time slot.");
+    if (!normalisePhone(form.patientPhone))
+      return setError("Please enter a valid 10-digit mobile number for the patient.");
+    if (!isAge(form.patientAge)) return setError("Please enter the patient's age.");
+    if (!isEmail(contactEmail))
+      return setError("Please enter a valid email address so we can send the confirmation.");
+    if (forOther && !normalisePhone(form.bookerPhone))
+      return setError("Please enter a valid 10-digit mobile number for yourself.");
+    if (forOther && !form.relationship.trim())
+      return setError("Please tell us your relationship to the patient.");
+    if (!form.paymentMethod) return setError("Please choose a payment method.");
     if (!consent) return setError("Please tick the consent box to continue.");
 
     setBusy(true);
@@ -275,13 +305,36 @@ const BookingForm = () => {
           <input style={inputStyle} required value={form.patientName} onChange={set("patientName")} />
         </Field>
         <Field label="Patient's age">
-          <input style={inputStyle} inputMode="numeric" value={form.patientAge} onChange={set("patientAge")} />
+          <input
+            style={inputStyle}
+            required
+            type="number"
+            min="0"
+            max="120"
+            value={form.patientAge}
+            onChange={set("patientAge")}
+          />
         </Field>
-        <Field label="Phone">
-          <input style={inputStyle} required inputMode="tel" value={form.patientPhone} onChange={set("patientPhone")} />
+        <Field label="Phone" hint="10-digit mobile number.">
+          <input
+            style={inputStyle}
+            required
+            type="tel"
+            value={form.patientPhone}
+            onChange={set("patientPhone")}
+          />
         </Field>
-        <Field label="Email">
-          <input style={inputStyle} type="email" value={form.patientEmail} onChange={set("patientEmail")} />
+        <Field
+          label={bookingFor === "other" ? "Patient's email (optional)" : "Email"}
+          hint={bookingFor === "other" ? "" : "Your confirmation and calendar invite go here."}
+        >
+          <input
+            style={inputStyle}
+            type="email"
+            required={bookingFor !== "other"}
+            value={form.patientEmail}
+            onChange={set("patientEmail")}
+          />
         </Field>
       </div>
 
@@ -291,13 +344,13 @@ const BookingForm = () => {
             <input style={inputStyle} required value={form.bookerName} onChange={set("bookerName")} />
           </Field>
           <Field label="Your relationship to patient">
-            <input style={inputStyle} placeholder="Parent, spouse, child…" value={form.relationship} onChange={set("relationship")} />
+            <input style={inputStyle} required placeholder="Parent, spouse, child…" value={form.relationship} onChange={set("relationship")} />
           </Field>
-          <Field label="Your phone">
-            <input style={inputStyle} required inputMode="tel" value={form.bookerPhone} onChange={set("bookerPhone")} />
+          <Field label="Your phone" hint="10-digit mobile number.">
+            <input style={inputStyle} required type="tel" value={form.bookerPhone} onChange={set("bookerPhone")} />
           </Field>
-          <Field label="Your email">
-            <input style={inputStyle} type="email" value={form.bookerEmail} onChange={set("bookerEmail")} />
+          <Field label="Your email" hint="The confirmation and calendar invite go here.">
+            <input style={inputStyle} required type="email" value={form.bookerEmail} onChange={set("bookerEmail")} />
           </Field>
         </div>
       )}
@@ -348,7 +401,7 @@ const BookingForm = () => {
           />
         </Field>
         <Field label="How will you pay?" hint="Payment is taken at the clinic, not online.">
-          <select style={inputStyle} value={form.paymentMethod} onChange={set("paymentMethod")}>
+          <select style={inputStyle} required value={form.paymentMethod} onChange={set("paymentMethod")}>
             <option value="">Select…</option>
             {PAYMENT_METHODS.map((m) => (
               <option key={m} value={m}>
