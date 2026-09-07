@@ -35,7 +35,7 @@ const FooterUtil = () => (
         </Reveal>
         <Reveal i={1}>
           <p className="lede" style={{ maxWidth: "44ch" }}>
-            Book a chair. We&rsquo;ll take it from there.
+            Book an appointment. We&rsquo;ll take it from there.
           </p>
         </Reveal>
         <Reveal i={2} style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>

@@ -129,7 +129,7 @@ const AboutUs = () => {
               </Reveal>
               <Reveal i={1}>
                 <p className="prose">
-                  Welcome to our practice &mdash; where experience, precision, and compassion come
+                  Welcome to our practice &mdash; where experience, precision and compassion come
                   together to create confident smiles. Founded and led by <b>Dr. Sandhya Shetty
                   (BDS, Gold Medalist)</b>, our practice has been a trusted name in dental care for
                   over 15 years. Known for her gentle touch, ethical practice and ability to explain

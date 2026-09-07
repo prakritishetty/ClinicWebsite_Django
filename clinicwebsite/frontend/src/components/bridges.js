@@ -21,7 +21,7 @@ const Bridges = () => {
       faqs={[
         { q: "How long does a dental bridge last?", a: "Dental bridges can last 5 to 15 years and even longer. With good oral hygiene and regular checkups, it is not unusual for a fixed bridge to last over 10 years." },
         { q: "Is it hard to eat with a dental bridge?", a: "Replacing missing teeth with a dental bridge should actually make eating easier. Until you become accustomed to the bridge, eat soft foods cut into small pieces." },
-        { q: "How do I care for my bridge?", a: "You need to keep your remaining teeth healthy and strong. Brush twice a day, floss daily (using a special floss threader to clean under the bridge), and visit your dentist regularly." }
+        { q: "How do I care for my bridge?", a: "You need to keep your remaining teeth healthy and strong. Brush twice a day, floss daily (using a special floss threader to clean under the bridge) and visit your dentist regularly." }
       ]}
     />
   );

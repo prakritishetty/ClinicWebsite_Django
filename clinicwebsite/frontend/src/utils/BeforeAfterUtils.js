@@ -54,7 +54,7 @@ const BeforeAfterUtil = ({ bare = false }) => {
             <h3 className="display display--md" style={{ margin: "1.1rem 0 .25rem" }}>
               {c.title}
             </h3>
-            <p className="text-quiet" style={{ margin: 0, fontSize: "var(--fs-sm)" }}>
+            <p className="text-quiet" style={{ margin: 0, fontSize: "var(--fs-base)" }}>
               {c.desc}
             </p>
           </Reveal>

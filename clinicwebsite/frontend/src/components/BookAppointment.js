@@ -311,7 +311,7 @@ const BookingForm = () => {
           required
           value={form.reason}
           onChange={set("reason")}
-          placeholder="Tell us what's bothering you, and since when."
+          placeholder="Tell us what's bothering you and since when."
         />
       </Field>
 
@@ -337,7 +337,7 @@ const BookingForm = () => {
             style={inputStyle}
             value={form.reschedulePreference}
             onChange={set("reschedulePreference")}
-            placeholder="e.g. weekday evenings, or Saturday morning"
+            placeholder="e.g. weekday evenings or Saturday morning"
           />
         </Field>
         <Field label="How will you pay?" hint="Payment is taken at the clinic, not online.">

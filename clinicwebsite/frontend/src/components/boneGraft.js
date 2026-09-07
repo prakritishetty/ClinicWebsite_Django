@@ -20,7 +20,7 @@ const BoneGraft = () => {
       ]}
       faqs={[
         { q: "Does a bone graft hurt?", a: "The procedure is performed under local anesthesia and/or sedation, so you won't feel pain. Post-operative discomfort is usually mild and easily managed with medication." },
-        { q: "Where does the bone come from?", a: "Grafting material can come from your own body, a tissue bank, or synthetic sources. We will discuss the best option for your specific case." },
+        { q: "Where does the bone come from?", a: "Grafting material can come from your own body, a tissue bank or synthetic sources. We will discuss the best option for your specific case." },
         { q: "How long does it take to heal?", a: "It typically takes 3 to 6 months for the graft to fully fuse with your natural bone and be ready to support a dental implant." }
       ]}
     />

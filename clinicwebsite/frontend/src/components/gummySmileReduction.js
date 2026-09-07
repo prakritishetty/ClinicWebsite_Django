@@ -10,7 +10,7 @@ const GummySmileReduction = () => {
       offerings={[
         { title: "Balanced Proportions", desc: "Creates a more aesthetically pleasing ratio between your teeth and gums." },
         { title: "Minimally Invasive Laser", desc: "We often use advanced soft-tissue lasers to gently sculpt the gums with minimal bleeding and rapid healing." },
-        { title: "Immediate Results", desc: "You will leave our clinic with an instantly larger, more proportionate, and radiant smile." }
+        { title: "Immediate Results", desc: "You will leave our clinic with an instantly larger, more proportionate and radiant smile." }
       ]}
       whenToConsider={[
         "You feel that your teeth look too short or small.",

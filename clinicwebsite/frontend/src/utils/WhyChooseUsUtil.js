@@ -6,7 +6,7 @@ const STATS = [
   { to: 15, suffix: "+", label: "Years in practice" },
   { to: 10000, suffix: "+", label: "Smiles restored" },
   { to: 100, suffix: "+", label: "Implants placed" },
-  { to: 2, suffix: "", label: "Specialists" },
+
 ];
 
 const WhyChooseUsUtil = () => (

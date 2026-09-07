@@ -13,7 +13,6 @@ import FooterUtil from "./utils/FooterUtil.js";
 import Reveal from "./components/Reveal.js";
 import Ribbon from "./components/Ribbon.js";
 import SmileJourney from "./components/SmileJourney.js";
-import ComfortTech from "./components/ComfortTech.js";
 import { CATEGORIES } from "./data/services.js";
 
 const RIBBON_WORDS = [
@@ -30,7 +29,7 @@ const RIBBON_WORDS = [
 const FAQS = [
   {
     q: "What happens at a first visit?",
-    a: "A full examination, digital imaging where it helps, and a straight conversation about what you actually need. You leave with a written plan, not a sales pitch.",
+    a: "A full examination, digital imaging where it helps and a straight conversation about what you actually need. You leave with a written plan, not a sales pitch.",
   },
   {
     q: "How often should I come in?",
@@ -74,7 +73,7 @@ const App = () => (
                 <h3 className="display display--lg" style={{ margin: ".5rem 0 .3rem" }}>
                   {cat.title}
                 </h3>
-                <p className="text-quiet" style={{ fontSize: "var(--fs-sm)", marginBottom: "1.4rem" }}>
+                <p className="text-quiet" style={{ fontSize: "var(--fs-base)", marginBottom: "1.4rem" }}>
                   {cat.tagline}
                 </p>
 
@@ -109,7 +108,7 @@ const App = () => (
             Five steps, no surprises
           </h2>
           <p className="lede" style={{ maxWidth: "34ch" }}>
-            The same sequence for a filling and for a full mouth rebuild.
+            The same sequence for a filling and for a full mouth rehabilitation.
           </p>
         </Reveal>
         <SmileJourney />
@@ -117,8 +116,6 @@ const App = () => (
     </section>
 
     {/* Alternating light/dark so two navy bands never sit against each other */}
-    <ComfortTech />
-
     <BeforeAfterUtil />
 
     <WhyChooseUsUtil />

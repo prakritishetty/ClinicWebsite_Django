@@ -79,7 +79,7 @@ const TreatmentLayout = ({
                   <h3 className="display display--md" style={{ margin: ".4rem 0 .5rem" }}>
                     {offer.title}
                   </h3>
-                  <p className="text-quiet" style={{ margin: 0, fontSize: "var(--fs-sm)" }}>
+                  <p className="text-quiet" style={{ margin: 0, fontSize: "var(--fs-base)" }}>
                     {offer.desc}
                   </p>
                 </article>

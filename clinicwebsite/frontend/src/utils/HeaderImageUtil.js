@@ -81,7 +81,7 @@ const HeaderImageUtil = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.9 }}
           >
-            Two dentists, one chair at a time. Gentle, unhurried, and measured to the
+            Two dentists, one chair at a time. Gentle, unhurried and measured to the
             tenth of a millimetre.
           </motion.p>
 

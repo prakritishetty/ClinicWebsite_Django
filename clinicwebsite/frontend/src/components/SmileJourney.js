@@ -33,7 +33,7 @@ const SmileJourney = () => {
             <h3 className="display display--md" style={{ marginBottom: ".2em" }}>
               {s.t}
             </h3>
-            <p className="text-quiet" style={{ margin: 0, fontSize: "var(--fs-sm)" }}>
+            <p className="text-quiet" style={{ margin: 0, fontSize: "var(--fs-base)" }}>
               {s.d}
             </p>
           </div>

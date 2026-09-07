@@ -37,7 +37,7 @@ const CoreValuesUtil = () => (
           <Reveal key={v.title} i={i + 1}>
             <div style={{ paddingBlock: "clamp(1rem, 1.8vw, 1.5rem)" }}>
               <h3 className="display display--md">{v.title}</h3>
-              <p className="text-quiet" style={{ margin: ".25rem 0 0", fontSize: "var(--fs-sm)" }}>
+              <p className="text-quiet" style={{ margin: ".25rem 0 0", fontSize: "var(--fs-base)" }}>
                 {v.desc}
               </p>
             </div>

@@ -16,12 +16,12 @@ const RootCanal = () => {
         "You experience severe pain while chewing or biting.",
         "You have a chipped or cracked tooth.",
         "You notice lingering sensitivity to hot or cold, even after the sensation has been removed.",
-        "You have swollen or tender gums, or a pimple on your gums."
+        "You have swollen or tender gums."
       ]}
       faqs={[
         { q: "Does a root canal hurt?", a: "The purpose of a root canal is to relieve pain, not cause it. With modern anesthetics, the procedure itself is typically painless." },
         { q: "Will I need a crown after the root canal?", a: "In most cases, yes. A tooth that requires a root canal is often weak and susceptible to fracture. A custom crown will protect the tooth and restore its full function." },
-        { q: "How long does the procedure take?", a: "Most root canals can be completed in one or two visits, depending on the severity of the infection and the specific tooth." }
+        { q: "How long does the procedure take?", a: "Most root canals can be completed in two to three visits, depending on the severity of the infection and the specific tooth." }
       ]}
     />
   );

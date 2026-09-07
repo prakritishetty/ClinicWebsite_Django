@@ -16,20 +16,18 @@ const Cleaning = () => {
       offerings={[
         { 
           title: "Comprehensive Examination", 
-          desc: "Our specialists meticulously examine your teeth and gums for any early signs of problems, such as tooth decay, gum disease, or oral cancer." 
+          desc: "Our specialists meticulously examine your teeth and gums for any early signs of problems, such as tooth decay, gum disease or oral cancer." 
         },
         { 
           title: "Professional Scaling", 
           desc: "We gently but effectively remove hardened tartar (calculus) buildup from above and below the gumline." 
         },
         { 
-          title: "Polishing & Fluoride", 
-          desc: "We polish your teeth to remove surface stains and can apply a fluoride treatment to strengthen your enamel." 
+          title: "Polishing", 
+          desc: "We polish your teeth to remove surface stains to restore your smile." 
         },
       ]}
       whenToConsider={[
-        "It's recommended every 6 months as part of your routine check-up.",
-        "People with gum disease may need it more frequently — every 3 to 4 months.",
         "Your gums bleed when you brush or floss.",
         "You notice persistent bad breath or a bad taste in your mouth.",
         "You feel a rough texture on the back of your teeth (tartar buildup)."

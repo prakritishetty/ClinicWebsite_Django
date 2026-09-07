@@ -9,13 +9,13 @@ const Dentures = () => {
       intro="Dentures are custom-crafted, removable replacements for missing teeth and surrounding tissues. Whether you need full dentures to replace all your teeth or partial dentures to fill in gaps, we design them to fit comfortably and look incredibly natural."
       offerings={[
         { title: "Customized Fit", desc: "Our dentures are meticulously molded to the exact contours of your gums for a secure, comfortable fit." },
-        { title: "Natural Aesthetics", desc: "We use high-quality acrylics and ceramics to ensure the artificial teeth and gum base look incredibly lifelike." },
+        { title: "Natural Aesthetics", desc: "We use high-quality acrylics to ensure the artificial teeth and gum base look incredibly lifelike." },
         { title: "Improved Function", desc: "Regain the ability to chew your favorite foods and speak clearly without hesitation." }
       ]}
       whenToConsider={[
         "You have lost all or most of your natural teeth along the upper or lower jaw.",
         "You have several missing teeth but are not a candidate for implants or bridges.",
-        "Your current dentures are loose, worn out, or causing sore spots.",
+        "Your current dentures are loose, worn out or causing sore spots.",
         "You want an affordable, non-surgical option for tooth replacement."
       ]}
       faqs={[

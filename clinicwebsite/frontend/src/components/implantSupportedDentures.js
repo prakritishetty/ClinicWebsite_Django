@@ -20,7 +20,7 @@ const ImplantSupportedDentures = () => {
       ]}
       faqs={[
         { q: "Do I take these dentures out at night?", a: "Yes, an implant-supported denture is overdenture that snaps onto attachments on the implants. You will take it out daily to clean it and to clean the implant posts." },
-        { q: "How many implants are needed?", a: "Typically, an implant-supported denture requires between 2 to 4 implants per jaw to provide adequate stability." },
+        { q: "How many implants are needed?", a: "Typically, an implant-supported denture requires between 2 to 5 implants per jaw to provide adequate stability." },
         { q: "Is the procedure painful?", a: "The implant placement is done under local anesthesia, so you won't feel pain during surgery. Post-operative discomfort is usually manageable with over-the-counter pain relievers." }
       ]}
     />
