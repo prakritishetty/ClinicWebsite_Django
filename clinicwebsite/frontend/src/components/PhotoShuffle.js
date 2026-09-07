@@ -9,7 +9,7 @@ const FEATHER = 26; // width of the soft edge, in % of the frame
  * fading in on the spot. The outgoing photo stays underneath throughout, so
  * there is never a moment where nothing is on screen.
  */
-const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 6500, style }) => {
+const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 8000, style }) => {
   const [pair, setPair] = useState({ prev: 0, curr: 0 });
   const reduce = useReducedMotion();
 
@@ -32,7 +32,7 @@ const PhotoShuffle = ({ photos = [], ratio = "4 / 5", alt = "", interval = 6500,
     // Only the gentle zoom is dropped for reduced motion; the wipe itself moves
     // no content, so it stays slow enough to read as a flow rather than a cut.
     const controls = animate(progress, 1, {
-      duration: reduce ? 1.4 : 1.9,
+      duration: reduce ? 2.2 : 2.9,
       ease: [0.65, 0, 0.35, 1],
     });
     return () => controls.stop();
