@@ -1,11 +1,14 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { VENEERS_AFTER, VENEERS_BEFORE } from "../data/photos.js";
 
 const Veneers = () => {
   return (
     <TreatmentLayout
       title="Porcelain Veneers"
       cursiveAccent="Design the smile of your dreams"
+      beforeSrc={VENEERS_BEFORE}
+      afterSrc={VENEERS_AFTER}
       intro="Porcelain veneers are ultra-thin, custom-made shells of tooth-colored materials designed to cover the front surface of teeth. They are an ideal choice for improving the appearance of your smile, correcting discoloration, chips and misalignment."
       offerings={[
         { title: "Flawless Aesthetics", desc: "Veneers dramatically transform the color, shape, size and length of your teeth for a picture-perfect smile." },

@@ -1,11 +1,14 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { WHITENING_AFTER, WHITENING_BEFORE } from "../data/photos.js";
 
 const Whitening = () => {
   return (
     <TreatmentLayout
       title="Teeth Whitening"
       cursiveAccent="Reveal a brighter, more confident you"
+      beforeSrc={WHITENING_BEFORE}
+      afterSrc={WHITENING_AFTER}
       intro="Professional teeth whitening is a fast, safe and highly effective way to lighten the color of your teeth. We offer advanced whitening treatments that penetrate deep into the enamel to remove years of stubborn stains and discoloration."
       offerings={[
         { title: "Immediate Results", desc: "Our in-office whitening treatments can make your teeth several shades whiter in just a single visit." },

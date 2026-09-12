@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { GUM_CARE_PHOTOS } from "../data/photos.js";
 
 const GumTherapy = () => {
   return (
     <TreatmentLayout
       title="Gum Therapy"
       cursiveAccent="Healthy gums, healthy body"
+      photos={GUM_CARE_PHOTOS}
       intro="Periodontal (gum) disease is a serious infection that damages the soft tissue and bone supporting your teeth. Our advanced gum therapy treatments are designed to halt the progression of the disease, eliminate infection and restore the health of your gums."
       offerings={[
         { title: "Deep Cleaning (Scaling & Root Planing)", desc: "Meticulously removes plaque and tartar from deep below the gumline and smooths the tooth roots." },

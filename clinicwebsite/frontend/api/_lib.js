@@ -58,16 +58,27 @@ const mailer = () =>
 const mailFrom = () => process.env.SMTP_FROM || process.env.SMTP_USER;
 
 /**
- * Approval links are per-recipient: `who` is the recipient's index in
- * REVIEW_NOTIFY_TO, so we can record which doctor decided without putting
- * their email address in a URL. It is signed too, so the index cannot be
- * edited to impersonate the other doctor.
+ * Approval links are per-recipient: `who` is the recipient's index in the list
+ * below, so we can record who decided without putting their email address in a
+ * URL. It is signed too, so the index cannot be edited to impersonate someone.
  */
-const recipients = () =>
-  (process.env.REVIEW_NOTIFY_TO || "")
+const list = (raw) =>
+  String(raw || "")
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
+
+/** Both doctors: they get the appointment request and the calendar invite. */
+const recipients = () => list(process.env.DOCTOR_EMAILS || process.env.REVIEW_NOTIFY_TO);
+
+/**
+ * Reviews are decided from the shared clinic inbox, so there is one approver
+ * rather than one per doctor. Falls back to the doctors if CLINIC_EMAIL is unset.
+ */
+const reviewRecipients = () => {
+  const inbox = list(process.env.CLINIC_EMAIL);
+  return inbox.length ? inbox : recipients();
+};
 
 const sign = (docId, action, who) => {
   const secret = process.env.REVIEW_ACTION_SECRET;
@@ -108,6 +119,7 @@ module.exports = {
   sign,
   verify,
   recipients,
+  reviewRecipients,
   escapeHtml,
   siteUrl,
 };

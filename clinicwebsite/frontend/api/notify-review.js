@@ -1,10 +1,9 @@
-const nodemailer = require("nodemailer");
-const { getDb, sign, recipients, escapeHtml, siteUrl } = require("./_lib");
+const { getDb, mailer, mailFrom, sign, reviewRecipients, escapeHtml, siteUrl } = require("./_lib");
 
 /**
- * Emails Dr. Sandhya and Dr. Pratiksha when a new review is submitted, with
- * one-click Approve / Reject links. Called by the site right after the review
- * is written to Firestore.
+ * Emails the clinic inbox when a new review is submitted, with one-click
+ * Approve / Reject links. Called by the site right after the review is written
+ * to Firestore.
  */
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
@@ -30,8 +29,8 @@ module.exports = async (req, res) => {
       return res.status(200).json({ ok: true, skipped: true });
     }
 
-    const to = recipients();
-    if (!to.length) return res.status(500).json({ error: "REVIEW_NOTIFY_TO is not set" });
+    const to = reviewRecipients();
+    if (!to.length) return res.status(500).json({ error: "CLINIC_EMAIL is not set" });
 
     const base = siteUrl(req);
     const link = (action, who) =>
@@ -56,23 +55,18 @@ module.exports = async (req, res) => {
         <p style="font-size:14px;color:#5c6b82">This review is <b>not visible</b> on the website yet.</p>
         ${button(link("approve", who), "Publish", "#03396c")}
         ${button(link("reject", who), "Reject", "#8a8f98")}
-        <p style="margin-top:20px;font-size:13px;color:#98a1ae">This was sent to both doctors. Whoever decides first settles it &mdash; the other will simply be shown what was decided.</p>
+        <p style="margin-top:20px;font-size:13px;color:#98a1ae">Whoever decides first settles it &mdash; anyone opening the link afterwards will simply be shown what was decided.</p>
         <p style="margin-top:16px;font-size:12px;color:#98a1ae">Sent automatically by Dr Sandhya&rsquo;s Total Dental Care website.</p>
       </div>`;
 
-    const transport = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 465),
-      secure: Number(process.env.SMTP_PORT || 465) === 465,
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-    });
+    const transport = mailer();
 
-    // One email each rather than a single message to both, so each link can
-    // carry the recipient's identity and we can record who decided.
+    // One email per approver rather than a single message to all of them, so
+    // each link can carry the recipient's identity and we can record who decided.
     await Promise.all(
       to.map((address, who) =>
         transport.sendMail({
-          from: process.env.SMTP_FROM || process.env.SMTP_USER,
+          from: mailFrom(),
           to: address,
           subject: `New review from ${review.person || "a patient"} - approval needed`,
           html: html(who),

@@ -4,6 +4,7 @@ import FooterUtil from "../utils/FooterUtil.js";
 import FaqUtil from "../utils/FaqUtil.js";
 import Placeholder from "./Placeholder.js";
 import PhotoShuffle from "./PhotoShuffle.js";
+import CompareSlider from "./CompareSlider.js";
 import Reveal from "./Reveal.js";
 import { BOOKING_URL } from "../data/services.js";
 
@@ -22,6 +23,8 @@ const TreatmentLayout = ({
   faqs = [],
   photos = [],
   photoNote,
+  beforeSrc,
+  afterSrc,
 }) => (
   <div style={{ background: "var(--paper)" }}>
     <NavbarUtil />
@@ -52,7 +55,9 @@ const TreatmentLayout = ({
         </Reveal>
 
         <Reveal i={1}>
-          {photos.length ? (
+          {beforeSrc && afterSrc ? (
+            <CompareSlider ratio="4 / 3" beforeSrc={beforeSrc} afterSrc={afterSrc} />
+          ) : photos.length ? (
             <PhotoShuffle photos={photos} ratio="4 / 3" alt={title} />
           ) : (
             <Placeholder ratio="4 / 3" label="Treatment" note={photoNote || "to be supplied"} />

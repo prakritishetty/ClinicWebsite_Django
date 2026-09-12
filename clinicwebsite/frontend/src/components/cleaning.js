@@ -1,11 +1,13 @@
 import React from "react";
 import AllServicesTemplate from "./AllServicesTemplate";
+import { CLEANING_PHOTOS } from "../data/photos.js";
 
 const Cleaning = () => {
   return (
     <AllServicesTemplate
       title="Professional Cleaning (Scaling & Polishing)"
       cursiveAccent="A foundation for healthy smiles"
+      photos={CLEANING_PHOTOS}
       intro={
         <>
           No matter how well you brush and floss at home, a layer of hardened deposits (called tartar or calculus) can form on your teeth over time. Professional cleaning removes this buildup using special instruments, followed by polishing to make your teeth smooth and clean.

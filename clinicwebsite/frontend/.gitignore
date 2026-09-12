@@ -23,5 +23,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# raw photo drops - only the extracted images belong in the repo
+src/imagesnew/*.zip
+
 
 clinicwebsite-42a0b-firebase-adminsdk-dklh5-86fe8d092b.json

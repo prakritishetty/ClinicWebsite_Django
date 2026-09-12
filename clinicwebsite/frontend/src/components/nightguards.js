@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { NIGHT_GUARD_PHOTOS } from "../data/photos.js";
 
 const NightGuards = () => {
   return (
     <TreatmentLayout
       title="Custom Night Guards"
       cursiveAccent="Protect your smile while you sleep"
+      photos={NIGHT_GUARD_PHOTOS}
       intro="Bruxism, or teeth grinding, often occurs subconsciously while you sleep and can cause severe damage to your teeth, jaw and restorative work. A custom-fitted night guard provides a comfortable, protective barrier that absorbs the force of grinding."
       offerings={[
         { title: "Custom Fit", desc: "Our night guards are molded exactly to your teeth, offering vastly superior comfort compared to over-the-counter boil-and-bite guards." },

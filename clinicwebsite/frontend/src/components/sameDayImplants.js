@@ -1,11 +1,14 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { SAME_DAY_IMPLANT_AFTER, SAME_DAY_IMPLANT_BEFORE } from "../data/photos.js";
 
 const SameDayImplants = () => {
   return (
     <TreatmentLayout
       title="Same-Day Implants"
       cursiveAccent="A brand new smile in one day"
+      beforeSrc={SAME_DAY_IMPLANT_BEFORE}
+      afterSrc={SAME_DAY_IMPLANT_AFTER}
       intro="Same-Day Implants are a revolutionary procedure that allows you to walk into our clinic with failing teeth and walk out the very same day with a beautiful, fully functional set of fixed replacement teeth."
       offerings={[
         { title: "Immediate Results", desc: "You never have to go without teeth. Your failing teeth are removed, implants are placed and new teeth are attached in a single visit." },

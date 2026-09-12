@@ -1,11 +1,14 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { FMR_AFTER, FMR_BEFORE } from "../data/photos.js";
 
 const FullMouthRehab = () => {
   return (
     <TreatmentLayout
       title="Full Mouth Rehabilitation"
       cursiveAccent="A complete transformation"
+      beforeSrc={FMR_BEFORE}
+      afterSrc={FMR_AFTER}
       intro="Full mouth rehabilitation is a highly personalized, comprehensive treatment plan designed to completely restore the health, function and aesthetics of your smile. It combines multiple restorative and cosmetic procedures to rebuild a severely compromised mouth."
       offerings={[
         { title: "Comprehensive Care", desc: "Addresses everything from severe decay and missing teeth to bite alignment and gum disease." },

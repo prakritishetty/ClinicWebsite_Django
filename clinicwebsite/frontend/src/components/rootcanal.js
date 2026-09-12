@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { ROOT_CANAL_PHOTOS } from "../data/photos.js";
 
 const RootCanal = () => {
   return (
     <TreatmentLayout
       title="Root Canal Therapy"
       cursiveAccent="Save your natural tooth"
+      photos={ROOT_CANAL_PHOTOS}
       intro="A root canal is a treatment used to repair and save a tooth that is badly decayed or becomes infected. During a root canal procedure, the nerve and pulp are removed and the inside of the tooth is cleaned and sealed, alleviating pain and preserving your natural smile."
       offerings={[
         { title: "Pain Relief", desc: "Root canal therapy effectively eliminates the excruciating pain caused by a severe tooth infection." },

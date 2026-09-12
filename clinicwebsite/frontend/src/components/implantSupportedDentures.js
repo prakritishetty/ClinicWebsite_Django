@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { IMPLANT_DENTURE_PHOTOS } from "../data/photos.js";
 
 const ImplantSupportedDentures = () => {
   return (
     <TreatmentLayout
       title="Implant Supported Dentures"
       cursiveAccent="Unwavering stability and comfort"
+      photos={IMPLANT_DENTURE_PHOTOS}
       intro="Implant-supported dentures combine the cost-effectiveness of traditional dentures with the unparalleled stability of dental implants. By anchoring the denture to strategically placed implants, you can enjoy a secure bite without the worry of slipping or clicking."
       offerings={[
         { title: "Rock-Solid Stability", desc: "The denture snaps securely onto the implants, meaning you can eat tough or sticky foods with confidence." },

@@ -1,11 +1,14 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { SMILE_DESIGN_AFTER, SMILE_DESIGN_BEFORE } from "../data/photos.js";
 
 const SmileMakeover = () => {
   return (
     <TreatmentLayout
       title="Smile Makeover"
       cursiveAccent="Unleash your true radiance"
+      beforeSrc={SMILE_DESIGN_BEFORE}
+      afterSrc={SMILE_DESIGN_AFTER}
       intro="A smile makeover is a completely customized treatment plan combining multiple cosmetic and restorative dental procedures to dramatically enhance the appearance of your smile. We consider your facial appearance, skin tone and tooth shape to design a smile that is uniquely yours."
       offerings={[
         { title: "Personalized Design", desc: "We don't use a 'one-size-fits-all' approach. Your new smile is meticulously designed to compliment your unique facial features." },

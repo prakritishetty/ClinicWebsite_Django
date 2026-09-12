@@ -1,11 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
+import { EXTRACTION_PHOTOS } from "../data/photos.js";
 
 const Extractions = () => {
   return (
     <TreatmentLayout
       title="Tooth Extractions"
       cursiveAccent="Gentle care when you need it most"
+      photos={EXTRACTION_PHOTOS}
       intro="While our primary goal is always to save your natural teeth, there are times when a tooth extraction is necessary to maintain your overall oral health. We perform extractions with the utmost care, utilizing modern anesthetics and gentle techniques to ensure your comfort."
       offerings={[
         { title: "Painless Procedure", desc: "We use effective local anesthetics to ensure a pain-free, relaxed experience." },
