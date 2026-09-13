@@ -10,8 +10,6 @@ import {
   SMILE_DESIGN_BEFORE,
   VENEERS_AFTER,
   VENEERS_BEFORE,
-  WHITENING_AFTER,
-  WHITENING_BEFORE,
 } from "../data/photos.js";
 
 const CASES = [
@@ -38,12 +36,6 @@ const CASES = [
     desc: "Sculpted in a single sitting. No metal, no visible margin.",
     beforeSrc: COMPOSITE_BEFORE,
     afterSrc: COMPOSITE_AFTER,
-  },
-  {
-    title: "Teeth whitening",
-    desc: "In-clinic whitening, several shades lighter in one appointment.",
-    beforeSrc: WHITENING_BEFORE,
-    afterSrc: WHITENING_AFTER,
   },
 ];
 
