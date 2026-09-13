@@ -35,7 +35,7 @@ export const ROUTE_META = {
   "/testimonials": {
     title: "Patient Reviews" + SUFFIX,
     description:
-      "Unedited reviews from patients of Dr Sandhya's Total Dental Care, Mulund West. Read their experiences, or share your own.",
+      "Unedited reviews from patients of Dr Sandhya's Total Dental Care, Mulund West. Read what they had to say about their treatment.",
   },
   "/book": {
     title: "Book a Dental Appointment Online" + SUFFIX,
