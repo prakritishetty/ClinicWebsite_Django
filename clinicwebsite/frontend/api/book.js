@@ -4,7 +4,7 @@ const {
   mailer,
   mailFrom,
   sign,
-  recipients,
+  clinicInbox,
   escapeHtml,
   siteUrl,
 } = require("./_lib");
@@ -179,7 +179,7 @@ module.exports = async (req, res) => {
     }
 
     const base = siteUrl(req);
-    const to = recipients();
+    const to = clinicInbox();
     const when = formatSlot(date, time, SLOT_MINUTES);
 
     const link = (action, who) =>
@@ -218,7 +218,7 @@ module.exports = async (req, res) => {
           <a href="${waLink(appointment.patient.phone, `Hello ${appointment.patient.name}, regarding your appointment request for ${when} at Dr Sandhya's Total Dental Care`)}"
              style="color:#005b96;font-size:14px">Message the patient on WhatsApp</a>
         </p>
-        <p style="margin-top:18px;font-size:12px;color:#98a1ae">Sent to both doctors. Whoever acts first settles it.</p>
+        <p style="margin-top:18px;font-size:12px;color:#98a1ae">Confirming here sends the calendar invite to both doctors and to the patient.</p>
       </div>`;
 
     const patientHtml = `

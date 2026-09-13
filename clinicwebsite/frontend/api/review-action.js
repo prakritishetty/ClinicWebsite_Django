@@ -1,4 +1,4 @@
-const { getDb, verify, reviewRecipients, escapeHtml } = require("./_lib");
+const { getDb, verify, clinicInbox, escapeHtml } = require("./_lib");
 
 const page = (title, body) => `<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -55,7 +55,7 @@ module.exports = async (req, res) => {
     );
   }
 
-  const actor = reviewRecipients()[Number(who)] || "a doctor";
+  const actor = clinicInbox()[Number(who)] || "a doctor";
 
   try {
     const db = getDb();

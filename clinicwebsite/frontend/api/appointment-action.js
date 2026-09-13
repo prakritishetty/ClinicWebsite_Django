@@ -1,4 +1,4 @@
-const { getDb, verify, recipients, escapeHtml, mailer, mailFrom } = require("./_lib");
+const { getDb, verify, recipients, clinicInbox, escapeHtml, mailer, mailFrom } = require("./_lib");
 const { buildIcs } = require("./_calendar");
 const {
   SLOT_MINUTES,
@@ -211,7 +211,7 @@ module.exports = async (req, res) => {
     );
   }
 
-  const actor = recipients()[Number(who)] || "a doctor";
+  const actor = clinicInbox()[Number(who)] || "the clinic";
   const db = getDb();
   const ref = db.collection("appointments").doc(id);
 

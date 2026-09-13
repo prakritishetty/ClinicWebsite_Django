@@ -68,14 +68,15 @@ const list = (raw) =>
     .map((s) => s.trim())
     .filter(Boolean);
 
-/** Both doctors: they get the appointment request and the calendar invite. */
+/** Both doctors. They are the attendees on every confirmed appointment. */
 const recipients = () => list(process.env.DOCTOR_EMAILS || process.env.REVIEW_NOTIFY_TO);
 
 /**
- * Reviews are decided from the shared clinic inbox, so there is one approver
- * rather than one per doctor. Falls back to the doctors if CLINIC_EMAIL is unset.
+ * The shared clinic mailbox. Requests are read and decided here, so there is one
+ * set of action links rather than one per doctor, and one address that every
+ * invite is organised by. Falls back to the doctors if CLINIC_EMAIL is unset.
  */
-const reviewRecipients = () => {
+const clinicInbox = () => {
   const inbox = list(process.env.CLINIC_EMAIL);
   return inbox.length ? inbox : recipients();
 };
@@ -119,7 +120,7 @@ module.exports = {
   sign,
   verify,
   recipients,
-  reviewRecipients,
+  clinicInbox,
   escapeHtml,
   siteUrl,
 };

@@ -1,4 +1,4 @@
-const { getDb, mailer, mailFrom, sign, reviewRecipients, escapeHtml, siteUrl } = require("./_lib");
+const { getDb, mailer, mailFrom, sign, clinicInbox, escapeHtml, siteUrl } = require("./_lib");
 
 /**
  * Emails the clinic inbox when a new review is submitted, with one-click
@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
       return res.status(200).json({ ok: true, skipped: true });
     }
 
-    const to = reviewRecipients();
+    const to = clinicInbox();
     if (!to.length) return res.status(500).json({ error: "CLINIC_EMAIL is not set" });
 
     const base = siteUrl(req);
