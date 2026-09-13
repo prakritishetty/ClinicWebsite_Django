@@ -12,8 +12,11 @@ import reception1 from "../imagesnew/reception 1.JPG";
 
 import psAndSs from "../imagesnew/PS and SS.jpeg";
 import ps from "../imagesnew/PS.jpeg";
+// Cropped from src/images/63.jpeg to a 3:4 portrait, clear of the desk behind her.
+import sandhya from "../imagesnew/Sandhya.jpg";
 
 import scaling from "../imagesnew/Scaling.jpg";
+import compositePre from "../imagesnew/Composite filling preop.png";
 import compositePost from "../imagesnew/Composite filling postop.png";
 import rct from "../imagesnew/RCT.jpg";
 import bridge1 from "../imagesnew/bridge 1.jpeg";
@@ -43,11 +46,14 @@ import extractionsPhoto from "../imagesnew/extractions.jpg";
 export const CLINIC_PHOTOS = [clinic, clinic1, reception, reception1];
 
 export const DOCTORS_PHOTO = psAndSs;
+export const SANDHYA_PHOTO = sandhya;
 export const PRATIKSHA_PHOTO = ps;
 
 /* General */
 export const CLEANING_PHOTOS = [scaling];
 export const FILLING_PHOTOS = [compositePost];
+export const COMPOSITE_BEFORE = compositePre;
+export const COMPOSITE_AFTER = compositePost;
 export const ROOT_CANAL_PHOTOS = [rct];
 export const CROWN_PHOTOS = [bridge1];
 export const DENTURE_PHOTOS = [denturePhoto];
@@ -62,7 +68,8 @@ export const VENEERS_AFTER = veneersPost;
 export const WHITENING_BEFORE = whiteningPre;
 export const WHITENING_AFTER = whiteningPost;
 export const ALIGNER_PHOTOS = [aligners1];
-export const GUMMY_SMILE_PHOTOS = [gummy1, gummy2];
+export const GUMMY_BEFORE = gummy1;
+export const GUMMY_AFTER = gummy2;
 export const FMR_BEFORE = fmrPre;
 export const FMR_AFTER = fmrPost;
 

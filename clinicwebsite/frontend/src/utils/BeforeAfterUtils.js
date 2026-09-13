@@ -1,13 +1,21 @@
 import React from "react";
 import CompareSlider from "../components/CompareSlider.js";
 import Reveal from "../components/Reveal.js";
-import { VENEERS_AFTER, VENEERS_BEFORE } from "../data/photos.js";
+import {
+  COMPOSITE_AFTER,
+  COMPOSITE_BEFORE,
+  FMR_AFTER,
+  FMR_BEFORE,
+  GUMMY_AFTER,
+  GUMMY_BEFORE,
+  SMILE_DESIGN_AFTER,
+  SMILE_DESIGN_BEFORE,
+  VENEERS_AFTER,
+  VENEERS_BEFORE,
+  WHITENING_AFTER,
+  WHITENING_BEFORE,
+} from "../data/photos.js";
 
-/*
- * Only the veneers case has photography so far; the other two still use the
- * shared placeholder, with the original asset recorded in the note so it can be
- * dropped straight in. All three share one aspect ratio so the row stays even.
- */
 const CASES = [
   {
     title: "Porcelain veneers",
@@ -16,20 +24,40 @@ const CASES = [
     afterSrc: VENEERS_AFTER,
   },
   {
-    title: "Cleft palate, missing tooth",
-    desc: "Prosthetic rehabilitation restoring speech, chewing and symmetry.",
-    beforeNote: "src/images/cleftpalatemissingtoothpreop.jpg",
-    afterNote: "src/images/cleftpalatemissingtoothpostop.jpg",
+    title: "Smile design",
+    desc: "Shape, length and proportion planned together, then rebuilt as one.",
+    beforeSrc: SMILE_DESIGN_BEFORE,
+    afterSrc: SMILE_DESIGN_AFTER,
+  },
+  {
+    title: "Full mouth rehabilitation",
+    desc: "Worn, crowded teeth restored across both arches to a settled bite.",
+    beforeSrc: FMR_BEFORE,
+    afterSrc: FMR_AFTER,
   },
   {
     title: "Composite restoration",
     desc: "Sculpted in a single sitting. No metal, no visible margin.",
-    beforeNote: "src/images/compositrestorationpreop.JPG",
-    afterNote: "src/images/compositerestorationpostop.JPG",
+    beforeSrc: COMPOSITE_BEFORE,
+    afterSrc: COMPOSITE_AFTER,
+  },
+  {
+    title: "Teeth whitening",
+    desc: "In-clinic whitening, several shades lighter in one appointment.",
+    beforeSrc: WHITENING_BEFORE,
+    afterSrc: WHITENING_AFTER,
+  },
+  {
+    title: "Gummy smile reduction",
+    desc: "Gum contouring to give short-looking teeth their full height back.",
+    beforeSrc: GUMMY_BEFORE,
+    afterSrc: GUMMY_AFTER,
   },
 ];
 
-const RATIO = "4 / 3";
+// Intraoral photography is much wider than it is tall; 4/3 cropped the corners
+// of every smile off. These sit between 1.7 and 3.0, so 2/1 loses the least.
+const RATIO = "2 / 1";
 
 const BeforeAfterUtil = ({ bare = false }) => {
   const body = (

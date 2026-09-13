@@ -10,7 +10,7 @@ import Placeholder from "./Placeholder.js";
 import PhotoShuffle from "./PhotoShuffle.js";
 import Reveal from "./Reveal.js";
 import ToothMark from "./ToothMark.js";
-import { DOCTORS_PHOTO, PRATIKSHA_PHOTO } from "../data/photos.js";
+import { DOCTORS_PHOTO, PRATIKSHA_PHOTO, SANDHYA_PHOTO } from "../data/photos.js";
 
 const TABS = [
   { id: "practice", label: "The Practice" },
@@ -162,7 +162,7 @@ const AboutUs = () => {
             <Doctor
               name="Dr. Sandhya Shetty"
               creds="BDS &middot; Gold Medalist"
-              photoNote="src/images/amma.JPG"
+              photo={SANDHYA_PHOTO}
               atAGlance={[
                 { k: "Degree", v: "Bachelor of Dental Surgery, Government Dental College, Aurangabad (1994)" },
                 { k: "Honour", v: "Gold Medal, Marathwada University" },
