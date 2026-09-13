@@ -6,8 +6,6 @@ import {
   COMPOSITE_BEFORE,
   FMR_AFTER,
   FMR_BEFORE,
-  GUMMY_AFTER,
-  GUMMY_BEFORE,
   SMILE_DESIGN_AFTER,
   SMILE_DESIGN_BEFORE,
   VENEERS_AFTER,
@@ -46,12 +44,6 @@ const CASES = [
     desc: "In-clinic whitening, several shades lighter in one appointment.",
     beforeSrc: WHITENING_BEFORE,
     afterSrc: WHITENING_AFTER,
-  },
-  {
-    title: "Gummy smile reduction",
-    desc: "Gum contouring to give short-looking teeth their full height back.",
-    beforeSrc: GUMMY_BEFORE,
-    afterSrc: GUMMY_AFTER,
   },
 ];
 

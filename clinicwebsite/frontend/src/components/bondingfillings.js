@@ -1,13 +1,14 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
-import { FILLING_PHOTOS } from "../data/photos.js";
+import { COMPOSITE_AFTER, COMPOSITE_BEFORE } from "../data/photos.js";
 
 const BondingFillings = () => {
   return (
     <TreatmentLayout
       title="Bonding & Fillings"
       cursiveAccent="Seamless, invisible repairs"
-      photos={FILLING_PHOTOS}
+      beforeSrc={COMPOSITE_BEFORE}
+      afterSrc={COMPOSITE_AFTER}
       intro="Dental bonding and composite fillings are minimally invasive treatments used to repair decayed, chipped or fractured teeth. We use high-quality, tooth-colored composite resin that flawlessly matches your natural enamel, ensuring your repair is virtually invisible."
       offerings={[
         { title: "Invisible Finish", desc: "Our tooth-colored fillings blend seamlessly with your natural teeth." },

@@ -51,7 +51,6 @@ export const PRATIKSHA_PHOTO = ps;
 
 /* General */
 export const CLEANING_PHOTOS = [scaling];
-export const FILLING_PHOTOS = [compositePost];
 export const COMPOSITE_BEFORE = compositePre;
 export const COMPOSITE_AFTER = compositePost;
 export const ROOT_CANAL_PHOTOS = [rct];
@@ -68,8 +67,7 @@ export const VENEERS_AFTER = veneersPost;
 export const WHITENING_BEFORE = whiteningPre;
 export const WHITENING_AFTER = whiteningPost;
 export const ALIGNER_PHOTOS = [aligners1];
-export const GUMMY_BEFORE = gummy1;
-export const GUMMY_AFTER = gummy2;
+export const GUMMY_SMILE_PHOTOS = [gummy1, gummy2];
 export const FMR_BEFORE = fmrPre;
 export const FMR_AFTER = fmrPost;
 

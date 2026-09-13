@@ -1,14 +1,13 @@
 import React from "react";
 import TreatmentLayout from "./TreatmentLayout";
-import { GUMMY_AFTER, GUMMY_BEFORE } from "../data/photos.js";
+import { GUMMY_SMILE_PHOTOS } from "../data/photos.js";
 
 const GummySmileReduction = () => {
   return (
     <TreatmentLayout
       title="Gummy Smile Reduction"
       cursiveAccent="Perfecting your smile's proportions"
-      beforeSrc={GUMMY_BEFORE}
-      afterSrc={GUMMY_AFTER}
+      photos={GUMMY_SMILE_PHOTOS}
       intro="A 'gummy smile' occurs when an excessive amount of gum tissue shows above your top teeth when you smile. Gummy smile reduction, or crown lengthening, is a cosmetic procedure that gently reshapes the gumline to reveal more of your beautiful teeth."
       offerings={[
         { title: "Balanced Proportions", desc: "Creates a more aesthetically pleasing ratio between your teeth and gums." },
