@@ -256,7 +256,18 @@ module.exports = async (req, res) => {
     }
 
     // The appointment is saved; a mail failure must not tell the patient it wasn't.
-    await Promise.allSettled(mail);
+    // It does need to reach the runtime log though - an SMTP rejection is
+    // otherwise invisible, since the patient still sees a success screen.
+    const sent = await Promise.allSettled(mail);
+    sent
+      .filter((r) => r.status === "rejected")
+      .forEach((r) => console.error("booking mail failed", r.reason));
+    console.log("booking mail", {
+      doctors: to,
+      patient: appointment.contactEmail,
+      from: mailFrom(),
+      failed: sent.filter((r) => r.status === "rejected").length,
+    });
 
     return res.status(200).json({ ok: true, when });
   } catch (err) {
