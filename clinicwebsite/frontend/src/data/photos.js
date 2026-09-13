@@ -51,6 +51,8 @@ export const PRATIKSHA_PHOTO = ps;
 
 /* General */
 export const CLEANING_PHOTOS = [scaling];
+export const FILLING_PHOTOS = [compositePost];
+// The matching pre-op is used by the transformations gallery, not the page.
 export const COMPOSITE_BEFORE = compositePre;
 export const COMPOSITE_AFTER = compositePost;
 export const ROOT_CANAL_PHOTOS = [rct];
