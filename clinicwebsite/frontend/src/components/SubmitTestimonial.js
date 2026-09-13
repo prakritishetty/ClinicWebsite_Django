@@ -51,15 +51,17 @@ const ReviewForm = ({ user }) => {
   };
 
   if (done) {
-    // Google has no API for writing a review - it has to be typed into their own
-    // page - so the most we can do is hand the patient their words on the clipboard.
-    const copyReview = async () => {
-      try {
-        await navigator.clipboard.writeText([headertext, text].filter(Boolean).join("\n\n"));
-        setCopied(true);
-      } catch {
-        setCopied(false);
-      }
+    // Google has no API for posting a review, so the most we can do is put the
+    // patient's words on the clipboard as the tab opens and let them paste.
+    // Copying from the anchor's onClick rather than window.open() afterwards,
+    // so the new tab is a real user gesture and pop-up blockers leave it alone.
+    const copyAndGo = () => {
+      navigator.clipboard
+        ?.writeText([headertext, text].filter(Boolean).join("\n\n"))
+        .then(
+          () => setCopied(true),
+          () => setCopied(false)
+        );
     };
 
     return (
@@ -75,26 +77,20 @@ const ReviewForm = ({ user }) => {
 
         <hr className="rule" style={{ margin: "2rem 0 1.5rem" }} />
 
-        <p className="eyebrow eyebrow--center">One more thing, if you have a minute</p>
-        <p className="text-quiet" style={{ maxWidth: "46ch", margin: "0 auto 1.5rem" }}>
-          A review on Google helps other people in Mulund find us. Copy what you just wrote and
-          paste it over there.
-        </p>
-        <div
-          style={{ display: "flex", gap: ".8rem", flexWrap: "wrap", justifyContent: "center" }}
+        <a
+          className="btn-lux"
+          href={GOOGLE_WRITE_REVIEW_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={copyAndGo}
         >
-          <button type="button" className="btn-lux btn-lux--ghost" onClick={copyReview}>
-            {copied ? "Copied" : "Copy my review"}
-          </button>
-          <a
-            className="btn-lux"
-            href={GOOGLE_WRITE_REVIEW_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Review us on Google
-          </a>
-        </div>
+          Post it on Google too
+        </a>
+        <p className="text-quiet" style={{ margin: "1rem 0 0", fontSize: "var(--fs-sm)" }}>
+          {copied
+            ? "Copied. Paste it on Google \u2014 that's the only step left."
+            : "We'll copy your review so all you do is paste it."}
+        </p>
       </motion.div>
     );
   }
