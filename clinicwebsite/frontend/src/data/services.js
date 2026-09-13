@@ -13,15 +13,13 @@ export const WHATSAPP =
 export const PHONE = "+91 98336 30985";
 
 /**
- * The clinic's Google listing. The id is the CID from the map embed in
- * FooterUtil, converted from hex to decimal.
- *
- * To send people straight into the review box instead of the listing, replace
- * GOOGLE_WRITE_REVIEW_URL with the short link from the Business Profile
- * dashboard (Ask for reviews), which looks like https://g.page/r/XXXX/review.
+ * The clinic's Google listing. GOOGLE_REVIEWS_URL opens the listing itself -
+ * the id is the CID from the map embed in FooterUtil, converted from hex to
+ * decimal. GOOGLE_WRITE_REVIEW_URL is the short link from the Business Profile
+ * dashboard, which drops straight into the review box.
  */
 export const GOOGLE_REVIEWS_URL = "https://www.google.com/maps?cid=11734218237412218568";
-export const GOOGLE_WRITE_REVIEW_URL = GOOGLE_REVIEWS_URL;
+export const GOOGLE_WRITE_REVIEW_URL = "https://g.page/r/CciW3f1QUdiiEAE/review";
 
 export const CATEGORIES = [
   {
