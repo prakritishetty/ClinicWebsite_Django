@@ -149,9 +149,12 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
   const transport = mailer();
   const doctors = recipients();
 
-  // One shared guest list so every calendar shows the same people. buildIcs
-  // drops whichever address is the organizer, since Google ignores an invite
-  // where the recipient is also the organizer.
+  // The clinic mailbox gets the same copy for its records. It cannot also be an
+  // ATTENDEE - it is the organizer, and Google ignores an invite where the
+  // recipient is the organizer - so it is on the To: line only.
+  const practice = [...new Set([...doctors, ...clinicInbox()])];
+
+  // One shared guest list so every calendar shows the same people.
   const guests = [
     appt.contactEmail || appt.patient?.email
       ? { name: appt.patient?.name, email: appt.contactEmail || appt.patient.email }
@@ -168,7 +171,7 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
   const jobs = [];
 
   // Still two emails, so the patient never sees the doctors' addresses in To:
-  // and the doctors' copy can carry the patient's contact details.
+  // and the practice's copy can carry the patient's contact details.
   const patientEmail = appt.contactEmail || appt.patient?.email;
   if (patientEmail) {
     jobs.push(
@@ -182,11 +185,11 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
     );
   }
 
-  if (doctors.length) {
+  if (practice.length) {
     jobs.push(
       transport.sendMail({
         from: mailFrom(),
-        to: doctors,
+        to: practice,
         subject,
         html: html(true),
         icalEvent: invite,
@@ -196,6 +199,13 @@ const sendInvite = async (appt, id, { cancelled = false } = {}) => {
 
   const results = await Promise.allSettled(jobs);
   results.filter((r) => r.status === "rejected").forEach((r) => console.error("invite send failed", r.reason));
+  console.log("invite sent", {
+    patient: patientEmail,
+    practice,
+    attendees: guests.map((g) => g.email),
+    organizer: organizerEmail,
+    failed: results.filter((r) => r.status === "rejected").length,
+  });
 };
 
 module.exports = async (req, res) => {
