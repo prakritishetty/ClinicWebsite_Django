@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import NavbarUtil from "../utils/NavbarUtil.js";
 import FooterUtil from "../utils/FooterUtil.js";
 import { cleanHeading } from "../utils/reviewText.js";
+import { GOOGLE_REVIEWS_URL } from "../data/services.js";
 import Reveal from "./Reveal.js";
 import SubmitTestimonial from "./SubmitTestimonial.js";
 import ToothMark from "./ToothMark.js";
@@ -62,6 +63,22 @@ const Testimonials = () => {
             </h1>
           </Reveal>
           <Reveal i={2}>
+            <p className="lede" style={{ maxWidth: "54ch", margin: 0 }}>
+              These are the reviews patients have left with the practice directly, here and on
+              Practo. They are separate from our Google reviews, which live on our Google listing.
+            </p>
+          </Reveal>
+          <Reveal i={3}>
+            <a
+              className="btn-lux btn-lux--ghost"
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read all our Google reviews
+            </a>
+          </Reveal>
+          <Reveal i={4}>
             <ToothMark size="clamp(46px, 6vw, 78px)" />
           </Reveal>
         </div>
@@ -94,7 +111,7 @@ const Testimonials = () => {
                   marginBottom: "clamp(2rem, 4vw, 3.5rem)",
                 }}
               >
-                {items.length} {items.length === 1 ? "review" : "reviews"}
+                {items.length} {items.length === 1 ? "review" : "reviews"} left with the practice
               </p>
 
               <div

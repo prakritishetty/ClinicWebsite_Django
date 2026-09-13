@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
 import AuthGate, { inputStyle } from "./AuthGate.js";
+import { GOOGLE_WRITE_REVIEW_URL } from "../data/services.js";
 import Reveal from "./Reveal.js";
 
 const ReviewForm = ({ user }) => {
@@ -12,6 +13,7 @@ const ReviewForm = ({ user }) => {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
   const [done, setDone] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -49,6 +51,17 @@ const ReviewForm = ({ user }) => {
   };
 
   if (done) {
+    // Google has no API for writing a review - it has to be typed into their own
+    // page - so the most we can do is hand the patient their words on the clipboard.
+    const copyReview = async () => {
+      try {
+        await navigator.clipboard.writeText([headertext, text].filter(Boolean).join("\n\n"));
+        setCopied(true);
+      } catch {
+        setCopied(false);
+      }
+    };
+
     return (
       <motion.div
         initial={{ opacity: 0, y: 12 }}
@@ -59,6 +72,29 @@ const ReviewForm = ({ user }) => {
         <p className="lede">
           Your review has been sent to the practice and will appear here once it&rsquo;s approved.
         </p>
+
+        <hr className="rule" style={{ margin: "2rem 0 1.5rem" }} />
+
+        <p className="eyebrow eyebrow--center">One more thing, if you have a minute</p>
+        <p className="text-quiet" style={{ maxWidth: "46ch", margin: "0 auto 1.5rem" }}>
+          A review on Google helps other people in Mulund find us. Copy what you just wrote and
+          paste it over there.
+        </p>
+        <div
+          style={{ display: "flex", gap: ".8rem", flexWrap: "wrap", justifyContent: "center" }}
+        >
+          <button type="button" className="btn-lux btn-lux--ghost" onClick={copyReview}>
+            {copied ? "Copied" : "Copy my review"}
+          </button>
+          <a
+            className="btn-lux"
+            href={GOOGLE_WRITE_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Review us on Google
+          </a>
+        </div>
       </motion.div>
     );
   }
