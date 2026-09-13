@@ -24,6 +24,132 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!--
+      Share cards (WhatsApp, Instagram, Facebook, LinkedIn, X).
+      These stay here rather than in Helmet because those scrapers never run
+      JavaScript - they read the raw HTML this file produces and nothing else.
+      Per-page titles are still set at runtime in src/components/Seo.js, which
+      is fine for Google because Googlebot does render the page.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dr Sandhya's Total Dental Care" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="Dr Sandhya's Total Dental Care - Dentist in Mulund West, Mumbai" />
+    <meta
+      property="og:description"
+      content="General, cosmetic and implant dentistry in Mulund West, Mumbai. Book an appointment online."
+    />
+    <meta property="og:url" content="https://dr-sandhyas-total-dental-care.vercel.app/" />
+    <meta property="og:image" content="https://dr-sandhyas-total-dental-care.vercel.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dr. Sandhya Shetty and Dr. Pratiksha Shetty at their Mulund West clinic" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--
+      Structured data. This is what tells Google, and the crawlers behind
+      ChatGPT and Perplexity, that this is a specific dental practice at a
+      specific address - and it is how the site gets linked to the Google
+      Business Profile. Keep the name, address and phone identical to the
+      Business Profile, character for character, or the match is lost.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "@id": "https://dr-sandhyas-total-dental-care.vercel.app/#clinic",
+        "name": "Dr Sandhya's Total Dental Care",
+        "url": "https://dr-sandhyas-total-dental-care.vercel.app/",
+        "image": "https://dr-sandhyas-total-dental-care.vercel.app/og-image.jpg",
+        "telephone": "+91-98336-30985",
+        "priceRange": "$$",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
+        "medicalSpecialty": "Dentistry",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop #9, Saidham Complex, P.K. Road",
+          "addressLocality": "Mulund West",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400080",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 19.167783,
+          "longitude": 72.942373
+        },
+        "areaServed": [
+          { "@type": "Place", "name": "Mulund West, Mumbai" },
+          { "@type": "Place", "name": "Mulund East, Mumbai" },
+          { "@type": "Place", "name": "Bhandup, Mumbai" },
+          { "@type": "Place", "name": "Nahur, Mumbai" },
+          { "@type": "Place", "name": "Thane" }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "14:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "18:00",
+            "closes": "21:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/drsandhyastotaldentalcare/"],
+        "employee": [
+          {
+            "@type": "Person",
+            "name": "Dr. Sandhya Shetty",
+            "jobTitle": "Dentist",
+            "honorificSuffix": "BDS"
+          },
+          {
+            "@type": "Person",
+            "name": "Dr. Pratiksha Shetty",
+            "jobTitle": "Prosthodontist",
+            "honorificSuffix": "BDS, MDS"
+          }
+        ],
+        "availableService": [
+          { "@type": "MedicalProcedure", "name": "Dental check-up, scaling and polishing" },
+          { "@type": "MedicalProcedure", "name": "Tooth-coloured composite fillings" },
+          { "@type": "MedicalProcedure", "name": "Root canal treatment" },
+          { "@type": "MedicalProcedure", "name": "Dental crowns and bridges" },
+          { "@type": "MedicalProcedure", "name": "Dentures" },
+          { "@type": "MedicalProcedure", "name": "Gum disease treatment" },
+          { "@type": "MedicalProcedure", "name": "Night guards for teeth grinding" },
+          { "@type": "MedicalProcedure", "name": "Smile design" },
+          { "@type": "MedicalProcedure", "name": "Porcelain veneers" },
+          { "@type": "MedicalProcedure", "name": "Teeth whitening" },
+          { "@type": "MedicalProcedure", "name": "Clear aligners" },
+          { "@type": "MedicalProcedure", "name": "Gummy smile correction" },
+          { "@type": "MedicalProcedure", "name": "Full mouth rehabilitation" },
+          { "@type": "MedicalProcedure", "name": "Dental implants" },
+          { "@type": "MedicalProcedure", "name": "Same-day dental implants" },
+          { "@type": "MedicalProcedure", "name": "Implant-supported dentures" },
+          { "@type": "MedicalProcedure", "name": "Tooth extraction" }
+        ],
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "name": "Book an appointment",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://dr-sandhyas-total-dental-care.vercel.app/book",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        }
+      }
+    </script>
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -33,7 +159,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Dr Sandhya's Total Dental Care</title>
+    <title>Dentist in Mulund West, Mumbai | Dr Sandhya's Total Dental Care</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

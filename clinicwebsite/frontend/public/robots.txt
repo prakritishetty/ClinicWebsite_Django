@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /doctorlogin
+Disallow: /api/
+
+Sitemap: https://dr-sandhyas-total-dental-care.vercel.app/sitemap.xml

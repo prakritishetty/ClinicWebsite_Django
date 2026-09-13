@@ -4,7 +4,10 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css'; // must load after bootstrap so the design system wins
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 
+import RouteSeo from './components/Seo.js'
+import ScrollToHash from './components/ScrollToHash.js'
 import App from './App.js';
 import AboutUs from './components/AboutUs.js'
 import General from './components/general.js'
@@ -39,7 +42,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   
+    <HelmetProvider>
     <BrowserRouter>
+    <RouteSeo />
+    <ScrollToHash />
     
   <Routes>
     <Route path="/" element={<App/>}/>
@@ -75,6 +81,7 @@ root.render(
 
   
   </BrowserRouter> 
+  </HelmetProvider>
 );
 
 

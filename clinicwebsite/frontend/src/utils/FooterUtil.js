@@ -1,6 +1,5 @@
 import React from "react";
 import { BsInstagram } from "react-icons/bs";
-import { AiOutlineLinkedin } from "react-icons/ai";
 import Reveal from "../components/Reveal.js";
 import ToothMark from "../components/ToothMark.js";
 import { BOOKING_URL, CATEGORIES, PHONE } from "../data/services.js";
@@ -169,11 +168,13 @@ const FooterUtil = () => (
             Shetty
           </span>
           <span style={{ display: "flex", gap: "1.1rem", color: "rgba(255,255,255,.72)" }}>
-            <a href="/" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/drsandhyastotaldentalcare/"
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label="Instagram"
+            >
               <BsInstagram size={18} />
-            </a>
-            <a href="/" aria-label="LinkedIn">
-              <AiOutlineLinkedin size={20} />
             </a>
           </span>
         </div>
