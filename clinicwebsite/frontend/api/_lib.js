@@ -46,16 +46,27 @@ const requireUser = async (req) => {
   }
 };
 
+/**
+ * Gmail displays an app password as four groups of four, and a value pasted
+ * into a dashboard usually arrives with a stray space or newline on the end.
+ * Either one fails authentication indistinguishably from a wrong password, so
+ * trim everything and close up the groups when the value is clearly Gmail's.
+ */
+const smtpPass = () => {
+  const raw = String(process.env.SMTP_PASS || "").trim();
+  return /^(\w{4}\s){3}\w{4}$/.test(raw) ? raw.replace(/\s/g, "") : raw;
+};
+
 /** Nodemailer transport built from the SMTP_* environment variables. */
 const mailer = () =>
   require("nodemailer").createTransport({
-    host: process.env.SMTP_HOST,
+    host: String(process.env.SMTP_HOST || "").trim(),
     port: Number(process.env.SMTP_PORT || 465),
     secure: Number(process.env.SMTP_PORT || 465) === 465,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    auth: { user: String(process.env.SMTP_USER || "").trim(), pass: smtpPass() },
   });
 
-const mailFrom = () => process.env.SMTP_FROM || process.env.SMTP_USER;
+const mailFrom = () => String(process.env.SMTP_FROM || process.env.SMTP_USER || "").trim();
 
 /**
  * Approval links are per-recipient: `who` is the recipient's index in the list
