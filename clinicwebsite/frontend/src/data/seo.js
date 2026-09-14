@@ -17,7 +17,7 @@ const SUFFIX = ` | ${SITE_NAME}`;
 export const DEFAULT_META = {
   title: "Dentist in Mulund West, Mumbai" + SUFFIX,
   description:
-    "General, cosmetic and implant dentistry in Mulund West, Mumbai. Led by Dr. Sandhya Shetty (BDS, Gold Medalist) and Dr. Pratiksha Shetty (BDS, MDS Prosthodontics). Book online.",
+    "General, cosmetic and implant dentistry in Mulund West, Mumbai. Led by Dr. Sandhya Shetty and Dr. Pratiksha Shetty. Book an appointment online.",
 };
 
 /**

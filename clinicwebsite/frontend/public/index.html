@@ -14,9 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#011f4b" />
+    <!--
+      data-rh marks a tag as Helmet's. Without it Helmet appends its own copy on
+      mount and the prerendered page ships two descriptions; with it, the tag
+      below is replaced by the route's own. It still stands alone as the
+      fallback if prerendering ever fails to run.
+    -->
     <meta
+      data-rh="true"
       name="description"
-      content="Dr Sandhya's Total Dental Care, Mulund West, Mumbai - general, cosmetic and implant dentistry led by Dr. Sandhya Shetty (BDS, Gold Medalist) and Dr. Pratiksha Shetty (BDS, MDS Prosthodontics)."
+      content="General, cosmetic and implant dentistry in Mulund West, Mumbai. Led by Dr. Sandhya Shetty and Dr. Pratiksha Shetty. Book an appointment online."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -35,12 +42,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Dr Sandhya's Total Dental Care" />
     <meta property="og:locale" content="en_IN" />
-    <meta property="og:title" content="Dr Sandhya's Total Dental Care - Dentist in Mulund West, Mumbai" />
+    <meta data-rh="true" property="og:title" content="Dr Sandhya's Total Dental Care - Dentist in Mulund West, Mumbai" />
     <meta
+      data-rh="true"
       property="og:description"
       content="General, cosmetic and implant dentistry in Mulund West, Mumbai. Book an appointment online."
     />
-    <meta property="og:url" content="https://dr-sandhyas-total-dental-care.vercel.app/" />
+    <meta data-rh="true" property="og:url" content="https://dr-sandhyas-total-dental-care.vercel.app/" />
     <meta property="og:image" content="https://dr-sandhyas-total-dental-care.vercel.app/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
