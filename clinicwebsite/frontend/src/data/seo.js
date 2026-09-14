@@ -12,7 +12,7 @@ export const SITE_URL = "https://dr-sandhyas-total-dental-care.vercel.app";
 
 export const SITE_NAME = "Dr Sandhya's Total Dental Care";
 
-const SUFFIX = ` | ${SITE_NAME} · Mulund West, Mumbai`;
+const SUFFIX = ` | ${SITE_NAME}`;
 
 export const DEFAULT_META = {
   title: "Dentist in Mulund West, Mumbai" + SUFFIX,
@@ -28,17 +28,17 @@ export const ROUTE_META = {
   "/": DEFAULT_META,
 
   "/about": {
-    title: "Our Dentists & Clinic" + SUFFIX,
+    title: "Our Dentists & Clinic in Mulund West" + SUFFIX,
     description:
       "Meet Dr. Sandhya Shetty and Dr. Pratiksha Shetty, and see the clinic in Mulund West. Over 30 years of general, cosmetic and prosthodontic dentistry in Mumbai.",
   },
   "/testimonials": {
-    title: "Patient Reviews" + SUFFIX,
+    title: "Patient Reviews \u00b7 Mulund West" + SUFFIX,
     description:
       "Unedited reviews from patients of Dr Sandhya's Total Dental Care, Mulund West. Read what they had to say about their treatment.",
   },
   "/book": {
-    title: "Book a Dental Appointment Online" + SUFFIX,
+    title: "Book a Dentist Appointment in Mulund West" + SUFFIX,
     description:
       "Choose a time that suits you and request an appointment at our Mulund West clinic. Confirmation and a calendar invite arrive by email.",
   },

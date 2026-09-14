@@ -38,9 +38,9 @@ import Testimonials from "./components/Testimonials.js"
 import BookAppointment from "./components/BookAppointment.js"
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
 
-root.render(
+const app = (
   
     <HelmetProvider>
     <BrowserRouter>
@@ -84,5 +84,13 @@ root.render(
   </HelmetProvider>
 );
 
+// scripts/prerender.js writes real markup into build/, so on a prerendered page
+// there is already a tree to adopt. Rendering fresh would throw it away and
+// flash blank first.
+if (container.hasChildNodes()) {
+  ReactDOM.hydrateRoot(container, app);
+} else {
+  ReactDOM.createRoot(container).render(app);
+}
 
 reportWebVitals();
